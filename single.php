@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'content', 'single' ); ?>
 
-			<?php kovkov_post_nav(); ?>
+			<?php get_template_part( 'related-content' ); ?>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template

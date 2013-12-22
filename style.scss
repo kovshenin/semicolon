@@ -155,12 +155,20 @@ a, a:visited, a:link {
 .entry-title {
 	margin-top: 0;
 	padding-top: 0;
+	margin-bottom: 40px;
+}
+
+pre {
+	background: rgba( $color-secondary, 0.03 );
+}
+
+article {
+	margin-right: 60px;
 }
 
 .grid article {
 	float: left;
 	width: 180px;
-	margin-right: 60px;
 	margin-bottom: 60px;
 
 	.post-thumbnail {
@@ -213,15 +221,6 @@ a, a:visited, a:link {
 		}
 	}
 
-	.entry-meta {
-		font-size: 80%;
-
-		a {
-			color: rgba( $color-secondary, 0.5 );
-			text-decoration: none;
-		}
-	}
-
 	&:hover {
 		.entry-title a {
 			@extend a:hover;
@@ -229,16 +228,67 @@ a, a:visited, a:link {
 	}
 }
 
+.related-content {
+
+	.related-content-title {
+		@extend h2;
+		font-size: 18px;
+	}
+
+	/* @todo: mixin? */;
+	article {
+		float: left;
+		width: 180px;
+		margin-bottom: 60px;
+
+		.post-thumbnail {
+			display: block;
+			float: left;
+			clear: both;
+			margin-bottom: 20px;
+			width: 180px;
+			height: 180px;
+			background: rgba( $color-secondary, 0.03 );
+		}
+
+		.entry-title {
+			@extend h2;
+
+			margin-top: 0;
+			padding-top: 0;
+			margin-bottom: 0;
+			font-size: 18px;
+			a {
+				color: $color-secondary;
+				text-decoration: none;
+				margin-bottom: 10px;
+				display: block;
+			}
+		}
+
+		&:hover {
+			.entry-title a {
+				@extend a:hover;
+			}
+		}
+	}
+}
+
+.entry-meta {
+	font-size: 80%;
+	color: rgba( $color-secondary, 0.5 );
+
+	a {
+		color: rgba( $color-secondary, 0.5 );
+		text-decoration: none;
+	}
+}
+
 #primary {
-	width: 180px * 4 + 3 * 60;
+	width: 180px * 4 + 4 * 60;
 	float: left;
 	display: block;
 	/* background: #ccc; */
-}
-
-.grid #primary {
-	/* 60px more room for right margins */
-	width: 180px * 4 + 4 * 60;
 }
 
 .widget-area {
@@ -292,4 +342,10 @@ a, a:visited, a:link {
 			border-top-color: $color-secondary;
 		}
 	}
+}
+
+/* WPM */
+.wpm-newsletter h3 {
+	@extend h2;
+	font-size: 18px;
 }

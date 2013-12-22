@@ -5,13 +5,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-
-		<div class="entry-meta">
-			<?php kovkov_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+	<h1 class="entry-title"><?php the_title(); ?></h1>
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -31,32 +25,22 @@
 			/* translators: used between list items, there is a space after the comma */
 			$tag_list = get_the_tag_list( '', __( ', ', 'kovkov' ) );
 
-			if ( ! kovkov_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'kovkov' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'kovkov' );
-				}
+			$meta = array( '&mdash;' );
+			$author = sprintf( '<a class="author" rel="author" href="%s">%s</a>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
 
+			if ( kovkov_categorized_blog() ) {
+				$meta[] = sprintf( __( '%1$s in %2$s', 'kovkov' ), $author, $category_list );
 			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'kovkov' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'kovkov' );
-				}
+				$meta[] = $author;
+			}
 
-			} // end check for categories on this blog
+			if ( '' != $tag_list )
+				$meta[] = sprintf( __( 'Tagged: %s', 'kovkov' ), $tag_list );
 
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink()
-			);
+			$meta[] = get_the_time( get_option( 'date_format' ) );
+
+			echo implode( '<br />', $meta );
 		?>
-
-		<?php edit_post_link( __( 'Edit', 'kovkov' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
+
 </article><!-- #post-## -->

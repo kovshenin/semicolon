@@ -313,3 +313,44 @@ class Kovkov {
 };
 
 Kovkov::get_instance()->init();
+
+if ( ! function_exists( 'kovkov_get_related_posts' ) ) :
+/**
+ * Returns a new WP_Query with related posts.
+ */
+function kovkov_get_related_posts() {
+	$post = get_post();
+
+	// Support for the Yet Another Related Posts Plugin
+	if ( function_exists( 'yarpp_get_related' ) ) {
+		$related = yarpp_get_related( array( 'limit' => 4 ), $post->ID );
+		return new WP_Query( array(
+			'post__in' => wp_list_pluck( $related, 'ID' ),
+			'posts_per_page' => 3,
+			'ignore_sticky_posts' => true,
+			'post__not_in' => array( $post->ID ),
+		) );
+	}
+
+	$args = array(
+		'posts_per_page' => 4,
+		'ignore_sticky_posts' => true,
+		'post__not_in' => array( $post->ID ),
+	);
+
+	// Get posts from the same category.
+	$categories = get_the_category();
+	if ( ! empty( $categories ) ) {
+		$category = array_shift( $categories );
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'category',
+				'field' => 'id',
+				'terms' => $category->term_id,
+			),
+		);
+	}
+
+	return new WP_Query( $args );
+}
+endif;
