@@ -23,38 +23,56 @@ and Blueprint http://www.blueprintcss.org/
 */
 
 @import url(http://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic);
 
 @import 'css/reset';
 @import 'css/underscores';
 
 $font-headings: 'PT Serif', Georgia, 'Times New Roman', serif;
-$font-regular: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-regular: 'Open Sans', Arial, sans-serif;
 $color-primary: #117bb8;
 $color-secondary: #3a3a3a;
 
 body {
 	background: white;
 	font-family: $font-regular;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.5;
 	font-weight: 400;
 	color: #444;
 }
 
+::selection {
+	background: $color-primary;
+	color: white;
+}
+
 h1 {
+	font-size: 44px;
+	line-height: 1.3;
 	font-family: $font-headings;
-	font-size: 24px;
-	font-weight: normal;
+	font-weight: 300;
+
+	margin-top: 30px;
+	padding-top: 30px;
+	margin-bottom: 20px;
+
+	/* font-size: 24px; */
 }
 
 h2 {
 	@extend h1;
-	font-size: 18px;
+	font-size: 28px;
+	line-height: 1.5;
 }
 
 h3 {
-	@extend h1;
-	font-size: 16px;
+	@extend h2;
+	font-family: $font-regular;
+	font-weight: 700;
+	font-size: 18px;
+
+	/* font size: 16px; */
 }
 
 a, a:visited, a:link {
@@ -76,6 +94,12 @@ a, a:visited, a:link {
 	margin-top: 60px;
 }
 
+.site-title {
+	@extend h2;
+	margin: 0;
+	padding: 0;
+}
+
 .site-title a {
 	color: $color-secondary;
 	text-decoration: none;
@@ -85,21 +109,22 @@ a, a:visited, a:link {
 	font-family: $font-regular;
 	font-size: 14px;
 	color: rgba( $color-secondary, 0.5 );
+	margin: 0;
+	padding: 0;
 }
 
 .main-navigation {
 	margin-top: 40px;
-	background: $color-secondary;
+	margin-bottom: 40px;
+
+	border-top: solid 1px rgba( $color-secondary, 0.1 );
 
 	a {
-		color: white;
+		color: $color-secondary;
 		text-decoration: none;
 		padding: 12px 20px;
-
-		&:hover {
-			background: lighten( $color-secondary, 5% );
-			color: white;
-		}
+		margin-top: -1px;
+		border-top: solid 4px transparent;
 	}
 
 	.current_page_item,
@@ -109,10 +134,7 @@ a, a:visited, a:link {
 	.current-menu-parent,
 	.current-post-parent {
 		a {
-			background: $color-primary;
-			&:hover {
-				background: lighten( $color-primary, 5% );
-			}
+			border-top-color: $color-secondary;
 		}
 	}
 
@@ -122,14 +144,17 @@ a, a:visited, a:link {
 
 .page-description {
 	@extend h1;
+	margin: 0 0 60px 0;
 	font-size: 18px;
+	line-height: 1.5;
 	padding: 20px;
 	background: rgba( $color-secondary, 0.03 );
 	p { margin: 0; }
 }
 
-.site-content {
-	margin-top: 60px;
+.entry-title {
+	margin-top: 0;
+	padding-top: 0;
 }
 
 .grid article {
@@ -152,7 +177,7 @@ a, a:visited, a:link {
 		clear: left;
 	}
 
-	&.sticky {
+	&.kovkov-featured {
 		width: 420px;
 		.post-thumbnail {
 			width: 420px;
@@ -160,38 +185,60 @@ a, a:visited, a:link {
 		}
 
 		.entry-title {
-			@extend h1;
+			@extend h2;
+			padding-top: 0;
+			margin-top: 0;
+			margin-bottom: 0;
+
+			font-size: 24px;
 		}
 	}
 
 	&.empty {
 		display: none;
 	}
-}
 
-.entry-title {
-	@extend h2;
-	a {
-		color: $color-secondary;
-		text-decoration: none;
-		margin-bottom: 10px;
-		display: block;
+	.entry-title {
+		@extend h2;
+
+		margin-top: 0;
+		padding-top: 0;
+		margin-bottom: 0;
+		font-size: 18px;
+		a {
+			color: $color-secondary;
+			text-decoration: none;
+			margin-bottom: 10px;
+			display: block;
+		}
 	}
-}
 
-.entry-meta {
-	font-size: 85%;
+	.entry-meta {
+		font-size: 80%;
 
-	a {
-		color: rgba( $color-secondary, 0.5 );
-		text-decoration: none;
+		a {
+			color: rgba( $color-secondary, 0.5 );
+			text-decoration: none;
+		}
+	}
+
+	&:hover {
+		.entry-title a {
+			@extend a:hover;
+		}
 	}
 }
 
 #primary {
-	width: 180px * 4 + 4 * 60;
+	width: 180px * 4 + 3 * 60;
 	float: left;
 	display: block;
+	/* background: #ccc; */
+}
+
+.grid #primary {
+	/* 60px more room for right margins */
+	width: 180px * 4 + 4 * 60;
 }
 
 .widget-area {
@@ -216,6 +263,9 @@ a, a:visited, a:link {
 
 	.widget-title {
 		@extend h2;
+		font-size: 18px;
+		margin-top: 0;
+		padding-top: 0;
 		margin-bottom: 20px;
 	}
 }
@@ -233,7 +283,6 @@ a, a:visited, a:link {
 		padding: 6px 14px;
 		font-size: 120%;
 		font-weight: 400;
-		position: relative;
 		margin-top: -1px;
 		border-top: solid 4px transparent;
 		text-decoration: none;

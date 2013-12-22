@@ -6,7 +6,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php $post_thumbnail_size = is_sticky() ? 'kovkov-featured' : 'post-thumbnail'; ?>
+		<?php $post_thumbnail_size = Kovkov::is_featured() ? 'kovkov-featured' : 'post-thumbnail'; ?>
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail( $post_thumbnail_size ); ?></a>
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
@@ -17,7 +17,7 @@
 
 </article><!-- #post-## -->
 
-<?php if ( is_sticky() ) : ?>
+<?php if ( Kovkov::is_featured() ) : ?>
 <article class="empty">
 </article>
 <?php endif; ?>

@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic);
 /*
 Theme Name: kovkov
 Theme URI: http://underscores.me/
@@ -27,11 +28,12 @@ and Blueprint http://www.blueprintcss.org/
 html, body, div, span, applet, object, iframe,
 h1,
 h2,
-.entry-title,
-.widget-area .widget-title,
 h3,
-.page-description,
-.grid article.sticky .entry-title, h2, .entry-title, .widget-area .widget-title, h3, h4, h5, h6, p, blockquote, pre,
+.site-title,
+.grid article.kovkov-featured .entry-title,
+.grid article .entry-title,
+.widget-area .widget-title,
+.page-description, h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .widget-area .widget-title, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -105,7 +107,7 @@ blockquote, q {
 a:focus {
   outline: thin dotted; }
 
-a:hover,
+a:hover, .grid article:hover .entry-title a,
 a:active {
   outline: 0; }
 
@@ -126,7 +128,7 @@ textarea {
   line-height: 1.5; }
 
 /* Headings */
-h1, h2, .entry-title, .widget-area .widget-title, h3, .page-description, .grid article.sticky .entry-title, h2, .entry-title, .widget-area .widget-title, h3, h4, h5, h6 {
+h1, h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .widget-area .widget-title, .page-description, h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .widget-area .widget-title, h3, h4, h5, h6 {
   clear: both; }
 
 hr {
@@ -343,7 +345,7 @@ a {
 a:visited {
   color: purple; }
 
-a:hover,
+a:hover, .grid article:hover .entry-title a,
 a:focus,
 a:active {
   color: midnightblue; }
@@ -490,10 +492,10 @@ a:active {
 
 /* =Asides
 ----------------------------------------------- */
-.blog .format-aside .entry-title,
+/*.blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-  display: none; }
-
+	display: none;
+}*/
 /* =Media
 ----------------------------------------------- */
 .page-content img.wp-smiley,
@@ -584,27 +586,40 @@ object {
 
 body {
   background: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
   color: #444; }
 
-h1, h2, .entry-title, .widget-area .widget-title, h3, .page-description, .grid article.sticky .entry-title {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
-  font-size: 24px;
-  font-weight: normal; }
+::selection {
+  background: #117bb8;
+  color: white; }
 
-h2, .entry-title, .widget-area .widget-title {
-  font-size: 18px; }
+h1, h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .widget-area .widget-title, .page-description {
+  font-size: 44px;
+  line-height: 1.3;
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-weight: 300;
+  margin-top: 30px;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  /* font-size: 24px; */ }
+
+h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .widget-area .widget-title {
+  font-size: 28px;
+  line-height: 1.5; }
 
 h3 {
-  font-size: 16px; }
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  /* font size: 16px; */ }
 
 a, a:visited, a:link {
   color: #117bb8;
   text-decoration: underline; }
-  a:hover, a:visited:hover, a:link:hover {
+  a:hover, .grid article:hover .entry-title a, a:visited:hover, .grid article:hover .entry-title a:visited, a:link:hover, .grid article:hover .entry-title a:link {
     color: #159ae7; }
 
 #page {
@@ -615,52 +630,54 @@ a, a:visited, a:link {
 .site-header {
   margin-top: 60px; }
 
+.site-title {
+  margin: 0;
+  padding: 0; }
+
 .site-title a {
   color: #3a3a3a;
   text-decoration: none; }
 
 .site-description {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 14px;
-  color: rgba(58, 58, 58, 0.5); }
+  color: rgba(58, 58, 58, 0.5);
+  margin: 0;
+  padding: 0; }
 
 .main-navigation {
   margin-top: 40px;
-  background: #3a3a3a;
+  margin-bottom: 40px;
+  border-top: solid 1px rgba(58, 58, 58, 0.1);
   /* Temporarily disable submenus */ }
   .main-navigation a {
-    color: white;
+    color: #3a3a3a;
     text-decoration: none;
-    padding: 12px 20px; }
-    .main-navigation a:hover {
-      background: #474747;
-      color: white; }
+    padding: 12px 20px;
+    margin-top: -1px;
+    border-top: solid 4px transparent; }
   .main-navigation .current_page_item a,
   .main-navigation .current-menu-item a,
   .main-navigation .current-post-ancestor a,
   .main-navigation .current-menu-ancestor a,
   .main-navigation .current-menu-parent a,
   .main-navigation .current-post-parent a {
-    background: #117bb8; }
-    .main-navigation .current_page_item a:hover,
-    .main-navigation .current-menu-item a:hover,
-    .main-navigation .current-post-ancestor a:hover,
-    .main-navigation .current-menu-ancestor a:hover,
-    .main-navigation .current-menu-parent a:hover,
-    .main-navigation .current-post-parent a:hover {
-      background: #138bcf; }
+    border-top-color: #3a3a3a; }
   .main-navigation .sub-menu {
     display: none !important; }
 
 .page-description {
+  margin: 0 0 60px 0;
   font-size: 18px;
+  line-height: 1.5;
   padding: 20px;
   background: rgba(58, 58, 58, 0.03); }
   .page-description p {
     margin: 0; }
 
-.site-content {
-  margin-top: 60px; }
+.entry-title {
+  margin-top: 0;
+  padding-top: 0; }
 
 .grid article {
   float: left;
@@ -677,30 +694,43 @@ a, a:visited, a:link {
     background: rgba(58, 58, 58, 0.03); }
   .grid article:nth-child(4n+5) {
     clear: left; }
-  .grid article.sticky {
+  .grid article.kovkov-featured {
     width: 420px; }
-    .grid article.sticky .post-thumbnail {
+    .grid article.kovkov-featured .post-thumbnail {
       width: 420px;
       height: 230px; }
+    .grid article.kovkov-featured .entry-title {
+      padding-top: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 24px; }
   .grid article.empty {
     display: none; }
-
-.entry-title a {
-  color: #3a3a3a;
-  text-decoration: none;
-  margin-bottom: 10px;
-  display: block; }
-
-.entry-meta {
-  font-size: 85%; }
-  .entry-meta a {
-    color: rgba(58, 58, 58, 0.5);
-    text-decoration: none; }
+  .grid article .entry-title {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    font-size: 18px; }
+    .grid article .entry-title a {
+      color: #3a3a3a;
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: block; }
+  .grid article .entry-meta {
+    font-size: 80%; }
+    .grid article .entry-meta a {
+      color: rgba(58, 58, 58, 0.5);
+      text-decoration: none; }
 
 #primary {
-  width: 960px;
+  width: 900px;
   float: left;
-  display: block; }
+  display: block;
+  /* background: #ccc; */ }
+
+.grid #primary {
+  /* 60px more room for right margins */
+  width: 960px; }
 
 .widget-area {
   float: right;
@@ -716,6 +746,9 @@ a, a:visited, a:link {
   .widget-area .sidebar-secondary {
     background: rgba(58, 58, 58, 0.03); }
   .widget-area .widget-title {
+    font-size: 18px;
+    margin-top: 0;
+    padding-top: 0;
     margin-bottom: 20px; }
 
 .paging-navigation {
@@ -730,7 +763,6 @@ a, a:visited, a:link {
     padding: 6px 14px;
     font-size: 120%;
     font-weight: 400;
-    position: relative;
     margin-top: -1px;
     border-top: solid 4px transparent;
     text-decoration: none;

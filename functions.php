@@ -135,19 +135,36 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 add_action( 'kovkov_header_after', function() {
+	if ( ! is_front_page() || is_paged() )
+		return;
 	?>
 	<div class="page-description"><p>WP Magazine — это онлайн журнал посвящённый системе управления контентом WordPress. Здесь вы найдёте много полезной информации, как для начинающих, так и для опытных разработчиков.</p></div>
 	<?php
 });
 
 class Kovkov {
-	function __construct() {
+	public $unfeature;
+
+	private function __construct() {}
+
+	public static function get_instance() {
+		static $instance;
+
+		if ( null === $instance ) {
+			$instance = new Kovkov;
+		}
+
+		return $instance;
+	}
+
+	function init() {
 		// @todo: sticky to featured
 
 		add_action( 'pre_get_posts', array( $this, 'pre_get_posts' ) );
 		add_filter( 'posts_results', array( $this, 'posts_results' ), 10, 2 );
-		add_filter( 'option_sticky_posts', array( $this, 'option_sticky_posts' ) );
+		add_filter( 'found_posts', array( $this, 'found_posts' ), 10, 2 );
 		add_filter( 'body_class', array( $this, 'body_class' ) );
+		add_filter( 'post_class', array( $this, 'post_class' ), 10, 3 );
 	}
 
 	function body_class( $classes ) {
@@ -155,6 +172,36 @@ class Kovkov {
 			$classes[] = 'grid';
 
 		return $classes;
+	}
+
+	function post_class( $classes, $class, $post_id ) {
+		if ( self::is_featured( $post_id ) )
+			$classes[] = 'kovkov-featured';
+
+		return $classes;
+	}
+
+	function get_featured_posts() {
+		$sticky_posts = get_option( 'sticky_posts' );
+		if ( empty( $sticky_posts ) )
+			return new WP_Query;
+
+		return new WP_Query( array(
+			'post__in' => (array) get_option( 'sticky_posts' ),
+			'posts_per_page' => 2,
+			'ignore_sticky_posts' => true,
+		) );
+	}
+
+	public static function is_featured( $post_id = null ) {
+		$post = get_post( $post_id );
+		$sticky_posts = (array) get_option( 'sticky_posts' );
+		$featured = in_array( $post->ID, $sticky_posts );
+
+		if ( ! empty( self::get_instance()->unfeature ) && in_array( $post->ID, self::get_instance()->unfeature ) )
+			$featured = false;
+
+		return $featured;
 	}
 
 	function pre_get_posts( $query ) {
@@ -166,13 +213,21 @@ class Kovkov {
 
 			// We're going to stick two posts only, on the home page
 			// But not on other pages, see posts_results.
-			$featured = get_posts( array(
-				'post__in' => (array) get_option( 'sticky_posts' ),
-				'posts_per_page' => 2,
-			) );
+			$featured = $this->get_featured_posts();
 
-			if ( ! empty( $featured ) ) {
-				$query->set( 'post__not_in', wp_list_pluck( $featured, 'ID' ) );
+			if ( $featured->have_posts() ) {
+				$posts_per_page = $query->get( 'posts_per_page' );
+				if ( ! $posts_per_page )
+					$posts_per_page = get_option( 'posts_per_page', 10 );
+
+				$query->set( 'post__not_in', wp_list_pluck( $featured->posts, 'ID' ) );
+
+				if ( ! is_paged() ) {
+					// $query->set( 'posts_per_page', $posts_per_page - $featured->post_count );
+				} else {
+					$query->set( 'offset', ( $query->get( 'paged' ) - 1 ) * $posts_per_page - $featured->post_count );
+					// $query->set( 'offset', get_query_var( 'paged' ) );
+				}
 			}
 		}
 	}
@@ -185,29 +240,32 @@ class Kovkov {
 
 			// Stick only on the home page.
 			if ( ! is_paged() ) {
-				$featured = get_posts( array(
-					'post__in' => (array) get_option( 'sticky_posts' ),
-					'posts_per_page' => 2,
-				) );
+				$featured = $this->get_featured_posts();
 
-				foreach ( $featured as $post ) {
-					array_unshift( $posts, $post );
-					array_pop( $posts );
+				if ( $featured->have_posts() ) {
+					foreach ( $featured->posts as $post ) {
+						array_unshift( $posts, $post );
+					}
+
+					// Remove any extras on top of ppp.
+					while ( count( $posts ) > $query->get( 'posts_per_page' ) ) {
+						array_pop( $posts );
+					}
 				}
 			}
 		}
 
 		// Unstick some stickies!
-		$unstick = array();
+		$unfeature = array();
 		$count = 0;
 		foreach ( $posts as $post ) {
-			$increment = is_sticky( $post->ID ) ? 2 : 1;
+			$increment = self::is_featured( $post->ID ) ? 2 : 1;
 			$count += $increment;
 
 			// Useful for debugging
 			// $post->post_title .= $count % 4;
 
-			if ( $count <= 4 || ! is_sticky( $post->ID ) )
+			if ( $count <= 4 || ! self::is_featured( $post->ID ) )
 				continue;
 
 			/*
@@ -219,34 +277,39 @@ class Kovkov {
 			 * Let's number our spaces, 1 is the first, 4 or 0 is the last space. If
 			 * a post is featured, we check its ending position. We know it takes up two spaces
 			 * so if it ended on space number 1, it means that it started on space number 4,
-			 * meaning it will wrap, creating an orphaned space. Yuck! So we unstick it and
-			 * display it as if it weren't sticky at all, better luck next time!
+			 * meaning it will wrap, creating an orphaned space. Yuck! So we unfeature it and
+			 * display it as if it weren't featured at all, better luck next time!
 			 *
 			 * If it's anything other than space #1, we can safely render it on two spaces.
-			 * Let's also unstick the last post in a set.
+			 * Let's also unfeature the last post in a set.
 			 */
 			if ( $count % 4 == 1 || end( $posts ) === $post ) {
-				$unstick[] = $post->ID;
+				$unfeature[] = $post->ID;
 				$count--;
 			}
 		}
 
-		$this->unstick = $unstick;
+		$this->unfeature = $unfeature;
 
 		return $posts;
 	}
 
-	function option_sticky_posts( $value ) {
-		if ( empty( $value ) || ! is_array( $value ) || empty( $this->unstick ) )
-			return $value;
+	function found_posts( $found_posts, $query ) {
+		if ( ! $query->is_main_query() || is_admin() )
+			return $found_posts;
 
-		$clean = array();
-		foreach ( $value as $post_id )
-			if ( ! in_array( $post_id, $this->unstick ) )
-				$clean[] = $post_id;
+		if ( is_front_page() ) {
+			$featured = $this->get_featured_posts();
 
-		$value = $clean;
-		return $value;
+			if ( $featured->have_posts() ) {
+				$found_posts += $featured->post_count;
+			}
+		}
+
+		echo $found_posts;
+
+		return $found_posts;
 	}
 };
-new Kovkov;
+
+Kovkov::get_instance()->init();
