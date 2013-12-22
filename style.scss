@@ -1,0 +1,246 @@
+/*
+Theme Name: kovkov
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: kovkov
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ kovkov is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+@import url(http://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic);
+
+@import 'css/reset';
+@import 'css/underscores';
+
+$font-headings: 'PT Serif', Georgia, 'Times New Roman', serif;
+$font-regular: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$color-primary: #117bb8;
+$color-secondary: #3a3a3a;
+
+body {
+	background: white;
+	font-family: $font-regular;
+	font-size: 14px;
+	line-height: 1.5;
+	font-weight: 400;
+	color: #444;
+}
+
+h1 {
+	font-family: $font-headings;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+h2 {
+	@extend h1;
+	font-size: 18px;
+}
+
+h3 {
+	@extend h1;
+	font-size: 16px;
+}
+
+a, a:visited, a:link {
+	color: $color-primary;
+	text-decoration: underline;
+
+	&:hover {
+		color: lighten( $color-primary, 10% );
+	}
+}
+
+#page {
+	width: 1260px;
+	margin: 0 auto;
+	/* background: #ccc; */
+}
+
+.site-header {
+	margin-top: 60px;
+}
+
+.site-title a {
+	color: $color-secondary;
+	text-decoration: none;
+}
+
+.site-description {
+	font-family: $font-regular;
+	font-size: 14px;
+	color: rgba( $color-secondary, 0.5 );
+}
+
+.main-navigation {
+	margin-top: 40px;
+	background: $color-secondary;
+
+	a {
+		color: white;
+		text-decoration: none;
+		padding: 12px 20px;
+
+		&:hover {
+			background: lighten( $color-secondary, 5% );
+			color: white;
+		}
+	}
+
+	.current_page_item,
+	.current-menu-item,
+	.current-post-ancestor,
+	.current-menu-ancestor,
+	.current-menu-parent,
+	.current-post-parent {
+		a {
+			background: $color-primary;
+			&:hover {
+				background: lighten( $color-primary, 5% );
+			}
+		}
+	}
+
+	/* Temporarily disable submenus */
+	.sub-menu { display: none !important; }
+}
+
+.page-description {
+	@extend h1;
+	font-size: 18px;
+	padding: 20px;
+	background: rgba( $color-secondary, 0.03 );
+	p { margin: 0; }
+}
+
+.site-content {
+	margin-top: 60px;
+}
+
+.grid article {
+	float: left;
+	width: 180px;
+	margin-right: 60px;
+	margin-bottom: 60px;
+
+	.post-thumbnail {
+		display: block;
+		float: left;
+		clear: both;
+		margin-bottom: 20px;
+		width: 180px;
+		height: 180px;
+		background: rgba( $color-secondary, 0.03 );
+	}
+
+	&:nth-child(4n+5) {
+		clear: left;
+	}
+
+	&.sticky {
+		width: 420px;
+		.post-thumbnail {
+			width: 420px;
+			height: 230px;
+		}
+
+		.entry-title {
+			@extend h1;
+		}
+	}
+
+	&.empty {
+		display: none;
+	}
+}
+
+.entry-title {
+	@extend h2;
+	a {
+		color: $color-secondary;
+		text-decoration: none;
+		margin-bottom: 10px;
+		display: block;
+	}
+}
+
+.entry-meta {
+	font-size: 85%;
+
+	a {
+		color: rgba( $color-secondary, 0.5 );
+		text-decoration: none;
+	}
+}
+
+#primary {
+	width: 180px * 4 + 4 * 60;
+	float: left;
+	display: block;
+}
+
+.widget-area {
+	float: right;
+	width: 300px;
+
+	.sidebar-primary,
+	.sidebar-secondary,
+	.sidebar-tertiary {
+		padding: 30px 30px;
+	}
+
+	.sidebar-primary {
+		background: $color-primary;
+		color: white;
+		min-height: 230px;
+	}
+
+	.sidebar-secondary {
+		background: rgba( $color-secondary, 0.03 );
+	}
+
+	.widget-title {
+		@extend h2;
+		margin-bottom: 20px;
+	}
+}
+
+.paging-navigation {
+	width: 900px;
+	display: block;
+	float: left;
+	clear: both;
+	border-top: solid 1px rgba( $color-secondary, 0.1 );
+	text-align: center;
+
+	.page-numbers {
+		display: inline-block;
+		padding: 6px 14px;
+		font-size: 120%;
+		font-weight: 400;
+		position: relative;
+		margin-top: -1px;
+		border-top: solid 4px transparent;
+		text-decoration: none;
+		color: $color-secondary;
+
+		&.current {
+			border-top-color: $color-secondary;
+		}
+	}
+}
