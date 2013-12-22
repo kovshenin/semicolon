@@ -51,6 +51,8 @@ function kovkov_setup() {
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
+	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form' ) );
+
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'kovkov_custom_background_args', array(
 		'default-color' => 'ffffff',
@@ -305,8 +307,6 @@ class Kovkov {
 				$found_posts += $featured->post_count;
 			}
 		}
-
-		echo $found_posts;
 
 		return $found_posts;
 	}

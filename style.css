@@ -35,8 +35,10 @@ h3,
 .related-content .related-content-title,
 .related-content article .entry-title,
 .widget-area .widget-title,
+.comments-title,
+.comment-meta .comment-author,
 .wpm-newsletter h3,
-.page-description, h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .wpm-newsletter h3, h3, h4, h5, h6, p, blockquote, pre,
+.page-description, h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, .wpm-newsletter h3, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -131,7 +133,7 @@ textarea {
   line-height: 1.5; }
 
 /* Headings */
-h1, h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .wpm-newsletter h3, .page-description, h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .wpm-newsletter h3, h3, h4, h5, h6 {
+h1, h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, .wpm-newsletter h3, .page-description, h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, .wpm-newsletter h3, h3, h4, h5, h6 {
   clear: both; }
 
 hr {
@@ -251,28 +253,26 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid #ccc;
-  border-color: #ccc #ccc #bbb #ccc;
-  border-radius: 3px;
-  background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-  /* Improves usability and consistency of cursor style between image-type 'input' and others */
-  -webkit-appearance: button;
-  /* Corrects inability to style clickable 'input' types in iOS */
-  font-size: 12px;
+                 /*border: 1px solid #ccc;
+border-color: #ccc #ccc #bbb #ccc;
+border-radius: 3px;
+background: #e6e6e6;
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+color: rgba(0, 0, 0, .8);
+cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+  /*-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+  /*font-size: 12px;
   font-size: 1.2rem;
   line-height: 1;
   padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);*/ }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa #bbb;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+  /*border-color: #ccc #bbb #aaa #bbb;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);*/ }
 
 button:focus,
 input[type="button"]:focus,
@@ -282,8 +282,8 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  border-color: #aaa #bbb #bbb #bbb;
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+  /*border-color: #aaa #bbb #bbb #bbb;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);*/ }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -314,9 +314,9 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
+  /*color: #666;
   border: 1px solid #ccc;
-  border-radius: 3px; }
+  border-radius: 3px;*/ }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -324,7 +324,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-  color: #111; }
+  /*color: #111;*/ }
 
 input[type="text"],
 input[type="email"],
@@ -599,7 +599,7 @@ body {
   background: #117bb8;
   color: white; }
 
-h1, h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .wpm-newsletter h3, .page-description {
+h1, h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, .wpm-newsletter h3, .page-description {
   font-size: 44px;
   line-height: 1.3;
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
@@ -609,7 +609,7 @@ h1, h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid artic
   margin-bottom: 20px;
   /* font-size: 24px; */ }
 
-h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .wpm-newsletter h3 {
+h2, h3, .site-title, .grid article.kovkov-featured .entry-title, .grid article .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, .wpm-newsletter h3 {
   font-size: 28px;
   line-height: 1.5; }
 
@@ -686,13 +686,11 @@ a, a:visited, a:link {
 pre {
   background: rgba(58, 58, 58, 0.03); }
 
-article {
-  margin-right: 60px; }
-
 .grid article {
   float: left;
   width: 180px;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  margin-right: 60px; }
   .grid article .post-thumbnail {
     display: block;
     float: left;
@@ -727,13 +725,15 @@ article {
       display: block; }
 
 .related-content {
+  float: left;
   /* @todo: mixin? */ }
   .related-content .related-content-title {
     font-size: 18px; }
   .related-content article {
     float: left;
     width: 180px;
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+    margin-right: 60px; }
     .related-content article .post-thumbnail {
       display: block;
       float: left;
@@ -753,10 +753,10 @@ article {
         margin-bottom: 10px;
         display: block; }
 
-.entry-meta {
+.entry-meta, .comment-meta .comment-metadata {
   font-size: 80%;
   color: rgba(58, 58, 58, 0.5); }
-  .entry-meta a {
+  .entry-meta a, .comment-meta .comment-metadata a {
     color: rgba(58, 58, 58, 0.5);
     text-decoration: none; }
 
@@ -804,6 +804,94 @@ article {
     .paging-navigation .page-numbers.current {
       border-top-color: #3a3a3a; }
 
+.comments-area {
+  margin-right: 60px; }
+
+.comments-title {
+  margin-top: 0;
+  padding-top: 0; }
+
+.comment-list {
+  list-style: none;
+  margin-left: 80px; }
+  .comment-list ul.children {
+    list-style: none;
+    margin-left: 80px; }
+
+.comment-meta {
+  position: relative; }
+  .comment-meta .comment-author {
+    font-size: 18px;
+    margin-bottom: 4px; }
+    .comment-meta .comment-author b {
+      font-weight: normal;
+      display: block;
+      margin-top: 5px;
+      font-style: normal; }
+    .comment-meta .comment-author .says {
+      display: none; }
+    .comment-meta .comment-author a {
+      text-decoration: none;
+      color: #3a3a3a; }
+  .comment-meta img.avatar {
+    position: absolute;
+    left: -80px;
+    width: 60px;
+    height: 60px; }
+  .comment-meta .comment-metadata {
+    margin-bottom: 30px; }
+
+#respond label {
+  display: block; }
+#respond .required {
+  color: #e60000; }
+
+.form-allowed-tags {
+  display: none; }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button-primary,
+.button,
+.button-secondary {
+  background: #117bb8;
+  color: white;
+  border: none;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  padding: 12px 20px;
+  cursor: pointer; }
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover,
+  .button-primary:hover,
+  .button:hover,
+  .button-secondary:hover {
+    background: #138bcf; }
+
+.button,
+.button-secondary {
+  background: #3a3a3a; }
+  .button:hover,
+  .button-secondary:hover {
+    background: #474747; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  border: solid 1px rgba(58, 58, 58, 0.3);
+  padding: 8px; }
+
 /* WPM */
-.wpm-newsletter h3 {
-  font-size: 18px; }
+.wpm-newsletter {
+  margin-right: 60px; }
+  .wpm-newsletter h3 {
+    font-size: 18px; }
+  .wpm-newsletter p {
+    margin: 0; }

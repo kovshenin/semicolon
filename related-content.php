@@ -33,4 +33,4 @@ $related_posts = kovkov_get_related_posts();
 </div>
 <?php wp_reset_postdata(); ?>
 <?php endif; // have_posts() ?>
-<?php do_action( 'expound_related_posts_after' ); ?>
+<?php do_action( 'kovkov_related_posts_after' ); ?>

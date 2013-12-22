@@ -162,14 +162,11 @@ pre {
 	background: rgba( $color-secondary, 0.03 );
 }
 
-article {
-	margin-right: 60px;
-}
-
 .grid article {
 	float: left;
 	width: 180px;
 	margin-bottom: 60px;
+	margin-right: 60px;
 
 	.post-thumbnail {
 		display: block;
@@ -229,6 +226,7 @@ article {
 }
 
 .related-content {
+	float: left;
 
 	.related-content-title {
 		@extend h2;
@@ -240,6 +238,7 @@ article {
 		float: left;
 		width: 180px;
 		margin-bottom: 60px;
+		margin-right: 60px;
 
 		.post-thumbnail {
 			display: block;
@@ -344,8 +343,126 @@ article {
 	}
 }
 
-/* WPM */
-.wpm-newsletter h3 {
+.comments-area {
+	margin-right: 60px;
+}
+
+.comments-title {
 	@extend h2;
-	font-size: 18px;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.comment-list {
+	list-style: none;
+	margin-left: 80px;
+
+	ul.children {
+		list-style: none;
+		margin-left: 80px;
+	}
+}
+
+.comment-meta {
+	position: relative;
+
+	.comment-author {
+		@extend h2;
+		font-size: 18px;
+		margin-bottom: 4px;
+
+		b {
+			font-weight: normal;
+			display: block;
+			margin-top: 5px;
+			font-style: normal;
+		}
+
+		.says {
+			display: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: $color-secondary;
+		}
+	}
+
+	img.avatar {
+		position: absolute;
+		left: -80px;
+		width: 60px;
+		height: 60px;
+	}
+
+	.comment-metadata {
+		@extend .entry-meta;
+		margin-bottom: 30px;
+	}
+}
+
+#respond {
+	label {
+		display: block;
+	}
+
+	.required {
+		color: darken( red, 5% );
+	}
+}
+
+.form-allowed-tags {
+	display: none;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button-primary {
+	background: $color-primary;
+	color: white;
+	border: none;
+	font-family: $font-regular;
+	font-size: 16px;
+	padding: 12px 20px;
+	cursor: pointer;
+
+	&:hover {
+		background: lighten( $color-primary, 5% );
+	}
+}
+
+.button,
+.button-secondary {
+	@extend .button-primary;
+	background: $color-secondary;
+
+	&:hover {
+		background: lighten( $color-secondary, 5% );
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	border: solid 1px rgba( $color-secondary, 0.3 );
+	padding: 8px;
+}
+
+/* WPM */
+.wpm-newsletter {
+	margin-right: 60px;
+
+	h3 {
+		@extend h2;
+		font-size: 18px;
+	}
+
+	p {
+		margin: 0;
+	}
 }
