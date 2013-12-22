@@ -9,7 +9,7 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
+	$content_width = 940; /* pixels */
 }
 
 if ( ! function_exists( 'kovkov_setup' ) ) :
@@ -101,6 +101,8 @@ add_action( 'widgets_init', 'kovkov_widgets_init' );
 function kovkov_scripts() {
 	wp_enqueue_style( 'kovkov-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'kovkov-genericons', get_template_directory_uri() . '/css/genericons.css', array(), '20131222' );
+
 	wp_enqueue_script( 'kovkov-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'kovkov-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -170,7 +172,7 @@ class Kovkov {
 	}
 
 	function body_class( $classes ) {
-		if ( is_front_page() || is_archive() )
+		if ( ! is_singular() )
 			$classes[] = 'grid';
 
 		return $classes;
@@ -354,3 +356,14 @@ function kovkov_get_related_posts() {
 	return new WP_Query( $args );
 }
 endif;
+
+add_action( 'kovkov_navigation_after', function() {
+	?>
+	<ul class="kovkov-social">
+		<li><a href="#" title="Twitter"><span class="genericon genericon-twitter"></span></a></li>
+		<li><a href="#" title="Facebook"><span class="genericon genericon-facebook"></span></a></li>
+		<li><a href="#" title="Google+"><span class="genericon genericon-googleplus"></span></a></li>
+		<li><a href="#" title="Feed"><span class="genericon genericon-feed"></span></a></li>
+	</ul>
+	<?php
+});
