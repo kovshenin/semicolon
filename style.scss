@@ -163,13 +163,10 @@ a, a:visited, a:link {
 }
 
 .page-description {
-	@extend h1;
 	margin: 0 0 60px 0;
-	font-size: 18px;
-	line-height: 1.5;
 	padding: 20px;
 	background: rgba( $color-secondary, 0.03 );
-	p { margin: 0; }
+	p { margin-bottom: 0; margin-top: 20px; }
 }
 
 .entry-title,
@@ -287,13 +284,9 @@ article.hentry {
 		display: block;
 	}
 
-	.wp-caption.alignnone .wp-caption-text {
+	.wp-caption.alignnone img.size-full + .wp-caption-text {
 		margin-left: -40px;
 	}
-}
-
-.wp-caption {
-
 }
 
 .related-content {

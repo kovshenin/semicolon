@@ -142,7 +142,9 @@ add_action( 'kovkov_header_after', function() {
 	if ( ! is_front_page() || is_paged() )
 		return;
 	?>
-	<div class="page-description"><p>WP Magazine — это онлайн журнал посвящённый системе управления контентом WordPress. Здесь вы найдёте много полезной информации, как для начинающих, так и для опытных разработчиков.</p></div>
+	<header class="page-header page-description">
+		<h1 class="page-title">WP Magazine — это онлайн журнал посвящённый системе управления контентом WordPress. Здесь вы найдёте много полезной информации, как для начинающих, так и для опытных разработчиков.</h1>
+	</header>
 	<?php
 });
 

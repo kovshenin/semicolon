@@ -39,8 +39,7 @@ h3,
 .comments-title,
 .comment-meta .comment-author,
 #respond #reply-title,
-.wpm-newsletter h3,
-.page-description, h2, h3, .site-title, .grid .page-title, .grid article.hentry.kovkov-featured .entry-title, .grid article.hentry .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpm-newsletter h3, h3, h4, h5, h6, p, blockquote, pre,
+.wpm-newsletter h3, h2, h3, .site-title, .grid .page-title, .grid article.hentry.kovkov-featured .entry-title, .grid article.hentry .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpm-newsletter h3, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -135,7 +134,7 @@ textarea {
   line-height: 1.5; }
 
 /* Headings */
-h1, h2, h3, .site-title, .grid .page-title, .grid article.hentry.kovkov-featured .entry-title, .grid article.hentry .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpm-newsletter h3, .page-description, h2, h3, .site-title, .grid .page-title, .grid article.hentry.kovkov-featured .entry-title, .grid article.hentry .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpm-newsletter h3, h3, h4, h5, h6 {
+h1, h2, h3, .site-title, .grid .page-title, .grid article.hentry.kovkov-featured .entry-title, .grid article.hentry .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpm-newsletter h3, h2, h3, .site-title, .grid .page-title, .grid article.hentry.kovkov-featured .entry-title, .grid article.hentry .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpm-newsletter h3, h3, h4, h5, h6 {
   clear: both; }
 
 hr {
@@ -601,7 +600,7 @@ body {
   background: #117bb8;
   color: white; }
 
-h1, h2, h3, .site-title, .grid .page-title, .grid article.hentry.kovkov-featured .entry-title, .grid article.hentry .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpm-newsletter h3, .page-description {
+h1, h2, h3, .site-title, .grid .page-title, .grid article.hentry.kovkov-featured .entry-title, .grid article.hentry .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpm-newsletter h3 {
   font-size: 44px;
   line-height: 1.3;
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
@@ -685,12 +684,11 @@ a, a:visited, a:link {
 
 .page-description {
   margin: 0 0 60px 0;
-  font-size: 18px;
-  line-height: 1.5;
   padding: 20px;
   background: rgba(58, 58, 58, 0.03); }
   .page-description p {
-    margin: 0; }
+    margin-bottom: 0;
+    margin-top: 20px; }
 
 .entry-title,
 .page-title {
@@ -765,7 +763,7 @@ article.hentry {
 .entry-content .wp-caption-text {
   margin-top: 10px;
   display: block; }
-.entry-content .wp-caption.alignnone .wp-caption-text {
+.entry-content .wp-caption.alignnone img.size-full + .wp-caption-text {
   margin-left: -40px; }
 
 .related-content {
