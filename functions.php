@@ -361,11 +361,11 @@ endif;
 
 add_action( 'kovkov_navigation_after', function() {
 	?>
-	<ul class="kovkov-social">
-		<li><a href="#" title="Twitter"><span class="genericon genericon-twitter"></span></a></li>
-		<li><a href="#" title="Facebook"><span class="genericon genericon-facebook"></span></a></li>
-		<li><a href="#" title="Google+"><span class="genericon genericon-googleplus"></span></a></li>
-		<li><a href="#" title="Feed"><span class="genericon genericon-feed"></span></a></li>
+	<ul class="kovkov-social social">
+		<li class="twitter"><a href="http://twitter.com/wpmagru" target="_blank" title="Twitter"><span class="genericon genericon-twitter"></span></a></li>
+		<li class="facebook"><a href="http://facebook.com/wpmagru" target="_blank" title="Facebook"><span class="genericon genericon-facebook"></span></a></li>
+		<li class="google-plus"><a href="https://plus.google.com/108553372817411783434?rel=author" target="_blank" title="Google+"><span class="genericon genericon-googleplus"></span></a></li>
+		<li class="feed"><a href="http://wpmag.ru/feed/" target="_blank" title="Feed"><span class="genericon genericon-feed"></span></a></li>
 	</ul>
 	<?php
 });

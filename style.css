@@ -819,6 +819,8 @@ article.hentry {
     background: #117bb8;
     color: white;
     min-height: 230px; }
+    .widget-area .sidebar-primary a {
+      color: white; }
   .widget-area .sidebar-secondary {
     background: rgba(58, 58, 58, 0.03); }
   .widget-area .widget-title {
@@ -943,3 +945,6 @@ textarea {
     font-size: 18px; }
   .wpm-newsletter p {
     margin: 0; }
+
+#disqus_thread {
+  margin-right: 60px; }
