@@ -208,6 +208,7 @@ class Kovkov {
 
 	public static function is_featured( $post_id = null ) {
 		$post = get_post( $post_id );
+		$featured = false;
 
 		if ( class_exists( 'Featured_Content' ) && method_exists( 'Featured_Content', 'get_setting' ) ) {
 			$tag_id = Featured_Content::get_setting( 'tag-id' );
