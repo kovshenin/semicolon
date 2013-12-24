@@ -27,11 +27,13 @@ and Blueprint http://www.blueprintcss.org/
 
 @import 'css/reset';
 @import 'css/underscores';
+@import 'css/respond';
 
 $font-headings: 'PT Serif', Georgia, 'Times New Roman', serif;
 $font-regular: 'Open Sans', Arial, sans-serif;
 $color-primary: #117bb8;
 $color-secondary: #3a3a3a;
+$debug: false;
 
 body {
 	background: white;
@@ -174,6 +176,8 @@ a, a:visited, a:link {
 	margin-top: 0;
 	padding-top: 0;
 	margin-bottom: 40px;
+
+	@if $debug { background: purple; }
 }
 
 pre {
@@ -188,14 +192,11 @@ pre {
 	font-size: 18px;
 }
 
-article.hentry {
-	margin-right: 60px;
-}
-
-.grid article.hentry {
+@mixin article-small {
 	float: left;
 	width: 180px;
 	margin-bottom: 60px;
+	margin-right: 60px;
 
 	.post-thumbnail {
 		display: block;
@@ -205,35 +206,27 @@ article.hentry {
 		width: 180px;
 		height: 180px;
 		background: rgba( $color-secondary, 0.03 );
-	}
+		text-align: center;
+		overflow: hidden;
 
-	&:nth-child(4n+5) {
-		clear: left;
-	}
-
-	&.kovkov-featured {
-		width: 420px;
-		.post-thumbnail {
-			width: 420px;
-			height: 230px;
+		span {
+			display: block;
+			width: 1000px;
+			margin-left: -1 * ( ( 1000px - 180px ) / 2 );
+			height: 100%;
 		}
 
-		.entry-title {
-			@extend h2;
-			padding-top: 0;
-			margin-top: 0;
-			margin-bottom: 0;
-
-			font-size: 24px;
+		img {
+			height: 100%;
+			width: auto;
+			max-width: none;
+			display: inline-block;
 		}
-	}
-
-	&.empty {
-		display: none;
 	}
 
 	.entry-title {
 		@extend h2;
+		width: 180px + 30px;
 
 		margin-top: 0;
 		padding-top: 0;
@@ -251,6 +244,37 @@ article.hentry {
 		.entry-title a {
 			@extend a:hover;
 		}
+	}
+
+	&.kovkov-last {
+		margin-right: 0;
+	}
+}
+
+@mixin article-large {
+	@include article-small;
+
+	width: 420px;
+	.post-thumbnail {
+		width: 420px;
+		height: 230px;
+
+		span {
+			margin-left: -1 * ( ( 1000px - 420px ) / 2 );
+		}
+	}
+
+	.entry-title {
+		width: 420px + 30px;
+		font-size: 24px;
+	}
+}
+
+.grid article.hentry {
+	@include article-small;
+
+	&.kovkov-featured {
+		@include article-large;
 	}
 }
 
@@ -297,43 +321,8 @@ article.hentry {
 		font-size: 18px;
 	}
 
-	/* @todo: mixin? */;
 	article {
-		float: left;
-		width: 180px;
-		margin-bottom: 60px;
-		margin-right: 60px;
-
-		.post-thumbnail {
-			display: block;
-			float: left;
-			clear: both;
-			margin-bottom: 20px;
-			width: 180px;
-			height: 180px;
-			background: rgba( $color-secondary, 0.03 );
-		}
-
-		.entry-title {
-			@extend h2;
-
-			margin-top: 0;
-			padding-top: 0;
-			margin-bottom: 0;
-			font-size: 18px;
-			a {
-				color: $color-secondary;
-				text-decoration: none;
-				margin-bottom: 10px;
-				display: block;
-			}
-		}
-
-		&:hover {
-			.entry-title a {
-				@extend a:hover;
-			}
-		}
+		@include article-small;
 	}
 }
 
@@ -348,10 +337,10 @@ article.hentry {
 }
 
 #primary {
-	width: 180px * 4 + 4 * 60;
+	width: 180px * 4 + 3 * 60;
 	float: left;
 	display: block;
-	/* background: #ccc; */
+	@if $debug { background: yellow; }
 }
 
 .widget-area {
@@ -409,10 +398,6 @@ article.hentry {
 			border-top-color: $color-secondary;
 		}
 	}
-}
-
-.comments-area {
-	margin-right: 60px;
 }
 
 .comments-title {
@@ -532,10 +517,13 @@ textarea {
 	margin: 40px 0;
 }
 
+.kovkov-clear-left {
+	clear: left;
+	@if $debug { background: red; }
+}
+
 /* WPM */
 .wpm-newsletter {
-	margin-right: 60px;
-
 	h3 {
 		@extend h2;
 		font-size: 18px;
@@ -547,5 +535,4 @@ textarea {
 }
 
 #disqus_thread {
-	margin-right: 60px;
 }

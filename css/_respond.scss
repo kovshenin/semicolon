@@ -1,0 +1,156 @@
+@media all and (max-width: 1380px) and (min-width: 1260px), (max-width: 1080px) and (min-width: 900px), (max-width: 720px) and (min-width: 640px), (max-width: 480px) {
+	body {
+		#page {
+			width: 1260px - 120px;
+		}
+
+		&.grid article.hentry {
+			width: 150px;
+
+			.post-thumbnail {
+				width: 180px - 30px;
+				height: 180px - 30px;
+
+				span {
+					margin-left: -1 * ( ( 1000px - ( 180px - 30px ) ) / 2 );
+				}
+			}
+
+			&.kovkov-featured {
+				width: 420px - 60px;
+
+				.post-thumbnail {
+					width: 420px - 60px;
+					height: 230px * ( ( 420 - 60 ) / 420 );
+
+					span {
+						margin-left: -1 * ( ( 1000px - ( 420px - 60px ) ) / 2 );
+					}
+				}
+
+				.entry-title {
+					width: 420px - 60px + 30px;
+				}
+			}
+
+			.entry-title {
+				width: 150px + 30px;
+			}
+		}
+
+		.related-content article {
+			width: 150px;
+
+			.post-thumbnail,
+			.post-thumbnail img {
+				width: 180px - 30px;
+				height: 180px - 30px;
+			}
+
+			.entry-title {
+				width: 150px + 30px;
+			}
+		}
+
+		#primary {
+			width: 900px - 120px;
+		}
+
+		.entry-content {
+			img.size-full,
+			iframe {
+				max-width: 940px - 120px;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 1259px) {
+	body {
+		#page,
+		.paging-navigation {
+			width: 1260px - 360px;
+		}
+		#primary {
+			width: 1260px - 360px;
+		}
+		#secondary {
+			display: none;
+		}
+	}
+}
+
+@media all and (max-width: 1080px) {
+	body {
+		#page,
+		.paging-navigation {
+			width: 1260px - 480px;
+		}
+		#primary {
+			width: 1260px - 480px;
+		}
+		.grid .site-content {
+		}
+	}
+}
+
+@media all and (max-width: 899px) {
+	body {
+		padding: 0 60px;
+
+		#page,
+		#primary,
+		.paging-navigation {
+			width: 100%;
+		}
+
+		.entry-content {
+			img.size-full,
+			iframe,
+			.wp-caption.alignnone img.size-full + .wp-caption-text {
+				max-width: 100%;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 780px) {
+	body {
+		padding: 0 20px;
+	}
+}
+
+@media all and (max-width: 640px) {
+	body {
+
+		/* Sorry iPhone 3 users */
+		min-width: 420px;
+
+		&.grid article.hentry {
+			max-width: 100%;
+
+			.post-thumbnail,
+			.post-thumbnail img {
+				max-width: 100%;
+			}
+
+			&.kovkov-featured {
+				max-width: 100%;
+
+				.post-thumbnail,
+				.post-thumbnail img {
+					max-width: 100%;
+				}
+
+				.entry-title {
+					/*max-width: 100%;*/
+				}
+			}
+
+			.entry-title {
+				/*max-width: 100%;*/
+			}
+		}
+	}
+}
