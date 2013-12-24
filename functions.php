@@ -192,7 +192,7 @@ class Kovkov {
 
 		$jetpack_featured_posts = apply_filters( 'kovkov_get_featured_posts', false );
 		if ( ! empty( $jetpack_featured_posts ) )
-			$featured_posts = array_map( 'absint', wp_list_filter( $jetpack_featured_posts, 'ID' ) );
+			$featured_posts = array_map( 'absint', wp_list_pluck( $jetpack_featured_posts, 'ID' ) );
 		else
 			$featured_posts = (array) get_option( 'sticky_posts' );
 
@@ -209,13 +209,15 @@ class Kovkov {
 	public static function is_featured( $post_id = null ) {
 		$post = get_post( $post_id );
 
-		$sticky_posts = (array) get_option( 'sticky_posts' );
-		$featured = in_array( $post->ID, $sticky_posts );
+		if ( class_exists( 'Featured_Content' ) && method_exists( 'Featured_Content', 'get_setting' ) ) {
+			$tag_id = Featured_Content::get_setting( 'tag-id' );
+			$post_tags = wp_get_object_terms( $post->ID, 'post_tag' );
 
-		if ( ! empty( $_GET['boom'] ) ) {
-			if ( class_exists( 'Featured_Content' ) && method_exists( 'Featured_Content', 'get_setting' ) ) {
-				$tag_id = Featured_Content::get_setting( 'tag-id' );
-			}
+			if ( in_array( absint( $tag_id ), wp_list_pluck( $post_tags, 'term_id' ) ) )
+				$featured = true;
+		} else {
+			$sticky_posts = (array) get_option( 'sticky_posts' );
+			$featured = in_array( $post->ID, $sticky_posts );
 		}
 
 		return $featured;
