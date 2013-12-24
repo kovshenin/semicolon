@@ -1171,7 +1171,7 @@ textarea {
 
 .site-title a {
   background: url("http://wpmag.ru/files/2013/12/wordpress-magazine-k.png") 0 0 no-repeat;
-  text-indent: -5000px;
+  text-indent: -15000px;
   display: inline-block;
   width: 224px;
   height: 75px; }
@@ -1183,3 +1183,9 @@ textarea {
   margin-bottom: 0; }
   .sidebar-primary aside:last-child p:last-child {
     margin-bottom: 0; }
+
+.yandex-share .b-share {
+  margin-left: -4px; }
+
+.page-id-3157 #secondary {
+  display: none; }
