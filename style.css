@@ -566,7 +566,7 @@ object {
 /* =Widgets
 ----------------------------------------------- */
 .widget {
-  margin: 0 0 1.5em; }
+  /*margin: 0 0 1.5em;*/ }
 
 /* Make sure select elements fit in widgets */
 .widget select {
@@ -1022,6 +1022,10 @@ pre {
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 20px; }
+  .widget-area .widget {
+    margin-bottom: 60px; }
+    .widget-area .widget:last-child {
+      margin-bottom: 0; }
 
 .home .widget-area .sidebar-primary {
   min-height: 230px; }
