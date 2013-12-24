@@ -2,8 +2,9 @@ var kovkov = kovkov || {};
 
 (function($){
 
-	var columns = 4,
-		selectors = [ $('#primary article.hentry'), $('.related-content article') ];
+	var columns = 0,
+		selectors = [ $('#primary article.hentry'), $('.related-content article') ],
+		$window = $(window);
 
 	kovkov.drawGrid = function(redraw) {
 		$.each(selectors, function(i, $entries) {
@@ -46,9 +47,7 @@ var kovkov = kovkov || {};
 		});
 	};
 
-	kovkov.drawGrid();
-
-	$(window).on('resize', function(){
+	$window.on('resize', function(){
 		var columns_old = columns,
 			width = $('#primary').width();
 
@@ -66,5 +65,7 @@ var kovkov = kovkov || {};
 		if (columns_old !== columns)
 			kovkov.drawGrid(true);
 	});
+
+	$window.trigger('resize');
 
 }(jQuery));
