@@ -762,6 +762,59 @@ a, a:visited, a:link {
   .main-navigation .kovkov-social span {
     font-size: 20px;
     width: 20px; }
+  .main-navigation .menu-toggle {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: -1px;
+    margin-bottom: 0;
+    padding: 20px 0;
+    border-top: solid 4px transparent; }
+    .main-navigation .menu-toggle:before {
+      display: inline-block;
+      font-weight: normal;
+      font-family: Genericons;
+      content: '\f419';
+      font-size: 16px;
+      line-height: 20px;
+      padding-right: 10px;
+      -webkit-font-smoothing: antialiased;
+      vertical-align: top; }
+  .main-navigation.toggled .current_page_item a,
+  .main-navigation.toggled .current-menu-item a,
+  .main-navigation.toggled .current-post-ancestor a,
+  .main-navigation.toggled .current-menu-ancestor a,
+  .main-navigation.toggled .current-menu-parent a,
+  .main-navigation.toggled .current-post-parent a {
+    border-top-color: transparent;
+    position: relative; }
+    .main-navigation.toggled .current_page_item a:before,
+    .main-navigation.toggled .current-menu-item a:before,
+    .main-navigation.toggled .current-post-ancestor a:before,
+    .main-navigation.toggled .current-menu-ancestor a:before,
+    .main-navigation.toggled .current-menu-parent a:before,
+    .main-navigation.toggled .current-post-parent a:before {
+      display: inline-block;
+      font-weight: normal;
+      font-family: Genericons;
+      content: '\f452';
+      font-size: 16px;
+      line-height: 22px;
+      -webkit-font-smoothing: antialiased;
+      vertical-align: top;
+      position: absolute;
+      left: 0px; }
+  .main-navigation.toggled ul.menu {
+    border-bottom: solid 1px rgba(58, 58, 58, 0.1); }
+  .main-navigation.toggled li {
+    display: block;
+    float: none;
+    clear: left; }
+    .main-navigation.toggled li a {
+      padding: 12px 26px; }
+  .main-navigation.toggled .menu-toggle {
+    border-top-color: #3a3a3a;
+    border-bottom: solid 1px rgba(58, 58, 58, 0.1); }
 
 .page-description {
   margin: 0 0 60px 0;
