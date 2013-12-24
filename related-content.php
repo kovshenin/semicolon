@@ -19,7 +19,7 @@ $related_posts = kovkov_get_related_posts();
 
 		<article id="post-<?php the_ID(); ?>">
 			<header class="entry-header">
-				<a class="post-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+				<a class="post-thumbnail" href="<?php the_permalink(); ?>"><span><?php the_post_thumbnail(); ?></span></a>
 				<h3 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 
 				<div class="entry-meta">

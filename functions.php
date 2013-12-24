@@ -371,3 +371,12 @@ add_action( 'kovkov_navigation_after', function() {
 	</ul>
 	<?php
 });
+
+// Maybe next time?
+/*add_filter( 'the_title', function( $title ) {
+	$pos = strrpos( $title, ' ' );
+	if ( $pos !== false )
+		$title = substr_replace( $title, '&nbsp;', $pos, 1 );
+
+	return $title;
+});*/
