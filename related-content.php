@@ -4,7 +4,7 @@
  */
 do_action( 'kovkov_related_posts_before' );
 ?>
-<div class="wpm-newsletter">
+<div class="wpmag-content-newsletter">
 	<h3>Подписаться на рассылку</h3>
 	<p>
 		<a class="button-primary alignright" href="http://wpmag.ru/subscribe/" target="_blank">Подписаться &rarr; </a>

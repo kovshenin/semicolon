@@ -39,7 +39,7 @@ h3,
 .comments-title,
 .comment-meta .comment-author,
 #respond #reply-title,
-.wpm-newsletter h3, h2, h3, .site-title, .grid .page-title, .grid article.hentry .entry-title, .grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpm-newsletter h3, h3, h4, h5, h6, p, blockquote, pre,
+.wpmag-content-newsletter h3, h2, h3, .site-title, .grid .page-title, .grid article.hentry .entry-title, .grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpmag-content-newsletter h3, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -134,7 +134,7 @@ textarea {
   line-height: 1.5; }
 
 /* Headings */
-h1, h2, h3, .site-title, .grid .page-title, .grid article.hentry .entry-title, .grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpm-newsletter h3, h2, h3, .site-title, .grid .page-title, .grid article.hentry .entry-title, .grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpm-newsletter h3, h3, h4, h5, h6 {
+h1, h2, h3, .site-title, .grid .page-title, .grid article.hentry .entry-title, .grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpmag-content-newsletter h3, h2, h3, .site-title, .grid .page-title, .grid article.hentry .entry-title, .grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpmag-content-newsletter h3, h3, h4, h5, h6 {
   clear: both; }
 
 hr {
@@ -736,7 +736,7 @@ body {
   background: #117bb8;
   color: white; }
 
-h1, h2, h3, .site-title, .grid .page-title, .grid article.hentry .entry-title, .grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpm-newsletter h3 {
+h1, h2, h3, .site-title, .grid .page-title, .grid article.hentry .entry-title, .grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpmag-content-newsletter h3 {
   font-size: 44px;
   line-height: 1.3;
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
@@ -746,7 +746,7 @@ h1, h2, h3, .site-title, .grid .page-title, .grid article.hentry .entry-title, .
   margin-bottom: 20px;
   /* font-size: 24px; */ }
 
-h2, h3, .site-title, .grid .page-title, .grid article.hentry .entry-title, .grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpm-newsletter h3 {
+h2, h3, .site-title, .grid .page-title, .grid article.hentry .entry-title, .grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpmag-content-newsletter h3 {
   font-size: 28px;
   line-height: 1.5; }
 
@@ -1164,9 +1164,9 @@ textarea {
   clear: left; }
 
 /* WPM */
-.wpm-newsletter h3 {
+.wpmag-content-newsletter h3 {
   font-size: 18px; }
-.wpm-newsletter p {
+.wpmag-content-newsletter p {
   margin: 0; }
 
 .site-title a {
