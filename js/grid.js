@@ -12,7 +12,7 @@ var kovkov = kovkov || {};
 			$entries.each(function(i,el){
 				var $el = $(el);
 
-				console.log($el);
+				// console.log($el);
 
 				// Reset featured and clear states when rendrawing.
 				if (redraw) {
@@ -51,7 +51,7 @@ var kovkov = kovkov || {};
 		var columns_old = columns,
 			width = $('#primary').width();
 
-		console.log(width);
+		// console.log(width);
 
 		if (width < 600)
 			columns = columns !== 2 ? 2 : columns;

@@ -188,12 +188,19 @@ class Kovkov {
 	}
 
 	function get_featured_posts() {
-		$sticky_posts = get_option( 'sticky_posts' );
-		if ( empty( $sticky_posts ) )
+		$featured_posts = array();
+
+		$jetpack_featured_posts = apply_filters( 'kovkov_get_featured_posts', false );
+		if ( ! empty( $jetpack_featured_posts ) )
+			$featured_posts = array_map( 'absint', wp_list_filter( $jetpack_featured_posts, 'ID' ) );
+		else
+			$featured_posts = (array) get_option( 'sticky_posts' );
+
+		if ( empty( $featured_posts ) )
 			return new WP_Query;
 
 		return new WP_Query( array(
-			'post__in' => (array) get_option( 'sticky_posts' ),
+			'post__in' => $featured_posts,
 			'posts_per_page' => 2,
 			'ignore_sticky_posts' => true,
 		) );
@@ -201,8 +208,15 @@ class Kovkov {
 
 	public static function is_featured( $post_id = null ) {
 		$post = get_post( $post_id );
+
 		$sticky_posts = (array) get_option( 'sticky_posts' );
 		$featured = in_array( $post->ID, $sticky_posts );
+
+		if ( ! empty( $_GET['boom'] ) ) {
+			if ( class_exists( 'Featured_Content' ) && method_exists( 'Featured_Content', 'get_setting' ) ) {
+				$tag_id = Featured_Content::get_setting( 'tag-id' );
+			}
+		}
 
 		return $featured;
 	}
