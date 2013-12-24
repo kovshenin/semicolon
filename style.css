@@ -1097,9 +1097,13 @@ input[type="submit"],
 .button-primary,
 .button,
 .button-secondary,
+.wpm-button,
+.wpm-button-primary,
 a.button-primary,
 a.button,
-a.button-secondary {
+a.button-secondary,
+a.wpm-button,
+a.wpm-button-primary {
   background: #117bb8;
   color: white;
   border: none;
@@ -1115,23 +1119,33 @@ a.button-secondary {
   .button-primary:hover,
   .button:hover,
   .button-secondary:hover,
+  .wpm-button:hover,
+  .wpm-button-primary:hover,
   a.button-primary:hover,
   .grid article.hentry:hover .entry-title a.button-primary,
   .grid article.hentry:hover .entry-title a.button,
   .grid article.hentry:hover .entry-title a.button-secondary,
+  .grid article.hentry:hover .entry-title a.wpm-button,
+  .grid article.hentry:hover .entry-title a.wpm-button-primary,
   .related-content article:hover .entry-title a.button-primary,
   .related-content article:hover .entry-title a.button,
   .related-content article:hover .entry-title a.button-secondary,
+  .related-content article:hover .entry-title a.wpm-button,
+  .related-content article:hover .entry-title a.wpm-button-primary,
   a.button:hover,
-  a.button-secondary:hover {
+  a.button-secondary:hover,
+  a.wpm-button:hover,
+  a.wpm-button-primary:hover {
     background: #138bcf;
     color: white; }
 
 .button,
-.button-secondary {
+.button-secondary,
+.wpm-button {
   background: #3a3a3a; }
   .button:hover,
-  .button-secondary:hover {
+  .button-secondary:hover,
+  .wpm-button:hover {
     background: #474747; }
 
 input[type="text"],

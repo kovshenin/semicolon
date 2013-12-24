@@ -33,3 +33,11 @@
 		}
 	}
 }
+
+.wpm-button-primary {
+	@extend .button-primary;
+}
+
+.wpm-button {
+	@extend .button-secondary;
+}
