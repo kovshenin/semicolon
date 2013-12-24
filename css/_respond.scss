@@ -41,10 +41,13 @@
 		.related-content article {
 			width: 150px;
 
-			.post-thumbnail,
-			.post-thumbnail img {
+			.post-thumbnail {
 				width: 180px - 30px;
 				height: 180px - 30px;
+
+				span {
+					margin-left: -1 * ( ( 1000px - ( 180px - 30px ) ) / 2 );
+				}
 			}
 
 			.entry-title {

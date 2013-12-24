@@ -611,10 +611,11 @@ object {
       width: 180px; }
   body .related-content article {
     width: 150px; }
-    body .related-content article .post-thumbnail,
-    body .related-content article .post-thumbnail img {
+    body .related-content article .post-thumbnail {
       width: 150px;
       height: 150px; }
+      body .related-content article .post-thumbnail span {
+        margin-left: -425px; }
     body .related-content article .entry-title {
       width: 180px; }
   body #primary {
