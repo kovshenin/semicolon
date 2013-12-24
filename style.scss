@@ -356,7 +356,6 @@ pre {
 	.sidebar-primary {
 		background: $color-primary;
 		color: white;
-		min-height: 230px;
 
 		a {
 			color: white;
@@ -374,6 +373,10 @@ pre {
 		padding-top: 0;
 		margin-bottom: 20px;
 	}
+}
+
+.home .widget-area .sidebar-primary {
+	min-height: 230px;
 }
 
 .paging-navigation {
@@ -478,7 +481,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.button-primary {
+.button-primary,
+a.button-primary {
 	background: $color-primary;
 	color: white;
 	border: none;
@@ -486,9 +490,11 @@ input[type="submit"],
 	font-size: 16px;
 	padding: 12px 20px;
 	cursor: pointer;
+	text-decoration: none;
 
 	&:hover {
 		background: lighten( $color-primary, 5% );
+		color: white;
 	}
 }
 

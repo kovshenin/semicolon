@@ -12,3 +12,24 @@
 
 #disqus_thread {
 }
+
+.site-title a {
+	background: url('http://wpmag.ru/files/2013/12/wordpress-magazine-k.png') 0 0 no-repeat;
+	text-indent: -5000px;
+	display: inline-block;
+	width: 224px;
+	height: 75px;
+}
+
+.site-description {
+	display: none;
+}
+
+.sidebar-primary {
+	aside:last-child {
+		margin-bottom: 0;
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

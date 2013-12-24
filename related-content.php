@@ -6,7 +6,10 @@ do_action( 'kovkov_related_posts_before' );
 ?>
 <div class="wpm-newsletter">
 	<h3>Подписаться на рассылку</h3>
-	<p>Подпишитесь на бесплатную рассылку журнала WP Magazine и получайте новости, события, подборки бесплатных тем и плагинов, уроки и советы по работе с WordPress и многое другое!</p>
+	<p>
+		<a class="button-primary alignright" href="http://wpmag.ru/subscribe/" target="_blank">Подписаться &rarr; </a>
+		Подпишитесь на бесплатную рассылку журнала WP Magazine и получайте новости, события, подборки тем и плагинов, уроки, советы и многое другое в мире WordPress!
+	</p>
 </div>
 <?php
 $related_posts = kovkov_get_related_posts();

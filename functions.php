@@ -151,8 +151,6 @@ add_action( 'kovkov_header_after', function() {
 });
 
 class Kovkov {
-	public $unfeature;
-
 	private function __construct() {}
 
 	public static function get_instance() {
@@ -205,9 +203,6 @@ class Kovkov {
 		$post = get_post( $post_id );
 		$sticky_posts = (array) get_option( 'sticky_posts' );
 		$featured = in_array( $post->ID, $sticky_posts );
-
-		if ( ! empty( self::get_instance()->unfeature ) && in_array( $post->ID, self::get_instance()->unfeature ) )
-			$featured = false;
 
 		return $featured;
 	}
@@ -262,42 +257,6 @@ class Kovkov {
 				}
 			}
 		}
-
-		// Unstick some stickies!
-		$unfeature = array();
-		$count = 0;
-		foreach ( $posts as $post ) {
-			$increment = self::is_featured( $post->ID ) ? 2 : 1;
-			$count += $increment;
-
-			// Useful for debugging
-			// $post->post_title .= $count % 4;
-
-			if ( $count <= 4 || ! self::is_featured( $post->ID ) )
-				continue;
-
-			/*
-			 * Let me explain. Our main grid can contain up to four posts, but featured
-			 * posts tend to take up two spaces instead of one. Only the two latest
-			 * featured posts are pushed to the top, the others are scattered within
-			 * the rest, so here's what we do.
-			 *
-			 * Let's number our spaces, 1 is the first, 4 or 0 is the last space. If
-			 * a post is featured, we check its ending position. We know it takes up two spaces
-			 * so if it ended on space number 1, it means that it started on space number 4,
-			 * meaning it will wrap, creating an orphaned space. Yuck! So we unfeature it and
-			 * display it as if it weren't featured at all, better luck next time!
-			 *
-			 * If it's anything other than space #1, we can safely render it on two spaces.
-			 * Let's also unfeature the last post in a set.
-			 */
-			if ( $count % 4 == 1 || end( $posts ) === $post ) {
-				// $unfeature[] = $post->ID;
-				$count--;
-			}
-		}
-
-		$this->unfeature = $unfeature;
 
 		return $posts;
 	}
