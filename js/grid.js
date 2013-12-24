@@ -27,9 +27,11 @@ var kovkov = kovkov || {};
 				}
 
 				// Unfeature a post if it's about to be rendered in the last column position
-				// because it won't fit and wrap instead.
-				if ($el.hasClass('kovkov-featured') && count % columns === columns - 1) {
-					$el.removeClass('kovkov-featured').addClass('kovkov-featured-removed');
+				// because it won't fit and wrap instead. Also unfeature the last item on the list.
+				if ($el.hasClass('kovkov-featured')) {
+					if (count % columns === columns - 1 || i == $entries.length - 1) {
+						$el.removeClass('kovkov-featured').addClass('kovkov-featured-removed');
+					}
 				}
 
 				count += 1;
