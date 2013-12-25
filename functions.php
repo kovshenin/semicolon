@@ -263,6 +263,10 @@ class Kovkov {
 				$featured = $this->get_featured_posts();
 
 				if ( $featured->have_posts() ) {
+
+					// Since we're going to unshif these, we'll need them in reverse order.
+					$featured->posts = array_reverse( $featured->posts );
+
 					foreach ( $featured->posts as $post ) {
 						array_unshift( $posts, $post );
 					}
