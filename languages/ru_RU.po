@@ -1,0 +1,383 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Expound\n"
+"POT-Creation-Date: 2013-12-25 20:11+0400\n"
+"PO-Revision-Date: 2013-12-25 20:14+0400\n"
+"Last-Translator: Konstantin Kovshenin <kovshenin@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _n:1,2;_;gettext;gettext_noop;__;_e;_x;esc_attr_e;"
+"_nx:1,2,4c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Страница не найдена."
+
+#: ../404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Страница не найдена. Попробуйте воспользоваться ссылками ниже или поиском."
+
+#: ../404.php:27
+msgid "Most Used Categories"
+msgstr "Популярные рубрики"
+
+#: ../404.php:44
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Посмотрите в архивах по месяцам. %1$s"
+
+#: ../comments.php:29
+#, php-format
+msgid "1 comment"
+msgid_plural "%s comments"
+msgstr[0] "%s комментарий"
+msgstr[1] "%s комментария"
+msgstr[2] "%s комментариев"
+
+#: ../comments.php:34 ../comments.php:51
+msgid "Comment navigation"
+msgstr "Навигация"
+
+#: ../comments.php:35 ../comments.php:52
+msgid "&larr; Older Comments"
+msgstr "&larr; Старые комментарии"
+
+#: ../comments.php:36 ../comments.php:53
+msgid "Newer Comments &rarr;"
+msgstr "Новые комментарии &rarr;"
+
+#: ../comments.php:63
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: ../content-none.php:13
+msgid "Nothing Found"
+msgstr "Не найдено"
+
+#: ../content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Готовы опубликовать вашу первую запись? <a href=\"%1$s\">Начните здесь</a>."
+
+#: ../content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "Ничего не найдено по вашему запросу. Попробуйте другие ключевые слова."
+
+#: ../content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Ничего не найдено, попробуйте воспользоваться поиском."
+
+#: ../content-page.php:18 ../content-single.php:14
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: ../content-single.php:23 ../content-single.php:26
+msgid ", "
+msgstr ", "
+
+#: ../content-single.php:32
+#, php-format
+msgid "%1$s in %2$s"
+msgstr "%1$s в рубрике %2$s"
+
+#: ../content-single.php:38 ../index.php:24
+#, php-format
+msgid "Tagged: %s"
+msgstr "Метки: %s"
+
+#: ../functions.php:48
+msgid "Primary Menu"
+msgstr "Основное меню"
+
+#: ../functions.php:70
+msgid "Primary"
+msgstr "Первая"
+
+#: ../functions.php:79
+msgid "Secondary"
+msgstr "Вторая"
+
+#: ../functions.php:88
+msgid "Tertiary"
+msgstr "Третья"
+
+#: ../header.php:31
+msgid "Menu"
+msgstr "Меню"
+
+#: ../header.php:32
+msgid "Skip to content"
+msgstr "Перейти к содержимому"
+
+#: ../index.php:27
+#, php-format
+msgid "Author: %s"
+msgstr "Автор: %s"
+
+#: ../index.php:30
+#, php-format
+msgid "Day: %s"
+msgstr "День: %s"
+
+#: ../index.php:33
+#, php-format
+msgid "Month: %s"
+msgstr "Месяц: %s"
+
+#: ../index.php:33
+msgid "F Y"
+msgstr "F Y"
+
+#: ../index.php:36
+#, php-format
+msgid "Year: %s"
+msgstr "Год: %s"
+
+#: ../index.php:36
+msgid "Y"
+msgstr "Y"
+
+#: ../index.php:39
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результаты поиска: %s"
+
+#: ../index.php:42
+msgid "Archives"
+msgstr "Архивы"
+
+#: ../related-content.php:19
+msgid "Related posts"
+msgstr "Читайте также"
+
+#: ../inc/extras.php:63
+#, php-format
+msgid "Page %s"
+msgstr "Страница %s"
+
+#: ../inc/template-tags.php:26
+msgid "Post navigation"
+msgstr "Навигация"
+
+#: ../inc/template-tags.php:29
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr "<span class=\"meta-nav\">&larr;</span> %title"
+
+#: ../inc/template-tags.php:30
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:77
+#, php-format
+msgid "%s min ago"
+msgid_plural "%s mins ago"
+msgstr[0] "%s минуту назад"
+msgstr[1] "%s минуты назад"
+msgstr[2] "%s минут назад"
+
+#: ../inc/template-tags.php:82
+#, php-format
+msgid "%s hour ago"
+msgid_plural "%s hours ago"
+msgstr[0] "%s час назад"
+msgstr[1] "%s часа назад"
+msgstr[2] "%s часов назад"
+
+#: ../inc/template-tags.php:87
+#, php-format
+msgid "%s day ago"
+msgid_plural "%s days ago"
+msgstr[0] "%s день назад"
+msgstr[1] "%s дня назад"
+msgstr[2] "%s дней назад"
+
+#: ../inc/template-tags.php:92
+#, php-format
+msgid "%s week ago"
+msgid_plural "%s weeks ago"
+msgstr[0] "%s неделю назад"
+msgstr[1] "%s недели назад"
+msgstr[2] "%s недель назад"
+
+#: ../inc/template-tags.php:97
+#, php-format
+msgid "%s month ago"
+msgid_plural "%s months ago"
+msgstr[0] "%s месяц назад"
+msgstr[1] "%s месяца назад"
+msgstr[2] "%s месяцев назад"
+
+#: ../inc/template-tags.php:102
+#, php-format
+msgid "%s year ago"
+msgid_plural "%s years ago"
+msgstr[0] "%s год назад"
+msgstr[1] "%s года назад"
+msgstr[2] "%s лет назад"
+
+#: ../inc/template-tags.php:181
+msgid "&larr;"
+msgstr "&larr;"
+
+#: ../inc/template-tags.php:182
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: ../inc/template-tags.php:189
+msgid "Posts navigation"
+msgstr "Навигация"
+
+#~ msgctxt "comments title"
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "<!-- %1$s -->Один комментарий к записи &laquo;%2$s&raquo;"
+#~ msgstr[1] "%1$s комментария к записи &laquo;%2$s&raquo;"
+#~ msgstr[2] "%1$s комментариев к записи &laquo;%2$s&raquo;"
+
+#~ msgid "Permalink to %s"
+#~ msgstr "Ссылка на %s"
+
+#~ msgid "Continue reading &rarr;"
+#~ msgstr "Читать далее &rarr;"
+
+#~ msgid "Sidebar"
+#~ msgstr "Боковая колонка"
+
+#~ msgid "Proudly powered by %s"
+#~ msgstr "Работает на %s"
+
+#~ msgid "Theme: %1$s by %2$s"
+#~ msgstr "Тема: %1$s, автор: %2$s"
+
+#~ msgid ""
+#~ "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post "
+#~ "a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s"
+#~ "\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</"
+#~ "a>."
+#~ msgstr ""
+#~ "<a class=\"comment-link\" href=\"#respond\" title=\"Оставить комментарийt"
+#~ "\">Напишите комментарий</a> или оставьте трэкбэк: <a class=\"trackback-"
+#~ "link\" href=\"%s\" title=\"Адрес трэкбэк для вашей записи\" rel="
+#~ "\"trackback\">адрес трэкбэк</a>."
+
+#~ msgid ""
+#~ "Comments are closed, but you can leave a trackback: <a class=\"trackback-"
+#~ "link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+#~ "\">Trackback URL</a>."
+#~ msgstr ""
+#~ "Коментирование закрыто, но вы можете оставить трэкбэк: <a class="
+#~ "\"trackback-link\" href=\"%s\" title=\"Адрес трэкбэк для вашей записи\" "
+#~ "rel=\"trackback\">адрес трэкбэк</a>."
+
+#~ msgid ""
+#~ "Trackbacks are closed, but you can <a class=\"comment-link\" href="
+#~ "\"#respond\" title=\"Post a comment\">post a comment</a>."
+#~ msgstr ""
+#~ "Трэкбэки закрыты, новы можете <a class=\"comment-link\" href=\"#respond\" "
+#~ "title=\"Написать комментарий\">оставить комментарий</a>."
+
+#~ msgid "Both comments and trackbacks are currently closed."
+#~ msgstr "Комментарии закрыты."
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgid "Tag Archives: %s"
+#~ msgstr "Архивы метки: %s"
+
+#~ msgid "Daily Archives: %s"
+#~ msgstr "Архивы по дням: %s"
+
+#~ msgid "Yearly Archives: %s"
+#~ msgstr "Архивы по годам: %s"
+
+#~ msgid ""
+#~ "Thank you for using Expound! If you like the theme, please consider "
+#~ "giving it a <a target=\"_blank\" href=\"%s\">high rating on WordPress."
+#~ "org</a>. Thank you! <a href=\"%s\">(hide this message)</a>"
+#~ msgstr ""
+#~ "Спасибо за использование темы Expound! Если она вам понравилась, не "
+#~ "забудьте оценить её на <a target=\"_blank\" href=\"%s\">WordPress.org</"
+#~ "a>. Спасибо! <a href=\"%s\">(спрятать сообщение)</a>"
+
+#~ msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+#~ msgstr "<span class=\"meta-nav\">&larr;</span> Старые записи"
+
+#~ msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "Новые записи <span class=\"meta-nav\">&rarr;</span>"
+
+#~ msgid "Pingback:"
+#~ msgstr "Пингбэк:"
+
+#~ msgid "Edit"
+#~ msgstr "Редактировать"
+
+#~ msgid "%s <span class=\"says\">says:</span>"
+#~ msgstr "%s <span class=\"says\">сказал(а):</span>"
+
+#~ msgid "Your comment is awaiting moderation."
+#~ msgstr "Ваш комментарий ожидает модерации."
+
+#~ msgid "%1$s at %2$s"
+#~ msgstr "%1$s в %2$s"
+
+#~ msgid "%1$s / %2$s"
+#~ msgstr "%1$s / %2$s"
+
+#~ msgid "ago"
+#~ msgstr "назад"
+
+#~ msgid "Tags: "
+#~ msgstr "Метки: "
+
+#~ msgid "Singular"
+#~ msgid_plural "Plural"
+#~ msgstr[0] "Один"
+#~ msgstr[1] "Два"
+#~ msgstr[2] "Пять"
+
+#~ msgid "Meta"
+#~ msgstr "Мета"
+
+#~ msgid "&larr; Previous"
+#~ msgstr "&larr; Назад"
+
+#~ msgid "Next &rarr;"
+#~ msgstr "Вперёд &rarr;"
+
+#~ msgid "Search"
+#~ msgstr "Поиск"
+
+#~ msgid "Search &hellip;"
+#~ msgstr "Поиск &hellip;"
+
+#~ msgid "(Edit)"
+#~ msgstr "(Редактировать)"
+
+#~ msgid "Posted in %1$s"
+#~ msgstr "Опубликовано в %1$s"
+
+#~ msgid "Leave a comment"
+#~ msgstr "Оставить комментарий"
+
+#~ msgid "% Comments"
+#~ msgstr "Комментариев: %"
+
+#~ msgid "Category Archives: %s"
+#~ msgstr "Архивы рубрики: %s"

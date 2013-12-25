@@ -26,6 +26,14 @@ var kovkov = kovkov || {};
 						$el.removeClass('kovkov-last');
 				}
 
+				/**
+				 * @todo: More featured-unfeatured ideas:
+				 *
+				 * Don't print more than one featured post per row except the first row. Maybe
+				 * don't print featured posts in two consequent rows, so there will always be
+				 * at least one row with 4 non-featured posts in between ones that contain feats.
+				 */
+
 				// Unfeature a post if it's about to be rendered in the last column position
 				// because it won't fit and wrap instead. Also unfeature the last item on the list.
 				if ($el.hasClass('kovkov-featured')) {
