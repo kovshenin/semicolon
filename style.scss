@@ -287,10 +287,13 @@ pre {
 	}
 
 	img.size-full {
-		margin-left: -40px;
 		max-width: 940px;
 		margin-top: 20px;
 		margin-bottom: 20px;
+
+		&.alignnone {
+			margin-left: -40px;
+		}
 	}
 
 	.wp-caption img.size-full {
