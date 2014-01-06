@@ -949,7 +949,8 @@ pre {
 .entry-content .wp-caption-text {
   margin-top: 10px;
   display: block; }
-.entry-content .wp-caption.alignnone img.size-full + .wp-caption-text {
+.entry-content .wp-caption.alignnone img.size-full + .wp-caption-text,
+.entry-content .wp-caption.alignnone img.size-full {
   margin-left: -40px; }
 
 .related-content {
