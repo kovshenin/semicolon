@@ -981,6 +981,8 @@ pre {
     width: 260px; }
   .entry-content .gallery.gallery-columns-4 .gallery-item {
     width: 180px; }
+  .entry-content .gallery > br + br {
+    display: none; }
 
 .related-content {
   float: left; }
