@@ -49,3 +49,14 @@
 .page-id-3157 #secondary {
 	display: none;
 }
+
+/* HiDPI */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5) {
+        .site-title a {
+        	background-image: url('http://wpmag.ru/files/2014/01/wordpress-magazine-logo-hidpi.png');
+        	background-size: 224px 75px;
+        }
+}
