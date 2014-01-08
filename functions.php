@@ -42,6 +42,7 @@ function kovkov_setup() {
 	set_post_thumbnail_size( 420, 230, true );
 	// add_image_size( 'kovkov-featured', 420, 230, true );
 	add_image_size( 'kovkov-mini', 60, 60, true );
+	add_image_size( 'kovkov-gallery', 300, 300, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -171,6 +172,16 @@ class Kovkov {
 		add_filter( 'found_posts', array( $this, 'found_posts' ), 10, 2 );
 		add_filter( 'body_class', array( $this, 'body_class' ) );
 		add_filter( 'post_class', array( $this, 'post_class' ), 10, 3 );
+
+		add_filter( 'shortcode_atts_gallery', array( $this, 'shortcode_atts_gallery' ), 10, 3 );
+		add_filter( 'use_default_gallery_style', '__return_false' );
+	}
+
+	function shortcode_atts_gallery( $out, $pairs, $atts ) {
+		if ( empty( $atts['size'] ) && $out['columns'] >= 2 )
+			$out['size'] = 'kovkov-gallery';
+
+		return $out;
 	}
 
 	function body_class( $classes ) {

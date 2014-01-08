@@ -315,6 +315,34 @@ pre {
 	.wp-caption.alignnone img.size-full {
 		margin-left: -40px;
 	}
+
+	.gallery {
+		margin-left: -60px;
+		margin-top: 20px;
+		padding-top: 20px;
+		margin-bottom: 20px;
+
+		.gallery-item {
+			width: 260px;
+			float: left;
+			margin-left: 60px;
+
+			.gallery-icon,
+			.gallery-icon a, img, dd {
+				float: left;
+			}
+		}
+
+		dd {
+			margin-left: 0;
+			margin-top: 10px;
+			margin-bottom: 40px;
+		}
+
+		&.gallery-columns-2 .gallery-item { width: 300px; }
+		&.gallery-columns-3 .gallery-item { width: 260px; }
+		&.gallery-columns-4 .gallery-item { width: 180px; }
+	}
 }
 
 .related-content {
