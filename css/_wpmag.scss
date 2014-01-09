@@ -34,11 +34,13 @@
 	}
 }
 
-.wpm-button-primary {
+.wpm-button-primary,
+a.wpm-button-primary {
 	@extend .button-primary;
 }
 
-.wpm-button {
+.wpm-button,
+a.wpm-button {
 	@extend .button-secondary;
 }
 

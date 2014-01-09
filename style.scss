@@ -540,7 +540,9 @@ a.button-primary {
 }
 
 .button,
-.button-secondary {
+.button-secondary,
+a.button,
+a.button-secondary {
 	@extend .button-primary;
 	background: $color-secondary;
 
