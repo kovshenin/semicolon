@@ -984,6 +984,17 @@ pre {
   .entry-content .gallery > br + br {
     display: none; }
 
+blockquote:before {
+  content: '\201C';
+  display: block;
+  position: absolute;
+  margin-left: -40px;
+  margin-top: 26px;
+  color: #117bb8;
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-size: 64px;
+  line-height: 16px; }
+
 .related-content {
   float: left; }
   .related-content .related-content-title {

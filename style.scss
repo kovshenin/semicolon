@@ -346,6 +346,18 @@ pre {
 	}
 }
 
+blockquote:before {
+	content:'\201C';
+	display: block;
+	position: absolute;
+	margin-left: -40px;
+	margin-top: 26px;
+	color: $color-primary;
+	font-family: $font-headings;
+	font-size: 64px;
+	line-height: 16px;
+}
+
 .related-content {
 	float: left;
 
