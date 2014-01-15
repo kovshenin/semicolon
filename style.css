@@ -1282,3 +1282,8 @@ body.post-type-archive-wpm_jobs .entry-content .entry-meta, body.post-type-archi
   margin-top: -16px; }
 body.post-type-archive-wpm_jobs .paging-navigation {
   margin-top: 60px; }
+body.post-type-archive-wpm_jobs .yandex-share {
+  display: none; }
+
+body.page-id-31036 .yandex-share {
+  display: none; }
