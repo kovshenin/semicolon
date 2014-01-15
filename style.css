@@ -1284,9 +1284,14 @@ body.post-type-archive-wpm_jobs .paging-navigation {
   margin-top: 60px; }
 body.post-type-archive-wpm_jobs .yandex-share {
   display: none; }
+body.post-type-archive-wpm_jobs #text-4 {
+  display: none; }
 
 body.page-id-31036 .yandex-share,
 body.single-wpm_jobs .yandex-share {
+  display: none; }
+body.page-id-31036 #text-4,
+body.single-wpm_jobs #text-4 {
   display: none; }
 
 .wpm-jobs-widget ul {
