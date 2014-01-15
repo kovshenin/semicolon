@@ -62,3 +62,20 @@ a.wpm-button {
         	background-size: 224px 75px;
         }
 }
+
+/* Jobs */
+body.post-type-archive-wpm_jobs {
+	#primary h1.entry-title {
+		@extend h3;
+		font-weight: normal;
+		margin-bottom: 6px;
+	}
+
+	.entry-meta {
+		margin-top: -16px;
+	}
+
+	.paging-navigation {
+		margin-top: 60px;
+	}
+}
