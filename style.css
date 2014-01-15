@@ -1288,3 +1288,9 @@ body.post-type-archive-wpm_jobs .yandex-share {
 body.page-id-31036 .yandex-share,
 body.single-wpm_jobs .yandex-share {
   display: none; }
+
+.wpm-jobs-widget ul {
+  list-style: none;
+  margin-left: 0; }
+.wpm-jobs-widget li {
+  margin-bottom: 12px; }
