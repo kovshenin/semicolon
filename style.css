@@ -1285,5 +1285,6 @@ body.post-type-archive-wpm_jobs .paging-navigation {
 body.post-type-archive-wpm_jobs .yandex-share {
   display: none; }
 
-body.page-id-31036 .yandex-share {
+body.page-id-31036 .yandex-share,
+body.single-wpm_jobs .yandex-share {
   display: none; }
