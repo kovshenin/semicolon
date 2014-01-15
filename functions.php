@@ -100,7 +100,7 @@ add_action( 'widgets_init', 'kovkov_widgets_init' );
  * Enqueue scripts and styles.
  */
 function kovkov_scripts() {
-	wp_enqueue_style( 'kovkov-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'kovkov-style', get_stylesheet_uri(), array(), '20140115' );
 
 	wp_enqueue_style( 'kovkov-genericons', get_template_directory_uri() . '/css/genericons.css', array(), '20131222' );
 
