@@ -76,6 +76,72 @@ var kovkov = kovkov || {};
 			kovkov.drawGrid(true);
 	});
 
+	/*
+	 * Copied from https://github.com/cowboy/jquery-throttle-debounce
+	 * Licensed under GPL + MIT
+	 */
+	kovkov.throttle = function( delay, no_trailing, callback, debounce_mode ) {
+    	var timeout_id,
+		last_exec = 0;
+		if ( typeof no_trailing !== 'boolean' ) {
+			debounce_mode = callback;
+			callback = no_trailing;
+			no_trailing = undefined;
+		}
+
+		function wrapper() {
+			var that = this,
+			elapsed = +new Date() - last_exec,
+			args = arguments;
+
+			function exec() {
+				last_exec = +new Date();
+				callback.apply( that, args );
+			};
+
+			function clear() {
+				timeout_id = undefined;
+			};
+
+			if ( debounce_mode && !timeout_id ) {
+				exec();
+			}
+
+			timeout_id && clearTimeout( timeout_id );
+
+			if ( debounce_mode === undefined && elapsed > delay ) {
+				exec();
+			} else if ( no_trailing !== true ) {
+        		timeout_id = setTimeout( debounce_mode ? clear : exec, debounce_mode === undefined ? delay - elapsed : delay );
+			}
+		};
+
+		if ( $.guid ) {
+			wrapper.guid = callback.guid = callback.guid || $.guid++;
+		}
+
+    	return wrapper;
+	};
+
+	// Helps maintain vertical rhythm for images.
+	$window.on('resize', kovkov.throttle( 1000, function(){
+		var $content_images = $( '.entry-content img[class*="wp-image-"]' ),
+			$captioned_images = $( '.entry-content .wp-caption img[class*="wp-image-"]' );
+
+		$content_images.each(function(i,el){
+			$el = $(el);
+
+			if ( $el.height() % 24 > 0 ) {
+
+				if ( $.inArray( $el[0], $captioned_images ) > -1 ) {
+					$el.next( '.wp-caption-text' ).css( 'padding-bottom', 24 - $el.height() % 24 );
+				} else {
+					$el.css( 'padding-bottom', 24 - $el.height() % 24 );
+				}
+			}
+		});
+	}));
+
 	$window.trigger('resize');
 
 }(jQuery));

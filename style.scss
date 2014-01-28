@@ -29,14 +29,17 @@ $font-headings: 'PT Serif', Georgia, 'Times New Roman', serif;
 $font-regular: 'Open Sans', Arial, sans-serif;
 $color-primary: #117bb8;
 $color-secondary: #3a3a3a;
+
 $debug: false;
+$vrhythm-debug: true;
 
 @import 'css/reset';
 @import 'css/underscores';
 
 body {
 	background: white;
-	background: url('24.png');/**/
+	@if $vrhythm-debug { background: url('24.png'); }
+
 	font-family: $font-regular;
 	font-size: 16px;
 	line-height: 24px;
@@ -50,8 +53,8 @@ body {
 }
 
 h1 {
-	font-size: 44px;
-	line-height: 60px;
+	font-size: 52px;
+	line-height: 72px;
 	font-family: $font-headings;
 	font-weight: 300;
 
@@ -220,7 +223,7 @@ a, a:visited, a:link {
 .page-title {
 	margin-top: 0;
 	padding-top: 0;
-	margin-bottom: 24px * 2;
+	margin-bottom: 24px;
 
 	@if $debug { background: purple; }
 }
@@ -240,14 +243,14 @@ pre {
 @mixin article-small {
 	float: left;
 	width: 180px;
-	margin-bottom: 60px;
+	margin-bottom: 48px;
 	margin-right: 60px;
 
 	.post-thumbnail {
 		display: block;
 		float: left;
 		clear: both;
-		margin-bottom: 24px;
+		margin-bottom: 12px;
 		width: 180px;
 		height: 180px;
 		background: rgba( $color-secondary, 0.03 );
@@ -276,11 +279,12 @@ pre {
 		margin-top: 0;
 		padding-top: 0;
 		margin-bottom: 0;
-		font-size: 18px;
+		font-size: 16px;
+		line-height: 24px;
 		a {
 			color: $color-secondary;
 			text-decoration: none;
-			margin-bottom: 10px;
+			margin-bottom: 12px;
 			display: block;
 		}
 	}
@@ -312,6 +316,7 @@ pre {
 	.entry-title {
 		width: 420px + 30px;
 		font-size: 24px;
+		line-height: 36px;
 	}
 }
 
@@ -464,7 +469,7 @@ blockquote:before {
 	.sidebar-primary,
 	.sidebar-secondary,
 	.sidebar-tertiary {
-		padding: 30px 30px;
+		padding: 24px 24px;
 	}
 
 	.sidebar-primary {
@@ -483,13 +488,14 @@ blockquote:before {
 	.widget-title {
 		@extend h2;
 		font-size: 18px;
+		line-height: 24px;
 		margin-top: 0;
 		padding-top: 0;
-		margin-bottom: 20px;
+		margin-bottom: 24px;
 	}
 
 	.widget {
-		margin-bottom: 60px;
+		margin-bottom: 48px;
 
 		&:last-child {
 			margin-bottom: 0;

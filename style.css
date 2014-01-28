@@ -591,7 +591,6 @@ object {
 body {
   background: white;
   background: url("24.png");
-  /**/
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -603,8 +602,8 @@ body {
   color: white; }
 
 h1, h2, h3, body.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpmag-content-newsletter h3 {
-  font-size: 44px;
-  line-height: 60px;
+  font-size: 52px;
+  line-height: 72px;
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
   font-weight: 300;
   margin-top: 24px;
@@ -765,7 +764,7 @@ a, a:visited, a:link {
 .page-title {
   margin-top: 0;
   padding-top: 0;
-  margin-bottom: 48px; }
+  margin-bottom: 24px; }
 
 pre {
   background: rgba(58, 58, 58, 0.03); }
@@ -779,13 +778,13 @@ pre {
 .grid article.hentry {
   float: left;
   width: 180px;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
   margin-right: 60px; }
   .grid article.hentry .post-thumbnail {
     display: block;
     float: left;
     clear: both;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
     width: 180px;
     height: 180px;
     background: rgba(58, 58, 58, 0.03);
@@ -806,11 +805,12 @@ pre {
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0;
-    font-size: 18px; }
+    font-size: 16px;
+    line-height: 24px; }
     .grid article.hentry .entry-title a {
       color: #3a3a3a;
       text-decoration: none;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       display: block; }
   .grid article.hentry.kovkov-last {
     margin-right: 0; }
@@ -819,14 +819,14 @@ pre {
 .js.grid article.hentry.kovkov-featured {
   float: left;
   width: 180px;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
   margin-right: 60px;
   width: 420px; }
   .js.grid article.hentry.kovkov-featured .post-thumbnail {
     display: block;
     float: left;
     clear: both;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
     width: 180px;
     height: 180px;
     background: rgba(58, 58, 58, 0.03);
@@ -847,11 +847,12 @@ pre {
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0;
-    font-size: 18px; }
+    font-size: 16px;
+    line-height: 24px; }
     .js.grid article.hentry.kovkov-featured .entry-title a {
       color: #3a3a3a;
       text-decoration: none;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       display: block; }
   .js.grid article.hentry.kovkov-featured.kovkov-last {
     margin-right: 0; }
@@ -862,7 +863,8 @@ pre {
       margin-left: -290px; }
   .js.grid article.hentry.kovkov-featured .entry-title {
     width: 450px;
-    font-size: 24px; }
+    font-size: 24px;
+    line-height: 36px; }
 
 body.no-js {
   /* There's an h3 before the first article in related content, hence +1 */ }
@@ -941,13 +943,13 @@ blockquote:before {
   .related-content article {
     float: left;
     width: 180px;
-    margin-bottom: 60px;
+    margin-bottom: 48px;
     margin-right: 60px; }
     .related-content article .post-thumbnail {
       display: block;
       float: left;
       clear: both;
-      margin-bottom: 24px;
+      margin-bottom: 12px;
       width: 180px;
       height: 180px;
       background: rgba(58, 58, 58, 0.03);
@@ -968,11 +970,12 @@ blockquote:before {
       margin-top: 0;
       padding-top: 0;
       margin-bottom: 0;
-      font-size: 18px; }
+      font-size: 16px;
+      line-height: 24px; }
       .related-content article .entry-title a {
         color: #3a3a3a;
         text-decoration: none;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         display: block; }
     .related-content article.kovkov-last {
       margin-right: 0; }
@@ -996,7 +999,7 @@ blockquote:before {
   .widget-area .sidebar-primary,
   .widget-area .sidebar-secondary,
   .widget-area .sidebar-tertiary {
-    padding: 30px 30px; }
+    padding: 24px 24px; }
   .widget-area .sidebar-primary {
     background: #117bb8;
     color: white; }
@@ -1006,11 +1009,12 @@ blockquote:before {
     background: rgba(58, 58, 58, 0.03); }
   .widget-area .widget-title {
     font-size: 18px;
+    line-height: 24px;
     margin-top: 0;
     padding-top: 0;
-    margin-bottom: 20px; }
+    margin-bottom: 24px; }
   .widget-area .widget {
-    margin-bottom: 60px; }
+    margin-bottom: 48px; }
     .widget-area .widget:last-child {
       margin-bottom: 0; }
 
