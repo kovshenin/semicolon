@@ -163,6 +163,52 @@ a, a:visited, a:link {
 	}
 }
 
+#kovkov-social {
+	padding: 0;
+	list-style: none;
+	float: right;
+	margin-right: 12px;
+	color: transparent;
+
+	li a {
+		padding-left: 8px;
+		padding-right: 8px;
+		line-height: 1;
+	}
+
+	li:hover { background: none; }
+	a span { text-indent: -9000px; display: inline-block; }
+
+	li a::before       { color: rgba( $color-secondary, 0.5 ); font: normal 20px/1 'Genericons'; content: '\f408'; }
+	li a:hover::before { color: $color-secondary; }
+
+	li a[href*="codepen.io"]::before      { content: '\f216'; }
+	li a[href*="digg.com"]::before        { content: '\f221'; }
+	li a[href*="dribbble.com"]::before    { content: '\f201'; }
+	li a[href*="facebook.com"]::before    { content: '\f203'; }
+	li a[href*="flickr.com"]::before      { content: '\f211'; }
+	li a[href*="plus.google.com"]::before { content: '\f206'; }
+	li a[href*="github.com"]::before      { content: '\f200'; }
+	li a[href*="instagram.com"]::before   { content: '\f215'; }
+	li a[href*="linkedin.com"]::before    { content: '\f208'; }
+	li a[href*="pinterest.com"]::before   { content: '\f210'; }
+	li a[href*="polldaddy.com"]::before   { content: '\f217'; }
+	li a[href*="getpocket.com"]::before   { content: '\f224'; }
+	li a[href*="reddit.com"]::before      { content: '\f222'; }
+	li a[href*="skype.com"]::before,
+	li a[href*="skype:"]::before          { content: '\f220'; }
+	li a[href*="stumbleupon.com"]::before { content: '\f223'; }
+	li a[href*="tumblr.com"]::before      { content: '\f214'; }
+	li a[href*="twitter.com"]::before     { content: '\f202'; }
+	li a[href*="vimeo.com"]::before       { content: '\f212'; }
+	li a[href*="wordpress.org"]::before,
+	li a[href*="wordpress.com"]::before   { content: '\f205'; }
+	li a[href*="youtube.com"]::before     { content: '\f213'; }
+	li a[href$="/feed/"]::before,
+	li a[href$="/feed"]::before,
+	li a[href$="?feed=rss2"]::before      { content: '\f413'; }
+}
+
 .page-description {
 	margin: 0 0 60px 0;
 	padding: 20px;

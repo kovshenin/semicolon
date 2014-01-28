@@ -682,6 +682,74 @@ a, a:visited, a:link {
     font-size: 20px;
     width: 20px; }
 
+#kovkov-social {
+  padding: 0;
+  list-style: none;
+  float: right;
+  margin-right: 12px;
+  color: transparent; }
+  #kovkov-social li a {
+    padding-left: 8px;
+    padding-right: 8px;
+    line-height: 1; }
+  #kovkov-social li:hover {
+    background: none; }
+  #kovkov-social a span {
+    text-indent: -9000px;
+    display: inline-block; }
+  #kovkov-social li a::before {
+    color: rgba(58, 58, 58, 0.5);
+    font: normal 20px/1 'Genericons';
+    content: '\f408'; }
+  #kovkov-social li a:hover::before, #kovkov-social li .grid article.hentry:hover .entry-title a::before, .grid article.hentry:hover .entry-title #kovkov-social li a::before, #kovkov-social li .related-content article:hover .entry-title a::before, .related-content article:hover .entry-title #kovkov-social li a::before {
+    color: #3a3a3a; }
+  #kovkov-social li a[href*="codepen.io"]::before {
+    content: '\f216'; }
+  #kovkov-social li a[href*="digg.com"]::before {
+    content: '\f221'; }
+  #kovkov-social li a[href*="dribbble.com"]::before {
+    content: '\f201'; }
+  #kovkov-social li a[href*="facebook.com"]::before {
+    content: '\f203'; }
+  #kovkov-social li a[href*="flickr.com"]::before {
+    content: '\f211'; }
+  #kovkov-social li a[href*="plus.google.com"]::before {
+    content: '\f206'; }
+  #kovkov-social li a[href*="github.com"]::before {
+    content: '\f200'; }
+  #kovkov-social li a[href*="instagram.com"]::before {
+    content: '\f215'; }
+  #kovkov-social li a[href*="linkedin.com"]::before {
+    content: '\f208'; }
+  #kovkov-social li a[href*="pinterest.com"]::before {
+    content: '\f210'; }
+  #kovkov-social li a[href*="polldaddy.com"]::before {
+    content: '\f217'; }
+  #kovkov-social li a[href*="getpocket.com"]::before {
+    content: '\f224'; }
+  #kovkov-social li a[href*="reddit.com"]::before {
+    content: '\f222'; }
+  #kovkov-social li a[href*="skype.com"]::before,
+  #kovkov-social li a[href*="skype:"]::before {
+    content: '\f220'; }
+  #kovkov-social li a[href*="stumbleupon.com"]::before {
+    content: '\f223'; }
+  #kovkov-social li a[href*="tumblr.com"]::before {
+    content: '\f214'; }
+  #kovkov-social li a[href*="twitter.com"]::before {
+    content: '\f202'; }
+  #kovkov-social li a[href*="vimeo.com"]::before {
+    content: '\f212'; }
+  #kovkov-social li a[href*="wordpress.org"]::before,
+  #kovkov-social li a[href*="wordpress.com"]::before {
+    content: '\f205'; }
+  #kovkov-social li a[href*="youtube.com"]::before {
+    content: '\f213'; }
+  #kovkov-social li a[href$="/feed/"]::before,
+  #kovkov-social li a[href$="/feed"]::before,
+  #kovkov-social li a[href$="?feed=rss2"]::before {
+    content: '\f413'; }
+
 .page-description {
   margin: 0 0 60px 0;
   padding: 20px;

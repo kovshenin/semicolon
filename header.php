@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
 <script type="text/javascript">document.body.className = document.body.className.replace('no-js','js');</script>
 <div id="page" class="hfeed site">
-	<?php do_action( 'before' ); ?>
+
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -33,9 +33,15 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'kovkov' ); ?></a>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			<?php do_action( 'kovkov_navigation_after' ); ?>
+			<?php wp_nav_menu( array(
+				'theme_location' => 'social',
+				'depth' => 1,
+				'container_id' => 'kovkov-social',
+				'link_before' => '<span>',
+				'link_after' => '</span>',
+				'fallback_cb' => '',
+			) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-	<?php do_action( 'kovkov_header_after' ); ?>
 
 	<div id="content" class="site-content">

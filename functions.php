@@ -47,6 +47,7 @@ function kovkov_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'kovkov' ),
+		'social' => __( 'Social Menu', 'kovkov' ),
 	) );
 
 	// Enable support for Post Formats.
@@ -353,17 +354,6 @@ function kovkov_get_related_posts() {
 	return new WP_Query( $args );
 }
 endif;
-
-add_action( 'kovkov_navigation_after', function() {
-	?>
-	<ul class="kovkov-social social">
-		<li class="twitter"><a href="http://twitter.com/wpmagru" target="_blank" title="Twitter"><span class="genericon genericon-twitter"></span></a></li>
-		<li class="facebook"><a href="http://facebook.com/wpmagru" target="_blank" title="Facebook"><span class="genericon genericon-facebook"></span></a></li>
-		<li class="google-plus"><a href="https://plus.google.com/108553372817411783434?rel=author" target="_blank" title="Google+"><span class="genericon genericon-googleplus"></span></a></li>
-		<li class="feed"><a href="http://wpmag.ru/feed/" target="_blank" title="Feed"><span class="genericon genericon-feed"></span></a></li>
-	</ul>
-	<?php
-});
 
 // Maybe next time?
 /*add_filter( 'the_title', function( $title ) {
