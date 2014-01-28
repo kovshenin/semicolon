@@ -19,6 +19,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<script type="text/javascript">document.body.className = document.body.className.replace('no-js','js');</script>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">

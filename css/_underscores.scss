@@ -355,13 +355,15 @@ a:active {
 }
 
 @media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
+	body.js {
+		.menu-toggle,
+		.main-navigation.toggled .nav-menu {
+			display: block;
+		}
 
-	.main-navigation ul {
-		display: none;
+		.main-navigation ul {
+			display: none;
+		}
 	}
 }
 

@@ -1,180 +1,268 @@
+/* A tiny bit smaller than the original small article */
+@mixin article-smaller-small {
+	width: 150px;
+	.post-thumbnail {
+		width: 180px - 30px;
+		height: 180px - 30px;
+
+		span {
+			margin-left: -1 * ( ( 1000px - ( 180px - 30px ) ) / 2 );
+		}
+	}
+
+	.entry-title {
+		width: 150px + 30px;
+	}
+}
+
+/* A tiny bit smaller than the original featured article */
+@mixin article-smaller-large {
+	width: 420px - 60px;
+	.post-thumbnail {
+		width: 420px - 60px;
+		height: 230px * ( ( 420 - 60 ) / 420 );
+
+		span {
+			margin-left: -1 * ( ( 1000px - ( 420px - 60px ) ) / 2 );
+		}
+	}
+
+	.entry-title {
+		width: 420px - 60px + 30px;
+	}
+
+}
+
+/* A tiny bit smaller than the original articles (both featured and regular) */
+@mixin smaller-articles {
+	body.grid article.hentry,
+	.related-content article {
+		@include article-smaller-small;
+	}
+	body.grid.js article.hentry.kovkov-featured {
+		@include article-smaller-large;
+	}
+}
+
+/* @todo smarter galleries */
+@mixin smaller-galleries {
+	.entry-content .gallery {
+		.gallery-item {
+			max-width: 260px - 40px;
+		}
+
+		&.gallery-columns-2 .gallery-item { max-width: 300px; }
+		&.gallery-columns-3 .gallery-item { max-width: 220px; }
+		&.gallery-columns-4 .gallery-item { max-width: 140px; }
+	}
+}
+
+@mixin grid-compat($columns) {
+	body.no-js {
+		&.grid article:nth-child(4n+0),
+		.related-content article:nth-child(4n+1) {
+			@if $debug { background: none; }
+			margin-right: 60px;
+		}
+
+		&.grid article:nth-child(4n+0) + article,
+		.related-content article:nth-child(4n+1) + article {
+			@if $debug { background: none; }
+			clear: none;
+		}
+
+		&.grid article:nth-child(#{$columns}n+0),
+		.related-content article:nth-child(#{$columns}n+1) {
+			@if $debug { background: red !important; }
+			margin-right: 0 !important;
+		}
+
+		&.grid article:nth-child(#{$columns}n+0) + article,
+		.related-content article:nth-child(#{$columns}n+1) + article {
+			@if $debug { background: blue; }
+			clear: left !important;
+		}
+	}
+}
+
+/* Four columns (smaller) + sidebar */
+@media all and (max-width: 1380px) and (min-width: 1260px) {
+	@include smaller-articles;
+	@include smaller-galleries;
+
+	#page { width: 1260px - 120px; }
+	#primary,
+	.paging-navigation { width: 900px - 120px; }
+
+	.entry-content img.size-full,
+	.entry-content iframe {
+		max-width: 940px - 120px;
+	}
+}
+
+/* Four columns large */
+@media all and (max-width: 1259px) and (min-width: 1080px) {
+	#page,
+	#primary,
+	.paging-navigation { width: 1260px - 360px; }
+
+	.entry-content img.size-full,
+	.entry-content iframe {
+		max-width: 940px;
+	}
+
+	/* @todo get a brain */
+	#secondary { display: none; }
+}
+
+/* Four columns smaller */
+@media all and (max-width: 1079px) and (min-width: 900px) {
+	@include smaller-articles;
+	@include smaller-galleries;
+
+	#page,
+	#primary,
+	.paging-navigation { width: 1260px - 480px; }
+
+	.entry-content img.size-full,
+	.entry-content iframe {
+		max-width: 940px - 120px;
+	}
+
+	/* @todo get a brain */
+	#secondary { display: none; }
+}
+
+/* Three column large */
+@media all and (max-width: 899px) and (min-width: 780px) {
+	body { padding: 0 60px; }
+
+	#page,
+	#primary,
+	.paging-navigation {
+		width: 100%;
+	}
+
+	.entry-content {
+		.wp-caption.alignnone img.size-full,
+		img.size-full,
+		img.size-full.alignnone,
+		iframe,
+		.wp-caption.alignnone img.size-full + .wp-caption-text {
+			max-width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	/* @todo get a brain */
+	#secondary { display: none; }
+
+	/* @no-js compat */
+	@include grid-compat(3);
+}
+
+/* Three columns small */
+@media all and (max-width: 779px) and (min-width: 720px) {
+	@include smaller-articles;
+
+	body { padding: 0 60px; }
+
+	#page,
+	#primary,
+	.paging-navigation {
+		width: 100%;
+	}
+
+	.entry-content {
+		.wp-caption.alignnone img.size-full,
+		img.size-full,
+		img.size-full.alignnone,
+		iframe,
+		.wp-caption.alignnone img.size-full + .wp-caption-text {
+			max-width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	/* @todo get a brain */
+	#secondary { display: none; }
+
+	/* @no-js compat */
+	@include grid-compat(3);
+}
+
+/* Two columns large */
+@media all and (max-width: 719px) and (min-width: 540px) {
+	body { padding: 0 60px; }
+
+	#page,
+	#primary,
+	.paging-navigation {
+		width: 100%;
+	}
+
+	.entry-content {
+		.wp-caption.alignnone img.size-full,
+		img.size-full,
+		img.size-full.alignnone,
+		iframe,
+		.wp-caption.alignnone img.size-full + .wp-caption-text {
+			max-width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	/* @todo get a brain */
+	#secondary { display: none; }
+
+	/* @no-js compat */
+	@include grid-compat(2);
+}
+
+/* Two columns small */
+@media all and (max-width: 539px) {
+	@include smaller-articles;
+
+	body { padding: 0 60px; }
+
+	#page,
+	#primary,
+	.paging-navigation {
+		width: 100%;
+	}
+
+	.entry-content {
+		.wp-caption.alignnone img.size-full,
+		img.size-full,
+		img.size-full.alignnone,
+		iframe,
+		.wp-caption.alignnone img.size-full + .wp-caption-text {
+			max-width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	/* @todo get a brain */
+	#secondary { display: none; }
+
+	/* @no-js compat */
+	@include grid-compat(2);
+}
+
+/* @todo moar narrow! */
+
 @media all and (max-width: 1380px) and (min-width: 1260px), (max-width: 1080px) and (min-width: 900px), (max-width: 720px) and (min-width: 640px), (max-width: 480px) {
 	body {
-		#page {
-			width: 1260px - 120px;
-		}
-
-		&.grid article.hentry {
-			width: 150px;
-
-			.post-thumbnail {
-				width: 180px - 30px;
-				height: 180px - 30px;
-
-				span {
-					margin-left: -1 * ( ( 1000px - ( 180px - 30px ) ) / 2 );
-				}
-			}
-
-			&.kovkov-featured {
-				width: 420px - 60px;
-
-				.post-thumbnail {
-					width: 420px - 60px;
-					height: 230px * ( ( 420 - 60 ) / 420 );
-
-					span {
-						margin-left: -1 * ( ( 1000px - ( 420px - 60px ) ) / 2 );
-					}
-				}
-
-				.entry-title {
-					width: 420px - 60px + 30px;
-				}
-			}
-
-			.entry-title {
-				width: 150px + 30px;
-			}
-		}
-
-		.related-content article {
-			width: 150px;
-
-			.post-thumbnail {
-				width: 180px - 30px;
-				height: 180px - 30px;
-
-				span {
-					margin-left: -1 * ( ( 1000px - ( 180px - 30px ) ) / 2 );
-				}
-			}
-
-			.entry-title {
-				width: 150px + 30px;
-			}
-		}
-
-		#primary {
-			width: 900px - 120px;
-		}
-
 		.entry-content {
-			img.size-full,
-			iframe {
-				max-width: 940px - 120px;
-			}
 
-			.gallery {
-				.gallery-item {
-					max-width: 260px - 40px;
-				}
 
-				&.gallery-columns-2 .gallery-item { max-width: 300px; }
-				&.gallery-columns-3 .gallery-item { max-width: 220px; }
-				&.gallery-columns-4 .gallery-item { max-width: 140px; }
-			}
-		}
-	}
-}
-
-@media all and (max-width: 1259px) {
-	body {
-		#page,
-		.paging-navigation {
-			width: 1260px - 360px;
-		}
-		#primary {
-			width: 1260px - 360px;
-		}
-		#secondary {
-			display: none;
-		}
-	}
-}
-
-@media all and (max-width: 1080px) {
-	body {
-		#page,
-		.paging-navigation {
-			width: 1260px - 480px;
-		}
-		#primary {
-			width: 1260px - 480px;
-		}
-		.grid .site-content {
-		}
-	}
-}
-
-@media all and (max-width: 899px) {
-	body {
-		padding: 0 60px;
-
-		#page,
-		#primary,
-		.paging-navigation {
-			width: 100%;
-		}
-
-		.entry-content {
-			img.size-full,
-			iframe,
-			.wp-caption.alignnone img.size-full + .wp-caption-text {
-				max-width: 100%;
-				margin-left: 0;
-			}
-
-			img.size-full.alignnone {
-				margin-left: 0;
-			}
-		}
-	}
-}
-
-@media all and (max-width: 780px) {
-	body {
-		padding: 0 20px;
-	}
-}
-
-@media all and (max-width: 640px) {
-	body {
-
-		/* Sorry iPhone 3 users */
-		min-width: 420px;
-
-		&.grid article.hentry {
-			max-width: 100%;
-
-			.post-thumbnail,
-			.post-thumbnail img {
-				max-width: 100%;
-			}
-
-			&.kovkov-featured {
-				max-width: 100%;
-
-				.post-thumbnail,
-				.post-thumbnail img {
-					max-width: 100%;
-				}
-
-				.entry-title {
-					/*max-width: 100%;*/
-				}
-			}
-
-			.entry-title {
-				/*max-width: 100%;*/
-			}
 		}
 	}
 }
 
 /* Better mobile menu */
 @media screen and (max-width: 600px) {
-	body .main-navigation {
+	body.js .main-navigation {
 		.menu-toggle {
 			font-family: $font-regular;
 			font-size: 16px;

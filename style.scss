@@ -33,7 +33,6 @@ $debug: false;
 
 @import 'css/reset';
 @import 'css/underscores';
-@import 'css/respond';
 
 body {
 	background: white;
@@ -272,9 +271,27 @@ pre {
 
 .grid article.hentry {
 	@include article-small;
+}
 
-	&.kovkov-featured {
+/* Featured images are featured in JS-mode only */
+.js.grid {
+	article.hentry.kovkov-featured {
 		@include article-large;
+	}
+}
+
+body.no-js {
+	/* There's an h3 before the first article in related content, hence +1 */
+	&.grid article:nth-child(4n+0),
+	.related-content article:nth-child(4n+1) {
+		@if $debug { background: red; }
+		margin-right: 0;
+	}
+
+	&.grid article:nth-child(4n+0) + article,
+	.related-content article:nth-child(4n+1) + article {
+		@if $debug { background: blue; }
+		clear: left;
 	}
 }
 
@@ -583,4 +600,5 @@ textarea {
 	@if $debug { background: red; }
 }
 
+@import 'css/respond';
 @import 'css/wpmag';

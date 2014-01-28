@@ -188,6 +188,8 @@ class Kovkov {
 		if ( ! is_singular() )
 			$classes[] = 'grid';
 
+		$classes[] = 'no-js';
+
 		return $classes;
 	}
 
