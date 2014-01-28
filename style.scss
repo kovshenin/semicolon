@@ -177,7 +177,7 @@ a, a:visited, a:link {
 	}
 
 	li:hover { background: none; }
-	a span { text-indent: -9000px; display: inline-block; }
+	a span { position: absolute; top: -9999px; left: -9999px; }
 
 	li a::before       { color: rgba( $color-secondary, 0.5 ); font: normal 20px/1 'Genericons'; content: '\f408'; }
 	li a:hover::before { color: $color-secondary; }

@@ -695,8 +695,9 @@ a, a:visited, a:link {
   #kovkov-social li:hover {
     background: none; }
   #kovkov-social a span {
-    text-indent: -9000px;
-    display: inline-block; }
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
   #kovkov-social li a::before {
     color: rgba(58, 58, 58, 0.5);
     font: normal 20px/1 'Genericons';
