@@ -590,7 +590,8 @@ object {
 
 body {
   background: white;
-  /*background: url('24.png');/**/
+  background: url("24.png");
+  /**/
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -784,7 +785,7 @@ pre {
     display: block;
     float: left;
     clear: both;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     width: 180px;
     height: 180px;
     background: rgba(58, 58, 58, 0.03);
@@ -825,7 +826,7 @@ pre {
     display: block;
     float: left;
     clear: both;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     width: 180px;
     height: 180px;
     background: rgba(58, 58, 58, 0.03);
@@ -856,7 +857,7 @@ pre {
     margin-right: 0; }
   .js.grid article.hentry.kovkov-featured .post-thumbnail {
     width: 420px;
-    height: 230px; }
+    height: 240px; }
     .js.grid article.hentry.kovkov-featured .post-thumbnail span {
       margin-left: -290px; }
   .js.grid article.hentry.kovkov-featured .entry-title {
@@ -881,18 +882,19 @@ body.no-js {
     margin-bottom: 24px; }
   .entry-content img.size-full {
     max-width: 940px;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: 36px;
+    margin-bottom: 36px;
     display: block; }
     .entry-content img.size-full.alignnone {
       margin-left: -40px; }
   .entry-content .wp-caption img.size-full {
     margin-bottom: 0; }
   .entry-content .wp-caption {
-    margin-bottom: 48px;
+    margin-bottom: 24px;
     max-width: 100%; }
   .entry-content .wp-caption-text {
-    margin-top: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
     display: block; }
   .entry-content .wp-caption.alignnone img.size-full + .wp-caption-text,
   .entry-content .wp-caption.alignnone img.size-full {
@@ -945,7 +947,7 @@ blockquote:before {
       display: block;
       float: left;
       clear: both;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       width: 180px;
       height: 180px;
       background: rgba(58, 58, 58, 0.03);
@@ -976,7 +978,8 @@ blockquote:before {
       margin-right: 0; }
 
 .entry-meta, .entry-content .wp-caption-text, .comment-meta .comment-metadata, .site-footer {
-  font-size: 80%;
+  font-size: 13px;
+  line-height: 24px;
   color: rgba(58, 58, 58, 0.5); }
   .entry-meta a, .entry-content .wp-caption-text a, .comment-meta .comment-metadata a, .site-footer a {
     color: rgba(58, 58, 58, 0.5);
@@ -1012,7 +1015,7 @@ blockquote:before {
       margin-bottom: 0; }
 
 .home .widget-area .sidebar-primary {
-  min-height: 230px; }
+  min-height: 240px; }
 
 .paging-navigation {
   width: 900px;

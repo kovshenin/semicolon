@@ -36,7 +36,7 @@ $debug: false;
 
 body {
 	background: white;
-	/*background: url('24.png');/**/
+	background: url('24.png');/**/
 	font-family: $font-regular;
 	font-size: 16px;
 	line-height: 24px;
@@ -247,7 +247,7 @@ pre {
 		display: block;
 		float: left;
 		clear: both;
-		margin-bottom: 20px;
+		margin-bottom: 24px;
 		width: 180px;
 		height: 180px;
 		background: rgba( $color-secondary, 0.03 );
@@ -302,7 +302,7 @@ pre {
 	width: 420px;
 	.post-thumbnail {
 		width: 420px;
-		height: 230px;
+		height: 240px;
 
 		span {
 			margin-left: -1 * ( ( 1000px - 420px ) / 2 );
@@ -353,8 +353,8 @@ body.no-js {
 
 	img.size-full {
 		max-width: 940px;
-		margin-top: 24px;
-		margin-bottom: 24px;
+		margin-top: 36px;
+		margin-bottom: 36px;
 		display: block;
 
 		&.alignnone {
@@ -367,13 +367,14 @@ body.no-js {
 	}
 
 	.wp-caption {
-		margin-bottom: 48px;
+		margin-bottom: 24px;
 		max-width: 100%;
 	}
 
 	.wp-caption-text {
 		@extend .entry-meta;
-		margin-top: 10px;
+		margin-top: 12px;
+		margin-bottom: 12px;
 		display: block;
 	}
 
@@ -438,7 +439,9 @@ blockquote:before {
 }
 
 .entry-meta {
-	font-size: 80%;
+	font-size: 13px;
+	line-height: 24px;
+
 	color: rgba( $color-secondary, 0.5 );
 
 	a {
@@ -495,7 +498,7 @@ blockquote:before {
 }
 
 .home .widget-area .sidebar-primary {
-	min-height: 230px;
+	min-height: 240px;
 }
 
 .paging-navigation {

@@ -39,7 +39,7 @@ function kovkov_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 420, 230, true );
+	set_post_thumbnail_size( 420, 240, true );
 	// add_image_size( 'kovkov-featured', 420, 230, true );
 	add_image_size( 'kovkov-mini', 60, 60, true );
 	add_image_size( 'kovkov-gallery', 300, 300, true );
@@ -354,6 +354,17 @@ function kovkov_get_related_posts() {
 	return new WP_Query( $args );
 }
 endif;
+
+add_action( 'kovkov_navigation_after', function() {
+	?>
+	<ul class="kovkov-social social">
+		<li class="twitter"><a href="http://twitter.com/wpmagru" target="_blank" title="Twitter"><span class="genericon genericon-twitter"></span></a></li>
+		<li class="facebook"><a href="http://facebook.com/wpmagru" target="_blank" title="Facebook"><span class="genericon genericon-facebook"></span></a></li>
+		<li class="google-plus"><a href="https://plus.google.com/108553372817411783434?rel=author" target="_blank" title="Google+"><span class="genericon genericon-googleplus"></span></a></li>
+		<li class="feed"><a href="http://wpmag.ru/feed/" target="_blank" title="Feed"><span class="genericon genericon-feed"></span></a></li>
+	</ul>
+	<?php
+});
 
 // Maybe next time?
 /*add_filter( 'the_title', function( $title ) {
