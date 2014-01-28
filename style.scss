@@ -35,10 +35,10 @@ $debug: false;
 @import 'css/underscores';
 
 body {
-	background: white;
+	background: white url('24.png');
 	font-family: $font-regular;
 	font-size: 16px;
-	line-height: 1.5;
+	line-height: 24px;
 	font-weight: 400;
 	color: #444;
 }
@@ -49,16 +49,16 @@ body {
 }
 
 h1 {
+	margin-top: 20px;
 	font-size: 44px;
-	line-height: 1.3;
+	line-height: 62px;
 	font-family: $font-headings;
 	font-weight: 300;
+	margin-bottom: 10px;
 
-	margin-top: 30px;
-	padding-top: 30px;
-	margin-bottom: 20px;
-
-	/* font-size: 24px; */
+	/*margin-top: 30px;*/
+	/*padding-top: 30px;*/
+	/*margin-bottom: 20px;*/
 }
 
 h2 {
@@ -218,9 +218,9 @@ a, a:visited, a:link {
 
 .entry-title,
 .page-title {
-	margin-top: 0;
+	/*margin-top: 0;
 	padding-top: 0;
-	margin-bottom: 40px;
+	margin-bottom: 40px;*/
 
 	@if $debug { background: purple; }
 }
@@ -342,6 +342,8 @@ body.no-js {
 }
 
 .entry-content {
+	margin: 0;
+
 	iframe {
 		max-width: 940px;
 		margin-left: -40px;
