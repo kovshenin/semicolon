@@ -12,10 +12,11 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php do_action( 'kovkov_credits' ); ?>
-			<?php /*<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'kovkov' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span> */ ?>
-			<?php /* printf( __( 'Theme: %1$s by %2$s.', 'kovkov' ), 'kovkov', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); */ ?>
+			<?php if ( has_action( 'kovkov_credits' ) ) : ?>
+				<?php do_action( 'kovkov_credits' ); ?>
+			<?php else : ?>
+				Semicolon &mdash; Quite possibly the cleanest magazine theme for WordPress. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+			<?php endif; ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
