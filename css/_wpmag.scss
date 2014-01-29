@@ -1,58 +1,60 @@
 /* WPM */
-.wpmag-content-newsletter {
-	h3 {
-		@extend h2;
-		font-size: 18px;
-	}
+body.wpmag {
+	.wpmag-content-newsletter {
+		h3 {
+			@extend h2;
+			font-size: 18px;
+		}
 
-	p {
-		margin: 0;
-	}
-}
-
-#disqus_thread {
-}
-
-.site-title a {
-	background: url('http://wpmag.ru/files/2013/12/wordpress-magazine-k.png') 0 0 no-repeat;
-	text-indent: -15000px;
-	display: inline-block;
-	width: 224px;
-	height: 75px;
-	margin-bottom: 9px; /* 84px - 75px */
-}
-
-.site-description {
-	display: none;
-}
-
-.sidebar-primary {
-	aside:last-child {
-		margin-bottom: 0;
-		p:last-child {
-			margin-bottom: 0;
+		p {
+			margin: 0;
 		}
 	}
+
+	#disqus_thread {
+	}
+
+	.site-title a {
+		background: url('http://wpmag.ru/files/2013/12/wordpress-magazine-k.png') 0 0 no-repeat;
+		text-indent: -15000px;
+		display: inline-block;
+		width: 224px;
+		height: 75px;
+		margin-bottom: 9px; /* 84px - 75px */
+	}
+
+	.site-description {
+		display: none;
+	}
+
+	.sidebar-primary {
+		aside:last-child {
+			margin-bottom: 0;
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.wpm-button-primary,
+	a.wpm-button-primary {
+		@extend .button-primary;
+	}
+
+	.wpm-button,
+	a.wpm-button {
+		@extend .button-secondary;
+	}
+
+	.yandex-share .b-share {
+		margin-left: -4px;
+	}
+	.yandex-share {
+		margin-bottom: 21px; /* vertical rhythm */
+	}
 }
 
-.wpm-button-primary,
-a.wpm-button-primary {
-	@extend .button-primary;
-}
-
-.wpm-button,
-a.wpm-button {
-	@extend .button-secondary;
-}
-
-.yandex-share .b-share {
-	margin-left: -4px;
-}
-.yandex-share {
-	margin-bottom: 21px; /* vertical rhythm */
-}
-
-.page-id-3157 #secondary {
+body.wpmag.page-id-3157 #secondary {
 	display: none;
 }
 
@@ -61,14 +63,14 @@ a.wpm-button {
     only screen and (-o-min-device-pixel-ratio: 3/2),
     only screen and (min--moz-device-pixel-ratio: 1.5),
     only screen and (min-device-pixel-ratio: 1.5) {
-        .site-title a {
+        body.wpmag .site-title a {
         	background-image: url('http://wpmag.ru/files/2014/01/wordpress-magazine-logo-hidpi.png');
         	background-size: 224px 75px;
         }
 }
 
 /* Jobs */
-body.post-type-archive-wpm_jobs {
+body.wpmag.post-type-archive-wpm_jobs {
 	#primary h1.entry-title {
 		@extend h3;
 		font-weight: normal;
@@ -92,8 +94,8 @@ body.post-type-archive-wpm_jobs {
 	}
 }
 
-body.page-id-31036,
-body.single-wpm_jobs {
+body.wpmag.page-id-31036,
+body.wpmag.single-wpm_jobs {
 	.yandex-share {
 		display: none;
 	}
@@ -103,7 +105,7 @@ body.single-wpm_jobs {
 	}
 }
 
-.wpm-jobs-widget {
+bady.wpmag .wpm-jobs-widget {
 	ul {
 		list-style: none;
 		margin-left: 0;
