@@ -217,6 +217,18 @@ pre {
 	background: rgba( $color-secondary, 0.03 );
 }
 
+hr {
+	border-top: solid 1px #ccc;
+	border: 0;
+	height: 24px;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
 .grid .page-title {
 	@extend h2;
 	margin-top: 0;
@@ -629,6 +641,7 @@ a.button-primary {
 	padding: 12px 20px;
 	cursor: pointer;
 	text-decoration: none;
+	display: inline-block;
 
 	&:hover,
 	&:focus {

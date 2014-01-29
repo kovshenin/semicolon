@@ -138,12 +138,12 @@ textarea {
 h1, h2, h3, body.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpmag-content-newsletter h3, h2, h3, body.post-type-archive-wpm_jobs #primary h1.entry-title, body.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, .wpmag-content-newsletter h3, h3, body.post-type-archive-wpm_jobs #primary h1.entry-title, body.post-type-archive-wpm_jobs #primary h2.entry-title, body.post-type-archive-wpm_jobs #primary h3.entry-title, body.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.post-type-archive-wpm_jobs #primary .grid article.hentry .entry-title, .grid article.hentry body.post-type-archive-wpm_jobs #primary .entry-title, body.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.post-type-archive-wpm_jobs #primary .entry-title, body.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.post-type-archive-wpm_jobs #primary .entry-title#reply-title, h4, h5, h6 {
   clear: both; }
 
-hr {
-  background-color: #ccc;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5em; }
-
+/*hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}*/
 /* Text elements */
 p {
   margin-bottom: 1.5em; }
@@ -760,6 +760,16 @@ a, a:visited, a:link {
 pre {
   background: rgba(58, 58, 58, 0.03); }
 
+hr {
+  border-top: solid 1px #ccc;
+  border: 0;
+  height: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
 .grid .page-title {
   margin-top: 0;
   padding-top: 0;
@@ -1118,7 +1128,8 @@ a.wpm-button-primary {
   font-size: 16px;
   padding: 12px 20px;
   cursor: pointer;
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-block; }
   button:hover, button:focus,
   input[type="button"]:hover,
   input[type="button"]:focus,
