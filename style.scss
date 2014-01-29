@@ -100,6 +100,7 @@ a, a:visited, a:link {
 
 .site-title {
 	@extend h2;
+	font-size: 36px;
 	margin: 0;
 	padding: 0;
 }
@@ -354,7 +355,8 @@ body.no-js {
 		margin-bottom: 24px;
 	}
 
-	img.size-full {
+	img.size-full,
+	img.size-large {
 		max-width: 940px;
 		margin-top: 36px;
 		margin-bottom: 36px;
@@ -430,6 +432,7 @@ blockquote:before {
 
 .related-content {
 	float: left;
+	width: 100%;
 
 	.related-content-title {
 		@extend h2;

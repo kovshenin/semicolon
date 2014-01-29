@@ -635,6 +635,7 @@ a, a:visited, a:link {
   margin-top: 60px; }
 
 .site-title {
+  font-size: 36px;
   margin: 0;
   padding: 0; }
 
@@ -884,12 +885,14 @@ body.no-js {
     margin-left: -40px;
     margin-top: 24px;
     margin-bottom: 24px; }
-  .entry-content img.size-full {
+  .entry-content img.size-full,
+  .entry-content img.size-large {
     max-width: 940px;
     margin-top: 36px;
     margin-bottom: 36px;
     display: block; }
-    .entry-content img.size-full.alignnone {
+    .entry-content img.size-full.alignnone,
+    .entry-content img.size-large.alignnone {
       margin-left: -40px; }
   .entry-content .wp-caption img.size-full {
     margin-bottom: 0; }
@@ -939,7 +942,8 @@ blockquote:before {
   line-height: 16px; }
 
 .related-content {
-  float: left; }
+  float: left;
+  width: 100%; }
   .related-content .related-content-title {
     font-size: 18px;
     padding-top: 0; }
