@@ -367,7 +367,8 @@ body.no-js {
 		}
 	}
 
-	.wp-caption img.size-full {
+	.wp-caption img.size-full,
+	.wp-caption img.size-large {
 		margin-bottom: 0;
 	}
 
@@ -384,7 +385,9 @@ body.no-js {
 	}
 
 	.wp-caption.alignnone img.size-full + .wp-caption-text,
-	.wp-caption.alignnone img.size-full {
+	.wp-caption.alignnone img.size-full,
+	.wp-caption.alignnone img.size-large + .wp-caption-text,
+	.wp-caption.alignnone img.size-large {
 		margin-left: -40px;
 	}
 
