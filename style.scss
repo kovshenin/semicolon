@@ -425,6 +425,7 @@ blockquote:before {
 	.related-content-title {
 		@extend h2;
 		font-size: 18px;
+		padding-top: 0;
 	}
 
 	article {
@@ -526,6 +527,10 @@ blockquote:before {
 	}
 }
 
+.comments-area {
+	float: left;
+}
+
 .comments-title {
 	@extend h2;
 	margin-top: 0;
@@ -548,13 +553,16 @@ blockquote:before {
 	.comment-author {
 		@extend h2;
 		font-size: 18px;
-		margin-bottom: 4px;
+		line-height: 24px;
+		margin-top: 24px;
+		padding-top: 24px;
+		margin-bottom: 0;
 
 		b {
 			font-weight: normal;
 			display: block;
-			margin-top: 5px;
 			font-style: normal;
+			padding-top: 12px;
 		}
 
 		.says {
@@ -572,23 +580,25 @@ blockquote:before {
 		left: -80px;
 		width: 60px;
 		height: 60px;
+		margin-top: 6px;
 	}
 
 	.comment-metadata {
 		@extend .entry-meta;
-		margin-bottom: 30px;
+		margin-bottom: 24px;
 	}
 }
 
 #respond {
 	label {
 		display: block;
+		margin-bottom: 12px;
 	}
 
 	#reply-title {
 		@extend h2;
 		font-size: 18px;
-		margin: 0 0 10px 0;
+		margin: 0 0 12px 0;
 	}
 
 	.required {
@@ -615,7 +625,8 @@ a.button-primary {
 	cursor: pointer;
 	text-decoration: none;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background: lighten( $color-primary, 5% );
 		color: white;
 	}
@@ -640,7 +651,9 @@ input[type="password"],
 input[type="search"],
 textarea {
 	border: solid 1px rgba( $color-secondary, 0.3 );
-	padding: 8px;
+	box-sizing: border-box;
+	line-height: 24px;
+	padding: 5px 6px;
 }
 
 .site-footer {
@@ -654,4 +667,4 @@ textarea {
 }
 
 @import 'css/respond';
-/*@import 'css/wpmag';*/
+@import 'css/wpmag';
