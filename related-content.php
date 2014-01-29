@@ -3,15 +3,6 @@
  * @package Kovkov
  */
 do_action( 'kovkov_related_posts_before' );
-?>
-<div class="wpmag-content-newsletter">
-	<h3>Подписаться на рассылку</h3>
-	<p>
-		<a class="button-primary alignright" href="http://wpmag.ru/subscribe/" target="_blank">Подписаться &rarr; </a>
-		Подпишитесь на бесплатную рассылку журнала WP Magazine и получайте новости, события, подборки тем и плагинов, уроки, советы и многое другое в мире WordPress!
-	</p>
-</div>
-<?php
 $related_posts = kovkov_get_related_posts();
 ?>
 <?php if ( $related_posts->have_posts() ) : ?>
