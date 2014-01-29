@@ -653,7 +653,7 @@ a, a:visited, a:link {
 
 .main-navigation {
   margin-top: 48px;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   border-top: solid 1px rgba(58, 58, 58, 0.1);
   /* Temporarily disable submenus */ }
   .main-navigation a {
