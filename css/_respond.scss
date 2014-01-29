@@ -5,6 +5,9 @@
 		width: 180px - 30px;
 		height: 180px - 30px;
 
+		/* 150px is the new height, 168 is the desired (vrhythm) height, bottom margin is 12px by default, so 18px */
+		margin-bottom: 18px;
+
 		span {
 			margin-left: -1 * ( ( 1000px - ( 180px - 30px ) ) / 2 );
 		}
@@ -20,7 +23,10 @@
 	width: 420px - 60px;
 	.post-thumbnail {
 		width: 420px - 60px;
-		height: 240px * ( ( 420 - 60 ) / 420 );
+		height: round( 240px * ( ( 420 - 60 ) / 420 ) );
+
+		/* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
+		margin-bottom: 10px;
 
 		span {
 			margin-left: -1 * ( ( 1000px - ( 420px - 60px ) ) / 2 );
@@ -263,14 +269,17 @@
 /* Better mobile menu */
 @media screen and (max-width: 600px) {
 	body.js .main-navigation {
+
 		.menu-toggle {
 			font-family: $font-regular;
 			font-size: 16px;
+			line-height: 52px;
+			height: 60px;
 			font-weight: 400;
-			margin-top: -1px;
-			margin-bottom: 0;
-			padding: 20px 0;
 			border-top: solid 4px transparent;
+
+			margin: -1px 0 0 0;
+			padding: 0;
 
 			&:before {
 				display: inline-block;
@@ -278,7 +287,7 @@
 				font-family: Genericons;
 				content: '\f419';
 				font-size: 16px;
-				line-height: 20px;
+				line-height: 52px;
 				padding-right: 10px;
 				-webkit-font-smoothing: antialiased;
 				vertical-align: top;
@@ -303,7 +312,7 @@
 						font-family: Genericons;
 						content: '\f452';
 						font-size: 16px;
-						line-height: 22px;
+						line-height: 24px;
 						-webkit-font-smoothing: antialiased;
 						vertical-align: top;
 						position: absolute;
@@ -322,7 +331,7 @@
 				clear: left;
 
 				a {
-					padding: 12px 26px;
+					padding: 0 26px;
 				}
 			}
 

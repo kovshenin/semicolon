@@ -129,15 +129,15 @@ var kovkov = kovkov || {};
 			$captioned_images = $( '.entry-content .wp-caption img[class*="wp-image-"]' );
 
 		$content_images.each(function(i,el){
-			$el = $(el);
+			var $el = $(el),
+				padding = 0;
 
-			if ( $el.height() % 24 > 0 ) {
+			padding = ( $el.height() % 24 > 0 ) ? 24 - $el.height() % 24 : 0;
 
-				if ( $.inArray( $el[0], $captioned_images ) > -1 ) {
-					$el.next( '.wp-caption-text' ).css( 'padding-bottom', 24 - $el.height() % 24 );
-				} else {
-					$el.css( 'padding-bottom', 24 - $el.height() % 24 );
-				}
+			if ( $.inArray( $el[0], $captioned_images ) > -1 ) {
+				$el.next( '.wp-caption-text' ).css( 'padding-bottom', padding );
+			} else {
+				$el.css( 'padding-bottom', padding );
 			}
 		});
 	}));

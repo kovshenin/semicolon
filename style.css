@@ -1231,7 +1231,9 @@ textarea {
     body.grid article.hentry .post-thumbnail,
     .related-content article .post-thumbnail {
       width: 150px;
-      height: 150px; }
+      height: 150px;
+      /* 150px is the new height, 168 is the desired (vrhythm) height, bottom margin is 12px by default, so 18px */
+      margin-bottom: 18px; }
       body.grid article.hentry .post-thumbnail span,
       .related-content article .post-thumbnail span {
         margin-left: -425px; }
@@ -1243,7 +1245,9 @@ textarea {
     width: 360px; }
     body.grid.js article.hentry.kovkov-featured .post-thumbnail {
       width: 360px;
-      height: 205.71429px; }
+      height: 206px;
+      /* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
+      margin-bottom: 10px; }
       body.grid.js article.hentry.kovkov-featured .post-thumbnail span {
         margin-left: -320px; }
     body.grid.js article.hentry.kovkov-featured .entry-title {
@@ -1290,7 +1294,9 @@ textarea {
     body.grid article.hentry .post-thumbnail,
     .related-content article .post-thumbnail {
       width: 150px;
-      height: 150px; }
+      height: 150px;
+      /* 150px is the new height, 168 is the desired (vrhythm) height, bottom margin is 12px by default, so 18px */
+      margin-bottom: 18px; }
       body.grid article.hentry .post-thumbnail span,
       .related-content article .post-thumbnail span {
         margin-left: -425px; }
@@ -1302,7 +1308,9 @@ textarea {
     width: 360px; }
     body.grid.js article.hentry.kovkov-featured .post-thumbnail {
       width: 360px;
-      height: 205.71429px; }
+      height: 206px;
+      /* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
+      margin-bottom: 10px; }
       body.grid.js article.hentry.kovkov-featured .post-thumbnail span {
         margin-left: -320px; }
     body.grid.js article.hentry.kovkov-featured .entry-title {
@@ -1372,7 +1380,9 @@ textarea {
     body.grid article.hentry .post-thumbnail,
     .related-content article .post-thumbnail {
       width: 150px;
-      height: 150px; }
+      height: 150px;
+      /* 150px is the new height, 168 is the desired (vrhythm) height, bottom margin is 12px by default, so 18px */
+      margin-bottom: 18px; }
       body.grid article.hentry .post-thumbnail span,
       .related-content article .post-thumbnail span {
         margin-left: -425px; }
@@ -1384,7 +1394,9 @@ textarea {
     width: 360px; }
     body.grid.js article.hentry.kovkov-featured .post-thumbnail {
       width: 360px;
-      height: 205.71429px; }
+      height: 206px;
+      /* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
+      margin-bottom: 10px; }
       body.grid.js article.hentry.kovkov-featured .post-thumbnail span {
         margin-left: -320px; }
     body.grid.js article.hentry.kovkov-featured .entry-title {
@@ -1466,7 +1478,9 @@ textarea {
     body.grid article.hentry .post-thumbnail,
     .related-content article .post-thumbnail {
       width: 150px;
-      height: 150px; }
+      height: 150px;
+      /* 150px is the new height, 168 is the desired (vrhythm) height, bottom margin is 12px by default, so 18px */
+      margin-bottom: 18px; }
       body.grid article.hentry .post-thumbnail span,
       .related-content article .post-thumbnail span {
         margin-left: -425px; }
@@ -1478,7 +1492,9 @@ textarea {
     width: 360px; }
     body.grid.js article.hentry.kovkov-featured .post-thumbnail {
       width: 360px;
-      height: 205.71429px; }
+      height: 206px;
+      /* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
+      margin-bottom: 10px; }
       body.grid.js article.hentry.kovkov-featured .post-thumbnail span {
         margin-left: -320px; }
     body.grid.js article.hentry.kovkov-featured .entry-title {
@@ -1523,18 +1539,19 @@ textarea {
   body.js .main-navigation .menu-toggle {
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 16px;
+    line-height: 52px;
+    height: 60px;
     font-weight: 400;
-    margin-top: -1px;
-    margin-bottom: 0;
-    padding: 20px 0;
-    border-top: solid 4px transparent; }
+    border-top: solid 4px transparent;
+    margin: -1px 0 0 0;
+    padding: 0; }
     body.js .main-navigation .menu-toggle:before {
       display: inline-block;
       font-weight: normal;
       font-family: Genericons;
       content: '\f419';
       font-size: 16px;
-      line-height: 20px;
+      line-height: 52px;
       padding-right: 10px;
       -webkit-font-smoothing: antialiased;
       vertical-align: top; }
@@ -1557,7 +1574,7 @@ textarea {
       font-family: Genericons;
       content: '\f452';
       font-size: 16px;
-      line-height: 22px;
+      line-height: 24px;
       -webkit-font-smoothing: antialiased;
       vertical-align: top;
       position: absolute;
@@ -1569,7 +1586,7 @@ textarea {
     float: none;
     clear: left; }
     body.js .main-navigation.toggled li a {
-      padding: 12px 26px; }
+      padding: 0 26px; }
   body.js .main-navigation.toggled .menu-toggle {
     border-top-color: #3a3a3a;
     border-bottom: solid 1px rgba(58, 58, 58, 0.1); } }
