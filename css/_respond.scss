@@ -101,6 +101,7 @@
 	.paging-navigation { width: 900px - 120px; }
 
 	.entry-content img.size-full,
+	.entry-content img.size-large,
 	.entry-content iframe {
 		max-width: 940px - 120px;
 	}
@@ -113,6 +114,7 @@
 	.paging-navigation { width: 1260px - 360px; }
 
 	.entry-content img.size-full,
+	.entry-content img.size-large,
 	.entry-content iframe {
 		max-width: 940px;
 	}
@@ -131,6 +133,7 @@
 	.paging-navigation { width: 1260px - 480px; }
 
 	.entry-content img.size-full,
+	.entry-content img.size-large,
 	.entry-content iframe {
 		max-width: 940px - 120px;
 	}
@@ -151,10 +154,14 @@
 
 	.entry-content {
 		.wp-caption.alignnone img.size-full,
+		.wp-caption.alignnone img.size-large,
 		img.size-full,
 		img.size-full.alignnone,
+		img.size-large,
+		img.size-large.alignnone,
 		iframe,
-		.wp-caption.alignnone img.size-full + .wp-caption-text {
+		.wp-caption.alignnone img.size-full + .wp-caption-text,
+		.wp-caption.alignnone img.size-large + .wp-caption-text {
 			max-width: 100%;
 			margin-left: 0;
 		}
@@ -181,10 +188,14 @@
 
 	.entry-content {
 		.wp-caption.alignnone img.size-full,
+		.wp-caption.alignnone img.size-large,
 		img.size-full,
 		img.size-full.alignnone,
+		img.size-large,
+		img.size-large.alignnone,
 		iframe,
-		.wp-caption.alignnone img.size-full + .wp-caption-text {
+		.wp-caption.alignnone img.size-full + .wp-caption-text,
+		.wp-caption.alignnone img.size-large + .wp-caption-text {
 			max-width: 100%;
 			margin-left: 0;
 		}
@@ -209,10 +220,14 @@
 
 	.entry-content {
 		.wp-caption.alignnone img.size-full,
+		.wp-caption.alignnone img.size-large,
 		img.size-full,
 		img.size-full.alignnone,
+		img.size-large,
+		img.size-large.alignnone,
 		iframe,
-		.wp-caption.alignnone img.size-full + .wp-caption-text {
+		.wp-caption.alignnone img.size-full + .wp-caption-text,
+		.wp-caption.alignnone img.size-large + .wp-caption-text {
 			max-width: 100%;
 			margin-left: 0;
 		}
@@ -239,10 +254,14 @@
 
 	.entry-content {
 		.wp-caption.alignnone img.size-full,
+		.wp-caption.alignnone img.size-large,
 		img.size-full,
 		img.size-full.alignnone,
+		img.size-large,
+		img.size-large.alignnone,
 		iframe,
-		.wp-caption.alignnone img.size-full + .wp-caption-text {
+		.wp-caption.alignnone img.size-full + .wp-caption-text,
+		.wp-caption.alignnone img.size-large + .wp-caption-text {
 			max-width: 100%;
 			margin-left: 0;
 		}
