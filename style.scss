@@ -125,13 +125,10 @@ a, a:visited, a:link {
 
 	@if $debug { background: rgba(1,0,0,0.04); }
 
-	ul.nav-menu {
-		margin-top: -1px;
-	}
-
 	a {
 		color: $color-secondary;
 		text-decoration: none;
+		margin-top: -1px;
 		padding: 0px 20px;
 		border-top: solid 4px transparent;
 		height: 48px;
@@ -599,10 +596,18 @@ blockquote:before {
 		@extend h2;
 		font-size: 18px;
 		margin: 0 0 12px 0;
+
+		small {
+			line-height: 24px;
+		}
 	}
 
 	.required {
 		color: darken( red, 5% );
+	}
+
+	textarea {
+		height: 240px;
 	}
 }
 
@@ -651,9 +656,23 @@ input[type="password"],
 input[type="search"],
 textarea {
 	border: solid 1px rgba( $color-secondary, 0.3 );
-	box-sizing: border-box;
 	line-height: 24px;
-	padding: 5px 6px;
+	font-size: 16px;
+	display: block;
+	padding: 8px;
+	margin: 0;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	height: 36px;
 }
 
 .site-footer {

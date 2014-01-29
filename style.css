@@ -656,11 +656,10 @@ a, a:visited, a:link {
   margin-bottom: 24px;
   border-top: solid 1px rgba(58, 58, 58, 0.1);
   /* Temporarily disable submenus */ }
-  .main-navigation ul.nav-menu {
-    margin-top: -1px; }
   .main-navigation a {
     color: #3a3a3a;
     text-decoration: none;
+    margin-top: -1px;
     padding: 0px 20px;
     border-top: solid 4px transparent;
     height: 48px;
@@ -1085,8 +1084,12 @@ blockquote:before {
 #respond #reply-title {
   font-size: 18px;
   margin: 0 0 12px 0; }
+  #respond #reply-title small {
+    line-height: 24px; }
 #respond .required {
   color: #e60000; }
+#respond textarea {
+  height: 240px; }
 
 .form-allowed-tags {
   display: none; }
@@ -1209,9 +1212,21 @@ input[type="password"],
 input[type="search"],
 textarea {
   border: solid 1px rgba(58, 58, 58, 0.3);
-  box-sizing: border-box;
   line-height: 24px;
-  padding: 5px 6px; }
+  font-size: 16px;
+  display: block;
+  padding: 8px;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+  height: 36px; }
 
 .site-footer {
   margin: 48px 0; }
