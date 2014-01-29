@@ -44,4 +44,6 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
+	<?php do_action( 'kovkov_header_after' ); ?>
+
 	<div id="content" class="site-content">
