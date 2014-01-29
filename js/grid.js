@@ -126,7 +126,8 @@ var kovkov = kovkov || {};
 	// Helps maintain vertical rhythm for images.
 	$window.on('resize', kovkov.throttle( 1000, function(){
 		var $content_images = $( '.entry-content img[class*="wp-image-"]' ),
-			$captioned_images = $( '.entry-content .wp-caption img[class*="wp-image-"]' );
+			$captioned_images = $( '.entry-content .wp-caption img[class*="wp-image-"]' ),
+			$other = $( '.entry-content .wpm-tooltip' );
 
 		$content_images.each(function(i,el){
 			var $el = $(el),
@@ -140,6 +141,24 @@ var kovkov = kovkov || {};
 				$el.css( 'padding-bottom', padding );
 			}
 		});
+
+		// @todo: Don't RYS
+		/*$other.each(function(i,el){
+			var $el = $(el),
+				margin = 0;
+
+			// Save the original bottom margin.
+			if ( undefined === $el.data( 'kovkov-margin-bottom' ) ) {
+				$el.data( 'kovkov-margin-bottom', $el.css( 'margin-bottom' ) );
+			}
+
+			// Calculate a margin to fit our baseline.
+			margin = ( $el.height() % 24 > 0 ) ? 24 - $el.height() % 24 : 0;
+
+			console.log(margin);
+
+			// $el.css( 'margin-bottom'
+		});*/
 	}));
 
 	$window.trigger('resize');
