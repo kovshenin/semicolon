@@ -1015,6 +1015,10 @@ blockquote:before {
     color: white; }
     .widget-area .sidebar-primary a {
       color: white; }
+    .widget-area .sidebar-primary aside:last-child {
+      margin-bottom: 0; }
+      .widget-area .sidebar-primary aside:last-child p:last-child {
+        margin-bottom: 0; }
   .widget-area .sidebar-secondary {
     background: rgba(58, 58, 58, 0.03); }
   .widget-area .widget-title {
@@ -1666,10 +1670,6 @@ body.wpmag .site-title a {
   /* 84px - 75px */ }
 body.wpmag .site-description {
   display: none; }
-body.wpmag .sidebar-primary aside:last-child {
-  margin-bottom: 0; }
-  body.wpmag .sidebar-primary aside:last-child p:last-child {
-    margin-bottom: 0; }
 body.wpmag .yandex-share .b-share {
   margin-left: -4px; }
 body.wpmag .yandex-share {

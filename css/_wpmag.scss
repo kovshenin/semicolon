@@ -27,15 +27,6 @@ body.wpmag {
 		display: none;
 	}
 
-	.sidebar-primary {
-		aside:last-child {
-			margin-bottom: 0;
-			p:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
-
 	.wpm-button-primary,
 	a.wpm-button-primary {
 		@extend .button-primary;
