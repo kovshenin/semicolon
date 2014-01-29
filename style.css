@@ -1020,6 +1020,9 @@ blockquote:before {
     margin-bottom: 48px; }
     .widget-area .widget:last-child {
       margin-bottom: 0; }
+  .widget-area .widget.widget_search {
+    margin-bottom: 60px;
+    /* Input size is only 36px high, so give this morge margin to fit 48px */ }
 
 .home .widget-area .sidebar-primary {
   min-height: 240px; }

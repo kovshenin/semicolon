@@ -500,6 +500,10 @@ blockquote:before {
 			margin-bottom: 0;
 		}
 	}
+
+	.widget.widget_search {
+		margin-bottom: 48px + 12px; /* Input size is only 36px high, so give this morge margin to fit 48px */
+	}
 }
 
 .home .widget-area .sidebar-primary {
