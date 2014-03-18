@@ -401,12 +401,12 @@ body.no-js {
 			margin-left: 60px;
 
 			.gallery-icon,
-			.gallery-icon a, img, dd {
+			.gallery-icon a, img, .gallery-caption {
 				float: left;
 			}
 		}
 
-		dd {
+		.gallery-caption {
 			margin-left: 0;
 			margin-top: 10px;
 		}

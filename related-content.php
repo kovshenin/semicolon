@@ -2,7 +2,7 @@
 /**
  */
 do_action( 'semicolon_related_posts_before' );
-$related_posts = semicolon_get_related_posts();
+$related_posts = Semicolon::get_related_posts();
 ?>
 <?php if ( $related_posts->have_posts() ) : ?>
 <div class="related-content">
