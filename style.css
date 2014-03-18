@@ -9,7 +9,7 @@ Description: Quite possibly the cleanest magazine theme for WordPress
 Version: 0.8
 License: GNU General Public License
 License URI: license.txt
-Text Domain: kovkov
+Text Domain: semicolon
 Domain Path: /languages/
 Tags:
 
@@ -30,14 +30,14 @@ body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title,
 .site-title,
 .grid .page-title,
 .grid article.hentry .entry-title,
-.js.grid article.hentry.kovkov-featured .entry-title,
+.js.grid article.hentry.semicolon-featured .entry-title,
 .related-content .related-content-title,
 .related-content article .entry-title,
 .widget-area .widget-title,
 .comments-title,
 .comment-meta .comment-author,
 #respond #reply-title,
-body.wpmag .wpmag-content-newsletter h3, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article.hentry .entry-title, .grid article.hentry body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title, h4, h5, h6, p, blockquote, pre,
+body.wpmag .wpmag-content-newsletter h3, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article.hentry .entry-title, .grid article.hentry body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -111,7 +111,7 @@ blockquote, q {
 a:focus {
   outline: thin dotted; }
 
-a:hover, .grid article.hentry:hover .entry-title a, .js.grid article.hentry.kovkov-featured:hover .entry-title a, .related-content article:hover .entry-title a,
+a:hover, .grid article.hentry:hover .entry-title a, .js.grid article.hentry.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a,
 a:active {
   outline: 0; }
 
@@ -132,7 +132,7 @@ textarea {
   line-height: 1.5; }
 
 /* Headings */
-h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article.hentry .entry-title, .grid article.hentry body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title, h4, h5, h6 {
+h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article.hentry .entry-title, .grid article.hentry body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title, h4, h5, h6 {
   clear: both; }
 
 /*hr {
@@ -347,7 +347,7 @@ a {
 a:visited {
   color: purple; }
 
-a:hover, .grid article.hentry:hover .entry-title a, .js.grid article.hentry.kovkov-featured:hover .entry-title a, .related-content article:hover .entry-title a,
+a:hover, .grid article.hentry:hover .entry-title a, .js.grid article.hentry.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a,
 a:focus,
 a:active {
   color: midnightblue; }
@@ -597,7 +597,7 @@ body {
   background: #117bb8;
   color: white; }
 
-h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
+h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
   font-size: 52px;
   line-height: 72px;
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
@@ -606,7 +606,7 @@ h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site
   padding-top: 24px;
   margin-bottom: 24px; }
 
-h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.kovkov-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
+h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
   font-size: 28px;
   line-height: 48px; }
 
@@ -620,7 +620,7 @@ h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.po
 a, a:visited, a:link {
   color: #117bb8;
   text-decoration: underline; }
-  a:hover, .grid article.hentry:hover .entry-title a, .js.grid article.hentry.kovkov-featured:hover .entry-title a, .related-content article:hover .entry-title a, a:visited:hover, .grid article.hentry:hover .entry-title a:visited, .js.grid article.hentry.kovkov-featured:hover .entry-title a:visited, .related-content article:hover .entry-title a:visited, a:link:hover, .grid article.hentry:hover .entry-title a:link, .js.grid article.hentry.kovkov-featured:hover .entry-title a:link, .related-content article:hover .entry-title a:link {
+  a:hover, .grid article.hentry:hover .entry-title a, .js.grid article.hentry.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a, a:visited:hover, .grid article.hentry:hover .entry-title a:visited, .js.grid article.hentry.semicolon-featured:hover .entry-title a:visited, .related-content article:hover .entry-title a:visited, a:link:hover, .grid article.hentry:hover .entry-title a:link, .js.grid article.hentry.semicolon-featured:hover .entry-title a:link, .related-content article:hover .entry-title a:link {
     color: #159ae7; }
 
 #page {
@@ -646,7 +646,8 @@ a, a:visited, a:link {
   line-height: 24px;
   color: rgba(58, 58, 58, 0.5);
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-weight: 400; }
 
 .main-navigation {
   margin-top: 48px;
@@ -672,73 +673,73 @@ a, a:visited, a:link {
   .main-navigation .sub-menu {
     display: none !important; }
 
-#kovkov-social {
+#semicolon-social {
   padding: 0;
   list-style: none;
   float: right;
   margin-right: 12px;
   color: transparent; }
-  #kovkov-social li a {
+  #semicolon-social li a {
     padding-left: 8px;
     padding-right: 8px;
     line-height: 1; }
-  #kovkov-social li:hover {
+  #semicolon-social li:hover {
     background: none; }
-  #kovkov-social a span {
+  #semicolon-social a span {
     position: absolute;
     top: -9999px;
     left: -9999px; }
-  #kovkov-social li a::before {
+  #semicolon-social li a::before {
     color: rgba(58, 58, 58, 0.5);
     font: normal 20px/40px 'Genericons';
     content: '\f408'; }
-  #kovkov-social li a:hover::before, #kovkov-social li .grid article.hentry:hover .entry-title a::before, .grid article.hentry:hover .entry-title #kovkov-social li a::before, #kovkov-social li .related-content article:hover .entry-title a::before, .related-content article:hover .entry-title #kovkov-social li a::before {
+  #semicolon-social li a:hover::before, #semicolon-social li .grid article.hentry:hover .entry-title a::before, .grid article.hentry:hover .entry-title #semicolon-social li a::before, #semicolon-social li .related-content article:hover .entry-title a::before, .related-content article:hover .entry-title #semicolon-social li a::before {
     color: #3a3a3a; }
-  #kovkov-social li a[href*="codepen.io"]::before {
+  #semicolon-social li a[href*="codepen.io"]::before {
     content: '\f216'; }
-  #kovkov-social li a[href*="digg.com"]::before {
+  #semicolon-social li a[href*="digg.com"]::before {
     content: '\f221'; }
-  #kovkov-social li a[href*="dribbble.com"]::before {
+  #semicolon-social li a[href*="dribbble.com"]::before {
     content: '\f201'; }
-  #kovkov-social li a[href*="facebook.com"]::before {
+  #semicolon-social li a[href*="facebook.com"]::before {
     content: '\f203'; }
-  #kovkov-social li a[href*="flickr.com"]::before {
+  #semicolon-social li a[href*="flickr.com"]::before {
     content: '\f211'; }
-  #kovkov-social li a[href*="plus.google.com"]::before {
+  #semicolon-social li a[href*="plus.google.com"]::before {
     content: '\f206'; }
-  #kovkov-social li a[href*="github.com"]::before {
+  #semicolon-social li a[href*="github.com"]::before {
     content: '\f200'; }
-  #kovkov-social li a[href*="instagram.com"]::before {
+  #semicolon-social li a[href*="instagram.com"]::before {
     content: '\f215'; }
-  #kovkov-social li a[href*="linkedin.com"]::before {
+  #semicolon-social li a[href*="linkedin.com"]::before {
     content: '\f208'; }
-  #kovkov-social li a[href*="pinterest.com"]::before {
+  #semicolon-social li a[href*="pinterest.com"]::before {
     content: '\f210'; }
-  #kovkov-social li a[href*="polldaddy.com"]::before {
+  #semicolon-social li a[href*="polldaddy.com"]::before {
     content: '\f217'; }
-  #kovkov-social li a[href*="getpocket.com"]::before {
+  #semicolon-social li a[href*="getpocket.com"]::before {
     content: '\f224'; }
-  #kovkov-social li a[href*="reddit.com"]::before {
+  #semicolon-social li a[href*="reddit.com"]::before {
     content: '\f222'; }
-  #kovkov-social li a[href*="skype.com"]::before,
-  #kovkov-social li a[href*="skype:"]::before {
+  #semicolon-social li a[href*="skype.com"]::before,
+  #semicolon-social li a[href*="skype:"]::before {
     content: '\f220'; }
-  #kovkov-social li a[href*="stumbleupon.com"]::before {
+  #semicolon-social li a[href*="stumbleupon.com"]::before {
     content: '\f223'; }
-  #kovkov-social li a[href*="tumblr.com"]::before {
+  #semicolon-social li a[href*="tumblr.com"]::before {
     content: '\f214'; }
-  #kovkov-social li a[href*="twitter.com"]::before {
+  #semicolon-social li a[href*="twitter.com"]::before {
     content: '\f202'; }
-  #kovkov-social li a[href*="vimeo.com"]::before {
+  #semicolon-social li a[href*="vimeo.com"]::before {
     content: '\f212'; }
-  #kovkov-social li a[href*="wordpress.org"]::before,
-  #kovkov-social li a[href*="wordpress.com"]::before {
+  #semicolon-social li a[href*="wordpress.org"]::before,
+  #semicolon-social li a[href*="wordpress.com"]::before {
     content: '\f205'; }
-  #kovkov-social li a[href*="youtube.com"]::before {
+  #semicolon-social li a[href*="youtube.com"]::before {
     content: '\f213'; }
-  #kovkov-social li a[href$="/feed/"]::before,
-  #kovkov-social li a[href$="/feed"]::before,
-  #kovkov-social li a[href$="?feed=rss2"]::before {
+  #semicolon-social li a[href$="/feed/"]::before,
+  #semicolon-social li a[href$="/feed"]::before,
+  #semicolon-social li a[href$="?feed=rss2"]::before {
     content: '\f413'; }
 
 .page-description {
@@ -812,17 +813,17 @@ hr {
       text-decoration: none;
       margin-bottom: 12px;
       display: block; }
-  .grid article.hentry.kovkov-last {
+  .grid article.hentry.semicolon-last {
     margin-right: 0; }
 
 /* Featured images are featured in JS-mode only */
-.js.grid article.hentry.kovkov-featured {
+.js.grid article.hentry.semicolon-featured {
   float: left;
   width: 180px;
   margin-bottom: 48px;
   margin-right: 60px;
   width: 420px; }
-  .js.grid article.hentry.kovkov-featured .post-thumbnail {
+  .js.grid article.hentry.semicolon-featured .post-thumbnail {
     display: block;
     float: left;
     clear: both;
@@ -832,36 +833,36 @@ hr {
     background: rgba(58, 58, 58, 0.03);
     text-align: center;
     overflow: hidden; }
-    .js.grid article.hentry.kovkov-featured .post-thumbnail span {
+    .js.grid article.hentry.semicolon-featured .post-thumbnail span {
       display: block;
       width: 1000px;
       margin-left: -410px;
       height: 100%; }
-    .js.grid article.hentry.kovkov-featured .post-thumbnail img {
+    .js.grid article.hentry.semicolon-featured .post-thumbnail img {
       height: 100%;
       width: auto;
       max-width: none;
       display: inline-block; }
-  .js.grid article.hentry.kovkov-featured .entry-title {
+  .js.grid article.hentry.semicolon-featured .entry-title {
     width: 210px;
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0;
     font-size: 16px;
     line-height: 24px; }
-    .js.grid article.hentry.kovkov-featured .entry-title a {
+    .js.grid article.hentry.semicolon-featured .entry-title a {
       color: #3a3a3a;
       text-decoration: none;
       margin-bottom: 12px;
       display: block; }
-  .js.grid article.hentry.kovkov-featured.kovkov-last {
+  .js.grid article.hentry.semicolon-featured.semicolon-last {
     margin-right: 0; }
-  .js.grid article.hentry.kovkov-featured .post-thumbnail {
+  .js.grid article.hentry.semicolon-featured .post-thumbnail {
     width: 420px;
     height: 240px; }
-    .js.grid article.hentry.kovkov-featured .post-thumbnail span {
+    .js.grid article.hentry.semicolon-featured .post-thumbnail span {
       margin-left: -290px; }
-  .js.grid article.hentry.kovkov-featured .entry-title {
+  .js.grid article.hentry.semicolon-featured .entry-title {
     width: 450px;
     font-size: 24px;
     line-height: 36px; }
@@ -984,7 +985,7 @@ blockquote:before {
         text-decoration: none;
         margin-bottom: 12px;
         display: block; }
-    .related-content article.kovkov-last {
+    .related-content article.semicolon-last {
       margin-right: 0; }
 
 .entry-meta, .entry-content .wp-caption-text, .comment-meta .comment-metadata, .site-footer {
@@ -1158,10 +1159,10 @@ body.wpmag a.wpm-button-primary {
   body.wpmag .related-content article:hover .entry-title a.wpm-button,
   .related-content article:hover .entry-title body.wpmag a.wpm-button,
   .grid article.hentry:hover .entry-title a.button,
-  .js.grid article.hentry.kovkov-featured:hover .entry-title a.button,
+  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button,
   .related-content article:hover .entry-title a.button,
   .grid article.hentry:hover .entry-title a.button-secondary,
-  .js.grid article.hentry.kovkov-featured:hover .entry-title a.button-secondary,
+  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button-secondary,
   .related-content article:hover .entry-title a.button-secondary,
   body.wpmag .wpm-button-primary:hover,
   body.wpmag .grid article.hentry:hover .entry-title a.wpm-button-primary,
@@ -1181,9 +1182,9 @@ body.wpmag a.wpm-button-primary {
   body.wpmag .grid article.hentry:hover .entry-title a.wpm-button,
   .grid article.hentry:hover .entry-title body.wpmag a.wpm-button-primary,
   body.wpmag .grid article.hentry:hover .entry-title a.wpm-button-primary,
-  .js.grid article.hentry.kovkov-featured:hover .entry-title a.button-primary,
-  .js.grid article.hentry.kovkov-featured:hover .entry-title a.button,
-  .js.grid article.hentry.kovkov-featured:hover .entry-title a.button-secondary,
+  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button-primary,
+  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button,
+  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button-secondary,
   .related-content article:hover .entry-title a.button-primary,
   .related-content article:hover .entry-title a.button,
   .related-content article:hover .entry-title a.button-secondary,
@@ -1220,13 +1221,13 @@ body.wpmag a.wpm-button {
   .related-content article:hover .entry-title body.wpmag a.wpm-button,
   a.button:hover,
   .grid article.hentry:hover .entry-title a.button,
-  .js.grid article.hentry.kovkov-featured:hover .entry-title a.button,
+  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button,
   .related-content article:hover .entry-title a.button,
   a.button-secondary:hover,
   .grid article.hentry:hover .entry-title a.button-secondary,
   .grid article.hentry:hover .entry-title body.wpmag a.wpm-button,
   body.wpmag .grid article.hentry:hover .entry-title a.wpm-button,
-  .js.grid article.hentry.kovkov-featured:hover .entry-title a.button-secondary,
+  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button-secondary,
   .related-content article:hover .entry-title a.button-secondary,
   .related-content article:hover .entry-title body.wpmag a.wpm-button,
   body.wpmag .related-content article:hover .entry-title a.wpm-button,
@@ -1259,7 +1260,7 @@ input[type="search"] {
 .site-footer {
   margin: 48px 0; }
 
-.kovkov-clear-left {
+.semicolon-clear-left {
   clear: left; }
 
 /* A tiny bit smaller than the original small article */
@@ -1284,16 +1285,16 @@ input[type="search"] {
     .related-content article .entry-title {
       width: 180px; }
 
-  body.grid.js article.hentry.kovkov-featured {
+  body.grid.js article.hentry.semicolon-featured {
     width: 360px; }
-    body.grid.js article.hentry.kovkov-featured .post-thumbnail {
+    body.grid.js article.hentry.semicolon-featured .post-thumbnail {
       width: 360px;
       height: 206px;
       /* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
       margin-bottom: 10px; }
-      body.grid.js article.hentry.kovkov-featured .post-thumbnail span {
+      body.grid.js article.hentry.semicolon-featured .post-thumbnail span {
         margin-left: -320px; }
-    body.grid.js article.hentry.kovkov-featured .entry-title {
+    body.grid.js article.hentry.semicolon-featured .entry-title {
       width: 390px; }
 
   .entry-content .gallery .gallery-item {
@@ -1349,16 +1350,16 @@ input[type="search"] {
     .related-content article .entry-title {
       width: 180px; }
 
-  body.grid.js article.hentry.kovkov-featured {
+  body.grid.js article.hentry.semicolon-featured {
     width: 360px; }
-    body.grid.js article.hentry.kovkov-featured .post-thumbnail {
+    body.grid.js article.hentry.semicolon-featured .post-thumbnail {
       width: 360px;
       height: 206px;
       /* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
       margin-bottom: 10px; }
-      body.grid.js article.hentry.kovkov-featured .post-thumbnail span {
+      body.grid.js article.hentry.semicolon-featured .post-thumbnail span {
         margin-left: -320px; }
-    body.grid.js article.hentry.kovkov-featured .entry-title {
+    body.grid.js article.hentry.semicolon-featured .entry-title {
       width: 390px; }
 
   .entry-content .gallery .gallery-item {
@@ -1440,16 +1441,16 @@ input[type="search"] {
     .related-content article .entry-title {
       width: 180px; }
 
-  body.grid.js article.hentry.kovkov-featured {
+  body.grid.js article.hentry.semicolon-featured {
     width: 360px; }
-    body.grid.js article.hentry.kovkov-featured .post-thumbnail {
+    body.grid.js article.hentry.semicolon-featured .post-thumbnail {
       width: 360px;
       height: 206px;
       /* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
       margin-bottom: 10px; }
-      body.grid.js article.hentry.kovkov-featured .post-thumbnail span {
+      body.grid.js article.hentry.semicolon-featured .post-thumbnail span {
         margin-left: -320px; }
-    body.grid.js article.hentry.kovkov-featured .entry-title {
+    body.grid.js article.hentry.semicolon-featured .entry-title {
       width: 390px; }
 
   body {
@@ -1546,16 +1547,16 @@ input[type="search"] {
     .related-content article .entry-title {
       width: 180px; }
 
-  body.grid.js article.hentry.kovkov-featured {
+  body.grid.js article.hentry.semicolon-featured {
     width: 360px; }
-    body.grid.js article.hentry.kovkov-featured .post-thumbnail {
+    body.grid.js article.hentry.semicolon-featured .post-thumbnail {
       width: 360px;
       height: 206px;
       /* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
       margin-bottom: 10px; }
-      body.grid.js article.hentry.kovkov-featured .post-thumbnail span {
+      body.grid.js article.hentry.semicolon-featured .post-thumbnail span {
         margin-left: -320px; }
-    body.grid.js article.hentry.kovkov-featured .entry-title {
+    body.grid.js article.hentry.semicolon-featured .entry-title {
       width: 390px; }
 
   body {

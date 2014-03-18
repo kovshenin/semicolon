@@ -3,8 +3,6 @@
  * The Header for our theme.
  *
  * Displays all of the <head> section and everything up till <div id="content">
- *
- * @package kovkov
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -29,14 +27,14 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'kovkov' ); ?></h1>
-			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'kovkov' ); ?></a>
+			<h1 class="menu-toggle"><?php _e( 'Menu', 'semicolon' ); ?></h1>
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'semicolon' ); ?></a>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			<?php wp_nav_menu( array(
 				'theme_location' => 'social',
 				'depth' => 1,
-				'container_id' => 'kovkov-social',
+				'container_id' => 'semicolon-social',
 				'link_before' => '<span>',
 				'link_after' => '</span>',
 				'fallback_cb' => '',
@@ -44,6 +42,6 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<?php do_action( 'kovkov_header_after' ); ?>
+	<?php do_action( 'semicolon_header_after' ); ?>
 
 	<div id="content" class="site-content">

@@ -1,6 +1,5 @@
 <?php
 /**
- * @package kovkov
  */
 ?>
 
@@ -10,7 +9,7 @@
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<div class="entry-meta">
-			<?php kovkov_posted_on(); ?>
+			<?php semicolon_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 

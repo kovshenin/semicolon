@@ -1,8 +1,6 @@
 <?php
 /**
  * The Sidebar containing the main widget areas.
- *
- * @package kovkov
  */
 ?>
 	<div id="secondary" class="widget-area" role="complementary">

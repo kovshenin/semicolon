@@ -7,7 +7,7 @@ Description: Quite possibly the cleanest magazine theme for WordPress
 Version: 0.8
 License: GNU General Public License
 License URI: license.txt
-Text Domain: kovkov
+Text Domain: semicolon
 Domain Path: /languages/
 Tags:
 
@@ -114,6 +114,7 @@ a, a:visited, a:link {
 	color: rgba( $color-secondary, 0.5 );
 	margin: 0;
 	padding: 0;
+	font-weight: 400;
 }
 
 .main-navigation {
@@ -149,7 +150,7 @@ a, a:visited, a:link {
 	.sub-menu { display: none !important; }
 }
 
-#kovkov-social {
+#semicolon-social {
 	padding: 0;
 	list-style: none;
 	float: right;
@@ -291,7 +292,7 @@ hr {
 		}
 	}
 
-	&.kovkov-last {
+	&.semicolon-last {
 		margin-right: 0;
 	}
 }
@@ -322,7 +323,7 @@ hr {
 
 /* Featured images are featured in JS-mode only */
 .js.grid {
-	article.hentry.kovkov-featured {
+	article.hentry.semicolon-featured {
 		@include article-large;
 	}
 }
@@ -708,7 +709,7 @@ input[type="search"] {
 	margin: 48px 0;
 }
 
-.kovkov-clear-left {
+.semicolon-clear-left {
 	clear: left;
 	@if $debug { background: red; }
 }

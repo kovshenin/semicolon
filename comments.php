@@ -1,13 +1,6 @@
 <?php
 /**
  * The template for displaying Comments.
- *
- * The area of the page that contains both current comments
- * and the comment form. The actual display of comments is
- * handled by a callback to kovkov_comment() which is
- * located in the inc/template-tags.php file.
- *
- * @package kovkov
  */
 
 /*
@@ -26,14 +19,14 @@ if ( post_password_required() ) {
 
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
-			<?php printf( _n( '1 comment', '%s comments', get_comments_number(), 'kovkov' ), number_format_i18n( get_comments_number() ) ); ?>
+			<?php printf( _n( '1 comment', '%s comments', get_comments_number(), 'semicolon' ), number_format_i18n( get_comments_number() ) ); ?>
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'kovkov' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'kovkov' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'kovkov' ) ); ?></div>
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'semicolon' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'semicolon' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'semicolon' ) ); ?></div>
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
@@ -48,9 +41,9 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'kovkov' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'kovkov' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'kovkov' ) ); ?></div>
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'semicolon' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'semicolon' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'semicolon' ) ); ?></div>
 		</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 
@@ -60,7 +53,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'kovkov' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'semicolon' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form(); ?>

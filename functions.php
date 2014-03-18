@@ -1,8 +1,6 @@
 <?php
 /**
- * kovkov functions and definitions
- *
- * @package kovkov
+ * The Semicolon Theme
  */
 
 /**
@@ -12,7 +10,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 940; /* pixels */
 }
 
-if ( ! function_exists( 'kovkov_setup' ) ) :
+if ( ! function_exists( 'semicolon_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,15 +18,9 @@ if ( ! function_exists( 'kovkov_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function kovkov_setup() {
+function semicolon_setup() {
 
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on kovkov, use a find and replace
-	 * to change 'kovkov' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'kovkov', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'semicolon', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -40,14 +32,14 @@ function kovkov_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 420, 240, true );
-	// add_image_size( 'kovkov-featured', 420, 230, true );
-	add_image_size( 'kovkov-mini', 60, 60, true );
-	add_image_size( 'kovkov-gallery', 300, 300, true );
+
+	add_image_size( 'semicolon-mini', 60, 60, true );
+	add_image_size( 'semicolon-gallery', 300, 300, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'kovkov' ),
-		'social' => __( 'Social Menu', 'kovkov' ),
+		'primary' => __( 'Primary Menu', 'semicolon' ),
+		'social' => __( 'Social Menu', 'semicolon' ),
 	) );
 
 	// Enable support for Post Formats.
@@ -56,20 +48,20 @@ function kovkov_setup() {
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form' ) );
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'kovkov_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'semicolon_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // kovkov_setup
-add_action( 'after_setup_theme', 'kovkov_setup' );
+endif;
+add_action( 'after_setup_theme', 'semicolon_setup' );
 
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
-function kovkov_widgets_init() {
+function semicolon_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Primary', 'kovkov' ),
+		'name'          => __( 'Primary', 'semicolon' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -78,7 +70,7 @@ function kovkov_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Secondary', 'kovkov' ),
+		'name'          => __( 'Secondary', 'semicolon' ),
 		'id'            => 'sidebar-2',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -87,7 +79,7 @@ function kovkov_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Tertiary', 'kovkov' ),
+		'name'          => __( 'Tertiary', 'semicolon' ),
 		'id'            => 'sidebar-3',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -95,32 +87,27 @@ function kovkov_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'kovkov_widgets_init' );
+add_action( 'widgets_init', 'semicolon_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function kovkov_scripts() {
-	wp_enqueue_style( 'kovkov-style', get_stylesheet_uri(), array(), '20140129' );
+function semicolon_scripts() {
+	wp_enqueue_style( 'semicolon-style', get_stylesheet_uri(), array(), '20140129' );
 
-	wp_enqueue_style( 'kovkov-genericons', get_template_directory_uri() . '/css/genericons.css', array(), '20131222' );
+	wp_enqueue_style( 'semicolon-genericons', get_template_directory_uri() . '/css/genericons.css', array(), '20131222' );
 
-	wp_enqueue_script( 'kovkov-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'semicolon-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'kovkov-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'semicolon-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-	wp_enqueue_script( 'kovkov-grid', get_template_directory_uri() . '/js/grid.js', array( 'jquery' ), '20140129', true );
+	wp_enqueue_script( 'semicolon-grid', get_template_directory_uri() . '/js/grid.js', array( 'jquery' ), '20140129', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'kovkov_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
+add_action( 'wp_enqueue_scripts', 'semicolon_scripts' );
 
 /**
  * Custom template tags for this theme.
@@ -142,15 +129,14 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-class Kovkov {
+class Semicolon {
 	private function __construct() {}
 
 	public static function get_instance() {
 		static $instance;
 
-		if ( null === $instance ) {
-			$instance = new Kovkov;
-		}
+		if ( null === $instance )
+			$instance = new Semicolon;
 
 		return $instance;
 	}
@@ -170,7 +156,7 @@ class Kovkov {
 
 	function shortcode_atts_gallery( $out, $pairs, $atts ) {
 		if ( empty( $atts['size'] ) && $out['columns'] >= 2 )
-			$out['size'] = 'kovkov-gallery';
+			$out['size'] = 'semicolon-gallery';
 
 		return $out;
 	}
@@ -186,7 +172,7 @@ class Kovkov {
 
 	function post_class( $classes, $class, $post_id ) {
 		if ( self::is_featured( $post_id ) )
-			$classes[] = 'kovkov-featured';
+			$classes[] = 'semicolon-featured';
 
 		return $classes;
 	}
@@ -194,7 +180,7 @@ class Kovkov {
 	function get_featured_posts() {
 		$featured_posts = array();
 
-		$jetpack_featured_posts = apply_filters( 'kovkov_get_featured_posts', false );
+		$jetpack_featured_posts = apply_filters( 'semicolon_get_featured_posts', false );
 		if ( ! empty( $jetpack_featured_posts ) )
 			$featured_posts = array_map( 'absint', wp_list_pluck( $jetpack_featured_posts, 'ID' ) );
 		else
@@ -302,13 +288,13 @@ class Kovkov {
 	}
 };
 
-Kovkov::get_instance()->init();
+Semicolon::get_instance()->init();
 
-if ( ! function_exists( 'kovkov_get_related_posts' ) ) :
+if ( ! function_exists( 'semicolon_get_related_posts' ) ) :
 /**
  * Returns a new WP_Query with related posts.
  */
-function kovkov_get_related_posts() {
+function semicolon_get_related_posts() {
 	$post = get_post();
 
 	// Support for the Yet Another Related Posts Plugin

@@ -1,4 +1,4 @@
-var kovkov = kovkov || {};
+var semicolon = semicolon || {};
 
 (function($){
 
@@ -6,7 +6,7 @@ var kovkov = kovkov || {};
 		selectors = [ $('#primary article.hentry'), $('.related-content article') ],
 		$window = $(window);
 
-	kovkov.drawGrid = function(redraw) {
+	semicolon.drawGrid = function(redraw) {
 		$.each(selectors, function(i, $entries) {
 			var count = 0;
 			$entries.each(function(i,el){
@@ -16,14 +16,14 @@ var kovkov = kovkov || {};
 
 				// Reset featured and clear states when rendrawing.
 				if (redraw) {
-					if ($el.hasClass('kovkov-featured-removed'))
-						$el.removeClass('kovkov-featured-removed').addClass('kovkov-featured');
+					if ($el.hasClass('semicolon-featured-removed'))
+						$el.removeClass('semicolon-featured-removed').addClass('semicolon-featured');
 
-					if ($el.hasClass('kovkov-clear-left'))
-						$el.removeClass('kovkov-clear-left');
+					if ($el.hasClass('semicolon-clear-left'))
+						$el.removeClass('semicolon-clear-left');
 
-					if ($el.hasClass('kovkov-last'))
-						$el.removeClass('kovkov-last');
+					if ($el.hasClass('semicolon-last'))
+						$el.removeClass('semicolon-last');
 				}
 
 				/**
@@ -36,23 +36,23 @@ var kovkov = kovkov || {};
 
 				// Unfeature a post if it's about to be rendered in the last column position
 				// because it won't fit and wrap instead. Also unfeature the last item on the list.
-				if ($el.hasClass('kovkov-featured')) {
+				if ($el.hasClass('semicolon-featured')) {
 					if (count % columns === columns - 1 || i == $entries.length - 1) {
-						$el.removeClass('kovkov-featured').addClass('kovkov-featured-removed');
+						$el.removeClass('semicolon-featured').addClass('semicolon-featured-removed');
 					}
 				}
 
 				count += 1;
 
 				if (count % columns === 1)
-					$el.addClass('kovkov-clear-left');
+					$el.addClass('semicolon-clear-left');
 
 				// One ghost element because featured posts take up two columns
-				if ($el.hasClass('kovkov-featured'))
+				if ($el.hasClass('semicolon-featured'))
 					count += 1;
 
 				if (count % columns === 0)
-					$el.addClass('kovkov-last');
+					$el.addClass('semicolon-last');
 			});
 		});
 	};
@@ -73,14 +73,14 @@ var kovkov = kovkov || {};
 			columns = columns !== 4 ? 4 : columns;
 
 		if (columns_old !== columns)
-			kovkov.drawGrid(true);
+			semicolon.drawGrid(true);
 	});
 
 	/*
 	 * Copied from https://github.com/cowboy/jquery-throttle-debounce
 	 * Licensed under GPL + MIT
 	 */
-	kovkov.throttle = function( delay, no_trailing, callback, debounce_mode ) {
+	semicolon.throttle = function( delay, no_trailing, callback, debounce_mode ) {
     	var timeout_id,
 		last_exec = 0;
 		if ( typeof no_trailing !== 'boolean' ) {
@@ -124,7 +124,7 @@ var kovkov = kovkov || {};
 	};
 
 	// Helps maintain vertical rhythm for images.
-	$window.on('resize', kovkov.throttle( 1000, function(){
+	$window.on('resize', semicolon.throttle( 1000, function(){
 		var $content_images = $( '.entry-content img[class*="wp-image-"]' ),
 			$captioned_images = $( '.entry-content .wp-caption img[class*="wp-image-"]' ),
 			$other = $( '.entry-content .wpm-tooltip' );
@@ -141,24 +141,6 @@ var kovkov = kovkov || {};
 				$el.css( 'padding-bottom', padding );
 			}
 		});
-
-		// @todo: Don't RYS
-		/*$other.each(function(i,el){
-			var $el = $(el),
-				margin = 0;
-
-			// Save the original bottom margin.
-			if ( undefined === $el.data( 'kovkov-margin-bottom' ) ) {
-				$el.data( 'kovkov-margin-bottom', $el.css( 'margin-bottom' ) );
-			}
-
-			// Calculate a margin to fit our baseline.
-			margin = ( $el.height() % 24 > 0 ) ? 24 - $el.height() % 24 : 0;
-
-			console.log(margin);
-
-			// $el.css( 'margin-bottom'
-		});*/
 	}));
 
 	$window.trigger('resize');

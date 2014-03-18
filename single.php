@@ -1,8 +1,6 @@
 <?php
 /**
  * The Template for displaying all single posts.
- *
- * @package kovkov
  */
 
 get_header(); ?>
@@ -20,7 +18,7 @@ get_header(); ?>
 				// If comments are open or we have at least one comment, load up the comment template
 				if ( comments_open() || '0' != get_comments_number() ) :
 					comments_template();
-					do_action( 'kovkov_comments_after' );
+					do_action( 'semicolon_comments_after' );
 				endif;
 			?>
 

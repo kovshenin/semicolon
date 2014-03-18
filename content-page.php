@@ -1,8 +1,6 @@
 <?php
 /**
  * The template used for displaying page content in page.php
- *
- * @package kovkov
  */
 ?>
 
@@ -15,7 +13,7 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'kovkov' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'semicolon' ),
 				'after'  => '</div>',
 			) );
 		?>

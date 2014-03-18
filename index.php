@@ -7,8 +7,6 @@
  * It is used to display a page when nothing more specific matches a query.
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package kovkov
  */
 
 get_header(); ?>
@@ -21,25 +19,25 @@ get_header(); ?>
 					single_cat_title();
 
 				elseif ( is_tag() ) :
-					printf( __( 'Tagged: %s', 'kovkov' ), single_tag_title( '', false ) );
+					printf( __( 'Tagged: %s', 'semicolon' ), single_tag_title( '', false ) );
 
 				elseif ( is_author() ) :
-					printf( __( 'Author: %s', 'kovkov' ), '<span class="vcard">' . get_the_author() . '</span>' );
+					printf( __( 'Author: %s', 'semicolon' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
 				elseif ( is_day() ) :
-					printf( __( 'Day: %s', 'kovkov' ), '<span>' . get_the_date() . '</span>' );
+					printf( __( 'Day: %s', 'semicolon' ), '<span>' . get_the_date() . '</span>' );
 
 				elseif ( is_month() ) :
-					printf( __( 'Month: %s', 'kovkov' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'kovkov' ) ) . '</span>' );
+					printf( __( 'Month: %s', 'semicolon' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'semicolon' ) ) . '</span>' );
 
 				elseif ( is_year() ) :
-					printf( __( 'Year: %s', 'kovkov' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'kovkov' ) ) . '</span>' );
+					printf( __( 'Year: %s', 'semicolon' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'semicolon' ) ) . '</span>' );
 
 				elseif ( is_search() ) :
-					printf( __( 'Search Results for: %s', 'kovkov' ), '<span>' . get_search_query() . '</span>' );
+					printf( __( 'Search Results for: %s', 'semicolon' ), '<span>' . get_search_query() . '</span>' );
 
 				elseif ( is_archive() ):
-					_e( 'Archives', 'kovkov' );
+					_e( 'Archives', 'semicolon' );
 
 				endif;
 			?>
@@ -59,7 +57,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php kovkov_paging_nav(); ?>
+			<?php semicolon_paging_nav(); ?>
 
 		<?php else : ?>
 
