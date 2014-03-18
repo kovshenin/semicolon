@@ -28,7 +28,7 @@ class Semicolon {
 		add_action( 'wp_enqueue_scripts', array( 'Semicolon', 'enqueue_scripts' ) );
 
 		add_filter( 'wp_page_menu_args', array( 'Semicolon', 'page_menu_args' ) );
-		add_filter( 'wp_title', array( 'Semicolon', 'wp_title', 10, 2 ) );
+		add_filter( 'wp_title', array( 'Semicolon', 'wp_title' ), 10, 2 );
 
 		do_action( 'semicolon_setup' );
 	}
