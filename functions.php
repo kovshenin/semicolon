@@ -27,6 +27,9 @@ class Semicolon {
 		add_action( 'widgets_init', array( 'Semicolon', 'widgets_init' ) );
 		add_action( 'wp_enqueue_scripts', array( 'Semicolon', 'enqueue_scripts' ) );
 
+		add_filter( 'wp_page_menu_args', array( 'Semicolon', 'page_menu_args' ) );
+		add_filter( 'wp_title', array( 'Semicolon', 'wp_title', 10, 2 ) );
+
 		do_action( 'semicolon_setup' );
 	}
 
@@ -283,6 +286,35 @@ class Semicolon {
 
 		return new WP_Query( $args );
 	}
+
+	public static function page_menu_args( $args ) {
+		$args['show_home'] = true;
+		return $args;
+	}
+
+	public static function wp_title( $title, $sep ) {
+		global $page, $paged;
+
+		if ( is_feed() ) {
+			return $title;
+		}
+
+		// Add the blog name
+		$title .= get_bloginfo( 'name' );
+
+		// Add the blog description for the home/front page.
+		$site_description = get_bloginfo( 'description', 'display' );
+		if ( $site_description && ( is_home() || is_front_page() ) ) {
+			$title .= " $sep $site_description";
+		}
+
+		// Add a page number if necessary:
+		if ( $paged >= 2 || $page >= 2 ) {
+			$title .= " $sep " . sprintf( __( 'Page %s', 'semicolon' ), max( $paged, $page ) );
+		}
+
+		return $title;
+	}
 }
 
 Semicolon::setup();
@@ -293,11 +325,6 @@ Semicolon::setup();
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
-
-/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
@@ -306,3 +333,24 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Sets the authordata global when viewing an author archive.
+ *
+ * This provides backwards compatibility with
+ * http://core.trac.wordpress.org/changeset/25574
+ *
+ * It removes the need to call the_post() and rewind_posts() in an author
+ * template to print information about the author.
+ *
+ * @global WP_Query $wp_query WordPress Query object.
+ * @return void
+ */
+function semicolon_setup_author() {
+	global $wp_query;
+
+	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
+		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
+	}
+}
+add_action( 'wp', 'semicolon_setup_author' );
