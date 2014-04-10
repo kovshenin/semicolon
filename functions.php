@@ -30,6 +30,10 @@ class Semicolon {
 		add_filter( 'wp_page_menu_args', array( 'Semicolon', 'page_menu_args' ) );
 		add_filter( 'wp_title', array( 'Semicolon', 'wp_title' ), 10, 2 );
 
+		// Enhanced customizer support
+		add_action( 'customize_register', array( 'Semicolon', 'customize_register' ) );
+		add_action( 'customize_preview_init', array( 'Semicolon', 'customize_preview_js' ) );
+
 		do_action( 'semicolon_setup' );
 	}
 
@@ -315,6 +319,20 @@ class Semicolon {
 
 		return $title;
 	}
+
+	public static function customize_register( $wp_customize ) {
+		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	}
+
+	/**
+	 * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+	 */
+	public static function customize_preview_js() {
+		wp_enqueue_script( 'semicolon_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+	}
+
 }
 
 Semicolon::setup();
