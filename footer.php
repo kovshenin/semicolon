@@ -13,7 +13,7 @@
 			<?php if ( has_action( 'semicolon_credits' ) ) : ?>
 				<?php do_action( 'semicolon_credits' ); ?>
 			<?php else : ?>
-				Semicolon &mdash; Quite possibly the cleanest magazine theme for WordPress. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+				<?php _e( 'Powered by <a href="http://wordpress.org">WordPress</a>. Semicolon Theme by <a href="http://wpmag.ru">WP Magazine</a>.' ); ?>
 			<?php endif; ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
