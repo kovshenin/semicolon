@@ -999,6 +999,9 @@ blockquote:before {
 time.updated {
   display: none; }
 
+.grid .entry-meta .author, .grid .entry-content .wp-caption-text .author, .entry-content .grid .wp-caption-text .author, .grid .comment-meta .comment-metadata .author, .comment-meta .grid .comment-metadata .author, .grid .site-footer .author {
+  display: none; }
+
 #primary {
   width: 900px;
   float: left;

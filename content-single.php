@@ -25,7 +25,7 @@
 			$tag_list = get_the_tag_list( '', __( ', ', 'semicolon' ) );
 
 			$meta = array( '&mdash;' );
-			$author = sprintf( '<a class="author" rel="author" href="%s">%s</a>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
+			$author = sprintf( '<a class="vcard author" rel="author" href="%s">%s</a>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
 
 			if ( semicolon_categorized_blog() ) {
 				$meta[] = sprintf( __( '%1$s in %2$s', 'semicolon' ), $author, $category_list );
