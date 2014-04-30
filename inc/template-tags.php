@@ -47,7 +47,7 @@ function semicolon_posted_on() {
 		$output_time = $regular_time;
 
 	printf( '<a class="entry-date published" datetime="%s" href="%s">%s</a>', get_the_date('c'), esc_url( get_permalink() ), $output_time );
-	printf( '<time class="updated" datetime="%s">%s</a>', get_the_modified_date('c'), get_the_modified_date() );
+	printf( '<time class="updated" datetime="%s">%s</time>', get_the_modified_date('c'), get_the_modified_date() );
 	printf( '<span class="author vcard"><a class="url fn n" href="%s">%s</a></span>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
 }
 endif;

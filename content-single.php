@@ -37,7 +37,7 @@
 				$meta[] = sprintf( __( 'Tagged: %s', 'semicolon' ), $tag_list );
 
 			$time_string = sprintf( '<time class="entry-date published" datetime="%s">%s</time>', get_the_date('c'), get_the_time( get_option( 'date_format' ) ) );
-			$time_string .= sprintf( '<time class="updated" datetime="%s">%s</a>', get_the_modified_date('c'), get_the_modified_date() );
+			$time_string .= sprintf( '<time class="updated" datetime="%s">%s</time>', get_the_modified_date('c'), get_the_modified_date() );
 			$meta[] = $time_string;
 			
 
