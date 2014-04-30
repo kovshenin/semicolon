@@ -46,7 +46,8 @@ function semicolon_posted_on() {
 	if ( current_time( 'timestamp' ) > get_the_time( 'U' ) + 60 * 60 * 24 * 14 )
 		$output_time = $regular_time;
 
-	printf( '<a class="entry-date" href="%s">%s</a>', esc_url( get_permalink() ), $output_time );
+	printf( '<a class="entry-date published" datetime="%s" href="%s">%s</a>', get_the_date('c'), esc_url( get_permalink() ), $output_time );
+	printf( '<time class="updated" datetime="%s">%s</a>', get_the_modified_date('c'), get_the_modified_date() );
 }
 endif;
 

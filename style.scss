@@ -458,6 +458,10 @@ blockquote:before {
 	}
 }
 
+time.updated {
+	display: none;
+}
+
 #primary {
 	width: 180px * 4 + 3 * 60;
 	float: left;
