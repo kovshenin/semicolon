@@ -1015,12 +1015,13 @@ time.updated {
   .widget-area .sidebar-tertiary {
     /*padding: 24px 24px;*/ }
   .widget-area .sidebar-primary {
-    background: #117bb8;
     color: white; }
     .widget-area .sidebar-primary a {
       color: white; }
     .widget-area .sidebar-primary aside:last-child p:last-child {
       margin-bottom: 0; }
+    .widget-area .sidebar-primary .widget {
+      background: #117bb8; }
   .widget-area .sidebar-secondary .widget {
     background: rgba(58, 58, 58, 0.03); }
   .widget-area .widget-title {

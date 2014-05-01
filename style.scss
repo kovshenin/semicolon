@@ -484,7 +484,6 @@ time.updated {
 	}
 
 	.sidebar-primary {
-		background: $color-primary;
 		color: white;
 
 		a {
@@ -495,6 +494,10 @@ time.updated {
 			p:last-child {
 				margin-bottom: 0;
 			}
+		}
+
+		.widget {
+			background: $color-primary;
 		}
 	}
 
