@@ -127,10 +127,12 @@ a, a:visited, a:link {
 	a {
 		color: $color-secondary;
 		text-decoration: none;
-		padding: 10px 20px;
+		margin-top: -1px;
+		padding: 0px 20px;
 		border-top: solid 4px transparent;
+		height: 48px;
 		font-size: 16px;
-		line-height: 24px;
+		line-height: 40px;
 	}
 
 	.current_page_item,
@@ -139,26 +141,13 @@ a, a:visited, a:link {
 	.current-menu-ancestor,
 	.current-menu-parent,
 	.current-post-parent {
-		> a {
+		a {
 			border-top-color: $color-secondary;
-			margin-top: -1px;
-			padding-top: 11px;
 		}
-	}
-
-	.menu-item-has-children:hover a {
-		background: lighten( $color-secondary, 74.5% );
 	}
 
 	/* Temporarily disable submenus */
-	.sub-menu {
-		top: 100%;
-		a {
-			border-top-color: transparent;
-			margin-top: 0;
-			padding-bottom: 12px;
-		}
-	}
+	.sub-menu { display: none !important; }
 }
 
 #semicolon-social {

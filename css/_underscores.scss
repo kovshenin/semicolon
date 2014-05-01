@@ -318,7 +318,7 @@ a:active {
 	text-decoration: none;
 }
 .main-navigation ul ul {
-	/*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);*/
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
 	float: left;
 	left: 0;
@@ -331,7 +331,7 @@ a:active {
 	top: 0;
 }
 .main-navigation ul ul a {
-	width: 240px;
+	width: 200px;
 }
 .main-navigation ul ul li {
 }
