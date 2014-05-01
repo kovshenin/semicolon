@@ -1013,17 +1013,15 @@ time.updated {
   .widget-area .sidebar-primary,
   .widget-area .sidebar-secondary,
   .widget-area .sidebar-tertiary {
-    padding: 24px 24px; }
+    /*padding: 24px 24px;*/ }
   .widget-area .sidebar-primary {
     background: #117bb8;
     color: white; }
     .widget-area .sidebar-primary a {
       color: white; }
-    .widget-area .sidebar-primary aside:last-child {
+    .widget-area .sidebar-primary aside:last-child p:last-child {
       margin-bottom: 0; }
-      .widget-area .sidebar-primary aside:last-child p:last-child {
-        margin-bottom: 0; }
-  .widget-area .sidebar-secondary {
+  .widget-area .sidebar-secondary .widget {
     background: rgba(58, 58, 58, 0.03); }
   .widget-area .widget-title {
     font-size: 18px;
@@ -1032,12 +1030,8 @@ time.updated {
     padding-top: 0;
     margin-bottom: 24px; }
   .widget-area .widget {
-    margin-bottom: 48px; }
-    .widget-area .widget:last-child {
-      margin-bottom: 0; }
-  .widget-area .widget.widget_search {
-    margin-bottom: 60px;
-    /* Input size is only 36px high, so give this morge margin to fit 48px */ }
+    margin-bottom: 12px;
+    padding: 24px 24px; }
 
 .home .widget-area .sidebar-primary {
   min-height: 240px; }

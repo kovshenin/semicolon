@@ -480,7 +480,7 @@ time.updated {
 	.sidebar-primary,
 	.sidebar-secondary,
 	.sidebar-tertiary {
-		padding: 24px 24px;
+		/*padding: 24px 24px;*/
 	}
 
 	.sidebar-primary {
@@ -492,14 +492,13 @@ time.updated {
 		}
 
 		aside:last-child {
-			margin-bottom: 0;
 			p:last-child {
 				margin-bottom: 0;
 			}
 		}
 	}
 
-	.sidebar-secondary {
+	.sidebar-secondary .widget {
 		background: rgba( $color-secondary, 0.03 );
 	}
 
@@ -513,15 +512,8 @@ time.updated {
 	}
 
 	.widget {
-		margin-bottom: 48px;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-
-	.widget.widget_search {
-		margin-bottom: 48px + 12px; /* Input size is only 36px high, so give this morge margin to fit 48px */
+		margin-bottom: 12px;
+		padding: 24px 24px;
 	}
 }
 
