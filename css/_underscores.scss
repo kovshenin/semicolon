@@ -354,20 +354,6 @@ a:active {
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
-	body.js {
-		.menu-toggle,
-		.main-navigation.toggled .nav-menu {
-			display: block;
-		}
-
-		.main-navigation ul {
-			display: none;
-		}
-	}
-}
-
-
 /* =Content
 ----------------------------------------------- */
 

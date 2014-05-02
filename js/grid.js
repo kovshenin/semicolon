@@ -59,17 +59,17 @@ var semicolon = semicolon || {};
 
 	$window.on('resize', function(){
 		var columns_old = columns,
-			width = $('#primary').width();
+			width = $('body').width();
 
 		// console.log(width);
 
-		if (width < 600)
+		if (width <= 680)
 			columns = columns !== 2 ? 2 : columns;
 
-		else if (width < 780)
+		else if (width <= 1200)
 			columns = columns !== 3 ? 3 : columns;
 
-		else if (width >= 780)
+		else if (width > 1200)
 			columns = columns !== 4 ? 4 : columns;
 
 		if (columns_old !== columns)
@@ -144,5 +144,4 @@ var semicolon = semicolon || {};
 	}));
 
 	$window.trigger('resize');
-
 }(jQuery));

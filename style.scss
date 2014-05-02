@@ -86,7 +86,7 @@ a, a:visited, a:link {
 }
 
 #page {
-	width: 1260px;
+	width: 1140px;
 	margin: 0 auto;
 	/* background: #ccc; */
 }
@@ -121,6 +121,7 @@ a, a:visited, a:link {
 	margin-top: 48px;
 	margin-bottom: 48px;
 	border-top: solid 1px rgba( $color-secondary, 0.1 );
+	position: relative;
 
 	@if $debug { background: rgba(1,0,0,0.04); }
 
@@ -237,9 +238,9 @@ hr {
 	line-height: 36px;
 }
 
-@mixin article-small {
+@mixin grid-item {
 	float: left;
-	width: 180px;
+	width: 150px;
 	margin-bottom: 48px;
 	margin-right: 60px;
 
@@ -248,8 +249,8 @@ hr {
 		float: left;
 		clear: both;
 		margin-bottom: 12px;
-		width: 180px;
-		height: 180px;
+		width: 150px;
+		height: 150px;
 		background: rgba( $color-secondary, 0.03 );
 		text-align: center;
 		overflow: hidden;
@@ -257,7 +258,7 @@ hr {
 		span {
 			display: block;
 			width: 1000px;
-			margin-left: -1 * ( ( 1000px - 180px ) / 2 );
+			margin-left: -1 * ( ( 1000px - 150px ) / 2 );
 			height: 100%;
 		}
 
@@ -271,7 +272,7 @@ hr {
 
 	.entry-title {
 		@extend h2;
-		width: 180px + 30px;
+		width: 150px + 30px;
 
 		margin-top: 0;
 		padding-top: 0;
@@ -297,34 +298,28 @@ hr {
 	}
 }
 
-@mixin article-large {
-	@include article-small;
-
-	width: 420px;
-	.post-thumbnail {
-		width: 420px;
-		height: 240px;
-
-		span {
-			margin-left: -1 * ( ( 1000px - 420px ) / 2 );
-		}
-	}
-
-	.entry-title {
-		width: 420px + 30px;
-		font-size: 24px;
-		line-height: 36px;
-	}
-}
-
-.grid article.hentry {
-	@include article-small;
+.grid article {
+	@include grid-item;
 }
 
 /* Featured images are featured in JS-mode only */
 .js.grid {
-	article.hentry.semicolon-featured {
-		@include article-large;
+	article.semicolon-featured {
+		@include grid-item;
+
+		width: 360px;
+		.post-thumbnail {
+			width: 360px;
+			height: 210px;
+
+			span { margin-left: -1 * ( ( 1000px - 360px ) / 2 ); }
+		}
+
+		.entry-title {
+			width: 360px + 30px;
+			font-size: 24px;
+			line-height: 36px;
+		}
 	}
 }
 
@@ -442,7 +437,7 @@ blockquote:before {
 	}
 
 	article {
-		@include article-small;
+		@include grid-item;
 	}
 }
 
@@ -467,7 +462,7 @@ time.updated {
 }
 
 #primary {
-	width: 180px * 4 + 3 * 60;
+	width: 150px * 4 + 3 * 60;
 	float: left;
 	display: block;
 	@if $debug { background: yellow; }
@@ -525,7 +520,7 @@ time.updated {
 }
 
 .paging-navigation {
-	width: 900px;
+	width: 100%;
 	display: block;
 	float: left;
 	clear: both;

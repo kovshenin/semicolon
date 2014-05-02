@@ -29,15 +29,15 @@ h3,
 body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title,
 .site-title,
 .grid .page-title,
-.grid article.hentry .entry-title,
-.js.grid article.hentry.semicolon-featured .entry-title,
+.grid article .entry-title,
+.js.grid article.semicolon-featured .entry-title,
 .related-content .related-content-title,
 .related-content article .entry-title,
 .widget-area .widget-title,
 .comments-title,
 .comment-meta .comment-author,
 #respond #reply-title,
-body.wpmag .wpmag-content-newsletter h3, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article.hentry .entry-title, .grid article.hentry body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title, h4, h5, h6, p, blockquote, pre,
+body.wpmag .wpmag-content-newsletter h3, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .js.grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article .entry-title, .grid article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -111,7 +111,7 @@ blockquote, q {
 a:focus {
   outline: thin dotted; }
 
-a:hover, .grid article.hentry:hover .entry-title a, .js.grid article.hentry.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a,
+a:hover, .grid article:hover .entry-title a, .js.grid article.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a,
 a:active {
   outline: 0; }
 
@@ -132,7 +132,7 @@ textarea {
   line-height: 1.5; }
 
 /* Headings */
-h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article.hentry .entry-title, .grid article.hentry body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title, h4, h5, h6 {
+h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .js.grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .js.grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article .entry-title, .grid article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title, h4, h5, h6 {
   clear: both; }
 
 /*hr {
@@ -347,7 +347,7 @@ a {
 a:visited {
   color: purple; }
 
-a:hover, .grid article.hentry:hover .entry-title a, .js.grid article.hentry.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a,
+a:hover, .grid article:hover .entry-title a, .js.grid article.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a,
 a:focus,
 a:active {
   color: midnightblue; }
@@ -463,12 +463,6 @@ a:active {
   cursor: pointer;
   display: none; }
 
-@media screen and (max-width: 600px) {
-  body.js .menu-toggle,
-  body.js .main-navigation.toggled .nav-menu {
-    display: block; }
-  body.js .main-navigation ul {
-    display: none; } }
 /* =Content
 ----------------------------------------------- */
 .hentry {
@@ -597,7 +591,7 @@ body {
   background: #117bb8;
   color: white; }
 
-h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
+h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .js.grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
   font-size: 52px;
   line-height: 72px;
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
@@ -606,11 +600,11 @@ h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site
   padding-top: 24px;
   margin-bottom: 24px; }
 
-h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article.hentry .entry-title, .js.grid article.hentry.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
+h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .js.grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
   font-size: 28px;
   line-height: 48px; }
 
-h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article.hentry .entry-title, .grid article.hentry body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title {
+h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article .entry-title, .grid article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title {
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -620,11 +614,11 @@ h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.po
 a, a:visited, a:link {
   color: #117bb8;
   text-decoration: underline; }
-  a:hover, .grid article.hentry:hover .entry-title a, .js.grid article.hentry.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a, a:visited:hover, .grid article.hentry:hover .entry-title a:visited, .js.grid article.hentry.semicolon-featured:hover .entry-title a:visited, .related-content article:hover .entry-title a:visited, a:link:hover, .grid article.hentry:hover .entry-title a:link, .js.grid article.hentry.semicolon-featured:hover .entry-title a:link, .related-content article:hover .entry-title a:link {
+  a:hover, .grid article:hover .entry-title a, .js.grid article.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a, a:visited:hover, .grid article:hover .entry-title a:visited, .js.grid article.semicolon-featured:hover .entry-title a:visited, .related-content article:hover .entry-title a:visited, a:link:hover, .grid article:hover .entry-title a:link, .js.grid article.semicolon-featured:hover .entry-title a:link, .related-content article:hover .entry-title a:link {
     color: #159ae7; }
 
 #page {
-  width: 1260px;
+  width: 1140px;
   margin: 0 auto;
   /* background: #ccc; */ }
 
@@ -653,6 +647,7 @@ a, a:visited, a:link {
   margin-top: 48px;
   margin-bottom: 48px;
   border-top: solid 1px rgba(58, 58, 58, 0.1);
+  position: relative;
   /* Temporarily disable submenus */ }
   .main-navigation a {
     color: #3a3a3a;
@@ -693,7 +688,7 @@ a, a:visited, a:link {
     color: rgba(58, 58, 58, 0.5);
     font: normal 20px/40px 'Genericons';
     content: '\f408'; }
-  #semicolon-social li a:hover::before, #semicolon-social li .grid article.hentry:hover .entry-title a::before, .grid article.hentry:hover .entry-title #semicolon-social li a::before, #semicolon-social li .related-content article:hover .entry-title a::before, .related-content article:hover .entry-title #semicolon-social li a::before {
+  #semicolon-social li a:hover::before, #semicolon-social li .grid article:hover .entry-title a::before, .grid article:hover .entry-title #semicolon-social li a::before, #semicolon-social li .related-content article:hover .entry-title a::before, .related-content article:hover .entry-title #semicolon-social li a::before {
     color: #3a3a3a; }
   #semicolon-social li a[href*="codepen.io"]::before {
     content: '\f216'; }
@@ -776,94 +771,94 @@ hr {
   font-size: 18px;
   line-height: 36px; }
 
-.grid article.hentry {
+.grid article {
   float: left;
-  width: 180px;
+  width: 150px;
   margin-bottom: 48px;
   margin-right: 60px; }
-  .grid article.hentry .post-thumbnail {
+  .grid article .post-thumbnail {
     display: block;
     float: left;
     clear: both;
     margin-bottom: 12px;
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     background: rgba(58, 58, 58, 0.03);
     text-align: center;
     overflow: hidden; }
-    .grid article.hentry .post-thumbnail span {
+    .grid article .post-thumbnail span {
       display: block;
       width: 1000px;
-      margin-left: -410px;
+      margin-left: -425px;
       height: 100%; }
-    .grid article.hentry .post-thumbnail img {
+    .grid article .post-thumbnail img {
       height: 100%;
       width: auto;
       max-width: none;
       display: inline-block; }
-  .grid article.hentry .entry-title {
-    width: 210px;
+  .grid article .entry-title {
+    width: 180px;
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0;
     font-size: 16px;
     line-height: 24px; }
-    .grid article.hentry .entry-title a {
+    .grid article .entry-title a {
       color: #3a3a3a;
       text-decoration: none;
       margin-bottom: 12px;
       display: block; }
-  .grid article.hentry.semicolon-last {
+  .grid article.semicolon-last {
     margin-right: 0; }
 
 /* Featured images are featured in JS-mode only */
-.js.grid article.hentry.semicolon-featured {
+.js.grid article.semicolon-featured {
   float: left;
-  width: 180px;
+  width: 150px;
   margin-bottom: 48px;
   margin-right: 60px;
-  width: 420px; }
-  .js.grid article.hentry.semicolon-featured .post-thumbnail {
+  width: 360px; }
+  .js.grid article.semicolon-featured .post-thumbnail {
     display: block;
     float: left;
     clear: both;
     margin-bottom: 12px;
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     background: rgba(58, 58, 58, 0.03);
     text-align: center;
     overflow: hidden; }
-    .js.grid article.hentry.semicolon-featured .post-thumbnail span {
+    .js.grid article.semicolon-featured .post-thumbnail span {
       display: block;
       width: 1000px;
-      margin-left: -410px;
+      margin-left: -425px;
       height: 100%; }
-    .js.grid article.hentry.semicolon-featured .post-thumbnail img {
+    .js.grid article.semicolon-featured .post-thumbnail img {
       height: 100%;
       width: auto;
       max-width: none;
       display: inline-block; }
-  .js.grid article.hentry.semicolon-featured .entry-title {
-    width: 210px;
+  .js.grid article.semicolon-featured .entry-title {
+    width: 180px;
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0;
     font-size: 16px;
     line-height: 24px; }
-    .js.grid article.hentry.semicolon-featured .entry-title a {
+    .js.grid article.semicolon-featured .entry-title a {
       color: #3a3a3a;
       text-decoration: none;
       margin-bottom: 12px;
       display: block; }
-  .js.grid article.hentry.semicolon-featured.semicolon-last {
+  .js.grid article.semicolon-featured.semicolon-last {
     margin-right: 0; }
-  .js.grid article.hentry.semicolon-featured .post-thumbnail {
-    width: 420px;
-    height: 240px; }
-    .js.grid article.hentry.semicolon-featured .post-thumbnail span {
-      margin-left: -290px; }
-  .js.grid article.hentry.semicolon-featured .entry-title {
-    width: 450px;
+  .js.grid article.semicolon-featured .post-thumbnail {
+    width: 360px;
+    height: 210px; }
+    .js.grid article.semicolon-featured .post-thumbnail span {
+      margin-left: -320px; }
+  .js.grid article.semicolon-featured .entry-title {
+    width: 390px;
     font-size: 24px;
     line-height: 36px; }
 
@@ -950,7 +945,7 @@ blockquote:before {
     padding-top: 0; }
   .related-content article {
     float: left;
-    width: 180px;
+    width: 150px;
     margin-bottom: 48px;
     margin-right: 60px; }
     .related-content article .post-thumbnail {
@@ -958,15 +953,15 @@ blockquote:before {
       float: left;
       clear: both;
       margin-bottom: 12px;
-      width: 180px;
-      height: 180px;
+      width: 150px;
+      height: 150px;
       background: rgba(58, 58, 58, 0.03);
       text-align: center;
       overflow: hidden; }
       .related-content article .post-thumbnail span {
         display: block;
         width: 1000px;
-        margin-left: -410px;
+        margin-left: -425px;
         height: 100%; }
       .related-content article .post-thumbnail img {
         height: 100%;
@@ -974,7 +969,7 @@ blockquote:before {
         max-width: none;
         display: inline-block; }
     .related-content article .entry-title {
-      width: 210px;
+      width: 180px;
       margin-top: 0;
       padding-top: 0;
       margin-bottom: 0;
@@ -1003,7 +998,7 @@ time.updated {
   display: none; }
 
 #primary {
-  width: 900px;
+  width: 780px;
   float: left;
   display: block; }
 
@@ -1038,7 +1033,7 @@ time.updated {
   min-height: 240px; }
 
 .paging-navigation {
-  width: 900px;
+  width: 100%;
   display: block;
   float: left;
   clear: both;
@@ -1155,19 +1150,19 @@ body.wpmag a.wpm-button-primary {
   .button:hover,
   .button-secondary:hover,
   body.wpmag .wpm-button:hover,
-  body.wpmag .grid article.hentry:hover .entry-title a.wpm-button,
-  .grid article.hentry:hover .entry-title body.wpmag a.wpm-button,
+  body.wpmag .grid article:hover .entry-title a.wpm-button,
+  .grid article:hover .entry-title body.wpmag a.wpm-button,
   body.wpmag .related-content article:hover .entry-title a.wpm-button,
   .related-content article:hover .entry-title body.wpmag a.wpm-button,
-  .grid article.hentry:hover .entry-title a.button,
-  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button,
+  .grid article:hover .entry-title a.button,
+  .js.grid article.semicolon-featured:hover .entry-title a.button,
   .related-content article:hover .entry-title a.button,
-  .grid article.hentry:hover .entry-title a.button-secondary,
-  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button-secondary,
+  .grid article:hover .entry-title a.button-secondary,
+  .js.grid article.semicolon-featured:hover .entry-title a.button-secondary,
   .related-content article:hover .entry-title a.button-secondary,
   body.wpmag .wpm-button-primary:hover,
-  body.wpmag .grid article.hentry:hover .entry-title a.wpm-button-primary,
-  .grid article.hentry:hover .entry-title body.wpmag a.wpm-button-primary,
+  body.wpmag .grid article:hover .entry-title a.wpm-button-primary,
+  .grid article:hover .entry-title body.wpmag a.wpm-button-primary,
   body.wpmag .related-content article:hover .entry-title a.wpm-button-primary,
   .related-content article:hover .entry-title body.wpmag a.wpm-button-primary,
   .button-primary:focus,
@@ -1176,16 +1171,16 @@ body.wpmag a.wpm-button-primary {
   body.wpmag .wpm-button:focus,
   body.wpmag .wpm-button-primary:focus,
   a.button-primary:hover,
-  .grid article.hentry:hover .entry-title a.button-primary,
-  .grid article.hentry:hover .entry-title a.button,
-  .grid article.hentry:hover .entry-title a.button-secondary,
-  .grid article.hentry:hover .entry-title body.wpmag a.wpm-button,
-  body.wpmag .grid article.hentry:hover .entry-title a.wpm-button,
-  .grid article.hentry:hover .entry-title body.wpmag a.wpm-button-primary,
-  body.wpmag .grid article.hentry:hover .entry-title a.wpm-button-primary,
-  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button-primary,
-  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button,
-  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button-secondary,
+  .grid article:hover .entry-title a.button-primary,
+  .grid article:hover .entry-title a.button,
+  .grid article:hover .entry-title a.button-secondary,
+  .grid article:hover .entry-title body.wpmag a.wpm-button,
+  body.wpmag .grid article:hover .entry-title a.wpm-button,
+  .grid article:hover .entry-title body.wpmag a.wpm-button-primary,
+  body.wpmag .grid article:hover .entry-title a.wpm-button-primary,
+  .js.grid article.semicolon-featured:hover .entry-title a.button-primary,
+  .js.grid article.semicolon-featured:hover .entry-title a.button,
+  .js.grid article.semicolon-featured:hover .entry-title a.button-secondary,
   .related-content article:hover .entry-title a.button-primary,
   .related-content article:hover .entry-title a.button,
   .related-content article:hover .entry-title a.button-secondary,
@@ -1216,19 +1211,19 @@ body.wpmag a.wpm-button {
   .button:hover,
   .button-secondary:hover,
   body.wpmag .wpm-button:hover,
-  body.wpmag .grid article.hentry:hover .entry-title a.wpm-button,
-  .grid article.hentry:hover .entry-title body.wpmag a.wpm-button,
+  body.wpmag .grid article:hover .entry-title a.wpm-button,
+  .grid article:hover .entry-title body.wpmag a.wpm-button,
   body.wpmag .related-content article:hover .entry-title a.wpm-button,
   .related-content article:hover .entry-title body.wpmag a.wpm-button,
   a.button:hover,
-  .grid article.hentry:hover .entry-title a.button,
-  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button,
+  .grid article:hover .entry-title a.button,
+  .js.grid article.semicolon-featured:hover .entry-title a.button,
   .related-content article:hover .entry-title a.button,
   a.button-secondary:hover,
-  .grid article.hentry:hover .entry-title a.button-secondary,
-  .grid article.hentry:hover .entry-title body.wpmag a.wpm-button,
-  body.wpmag .grid article.hentry:hover .entry-title a.wpm-button,
-  .js.grid article.hentry.semicolon-featured:hover .entry-title a.button-secondary,
+  .grid article:hover .entry-title a.button-secondary,
+  .grid article:hover .entry-title body.wpmag a.wpm-button,
+  body.wpmag .grid article:hover .entry-title a.wpm-button,
+  .js.grid article.semicolon-featured:hover .entry-title a.button-secondary,
   .related-content article:hover .entry-title a.button-secondary,
   .related-content article:hover .entry-title body.wpmag a.wpm-button,
   body.wpmag .related-content article:hover .entry-title a.wpm-button,
@@ -1264,421 +1259,28 @@ input[type="search"] {
 .semicolon-clear-left {
   clear: left; }
 
-/* A tiny bit smaller than the original small article */
-/* A tiny bit smaller than the original featured article */
-/* A tiny bit smaller than the original articles (both featured and regular) */
-/* @todo smarter galleries */
-/* Four columns (smaller) + sidebar */
-@media all and (max-width: 1380px) and (min-width: 1260px) {
-  body.grid article.hentry,
-  .related-content article {
-    width: 150px; }
-    body.grid article.hentry .post-thumbnail,
-    .related-content article .post-thumbnail {
-      width: 150px;
-      height: 150px;
-      /* 150px is the new height, 168 is the desired (vrhythm) height, bottom margin is 12px by default, so 18px */
-      margin-bottom: 18px; }
-      body.grid article.hentry .post-thumbnail span,
-      .related-content article .post-thumbnail span {
-        margin-left: -425px; }
-    body.grid article.hentry .entry-title,
-    .related-content article .entry-title {
-      width: 180px; }
-
-  body.grid.js article.hentry.semicolon-featured {
-    width: 360px; }
-    body.grid.js article.hentry.semicolon-featured .post-thumbnail {
-      width: 360px;
-      height: 206px;
-      /* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
-      margin-bottom: 10px; }
-      body.grid.js article.hentry.semicolon-featured .post-thumbnail span {
-        margin-left: -320px; }
-    body.grid.js article.hentry.semicolon-featured .entry-title {
-      width: 390px; }
-
-  .entry-content .gallery .gallery-item {
-    max-width: 220px; }
-  .entry-content .gallery.gallery-columns-2 .gallery-item {
-    max-width: 300px; }
-  .entry-content .gallery.gallery-columns-3 .gallery-item {
-    max-width: 220px; }
-  .entry-content .gallery.gallery-columns-4 .gallery-item {
-    max-width: 140px; }
-
+@media screen and (max-width: 1200px) {
   #page {
-    width: 1140px; }
+    width: 930px; }
 
-  #primary,
-  .paging-navigation {
-    width: 780px; }
+  #primary {
+    width: 570px; } }
+@media screen and (max-width: 992px) {
+  #page {
+    width: 570px; }
 
-  .entry-content img.size-full,
-  .entry-content img.size-large,
-  .entry-content iframe {
-    max-width: 820px; } }
-/* Four columns large */
-@media all and (max-width: 1259px) and (min-width: 1080px) {
-  #page,
-  #primary,
-  .paging-navigation {
-    width: 900px; }
-
-  .entry-content img.size-full,
-  .entry-content img.size-large,
-  .entry-content iframe {
-    max-width: 940px; }
-
-  /* @todo get a brain */
-  #secondary {
-    display: none; } }
-/* Four columns smaller */
-@media all and (max-width: 1079px) and (min-width: 900px) {
-  body.grid article.hentry,
-  .related-content article {
-    width: 150px; }
-    body.grid article.hentry .post-thumbnail,
-    .related-content article .post-thumbnail {
-      width: 150px;
-      height: 150px;
-      /* 150px is the new height, 168 is the desired (vrhythm) height, bottom margin is 12px by default, so 18px */
-      margin-bottom: 18px; }
-      body.grid article.hentry .post-thumbnail span,
-      .related-content article .post-thumbnail span {
-        margin-left: -425px; }
-    body.grid article.hentry .entry-title,
-    .related-content article .entry-title {
-      width: 180px; }
-
-  body.grid.js article.hentry.semicolon-featured {
-    width: 360px; }
-    body.grid.js article.hentry.semicolon-featured .post-thumbnail {
-      width: 360px;
-      height: 206px;
-      /* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
-      margin-bottom: 10px; }
-      body.grid.js article.hentry.semicolon-featured .post-thumbnail span {
-        margin-left: -320px; }
-    body.grid.js article.hentry.semicolon-featured .entry-title {
-      width: 390px; }
-
-  .entry-content .gallery .gallery-item {
-    max-width: 220px; }
-  .entry-content .gallery.gallery-columns-2 .gallery-item {
-    max-width: 300px; }
-  .entry-content .gallery.gallery-columns-3 .gallery-item {
-    max-width: 220px; }
-  .entry-content .gallery.gallery-columns-4 .gallery-item {
-    max-width: 140px; }
-
-  #page,
-  #primary,
-  .paging-navigation {
-    width: 780px; }
-
-  .entry-content img.size-full,
-  .entry-content img.size-large,
-  .entry-content iframe {
-    max-width: 820px; }
-
-  /* @todo get a brain */
-  #secondary {
-    display: none; } }
-/* Three column large */
-@media all and (max-width: 899px) and (min-width: 780px) {
-  body {
-    padding: 0 60px; }
-
-  #page,
-  #primary,
-  .paging-navigation {
+  #primary {
     width: 100%; }
 
-  .entry-content .wp-caption.alignnone img.size-full,
-  .entry-content .wp-caption.alignnone img.size-large,
-  .entry-content img.size-full,
-  .entry-content img.size-full.alignnone,
-  .entry-content img.size-large,
-  .entry-content img.size-large.alignnone,
-  .entry-content iframe,
-  .entry-content .wp-caption.alignnone img.size-full + .wp-caption-text,
-  .entry-content .wp-caption.alignnone img.size-large + .wp-caption-text {
-    max-width: 100%;
-    margin-left: 0; }
-
-  /* @todo get a brain */
   #secondary {
-    display: none; }
-
-  /* @no-js compat */
-  body.no-js.grid article:nth-child(4n+0),
-  body.no-js .related-content article:nth-child(4n+1) {
-    margin-right: 60px; }
-  body.no-js.grid article:nth-child(4n+0) + article,
-  body.no-js .related-content article:nth-child(4n+1) + article {
-    clear: none; }
-  body.no-js.grid article:nth-child(3n+0),
-  body.no-js .related-content article:nth-child(3n+1) {
-    margin-right: 0 !important; }
-  body.no-js.grid article:nth-child(3n+0) + article,
-  body.no-js .related-content article:nth-child(3n+1) + article {
-    clear: left !important; } }
-/* Three columns small */
-@media all and (max-width: 779px) and (min-width: 720px) {
-  body.grid article.hentry,
-  .related-content article {
-    width: 150px; }
-    body.grid article.hentry .post-thumbnail,
-    .related-content article .post-thumbnail {
-      width: 150px;
-      height: 150px;
-      /* 150px is the new height, 168 is the desired (vrhythm) height, bottom margin is 12px by default, so 18px */
-      margin-bottom: 18px; }
-      body.grid article.hentry .post-thumbnail span,
-      .related-content article .post-thumbnail span {
-        margin-left: -425px; }
-    body.grid article.hentry .entry-title,
-    .related-content article .entry-title {
-      width: 180px; }
-
-  body.grid.js article.hentry.semicolon-featured {
-    width: 360px; }
-    body.grid.js article.hentry.semicolon-featured .post-thumbnail {
-      width: 360px;
-      height: 206px;
-      /* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
-      margin-bottom: 10px; }
-      body.grid.js article.hentry.semicolon-featured .post-thumbnail span {
-        margin-left: -320px; }
-    body.grid.js article.hentry.semicolon-featured .entry-title {
-      width: 390px; }
-
-  body {
-    padding: 0 60px; }
-
-  #page,
-  #primary,
-  .paging-navigation {
     width: 100%; }
 
-  .entry-content .wp-caption.alignnone img.size-full,
-  .entry-content .wp-caption.alignnone img.size-large,
-  .entry-content img.size-full,
-  .entry-content img.size-full.alignnone,
-  .entry-content img.size-large,
-  .entry-content img.size-large.alignnone,
-  .entry-content iframe,
-  .entry-content .wp-caption.alignnone img.size-full + .wp-caption-text,
-  .entry-content .wp-caption.alignnone img.size-large + .wp-caption-text {
-    max-width: 100%;
-    margin-left: 0; }
-
-  /* @todo get a brain */
-  #secondary {
+  /* Mobile Menu */
+  #semicolon-navigation ul {
     display: none; }
 
-  /* @no-js compat */
-  body.no-js.grid article:nth-child(4n+0),
-  body.no-js .related-content article:nth-child(4n+1) {
-    margin-right: 60px; }
-  body.no-js.grid article:nth-child(4n+0) + article,
-  body.no-js .related-content article:nth-child(4n+1) + article {
-    clear: none; }
-  body.no-js.grid article:nth-child(3n+0),
-  body.no-js .related-content article:nth-child(3n+1) {
-    margin-right: 0 !important; }
-  body.no-js.grid article:nth-child(3n+0) + article,
-  body.no-js .related-content article:nth-child(3n+1) + article {
-    clear: left !important; } }
-/* Two columns large */
-@media all and (max-width: 719px) and (min-width: 540px) {
-  body {
-    padding: 0 30px; }
-
-  .site-header {
-    margin-top: 30px; }
-
-  #page,
-  #primary,
-  .paging-navigation {
-    width: 100%; }
-
-  .entry-content .wp-caption.alignnone img.size-full,
-  .entry-content .wp-caption.alignnone img.size-large,
-  .entry-content img.size-full,
-  .entry-content img.size-full.alignnone,
-  .entry-content img.size-large,
-  .entry-content img.size-large.alignnone,
-  .entry-content iframe,
-  .entry-content .wp-caption.alignnone img.size-full + .wp-caption-text,
-  .entry-content .wp-caption.alignnone img.size-large + .wp-caption-text {
-    max-width: 100%;
-    margin-left: 0; }
-
-  /* @todo get a brain */
-  #secondary {
-    display: none; }
-
-  /* @no-js compat */
-  body.no-js.grid article:nth-child(4n+0),
-  body.no-js .related-content article:nth-child(4n+1) {
-    margin-right: 60px; }
-  body.no-js.grid article:nth-child(4n+0) + article,
-  body.no-js .related-content article:nth-child(4n+1) + article {
-    clear: none; }
-  body.no-js.grid article:nth-child(2n+0),
-  body.no-js .related-content article:nth-child(2n+1) {
-    margin-right: 0 !important; }
-  body.no-js.grid article:nth-child(2n+0) + article,
-  body.no-js .related-content article:nth-child(2n+1) + article {
-    clear: left !important; } }
-/* Two columns small */
-@media all and (max-width: 539px) and (min-width: 420px) {
-  body.grid article.hentry,
-  .related-content article {
-    width: 150px; }
-    body.grid article.hentry .post-thumbnail,
-    .related-content article .post-thumbnail {
-      width: 150px;
-      height: 150px;
-      /* 150px is the new height, 168 is the desired (vrhythm) height, bottom margin is 12px by default, so 18px */
-      margin-bottom: 18px; }
-      body.grid article.hentry .post-thumbnail span,
-      .related-content article .post-thumbnail span {
-        margin-left: -425px; }
-    body.grid article.hentry .entry-title,
-    .related-content article .entry-title {
-      width: 180px; }
-
-  body.grid.js article.hentry.semicolon-featured {
-    width: 360px; }
-    body.grid.js article.hentry.semicolon-featured .post-thumbnail {
-      width: 360px;
-      height: 206px;
-      /* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
-      margin-bottom: 10px; }
-      body.grid.js article.hentry.semicolon-featured .post-thumbnail span {
-        margin-left: -320px; }
-    body.grid.js article.hentry.semicolon-featured .entry-title {
-      width: 390px; }
-
-  body {
-    padding: 0 30px; }
-
-  .site-header {
-    margin-top: 30px; }
-
-  #page,
-  #primary,
-  .paging-navigation {
-    width: 100%; }
-
-  .entry-content .wp-caption.alignnone img.size-full,
-  .entry-content .wp-caption.alignnone img.size-large,
-  .entry-content img.size-full,
-  .entry-content img.size-full.alignnone,
-  .entry-content img.size-large,
-  .entry-content img.size-large.alignnone,
-  .entry-content iframe,
-  .entry-content .wp-caption.alignnone img.size-full + .wp-caption-text,
-  .entry-content .wp-caption.alignnone img.size-large + .wp-caption-text {
-    max-width: 100%;
-    margin-left: 0; }
-
-  /* @todo get a brain */
-  #secondary {
-    display: none; }
-
-  /* @no-js compat */
-  body.no-js.grid article:nth-child(4n+0),
-  body.no-js .related-content article:nth-child(4n+1) {
-    margin-right: 60px; }
-  body.no-js.grid article:nth-child(4n+0) + article,
-  body.no-js .related-content article:nth-child(4n+1) + article {
-    clear: none; }
-  body.no-js.grid article:nth-child(2n+0),
-  body.no-js .related-content article:nth-child(2n+1) {
-    margin-right: 0 !important; }
-  body.no-js.grid article:nth-child(2n+0) + article,
-  body.no-js .related-content article:nth-child(2n+1) + article {
-    clear: left !important; } }
-@media all and (max-width: 419px) {
-  body.grid article.hentry,
-  .related-content article {
-    width: 150px; }
-    body.grid article.hentry .post-thumbnail,
-    .related-content article .post-thumbnail {
-      width: 150px;
-      height: 150px;
-      /* 150px is the new height, 168 is the desired (vrhythm) height, bottom margin is 12px by default, so 18px */
-      margin-bottom: 18px; }
-      body.grid article.hentry .post-thumbnail span,
-      .related-content article .post-thumbnail span {
-        margin-left: -425px; }
-    body.grid article.hentry .entry-title,
-    .related-content article .entry-title {
-      width: 180px; }
-
-  body.grid.js article.hentry.semicolon-featured {
-    width: 360px; }
-    body.grid.js article.hentry.semicolon-featured .post-thumbnail {
-      width: 360px;
-      height: 206px;
-      /* 206px is the new height, 216 is the desired (vrhythm) height, bottom margin is 12px by default, so 10px */
-      margin-bottom: 10px; }
-      body.grid.js article.hentry.semicolon-featured .post-thumbnail span {
-        margin-left: -320px; }
-    body.grid.js article.hentry.semicolon-featured .entry-title {
-      width: 390px; }
-
-  body {
-    padding: 0 20px; }
-
-  .site-header {
-    margin-top: 20px; }
-
-  #page,
-  #primary,
-  .paging-navigation {
-    width: 100%; }
-
-  .grid .entry-title {
-    width: 100% !important; }
-
-  .entry-content .wp-caption.alignnone img.size-full,
-  .entry-content .wp-caption.alignnone img.size-large,
-  .entry-content img.size-full,
-  .entry-content img.size-full.alignnone,
-  .entry-content img.size-large,
-  .entry-content img.size-large.alignnone,
-  .entry-content iframe,
-  .entry-content .wp-caption.alignnone img.size-full + .wp-caption-text,
-  .entry-content .wp-caption.alignnone img.size-large + .wp-caption-text {
-    max-width: 100%;
-    margin-left: 0; }
-
-  /* @todo get a brain */
-  #secondary {
-    display: none; }
-
-  /* @no-js compat */
-  body.no-js.grid article:nth-child(4n+0),
-  body.no-js .related-content article:nth-child(4n+1) {
-    margin-right: 60px; }
-  body.no-js.grid article:nth-child(4n+0) + article,
-  body.no-js .related-content article:nth-child(4n+1) + article {
-    clear: none; }
-  body.no-js.grid article:nth-child(2n+0),
-  body.no-js .related-content article:nth-child(2n+1) {
-    margin-right: 0 !important; }
-  body.no-js.grid article:nth-child(2n+0) + article,
-  body.no-js .related-content article:nth-child(2n+1) + article {
-    clear: left !important; } }
-/* @todo moar narrow! */
-/* Better mobile menu */
-@media screen and (max-width: 600px) {
-  body.js .main-navigation .menu-toggle {
+  .menu-toggle {
+    display: block;
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 16px;
     line-height: 52px;
@@ -1687,7 +1289,7 @@ input[type="search"] {
     border-top: solid 4px transparent;
     margin: -1px 0 0 0;
     padding: 0; }
-    body.js .main-navigation .menu-toggle:before {
+    .menu-toggle:before {
       display: inline-block;
       font-weight: normal;
       font-family: Genericons;
@@ -1697,43 +1299,45 @@ input[type="search"] {
       padding-right: 10px;
       -webkit-font-smoothing: antialiased;
       vertical-align: top; }
-  body.js .main-navigation.toggled .current_page_item a,
-  body.js .main-navigation.toggled .current-menu-item a,
-  body.js .main-navigation.toggled .current-post-ancestor a,
-  body.js .main-navigation.toggled .current-menu-ancestor a,
-  body.js .main-navigation.toggled .current-menu-parent a,
-  body.js .main-navigation.toggled .current-post-parent a {
+
+  .main-navigation.toggled .current_page_item a,
+  .main-navigation.toggled .current-menu-item a,
+  .main-navigation.toggled .current-post-ancestor a,
+  .main-navigation.toggled .current-menu-ancestor a,
+  .main-navigation.toggled .current-menu-parent a,
+  .main-navigation.toggled .current-post-parent a {
     border-top-color: transparent;
-    position: relative; }
-    body.js .main-navigation.toggled .current_page_item a:before,
-    body.js .main-navigation.toggled .current-menu-item a:before,
-    body.js .main-navigation.toggled .current-post-ancestor a:before,
-    body.js .main-navigation.toggled .current-menu-ancestor a:before,
-    body.js .main-navigation.toggled .current-menu-parent a:before,
-    body.js .main-navigation.toggled .current-post-parent a:before {
-      display: inline-block;
-      font-weight: normal;
-      font-family: Genericons;
-      content: '\f452';
-      font-size: 16px;
-      line-height: 38px;
-      -webkit-font-smoothing: antialiased;
-      vertical-align: top;
-      position: absolute;
-      left: 0px; }
-  body.js .main-navigation.toggled ul.menu {
-    border-bottom: solid 1px rgba(58, 58, 58, 0.1); }
-  body.js .main-navigation.toggled li {
+    background: rgba(58, 58, 58, 0.03); }
+  .main-navigation.toggled #semicolon-navigation ul {
     display: block;
-    float: none;
-    clear: left; }
-    body.js .main-navigation.toggled li a {
-      padding: 0 26px; }
-  body.js .main-navigation.toggled .menu-toggle {
+    border-bottom: solid 1px rgba(58, 58, 58, 0.1); }
+    .main-navigation.toggled #semicolon-navigation ul li {
+      display: block;
+      float: none;
+      clear: left; }
+      .main-navigation.toggled #semicolon-navigation ul li a {
+        padding: 0 26px; }
+  .main-navigation.toggled .menu-toggle {
     border-top-color: #3a3a3a;
-    border-bottom: solid 1px rgba(58, 58, 58, 0.1); } }
+    border-bottom: solid 1px rgba(58, 58, 58, 0.1); }
+
+  #semicolon-social {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    #semicolon-social li a {
+      line-height: 60px; } }
+@media screen and (max-width: 680px) {
+  #page {
+    width: 360px; }
+
+  #primary {
+    width: 100%; }
+
+  .grid article .entry-title {
+    width: 100% !important; } }
 /* WPM */
-body.wpmag .wpmag-content-newsletter h3, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter h1.entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter h2.entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter h3.entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .grid .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .wpmag-content-newsletter .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .grid article.hentry .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article.hentry .wpmag-content-newsletter .entry-title, .grid article.hentry body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title, .grid article.hentry body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .related-content .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .wpmag-content-newsletter .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .related-content article .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .wpmag-content-newsletter .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .widget-area .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .wpmag-content-newsletter .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .comment-meta .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .wpmag-content-newsletter .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary #respond .entry-title#reply-title, body.wpmag.post-type-archive-wpm_jobs #primary #respond .wpmag-content-newsletter .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title#reply-title {
+body.wpmag .wpmag-content-newsletter h3, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter h1.entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter h2.entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter h3.entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .grid .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .wpmag-content-newsletter .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .grid article .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article .wpmag-content-newsletter .entry-title, .grid article body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title, .grid article body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .related-content .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .wpmag-content-newsletter .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .related-content article .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .wpmag-content-newsletter .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .widget-area .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .wpmag-content-newsletter .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .comment-meta .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .wpmag-content-newsletter .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary #respond .entry-title#reply-title, body.wpmag.post-type-archive-wpm_jobs #primary #respond .wpmag-content-newsletter .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title#reply-title {
   font-size: 18px; }
 body.wpmag .wpmag-content-newsletter p {
   margin: 0; }
@@ -1762,7 +1366,7 @@ body.wpmag.page-id-3157 #secondary {
     background-image: url("http://wpmag.ru/files/2014/01/wordpress-magazine-logo-hidpi.png");
     background-size: 224px 75px; } }
 /* Jobs */
-body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article.hentry .entry-title, .grid article.hentry body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title {
+body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article .entry-title, .grid article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title {
   font-weight: normal;
   margin-bottom: 6px; }
 body.wpmag.post-type-archive-wpm_jobs .entry-content .entry-meta, body.wpmag.post-type-archive-wpm_jobs .entry-content .wp-caption-text, body.wpmag.post-type-archive-wpm_jobs .entry-content .comment-meta .comment-metadata, .comment-meta body.wpmag.post-type-archive-wpm_jobs .entry-content .comment-metadata, body.wpmag.post-type-archive-wpm_jobs .entry-content .site-footer {

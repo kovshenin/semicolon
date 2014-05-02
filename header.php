@@ -30,7 +30,12 @@
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'semicolon' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'semicolon' ); ?></a>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 1 ) ); ?>
+			<?php wp_nav_menu( array(
+				'theme_location' => 'primary',
+				'depth' => 1,
+				'container_id' => 'semicolon-navigation',
+			) ); ?>
+
 			<?php wp_nav_menu( array(
 				'theme_location' => 'social',
 				'depth' => 1,
