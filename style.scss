@@ -303,7 +303,7 @@ hr {
 }
 
 /* Featured images are featured in JS-mode only */
-.grid {
+.js.grid {
 	article.semicolon-featured {
 		@include grid-item;
 

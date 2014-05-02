@@ -1,30 +1,3 @@
-@mixin grid-compat($columns) {
-	body.no-js {
-		&.grid article:nth-child(4n+0),
-		.related-content article:nth-child(4n+1) {
-			@if $debug { background: none; }
-			margin-right: 60px;
-		}
-
-		&.grid article:nth-child(4n+0) + article,
-		.related-content article:nth-child(4n+1) + article {
-			@if $debug { background: none; }
-			clear: none;
-		}
-
-		&.grid article:nth-child(#{$columns}n+0),
-		.related-content article:nth-child(#{$columns}n+1) {
-			@if $debug { background: red !important; }
-			margin-right: 0 !important;
-		}
-
-		&.grid article:nth-child(#{$columns}n+0) + article,
-		.related-content article:nth-child(#{$columns}n+1) + article {
-			@if $debug { background: blue; }
-			clear: left !important;
-		}
-	}
-}
 
 @media screen and (max-width: 1200px) {
 	#page { width: 1140px - ( 150px + 60px ) }
@@ -151,7 +124,7 @@
 		}
 	}
 
-	.grid article.semicolon-featured {
+	.js.grid article.semicolon-featured {
 		.entry-title {
 			font-size: 24px;
 			line-height: 36px;
@@ -201,7 +174,47 @@
 			position: static;
 
 			width: 100% !important;
+			height: 210px !important;
 			max-width: 360px !important;
+
+			span { margin-left: -1 * ( ( 1000px - 360px ) / 2 ); }
 		}
 	}
+}
+
+/* No-js grid compatibility */
+@mixin grid-compat($columns) {
+	body.no-js {
+		&.grid article:nth-child(4n+0),
+		.related-content article:nth-child(4n+1) {
+			@if $debug { background: none; }
+			margin-right: 60px;
+		}
+
+		&.grid article:nth-child(4n+0) + article,
+		.related-content article:nth-child(4n+1) + article {
+			@if $debug { background: none; }
+			clear: none;
+		}
+
+		&.grid article:nth-child(#{$columns}n+0),
+		.related-content article:nth-child(#{$columns}n+1) {
+			@if $debug { background: red !important; }
+			margin-right: 0 !important;
+		}
+
+		&.grid article:nth-child(#{$columns}n+0) + article,
+		.related-content article:nth-child(#{$columns}n+1) + article {
+			@if $debug { background: blue; }
+			clear: left !important;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) and (min-width: 681px) {
+	@include grid-compat(3);
+}
+
+@media screen and (max-width: 680px) {
+	@include grid-compat(2);
 }
