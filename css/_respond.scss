@@ -36,6 +36,11 @@
 	#primary { width: 100%; }
 	#secondary { width: 100%; }
 
+	.entry-content img.size-full,
+	.entry-content img.size-large {
+		max-width: 100%;
+	}
+
 	/* Mobile Menu */
 	#semicolon-navigation ul {
 		display: none;
