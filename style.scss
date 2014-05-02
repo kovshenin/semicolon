@@ -28,7 +28,7 @@ $color-primary: #117bb8;
 $color-secondary: #3a3a3a;
 
 $debug: false;
-$vrhythm-debug: false;
+$vrhythm-debug: true;
 
 @import 'css/reset';
 @import 'css/underscores';
@@ -389,54 +389,58 @@ body.no-js {
 		margin-bottom: 12px;
 		display: block;
 	}
+}
 
-	.gallery {
-		margin-left: -60px;
-		margin-top: 20px;
-		padding-top: 0px;
-		margin-bottom: 0px;
+.gallery {
+	margin-left: -60px;
+	margin-top: 24px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+	float: left;
+
+	.gallery-item {
+		width: 220px;
 		float: left;
+		margin-left: 60px;
+		min-height: 220px + 68px;
 
-		.gallery-item {
-			width: 220px;
+		.gallery-icon,
+		.gallery-icon a, img, .gallery-caption {
 			float: left;
-			margin-left: 60px;
-			min-height: 220px + 60px;
+		}
+	}
 
-			.gallery-icon,
-			.gallery-icon a, img, .gallery-caption {
-				float: left;
-			}
-		}
+	.gallery-caption {
+		margin-top: 8px;
+		margin-bottom: 24px;
+		width: 100%;
+	}
 
-		.gallery-caption {
-			margin-top: 12px;
-			margin-bottom: 24px;
-			width: 100%;
-		}
+	&.gallery-columns-1 .gallery-item {
+		clear: left;
+		width: 100%;
+		min-height: 0;
+		margin-bottom: 24px;
+	}
 
-		&.gallery-columns-1 .gallery-item {
-			clear: left;
-			width: 100%;
-		}
+	&.gallery-columns-2 .gallery-item {
+		&:nth-child(2n+1) { clear: left; }
+		width: 360px;
+		min-height: 360px + 60px;
 
-		&.gallery-columns-2 .gallery-item {
-			&:nth-child(2n+1) { clear: left; }
-			width: 360px;
-			min-height: 360px + 60px;
-		}
-		&.gallery-columns-3 .gallery-item {
-			&:nth-child(3n+1) { clear: left; }
-			width: 220px;
-			min-height: 220px + 60px;
-		}
-		&.gallery-columns-4 .gallery-item {
-			&:nth-child(4n+1) { clear: left; }
-			width: 150px;
-			min-height: 150px + 60px;
-		}
+		.gallery-caption { margin-top: 12px; }
+	}
+	&.gallery-columns-3 .gallery-item {
+		&:nth-child(3n+1) { clear: left; }
+		width: 220px;
+		min-height: 220px + 68px;
+	}
+	&.gallery-columns-4 .gallery-item {
+		&:nth-child(4n+1) { clear: left; }
+		width: 150px;
+		min-height: 150px + 66px;
 
-		> br + br { display: none; }
+		.gallery-caption { margin-top: 6px; }
 	}
 }
 
