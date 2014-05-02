@@ -137,6 +137,26 @@
 @media screen and (max-width: 680px) {
 	#page { width: 1140px - ( 150px + 60px ) * 2 - 360px; }
 	#primary { width: 100%; }
+
+	h1 { font-size: 24px; line-height: 36px; }
+	h2 { font-size: 18px; line-height: 24px; }
+	h3 { font-size: 16px; line-height: 24px; }
+
+	.site-title { font-size: 24px; line-height: 36px; }
+	.grid article,
+	.related-content article {
+		.entry-title {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+
+	.grid article.semicolon-featured {
+		.entry-title {
+			font-size: 24px;
+			line-height: 36px;
+		}
+	}
 }
 
 @media screen and (max-width: 479px) {

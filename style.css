@@ -30,14 +30,14 @@ body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title,
 .site-title,
 .grid .page-title,
 .grid article .entry-title,
-.js.grid article.semicolon-featured .entry-title,
+.grid article.semicolon-featured .entry-title,
 .related-content .related-content-title,
 .related-content article .entry-title,
 .widget-area .widget-title,
 .comments-title,
 .comment-meta .comment-author,
 #respond #reply-title,
-body.wpmag .wpmag-content-newsletter h3, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .js.grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article .entry-title, .grid article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title, h4, h5, h6, p, blockquote, pre,
+body.wpmag .wpmag-content-newsletter h3, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article .entry-title, .grid article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -111,7 +111,7 @@ blockquote, q {
 a:focus {
   outline: thin dotted; }
 
-a:hover, .grid article:hover .entry-title a, .js.grid article.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a,
+a:hover, .grid article:hover .entry-title a, .grid article.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a,
 a:active {
   outline: 0; }
 
@@ -132,7 +132,7 @@ textarea {
   line-height: 1.5; }
 
 /* Headings */
-h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .js.grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .js.grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article .entry-title, .grid article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title, h4, h5, h6 {
+h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article .entry-title, .grid article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title, h4, h5, h6 {
   clear: both; }
 
 /*hr {
@@ -347,7 +347,7 @@ a {
 a:visited {
   color: purple; }
 
-a:hover, .grid article:hover .entry-title a, .js.grid article.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a,
+a:hover, .grid article:hover .entry-title a, .grid article.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a,
 a:focus,
 a:active {
   color: midnightblue; }
@@ -591,7 +591,7 @@ body {
   background: #117bb8;
   color: white; }
 
-h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .js.grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
+h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
   font-size: 52px;
   line-height: 72px;
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
@@ -600,7 +600,7 @@ h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site
   padding-top: 24px;
   margin-bottom: 24px; }
 
-h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .js.grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
+h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
   font-size: 28px;
   line-height: 48px; }
 
@@ -614,7 +614,7 @@ h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.po
 a, a:visited, a:link {
   color: #117bb8;
   text-decoration: underline; }
-  a:hover, .grid article:hover .entry-title a, .js.grid article.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a, a:visited:hover, .grid article:hover .entry-title a:visited, .js.grid article.semicolon-featured:hover .entry-title a:visited, .related-content article:hover .entry-title a:visited, a:link:hover, .grid article:hover .entry-title a:link, .js.grid article.semicolon-featured:hover .entry-title a:link, .related-content article:hover .entry-title a:link {
+  a:hover, .grid article:hover .entry-title a, .grid article.semicolon-featured:hover .entry-title a, .related-content article:hover .entry-title a, a:visited:hover, .grid article:hover .entry-title a:visited, .related-content article:hover .entry-title a:visited, a:link:hover, .grid article:hover .entry-title a:link, .related-content article:hover .entry-title a:link {
     color: #159ae7; }
 
 #page {
@@ -812,13 +812,13 @@ hr {
     margin-right: 0; }
 
 /* Featured images are featured in JS-mode only */
-.js.grid article.semicolon-featured {
+.grid article.semicolon-featured {
   float: left;
   width: 150px;
   margin-bottom: 48px;
   margin-right: 60px;
   width: 360px; }
-  .js.grid article.semicolon-featured .post-thumbnail {
+  .grid article.semicolon-featured .post-thumbnail {
     display: block;
     float: left;
     clear: both;
@@ -828,36 +828,36 @@ hr {
     background: rgba(58, 58, 58, 0.03);
     text-align: center;
     overflow: hidden; }
-    .js.grid article.semicolon-featured .post-thumbnail span {
+    .grid article.semicolon-featured .post-thumbnail span {
       display: block;
       width: 1000px;
       margin-left: -425px;
       height: 100%; }
-    .js.grid article.semicolon-featured .post-thumbnail img {
+    .grid article.semicolon-featured .post-thumbnail img {
       height: 100%;
       width: auto;
       max-width: none;
       display: inline-block; }
-  .js.grid article.semicolon-featured .entry-title {
+  .grid article.semicolon-featured .entry-title {
     width: 180px;
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0;
     font-size: 16px;
     line-height: 24px; }
-    .js.grid article.semicolon-featured .entry-title a {
+    .grid article.semicolon-featured .entry-title a {
       color: #3a3a3a;
       text-decoration: none;
       margin-bottom: 12px;
       display: block; }
-  .js.grid article.semicolon-featured.semicolon-last {
+  .grid article.semicolon-featured.semicolon-last {
     margin-right: 0; }
-  .js.grid article.semicolon-featured .post-thumbnail {
+  .grid article.semicolon-featured .post-thumbnail {
     width: 360px;
     height: 210px; }
-    .js.grid article.semicolon-featured .post-thumbnail span {
+    .grid article.semicolon-featured .post-thumbnail span {
       margin-left: -320px; }
-  .js.grid article.semicolon-featured .entry-title {
+  .grid article.semicolon-featured .entry-title {
     width: 390px;
     font-size: 24px;
     line-height: 36px; }
@@ -1155,10 +1155,8 @@ body.wpmag a.wpm-button-primary {
   body.wpmag .related-content article:hover .entry-title a.wpm-button,
   .related-content article:hover .entry-title body.wpmag a.wpm-button,
   .grid article:hover .entry-title a.button,
-  .js.grid article.semicolon-featured:hover .entry-title a.button,
   .related-content article:hover .entry-title a.button,
   .grid article:hover .entry-title a.button-secondary,
-  .js.grid article.semicolon-featured:hover .entry-title a.button-secondary,
   .related-content article:hover .entry-title a.button-secondary,
   body.wpmag .wpm-button-primary:hover,
   body.wpmag .grid article:hover .entry-title a.wpm-button-primary,
@@ -1178,9 +1176,6 @@ body.wpmag a.wpm-button-primary {
   body.wpmag .grid article:hover .entry-title a.wpm-button,
   .grid article:hover .entry-title body.wpmag a.wpm-button-primary,
   body.wpmag .grid article:hover .entry-title a.wpm-button-primary,
-  .js.grid article.semicolon-featured:hover .entry-title a.button-primary,
-  .js.grid article.semicolon-featured:hover .entry-title a.button,
-  .js.grid article.semicolon-featured:hover .entry-title a.button-secondary,
   .related-content article:hover .entry-title a.button-primary,
   .related-content article:hover .entry-title a.button,
   .related-content article:hover .entry-title a.button-secondary,
@@ -1217,13 +1212,11 @@ body.wpmag a.wpm-button {
   .related-content article:hover .entry-title body.wpmag a.wpm-button,
   a.button:hover,
   .grid article:hover .entry-title a.button,
-  .js.grid article.semicolon-featured:hover .entry-title a.button,
   .related-content article:hover .entry-title a.button,
   a.button-secondary:hover,
   .grid article:hover .entry-title a.button-secondary,
   .grid article:hover .entry-title body.wpmag a.wpm-button,
   body.wpmag .grid article:hover .entry-title a.wpm-button,
-  .js.grid article.semicolon-featured:hover .entry-title a.button-secondary,
   .related-content article:hover .entry-title a.button-secondary,
   .related-content article:hover .entry-title body.wpmag a.wpm-button,
   body.wpmag .related-content article:hover .entry-title a.wpm-button,
@@ -1348,7 +1341,32 @@ input[type="search"] {
     width: 360px; }
 
   #primary {
-    width: 100%; } }
+    width: 100%; }
+
+  h1, h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
+    font-size: 24px;
+    line-height: 36px; }
+
+  h2, h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, .site-title, .grid .page-title, .grid article .entry-title, .grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title, body.wpmag .wpmag-content-newsletter h3 {
+    font-size: 18px;
+    line-height: 24px; }
+
+  h3, body.wpmag.post-type-archive-wpm_jobs #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article .entry-title, .grid article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary #respond .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .entry-title#reply-title {
+    font-size: 16px;
+    line-height: 24px; }
+
+  .site-title {
+    font-size: 24px;
+    line-height: 36px; }
+
+  .grid article .entry-title,
+  .related-content article .entry-title {
+    font-size: 16px;
+    line-height: 24px; }
+
+  .grid article.semicolon-featured .entry-title {
+    font-size: 24px;
+    line-height: 36px; } }
 @media screen and (max-width: 479px) {
   body {
     padding: 0 20px; }
