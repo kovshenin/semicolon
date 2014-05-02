@@ -874,13 +874,13 @@ body.no-js {
 .entry-content {
   margin: 0; }
   .entry-content iframe {
-    max-width: 940px;
+    max-width: 820px;
     margin-left: -40px;
     margin-top: 24px;
     margin-bottom: 24px; }
   .entry-content img.size-full,
   .entry-content img.size-large {
-    max-width: 940px;
+    max-width: 820px;
     margin-top: 36px;
     margin-bottom: 36px;
     display: block; }
