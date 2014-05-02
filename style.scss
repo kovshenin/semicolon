@@ -248,7 +248,7 @@ hr {
 		display: block;
 		float: left;
 		clear: both;
-		margin-bottom: 12px;
+		margin-bottom: 6px;
 		width: 150px;
 		height: 150px;
 		background: rgba( $color-secondary, 0.03 );
@@ -360,6 +360,18 @@ body.no-js {
 		}
 	}
 
+	img.alignnone,
+	.wp-caption.alignnone img {
+		display: block;
+	}
+
+	img.alignright,
+	img.alignleft,
+	.wp-caption.alignleft img,
+	.wp-caption.alignright img {
+		margin-top: 0;
+	}
+
 	.wp-caption img.size-full,
 	.wp-caption img.size-large {
 		margin-bottom: 0;
@@ -457,7 +469,8 @@ time.updated {
 	display: none;
 }
 
-.grid .entry-meta .author {
+.grid .entry-meta .author,
+.related-content .author {
 	display: none;
 }
 

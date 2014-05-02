@@ -46,7 +46,7 @@
 		font-weight: 400;
 		border-top: solid 4px transparent;
 
-		margin: -1px 0 0 0;
+		margin: 0;
 		padding: 0;
 
 		&:before {
@@ -78,6 +78,7 @@
 		#semicolon-navigation ul {
 			display: block;
 			border-bottom: solid 1px rgba( $color-secondary, 0.1 );
+			margin-bottom: 47px;
 
 			li {
 				display: block;
@@ -86,6 +87,7 @@
 
 				a {
 					padding: 0 26px;
+					margin-top: 0;
 				}
 			}
 		}
@@ -135,7 +137,7 @@
 @media screen and (max-width: 479px) {
 	body { padding: 0 20px; }
 	#page { width: 100%; min-width: 280px; }
-	.site-header { margin-top: 20px; }
+	.site-header { margin-top: 24px; }
 
 	.grid article,
 	.related-content article {
@@ -143,17 +145,17 @@
 		margin-right: 0;
 
 		.post-thumbnail {
-			width: 70px;
-			height: 70px;
+			width: 72px;
+			height: 72px;
 			position: absolute;
 			margin-left: -90px;
 
-			span { margin-left: -1 * ( ( 1000px - 70px ) / 2 ); }
+			span { margin-left: -1 * ( ( 1000px - 72px ) / 2 ); }
 		}
 
 		.entry-header {
 			padding-left: 90px;
-			min-height: 70px;
+			min-height: 72px;
 		}
 
 		.entry-title {
