@@ -5,12 +5,9 @@
 
 	/* Restore image margin behavior */
 	.entry-content {
-		img.size-full,
-		img.size-large {
+		.semicolon-lefter {
+			margin-left: 0;
 			max-width: 100%;
-			&.alignnone {
-				margin-left: 0;
-			}
 		}
 
 		iframe {

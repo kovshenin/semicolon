@@ -209,6 +209,7 @@ a, a:visited, a:link {
 	margin-top: 0;
 	padding-top: 0;
 	margin-bottom: 24px;
+	overflow: hidden;
 
 	@if $debug { background: purple; }
 }
@@ -341,23 +342,23 @@ body.no-js {
 .entry-content {
 	margin: 0;
 
-	iframe {
-		max-width: 820px;
-		margin-left: -40px;
+	iframe,
+	embed {
 		margin-top: 24px;
 		margin-bottom: 24px;
 	}
 
+	.semicolon-lefter,
+	.semicolon-lefter + .wp-caption-text {
+		max-width: 820px;
+		margin-left: -40px;
+	}
+
 	img.size-full,
 	img.size-large {
-		max-width: 820px;
 		margin-top: 36px;
 		margin-bottom: 36px;
 		display: block;
-
-		&.alignnone {
-			margin-left: -40px;
-		}
 	}
 
 	img.alignnone,
@@ -389,23 +390,18 @@ body.no-js {
 		display: block;
 	}
 
-	.wp-caption.alignnone img.size-full + .wp-caption-text,
-	.wp-caption.alignnone img.size-full,
-	.wp-caption.alignnone img.size-large + .wp-caption-text,
-	.wp-caption.alignnone img.size-large {
-		margin-left: -40px;
-	}
-
 	.gallery {
 		margin-left: -60px;
 		margin-top: 20px;
-		padding-top: 20px;
-		margin-bottom: 20px;
+		padding-top: 0px;
+		margin-bottom: 0px;
+		float: left;
 
 		.gallery-item {
-			width: 260px;
+			width: 220px;
 			float: left;
 			margin-left: 60px;
+			min-height: 220px + 60px;
 
 			.gallery-icon,
 			.gallery-icon a, img, .gallery-caption {
@@ -414,13 +410,31 @@ body.no-js {
 		}
 
 		.gallery-caption {
-			margin-left: 0;
-			margin-top: 10px;
+			margin-top: 12px;
+			margin-bottom: 24px;
+			width: 100%;
 		}
 
-		&.gallery-columns-2 .gallery-item { width: 300px; }
-		&.gallery-columns-3 .gallery-item { width: 260px; }
-		&.gallery-columns-4 .gallery-item { width: 180px; }
+		&.gallery-columns-1 .gallery-item {
+			clear: left;
+			width: 100%;
+		}
+
+		&.gallery-columns-2 .gallery-item {
+			&:nth-child(2n+1) { clear: left; }
+			width: 360px;
+			min-height: 360px + 60px;
+		}
+		&.gallery-columns-3 .gallery-item {
+			&:nth-child(3n+1) { clear: left; }
+			width: 220px;
+			min-height: 220px + 60px;
+		}
+		&.gallery-columns-4 .gallery-item {
+			&:nth-child(4n+1) { clear: left; }
+			width: 150px;
+			min-height: 150px + 60px;
+		}
 
 		> br + br { display: none; }
 	}

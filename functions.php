@@ -10,7 +10,7 @@ class Semicolon {
 	 */
 	public static function setup() {
 		if ( ! isset( $GLOBALS['content_width'] ) ) {
-			$GLOBALS['content_width'] = 940;
+			$GLOBALS['content_width'] = 840;
 		}
 
 		// @todo: sticky to featured
@@ -48,7 +48,7 @@ class Semicolon {
 
 		// Post thumbnail support and additional image sizes.
 		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 420, 240, true );
+		set_post_thumbnail_size( 360, 210, true );
 		add_image_size( 'semicolon-mini', 60, 60, true );
 		add_image_size( 'semicolon-gallery', 300, 300, true );
 
