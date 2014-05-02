@@ -1348,10 +1348,49 @@ input[type="search"] {
     width: 360px; }
 
   #primary {
-    width: 100%; }
+    width: 100%; } }
+@media screen and (max-width: 479px) {
+  body {
+    padding: 0 20px; }
 
-  .grid article .entry-title {
-    width: 100% !important; } }
+  #page {
+    width: 100%;
+    min-width: 280px; }
+
+  .site-header {
+    margin-top: 20px; }
+
+  .grid article,
+  .related-content article {
+    width: 100%;
+    margin-right: 0; }
+    .grid article .post-thumbnail,
+    .related-content article .post-thumbnail {
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      margin-left: -90px; }
+      .grid article .post-thumbnail span,
+      .related-content article .post-thumbnail span {
+        margin-left: -465px; }
+    .grid article .entry-header,
+    .related-content article .entry-header {
+      padding-left: 90px;
+      min-height: 70px; }
+    .grid article .entry-title,
+    .related-content article .entry-title {
+      width: 100% !important; }
+
+  .grid article.semicolon-featured {
+    width: 100% !important; }
+    .grid article.semicolon-featured .entry-header {
+      padding: 0;
+      min-height: auto; }
+    .grid article.semicolon-featured .post-thumbnail {
+      margin-left: 0;
+      position: static;
+      width: 100% !important;
+      max-width: 360px !important; } }
 /* WPM */
 body.wpmag .wpmag-content-newsletter h3, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary h1.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter h1.entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary h2.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter h2.entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary h3.entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter h3.entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.site-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .grid .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid .wpmag-content-newsletter .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.page-title, .grid body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.page-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .grid article .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .grid article .wpmag-content-newsletter .entry-title, .grid article body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title, .grid article body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .related-content .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content .wpmag-content-newsletter .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.related-content-title, .related-content body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.related-content-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .related-content article .entry-title, body.wpmag.post-type-archive-wpm_jobs #primary .related-content article .wpmag-content-newsletter .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title, .related-content article body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .widget-area .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs #primary .widget-area .wpmag-content-newsletter .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.widget-title, .widget-area body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.widget-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.comments-title, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .comment-meta .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs #primary .comment-meta .wpmag-content-newsletter .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title.comment-author, .comment-meta body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title.comment-author, body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary #respond .entry-title#reply-title, body.wpmag.post-type-archive-wpm_jobs #primary #respond .wpmag-content-newsletter .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs .wpmag-content-newsletter #primary .entry-title#reply-title, #respond body.wpmag.post-type-archive-wpm_jobs #primary .wpmag-content-newsletter .entry-title#reply-title {
   font-size: 18px; }

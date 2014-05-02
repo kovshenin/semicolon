@@ -36,7 +36,7 @@ var semicolon = semicolon || {};
 
 				// Unfeature a post if it's about to be rendered in the last column position
 				// because it won't fit and wrap instead. Also unfeature the last item on the list.
-				if ($el.hasClass('semicolon-featured')) {
+				if ($el.hasClass('semicolon-featured') && columns > 1) {
 					if (count % columns === columns - 1 || i == $entries.length - 1) {
 						$el.removeClass('semicolon-featured').addClass('semicolon-featured-removed');
 					}
@@ -63,7 +63,10 @@ var semicolon = semicolon || {};
 
 		// console.log(width);
 
-		if (width <= 680)
+		if (width <= 479)
+			columns = columns !== 1 ? 1 : columns;
+
+		else if (width <= 680)
 			columns = columns !== 2 ? 2 : columns;
 
 		else if (width <= 1200)

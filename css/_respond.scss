@@ -137,12 +137,51 @@
 @media screen and (max-width: 680px) {
 	#page { width: 1140px - ( 150px + 60px ) * 2 - 360px; }
 	#primary { width: 100%; }
-
-	.grid article .entry-title {
-		width: 100% !important;
-	}
 }
 
 @media screen and (max-width: 479px) {
+	body { padding: 0 20px; }
+	#page { width: 100%; min-width: 280px; }
+	.site-header { margin-top: 20px; }
 
+	.grid article,
+	.related-content article {
+		width: 100%;
+		margin-right: 0;
+
+		.post-thumbnail {
+			width: 70px;
+			height: 70px;
+			position: absolute;
+			margin-left: -90px;
+
+			span { margin-left: -1 * ( ( 1000px - 70px ) / 2 ); }
+		}
+
+		.entry-header {
+			padding-left: 90px;
+			min-height: 70px;
+		}
+
+		.entry-title {
+			width: 100% !important;
+		}
+	}
+
+	.grid article.semicolon-featured {
+		width: 100% !important;
+
+		.entry-header {
+			padding: 0;
+			min-height: auto;
+		}
+
+		.post-thumbnail {
+			margin-left: 0;
+			position: static;
+
+			width: 100% !important;
+			max-width: 360px !important;
+		}
+	}
 }
