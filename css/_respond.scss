@@ -29,17 +29,35 @@
 @media screen and (max-width: 1200px) {
 	#page { width: 1140px - ( 150px + 60px ) }
 	#primary { width: 780px - ( 150px + 60px ) }
+
+	/* Restore image margin behavior */
+	.entry-content {
+		img.size-full,
+		img.size-large {
+			max-width: 100%;
+			&.alignnone {
+				margin-left: 0;
+			}
+		}
+
+		iframe {
+			max-width: 100%;
+			margin-left: 0;
+		}
+
+		.wp-caption.alignnone img.size-full + .wp-caption-text,
+		.wp-caption.alignnone img.size-full,
+		.wp-caption.alignnone img.size-large + .wp-caption-text,
+		.wp-caption.alignnone img.size-large {
+			margin-left: 0;
+		}
+	}
 }
 
 @media screen and (max-width: 992px) {
 	#page { width: 1140px - ( 150px + 60px ) - 360px; }
 	#primary { width: 100%; }
 	#secondary { width: 100%; }
-
-	.entry-content img.size-full,
-	.entry-content img.size-large {
-		max-width: 100%;
-	}
 
 	/* Mobile Menu */
 	#semicolon-navigation ul {
