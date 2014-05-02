@@ -144,4 +144,9 @@ var semicolon = semicolon || {};
 	}));
 
 	$window.trigger('resize');
+
+	// Mobile navigation
+	$(document).on( 'click', '.main-navigation .menu-toggle', function() {
+		$(this).parent('.main-navigation').toggleClass('toggled');
+	});
 }(jQuery));
