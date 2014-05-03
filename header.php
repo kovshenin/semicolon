@@ -33,7 +33,7 @@
 			<?php wp_nav_menu( array(
 				'theme_location' => 'primary',
 				'depth' => 1,
-				'container_id' => 'semicolon-navigation',
+				'menu_class' => 'semicolon-navigation',
 			) ); ?>
 
 			<?php wp_nav_menu( array(

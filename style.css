@@ -1344,7 +1344,7 @@ input[type="search"] {
     width: 100%; }
 
   /* Mobile Menu */
-  #semicolon-navigation ul {
+  .semicolon-navigation ul {
     display: none; }
 
   .menu-toggle {
@@ -1379,14 +1379,14 @@ input[type="search"] {
   .main-navigation.toggled .current-post-parent a {
     border-top-color: transparent;
     background: rgba(58, 58, 58, 0.03); }
-  .main-navigation.toggled #semicolon-navigation ul {
+  .main-navigation.toggled .semicolon-navigation ul {
     display: block;
     border-bottom: solid 1px rgba(58, 58, 58, 0.1); }
-    .main-navigation.toggled #semicolon-navigation ul li {
+    .main-navigation.toggled .semicolon-navigation ul li {
       display: block;
       float: none;
       clear: left; }
-      .main-navigation.toggled #semicolon-navigation ul li a {
+      .main-navigation.toggled .semicolon-navigation ul li a {
         padding: 0 26px;
         margin-top: 0; }
   .main-navigation.toggled .menu-toggle {
