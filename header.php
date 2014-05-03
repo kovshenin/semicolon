@@ -27,23 +27,24 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'semicolon' ); ?></h1>
+			<a class="menu-toggle"><?php _e( 'Menu', 'semicolon' ); ?></a>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'semicolon' ); ?></a>
 
 			<?php wp_nav_menu( array(
 				'theme_location' => 'primary',
-				'depth' => 1,
-				'menu_class' => 'semicolon-navigation',
+				'menu_class'     => 'semicolon-navigation',
+				'depth'          => 1,
 			) ); ?>
 
 			<?php wp_nav_menu( array(
 				'theme_location' => 'social',
-				'depth' => 1,
-				'container_id' => 'semicolon-social',
-				'link_before' => '<span>',
-				'link_after' => '</span>',
-				'fallback_cb' => '',
+				'menu_class'     => 'semicolon-social',
+				'link_before'    => '<span>',
+				'link_after'     => '</span>',
+				'fallback_cb'    => '',
+				'depth'          => 1,
 			) ); ?>
+
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

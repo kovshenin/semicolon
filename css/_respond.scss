@@ -65,37 +65,38 @@
 	#secondary { width: 100%; }
 
 	/* Mobile Menu */
-	.semicolon-navigation ul {
+	div.semicolon-navigation ul,
+	ul.semicolon-navigation {
 		display: none;
-	}
-
-	.menu-toggle {
-		display: block;
-		font-family: $font-regular;
-		font-size: 16px;
-		line-height: 52px;
-		height: 60px;
-		font-weight: 400;
-		border-top: solid 4px transparent;
-
-		margin: 0;
-		padding: 0;
-
-		&:before {
-			display: inline-block;
-			font-weight: normal;
-			font-family: Genericons;
-			content: '\f419';
-			font-size: 16px;
-			line-height: 52px;
-			padding-right: 10px;
-			-webkit-font-smoothing: antialiased;
-			vertical-align: top;
-		}
 	}
 
 	.main-navigation {
 		margin-bottom: 47px;
+
+		.menu-toggle {
+			display: block;
+			font-family: $font-regular;
+			font-size: 16px;
+			line-height: 52px;
+			height: 60px;
+			font-weight: 400;
+			border-top: solid 4px transparent;
+
+			margin: 0;
+			padding: 0;
+
+			&:before {
+				display: inline-block;
+				font-weight: normal;
+				font-family: Genericons;
+				content: '\f419';
+				font-size: 16px;
+				line-height: 52px;
+				padding-right: 10px;
+				-webkit-font-smoothing: antialiased;
+				vertical-align: top;
+			}
+		}
 	}
 
 	.main-navigation.toggled {
@@ -111,7 +112,8 @@
 			}
 		}
 
-		.semicolon-navigation ul {
+		div.semicolon-navigation ul,
+		ul.semicolon-navigation {
 			display: block;
 			border-bottom: solid 1px rgba( $color-secondary, 0.1 );
 
@@ -133,7 +135,7 @@
 		}
 	}
 
-	#semicolon-social {
+	ul.semicolon-social {
 		position: absolute;
 		top: 0;
 		right: 0;
