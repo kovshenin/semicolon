@@ -3,26 +3,6 @@
 	#page { width: 1140px - ( 150px + 60px ) }
 	#primary { width: 780px - ( 150px + 60px ) }
 
-	/* Restore image margin behavior */
-	.entry-content {
-		.semicolon-lefter {
-			margin-left: 0;
-			max-width: 100%;
-		}
-
-		iframe {
-			max-width: 100%;
-			margin-left: 0;
-		}
-
-		.wp-caption.alignnone img.size-full + .wp-caption-text,
-		.wp-caption.alignnone img.size-full,
-		.wp-caption.alignnone img.size-large + .wp-caption-text,
-		.wp-caption.alignnone img.size-large {
-			margin-left: 0;
-		}
-	}
-
 	.gallery {
 		.gallery-item {
 			width: 150px;

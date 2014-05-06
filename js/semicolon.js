@@ -129,9 +129,7 @@ var semicolon = semicolon || {};
 	// Helps maintain vertical rhythm for images.
 	$window.on('resize', semicolon.throttle( 1000, function(){
 		var $content_images = $( '.entry-content img[class*="wp-image-"]' ),
-			$captioned_images = $( '.entry-content .wp-caption img[class*="wp-image-"]' ),
-			$other = $( '.entry-content .wpm-tooltip, .entry-content embed, .entry-content iframe' ),
-			max_width = $( '.entry-content' ).width();
+			$captioned_images = $( '.entry-content .wp-caption img[class*="wp-image-"]' );
 
 		$content_images.each(function(i,el){
 			var $el = $(el),
@@ -143,19 +141,6 @@ var semicolon = semicolon || {};
 				$el.next( '.wp-caption-text' ).css( 'padding-bottom', padding );
 			} else {
 				$el.css( 'padding-bottom', padding );
-			}
-		});
-
-		$.merge( $content_images, $other ).each(function(i,el){
-			var $el = $(el);
-
-			/**
-			 * Large images in the content area get a negative left margin.
-			 */
-			if ( $el.width() + 40 < parseInt( $el.attr('width') ) ) {
-				$el.addClass( 'semicolon-lefter' );
-			} else if ( $el.hasClass( 'semicolon-lefter' ) ) {
-				$el.removeClass( 'semicolon-lefter' );
 			}
 		});
 	}));

@@ -10,7 +10,7 @@ class Semicolon {
 	 */
 	public static function setup() {
 		if ( ! isset( $GLOBALS['content_width'] ) ) {
-			$GLOBALS['content_width'] = 840;
+			$GLOBALS['content_width'] = 780;
 		}
 
 		// @todo: sticky to featured
@@ -50,7 +50,7 @@ class Semicolon {
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( 360, 210, true );
 		add_image_size( 'semicolon-mini', 60, 60, true );
-		add_image_size( 'semicolon-gallery', 300, 300, true );
+		add_image_size( 'semicolon-gallery', 220, 220, true );
 
 		// This theme uses a primary navigation menu and an additional
 		// menu for social profile links.
