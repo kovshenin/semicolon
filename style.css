@@ -581,6 +581,7 @@ object {
 
 body {
   background: white;
+  background: url("24.png");
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -912,6 +913,9 @@ table td {
   border-bottom: solid 1px #ededed; }
 table tr:hover td {
   background: rgba(58, 58, 58, 0.03); }
+
+.post-password-form input[type="submit"] {
+  margin-top: 12px; }
 
 .gallery {
   margin-left: -60px;

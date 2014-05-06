@@ -28,7 +28,7 @@ $color-primary: #117bb8;
 $color-secondary: #3a3a3a;
 
 $debug: false;
-$vrhythm-debug: false;
+$vrhythm-debug: true;
 
 @import 'css/reset';
 @import 'css/underscores';
@@ -402,6 +402,12 @@ table {
 
 	tr:hover td {
 		background: rgba($color-secondary, 0.03);
+	}
+}
+
+.post-password-form {
+	input[type="submit"] {
+		margin-top: 12px;
 	}
 }
 
