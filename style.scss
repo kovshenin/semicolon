@@ -28,7 +28,7 @@ $color-primary: #117bb8;
 $color-secondary: #3a3a3a;
 
 $debug: false;
-$vrhythm-debug: true;
+$vrhythm-debug: false;
 
 @import 'css/reset';
 @import 'css/underscores';
@@ -755,7 +755,30 @@ input[type="search"] {
 
 .site-footer {
 	@extend .entry-meta;
+	max-width: 780px;
 	margin: 48px 0;
+
+	.widget-area {
+		width: 100%;
+		margin-bottom: 24px;
+
+		.footer-sidebar {
+			margin-left: -60px;
+		}
+
+		ul {
+			list-style: none;
+			margin-left: 0;
+		}
+
+		.widget {
+			padding: 0;
+			margin: 0;
+			float: left;
+			margin-left: 60px;
+			width: 220px;
+		}
+	}
 }
 
 .semicolon-clear-left {

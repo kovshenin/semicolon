@@ -581,7 +581,6 @@ object {
 
 body {
   background: white;
-  background: url("24.png");
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -1289,7 +1288,22 @@ input[type="search"] {
   height: 36px; }
 
 .site-footer {
+  max-width: 780px;
   margin: 48px 0; }
+  .site-footer .widget-area {
+    width: 100%;
+    margin-bottom: 24px; }
+    .site-footer .widget-area .footer-sidebar {
+      margin-left: -60px; }
+    .site-footer .widget-area ul {
+      list-style: none;
+      margin-left: 0; }
+    .site-footer .widget-area .widget {
+      padding: 0;
+      margin: 0;
+      float: left;
+      margin-left: 60px;
+      width: 220px; }
 
 .semicolon-clear-left {
   clear: left; }
