@@ -116,10 +116,10 @@ class Semicolon {
 	}
 
 	public static function enqueue_scripts() {
-		wp_enqueue_style( 'semicolon', get_stylesheet_uri(), array( 'semicolon-genericons' ), '20140129' );
+		wp_enqueue_style( 'semicolon', get_stylesheet_uri(), array( 'semicolon-genericons' ), '20140506' );
 		wp_enqueue_style( 'semicolon-genericons', get_template_directory_uri() . '/css/genericons.css', array(), '20131222' );
 		wp_enqueue_script( 'semicolon-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-		wp_enqueue_script( 'semicolon', get_template_directory_uri() . '/js/semicolon.js', array( 'jquery' ), '20140129', true );
+		wp_enqueue_script( 'semicolon', get_template_directory_uri() . '/js/semicolon.js', array( 'jquery' ), '20140506', true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
