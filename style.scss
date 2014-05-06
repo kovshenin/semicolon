@@ -387,6 +387,24 @@ body.no-js {
 	}
 }
 
+table {
+	td, th {
+		padding: 8px 8px;
+	}
+
+	th {
+		border-bottom: solid 3px lighten($color-secondary, 40%);
+	}
+
+	td {
+		border-bottom: solid 1px lighten($color-secondary, 70%);
+	}
+
+	tr:hover td {
+		background: rgba($color-secondary, 0.03);
+	}
+}
+
 .gallery {
 	margin-left: -60px;
 	margin-top: 24px;
