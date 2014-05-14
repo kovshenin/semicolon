@@ -54,7 +54,7 @@ body.wpmag {
 				border-radius: 0;
 				-webkit-border-radius: 0;
 
-				width: 32px;
+				min-width: 32px;
 				height: 32px;
 				margin-bottom: 4px;
 				margin-right: 4px;
@@ -66,6 +66,10 @@ body.wpmag {
 
 			.b-share-icon {
 				margin: 4px;
+			}
+
+			.b-share-counter {
+				margin-top: 7px;
 			}
 		}
 	}

@@ -1619,7 +1619,7 @@ body.wpmag .yandex-share {
   body.wpmag .yandex-share.b-share_theme_counter .b-share__link {
     border-radius: 0;
     -webkit-border-radius: 0;
-    width: 32px;
+    min-width: 32px;
     height: 32px;
     margin-bottom: 4px;
     margin-right: 4px; }
@@ -1627,6 +1627,8 @@ body.wpmag .yandex-share {
     margin: 0; }
   body.wpmag .yandex-share.b-share_theme_counter .b-share-icon {
     margin: 4px; }
+  body.wpmag .yandex-share.b-share_theme_counter .b-share-counter {
+    margin-top: 7px; }
 
 body.wpmag.page-id-3157 #secondary {
   display: none; }
