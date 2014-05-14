@@ -26,6 +26,7 @@ class Semicolon {
 		add_action( 'after_setup_theme', array( 'Semicolon', 'after_setup_theme' ) );
 		add_action( 'widgets_init', array( 'Semicolon', 'widgets_init' ) );
 		add_action( 'wp_enqueue_scripts', array( 'Semicolon', 'enqueue_scripts' ) );
+		add_action( 'wp', array( 'Semicolon', 'setup_author' ) );
 
 		add_filter( 'wp_page_menu_args', array( 'Semicolon', 'page_menu_args' ) );
 		add_filter( 'wp_title', array( 'Semicolon', 'wp_title' ), 10, 2 );
@@ -75,6 +76,26 @@ class Semicolon {
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) );
+	}
+
+	/**
+	 * Sets the authordata global when viewing an author archive.
+	 *
+	 * This provides backwards compatibility with
+	 * http://core.trac.wordpress.org/changeset/25574
+	 *
+	 * It removes the need to call the_post() and rewind_posts() in an author
+	 * template to print information about the author.
+	 *
+	 * @global WP_Query $wp_query WordPress Query object.
+	 * @return void
+	 */
+	public static function setup_author() {
+		global $wp_query;
+
+		if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
+			$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
+		}
 	}
 
 	public static function widgets_init() {
@@ -355,24 +376,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-/**
- * Sets the authordata global when viewing an author archive.
- *
- * This provides backwards compatibility with
- * http://core.trac.wordpress.org/changeset/25574
- *
- * It removes the need to call the_post() and rewind_posts() in an author
- * template to print information about the author.
- *
- * @global WP_Query $wp_query WordPress Query object.
- * @return void
- */
-function semicolon_setup_author() {
-	global $wp_query;
-
-	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
-		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
-	}
-}
-add_action( 'wp', 'semicolon_setup_author' );
