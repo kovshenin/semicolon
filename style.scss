@@ -503,6 +503,98 @@ blockquote:before {
 	}
 }
 
+.single .author {
+	margin-bottom: 24px;
+	float: left;
+	width: 100%;
+	clear: both;
+
+	h3 {
+		@extend h2;
+		font-size: 18px;
+		padding-top: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+
+		a {
+			color: $color-secondary;
+			text-decoration: none;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+
+	.author-bio {
+		display: block;
+		margin-left: 80px;
+		
+		h3, p { clear: none; }
+	}
+
+	.avatar {
+		width: 60px;
+		height: 60px;
+		float: left;
+		margin-top: 17px;
+	}
+
+	time {
+		font-size: 13px;
+		color: rgba( $color-secondary, 0.5 );
+		font-family: $font-regular;
+		font-weight: normal;
+
+		&::before {
+			content: ' / ';
+		}
+	}
+}
+
+.taxonomy {
+	float: left;
+	width: 100%;
+	clear: both;
+	margin-bottom: 24px;
+	margin-top: 24px;
+}
+
+.post-categories,
+.post-tags {
+	list-style: none;
+	margin: 0;
+	float: left;
+
+	li { float: left; }
+
+	a {
+		float: left;
+		background: lighten( $color-secondary, 60% );
+		padding: 0 10px;
+		font-size: 13px;
+		line-height: 32px;
+		height: 32px;
+		color: $color-secondary;
+		text-decoration: none;
+		margin-right: 4px;
+		margin-bottom: 4px;
+
+		&:hover {
+			background: lighten( $color-secondary, 50% );
+			color: $color-secondary;
+		}
+	}
+}
+
+.post-tags a {
+	background: lighten( $color-secondary, 70% );
+
+	&:hover {
+		background: lighten( $color-secondary, 60% );
+	}
+}
+
 time.updated {
 	display: none;
 }

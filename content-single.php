@@ -16,33 +16,24 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-meta">
-		<?php
-			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'semicolon' ) );
+	<footer>
+		<div class="taxonomy">
+			<?php if ( semicolon_categorized_blog() ) { the_category(); } ?>
+			<?php the_tags( '<div class="post-tags">', ' ', '</div>' ); ?>
+		</div>
 
-			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'semicolon' ) );
+		<div class="author vcard">
+			<?php echo get_avatar( get_the_author_meta( 'ID' ), 120 ); ?>
+			<?php
+				$time_string = sprintf( '<time class="entry-date published" datetime="%s">%s</time>', get_the_date('c'), get_the_time( get_option( 'date_format' ) ) );
+				$time_string .= sprintf( '<time class="updated" datetime="%s">%s</time>', get_the_modified_date('c'), get_the_modified_date() );
+			?>
 
-			$meta = array( '&mdash;' );
-			$author = sprintf( '<span class="author vcard"><a class="url fn n" href="%s">%s</a></span>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
-
-			if ( semicolon_categorized_blog() ) {
-				$meta[] = sprintf( __( '%1$s in %2$s', 'semicolon' ), $author, $category_list );
-			} else {
-				$meta[] = $author;
-			}
-
-			if ( '' != $tag_list )
-				$meta[] = sprintf( __( 'Tagged: %s', 'semicolon' ), $tag_list );
-
-			$time_string = sprintf( '<time class="entry-date published" datetime="%s">%s</time>', get_the_date('c'), get_the_time( get_option( 'date_format' ) ) );
-			$time_string .= sprintf( '<time class="updated" datetime="%s">%s</time>', get_the_modified_date('c'), get_the_modified_date() );
-			$meta[] = $time_string;
-			
-
-			echo implode( '<br />', $meta );
-		?>
+			<div class="author-bio">
+				<h3><a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a> <?php echo $time_string; ?></h3>
+				<p><?php echo get_the_author_meta( 'description', get_the_author_meta( 'ID' ) ); ?></p>
+			</div>
+		</div>
 	</footer><!-- .entry-meta -->
 
 </article><!-- #post-## -->
