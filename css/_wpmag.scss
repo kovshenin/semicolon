@@ -37,11 +37,37 @@ body.wpmag {
 		@extend .button-secondary;
 	}
 
-	.yandex-share .b-share {
-		margin-left: -4px;
+	.wpm-share-buttons {
+		float: left;
 	}
+
 	.yandex-share {
-		margin-bottom: 21px; /* vertical rhythm */
+		float: left;
+
+	 	.b-share {
+	 		margin: 0;
+	 		padding: 0 !important;
+		}
+
+		&.b-share_theme_counter {
+			.b-share__link {
+				border-radius: 0;
+				-webkit-border-radius: 0;
+
+				width: 32px;
+				height: 32px;
+				margin-bottom: 4px;
+				margin-right: 4px;
+			}
+
+			.b-share-btn__wrap {
+				margin: 0;
+			}
+
+			.b-share-icon {
+				margin: 4px;
+			}
+		}
 	}
 }
 

@@ -1609,11 +1609,24 @@ body.wpmag .site-title a {
   /* 84px - 75px */ }
 body.wpmag .site-description {
   display: none; }
-body.wpmag .yandex-share .b-share {
-  margin-left: -4px; }
+body.wpmag .wpm-share-buttons {
+  float: left; }
 body.wpmag .yandex-share {
-  margin-bottom: 21px;
-  /* vertical rhythm */ }
+  float: left; }
+  body.wpmag .yandex-share .b-share {
+    margin: 0;
+    padding: 0 !important; }
+  body.wpmag .yandex-share.b-share_theme_counter .b-share__link {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+    margin-right: 4px; }
+  body.wpmag .yandex-share.b-share_theme_counter .b-share-btn__wrap {
+    margin: 0; }
+  body.wpmag .yandex-share.b-share_theme_counter .b-share-icon {
+    margin: 4px; }
 
 body.wpmag.page-id-3157 #secondary {
   display: none; }
