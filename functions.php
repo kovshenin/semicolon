@@ -13,7 +13,6 @@ class Semicolon {
 			$GLOBALS['content_width'] = 780;
 		}
 
-		// @todo: sticky to featured
 		add_action( 'pre_get_posts', array( 'Semicolon', 'pre_get_posts' ) );
 		add_filter( 'posts_results', array( 'Semicolon', 'posts_results' ), 10, 2 );
 		add_filter( 'found_posts', array( 'Semicolon', 'found_posts' ), 10, 2 );
@@ -176,8 +175,6 @@ class Semicolon {
 		$jetpack_featured_posts = apply_filters( 'semicolon_get_featured_posts', false );
 		if ( ! empty( $jetpack_featured_posts ) )
 			$featured_posts = array_map( 'absint', wp_list_pluck( $jetpack_featured_posts, 'ID' ) );
-		else
-			$featured_posts = (array) get_option( 'sticky_posts' );
 
 		if ( empty( $featured_posts ) )
 			return new WP_Query;
@@ -199,9 +196,6 @@ class Semicolon {
 
 			if ( in_array( absint( $tag_id ), wp_list_pluck( $post_tags, 'term_id' ) ) )
 				$featured = true;
-		} else {
-			$sticky_posts = (array) get_option( 'sticky_posts' );
-			$featured = in_array( $post->ID, $sticky_posts );
 		}
 
 		return $featured;
@@ -225,11 +219,8 @@ class Semicolon {
 
 				$query->set( 'post__not_in', wp_list_pluck( $featured->posts, 'ID' ) );
 
-				if ( ! is_paged() ) {
-					// $query->set( 'posts_per_page', $posts_per_page - $featured->post_count );
-				} else {
+				if ( is_paged() ) {
 					$query->set( 'offset', ( $query->get( 'paged' ) - 1 ) * $posts_per_page - $featured->post_count );
-					// $query->set( 'offset', get_query_var( 'paged' ) );
 				}
 			}
 		}
