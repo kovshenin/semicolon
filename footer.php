@@ -23,7 +23,6 @@
 				<?php do_action( 'semicolon_credits' ); ?>
 			<?php else : ?>
 				<?php _e( 'Powered by <a href="http://wordpress.org">WordPress</a>. Semicolon Theme by <a href="http://wpmag.ru">WP Magazine</a>.' ); ?>
-				© 2014 Копирование материалов без разрешения автора запрещено. WordPress и WordCamp являются зарегистрированными торговыми марками и принадлежат фонду WordPress Foundation. Читайте правила использования торговых марок. Работает на WordPress.
 			<?php endif; ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
