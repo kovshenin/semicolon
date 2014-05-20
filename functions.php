@@ -18,8 +18,10 @@ class Semicolon {
 	 * Runs during core's after_setup_theme
 	 */
 	public static function after_setup_theme() {
-		if ( ! isset( $GLOBALS['content_width'] ) ) {
-			$GLOBALS['content_width'] = 780;
+		global $content_width;
+
+		if ( ! isset( $content_width ) ) {
+			$content_width = 780;
 		}
 
 		add_action( 'pre_get_posts', array( __CLASS__, 'pre_get_posts' ) );

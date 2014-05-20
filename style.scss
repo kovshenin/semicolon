@@ -1,15 +1,14 @@
 /*
 Theme Name: Semicolon
-Theme URI:
 Author: Konstantin Kovshenin
 Author URI: http://kovshenin.com
-Description: Quite possibly the cleanest magazine theme for WordPress
+Description: Quite possibly the cleanest magazine theme for WordPress. Demo at http://semicolon.kovshenin.com/
 Version: 0.8
 License: GNU General Public License
 License URI: license.txt
 Text Domain: semicolon
 Domain Path: /languages/
-Tags:
+Tags: white, blue, light, one-column, two-columns, three-columns, four-columns, right-sidebar, responsive-layout, featured-images, threaded-comments, translation-ready
 
 Semicolon is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
 
@@ -881,5 +880,7 @@ input[type="search"] {
 	clear: left;
 	@if $debug { background: red; }
 }
+
+.sticky, .bypostauthor { /* Nothing */ }
 
 @import 'css/respond';
