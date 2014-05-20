@@ -151,7 +151,7 @@ class Semicolon {
 	 * Enqueue all the things.
 	 */
 	public static function enqueue_scripts() {
-		wp_enqueue_style( 'semicolon', get_stylesheet_uri(), array( 'semicolon-genericons' ), '20140506' );
+		wp_enqueue_style( 'semicolon', get_stylesheet_uri(), array( 'semicolon-genericons' ), '20140520' );
 		wp_enqueue_style( 'semicolon-genericons', get_template_directory_uri() . '/css/genericons.css', array(), '20131222' );
 
 		wp_enqueue_script( 'semicolon-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
