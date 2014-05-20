@@ -6,34 +6,11 @@ class Semicolon {
 	private function __construct() {}
 
 	/**
-	 * Runs immediately at the end of this file.
+	 * Runs immediately at the end of this file, not to be confused
+	 * with after_setup_theme, which runs a little bit later.
 	 */
 	public static function setup() {
-		if ( ! isset( $GLOBALS['content_width'] ) ) {
-			$GLOBALS['content_width'] = 780;
-		}
-
-		add_action( 'pre_get_posts', array( 'Semicolon', 'pre_get_posts' ) );
-		add_filter( 'posts_results', array( 'Semicolon', 'posts_results' ), 10, 2 );
-		add_filter( 'found_posts', array( 'Semicolon', 'found_posts' ), 10, 2 );
-		add_filter( 'body_class', array( 'Semicolon', 'body_class' ) );
-		add_filter( 'post_class', array( 'Semicolon', 'post_class' ), 10, 3 );
-
-		add_filter( 'shortcode_atts_gallery', array( 'Semicolon', 'shortcode_atts_gallery' ), 10, 3 );
-		add_filter( 'use_default_gallery_style', '__return_false' );
-
-		add_action( 'after_setup_theme', array( 'Semicolon', 'after_setup_theme' ) );
-		add_action( 'widgets_init', array( 'Semicolon', 'widgets_init' ) );
-		add_action( 'wp_enqueue_scripts', array( 'Semicolon', 'enqueue_scripts' ) );
-		add_action( 'wp', array( 'Semicolon', 'setup_author' ) );
-
-		add_filter( 'wp_page_menu_args', array( 'Semicolon', 'page_menu_args' ) );
-		add_filter( 'wp_title', array( 'Semicolon', 'wp_title' ), 10, 2 );
-
-		// Enhanced customizer support
-		add_action( 'customize_register', array( 'Semicolon', 'customize_register' ) );
-		add_action( 'customize_preview_init', array( 'Semicolon', 'customize_preview_js' ) );
-
+		add_action( 'after_setup_theme', array( __CLASS__, 'after_setup_theme' ) );
 		do_action( 'semicolon_setup' );
 	}
 
@@ -41,6 +18,30 @@ class Semicolon {
 	 * Runs during core's after_setup_theme
 	 */
 	public static function after_setup_theme() {
+		if ( ! isset( $GLOBALS['content_width'] ) ) {
+			$GLOBALS['content_width'] = 780;
+		}
+
+		add_action( 'pre_get_posts', array( __CLASS__, 'pre_get_posts' ) );
+		add_filter( 'posts_results', array( __CLASS__, 'posts_results' ), 10, 2 );
+		add_filter( 'found_posts', array( __CLASS__, 'found_posts' ), 10, 2 );
+		add_filter( 'body_class', array( __CLASS__, 'body_class' ) );
+		add_filter( 'post_class', array( __CLASS__, 'post_class' ), 10, 3 );
+
+		add_filter( 'shortcode_atts_gallery', array( __CLASS__, 'shortcode_atts_gallery' ), 10, 3 );
+		add_filter( 'use_default_gallery_style', '__return_false' );
+
+		add_action( 'widgets_init', array( __CLASS__, 'widgets_init' ) );
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
+		add_action( 'wp', array( __CLASS__, 'setup_author' ) );
+
+		add_filter( 'wp_page_menu_args', array( __CLASS__, 'page_menu_args' ) );
+		add_filter( 'wp_title', array( __CLASS__, 'wp_title' ), 10, 2 );
+
+		// Enhanced customizer support
+		add_action( 'customize_register', array( __CLASS__, 'customize_register' ) );
+		add_action( 'customize_preview_init', array( __CLASS__, 'customize_preview_js' ) );
+
 		load_theme_textdomain( 'semicolon', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
@@ -75,6 +76,8 @@ class Semicolon {
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) );
+
+		do_action( 'semicolon_after_setup_theme' );
 	}
 
 	/**
@@ -238,7 +241,7 @@ class Semicolon {
 
 				if ( $featured->have_posts() ) {
 
-					// Since we're going to unshif these, we'll need them in reverse order.
+					// Since we're going to unshift these, we'll need them in reverse order.
 					$featured->posts = array_reverse( $featured->posts );
 
 					foreach ( $featured->posts as $post ) {
