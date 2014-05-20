@@ -77,6 +77,12 @@ class Semicolon {
 			'default-image' => '',
 		) );
 
+		// Add support for Jetpack's Featured Content
+		add_theme_support( 'featured-content', array(
+			'filter' => 'semicolon_get_featured_posts',
+			'max_posts' => 2,
+		) );
+
 		do_action( 'semicolon_after_setup_theme' );
 	}
 
@@ -100,6 +106,9 @@ class Semicolon {
 		}
 	}
 
+	/**
+	 * Sets up all the sidebars in the world.
+	 */
 	public static function widgets_init() {
 		register_sidebar( array(
 			'name'          => __( 'Primary', 'semicolon' ),
@@ -138,9 +147,13 @@ class Semicolon {
 		) );
 	}
 
+	/**
+	 * Enqueue all the things.
+	 */
 	public static function enqueue_scripts() {
 		wp_enqueue_style( 'semicolon', get_stylesheet_uri(), array( 'semicolon-genericons' ), '20140506' );
 		wp_enqueue_style( 'semicolon-genericons', get_template_directory_uri() . '/css/genericons.css', array(), '20131222' );
+
 		wp_enqueue_script( 'semicolon-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 		wp_enqueue_script( 'semicolon', get_template_directory_uri() . '/js/semicolon.js', array( 'jquery' ), '20140506', true );
 
@@ -149,6 +162,13 @@ class Semicolon {
 		}
 	}
 
+	/**
+	 * Use a specific size for the gallery shortcode.
+	 *
+	 * Unless a size is explicitly provided in the shortcode,
+	 * use a size registered with the theme if the number of columns
+	 * is more than a single one.
+	 */
 	public static function shortcode_atts_gallery( $out, $pairs, $atts ) {
 		if ( empty( $atts['size'] ) && $out['columns'] >= 2 )
 			$out['size'] = 'semicolon-gallery';
@@ -156,6 +176,9 @@ class Semicolon {
 		return $out;
 	}
 
+	/**
+	 * Theme-specific body classes.
+	 */
 	public static function body_class( $classes ) {
 		if ( ! is_singular() )
 			$classes[] = 'grid';
@@ -165,6 +188,9 @@ class Semicolon {
 		return $classes;
 	}
 
+	/**
+	 * Theme-specific post classes.
+	 */
 	public static function post_class( $classes, $class, $post_id ) {
 		if ( self::is_featured( $post_id ) )
 			$classes[] = 'semicolon-featured';
@@ -172,6 +198,11 @@ class Semicolon {
 		return $classes;
 	}
 
+	/**
+	 * Looks up featured posts via a filter or uses ones provided by Jetpack.
+	 *
+	 * @return WP_Query
+	 */
 	public static function get_featured_posts() {
 		$featured_posts = array();
 
@@ -189,6 +220,11 @@ class Semicolon {
 		) );
 	}
 
+	/**
+	 * Returns true if the given post is featured.
+	 *
+	 * @return bool Whether the given post is featured or not.
+	 */
 	public static function is_featured( $post_id = null ) {
 		$post = get_post( $post_id );
 		$featured = false;
@@ -204,6 +240,10 @@ class Semicolon {
 		return $featured;
 	}
 
+	/**
+	 * Exclude featured posts from the main loop, because we're going to
+	 * attach them to the results a little later with an offset.
+	 */
 	public static function pre_get_posts( $query ) {
 		if ( ! $query->is_main_query() || is_admin() )
 			return;
@@ -229,6 +269,10 @@ class Semicolon {
 		}
 	}
 
+	/**
+	 * When posts are fetched for the front page, look for
+	 * some feature posts and prepend them to the resulting array.
+	 */
 	public static function posts_results( $posts, $query ) {
 		if ( ! $query->is_main_query() || is_admin() )
 			return $posts;
@@ -259,6 +303,9 @@ class Semicolon {
 		return $posts;
 	}
 
+	/**
+	 * The number of found posts can vary with featured posts.
+	 */
 	public static function found_posts( $found_posts, $query ) {
 		if ( ! $query->is_main_query() || is_admin() )
 			return $found_posts;
@@ -274,6 +321,10 @@ class Semicolon {
 		return $found_posts;
 	}
 
+	/**
+	 * Use a plugin to get related posts, or fall back to
+	 * simply fetching some posts from the same category.
+	 */
 	public static function get_related_posts() {
 		$post = get_post();
 
@@ -365,8 +416,3 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
