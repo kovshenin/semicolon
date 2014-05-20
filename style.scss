@@ -552,6 +552,10 @@ blockquote:before {
 	}
 }
 
+body.page .author {
+	display: none;
+}
+
 .taxonomy {
 	float: left;
 	width: 100%;
