@@ -49,6 +49,9 @@ class Semicolon {
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
+		// Editor style
+		add_editor_style();
+
 		// Post thumbnail support and additional image sizes.
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( 360, 210, true );

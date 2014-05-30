@@ -1,0 +1,28 @@
+@import url('//fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic');
+@import url('//fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic');
+@import url('style.css');
+
+body {
+	margin: 20px;
+	max-width: 780px;
+}
+
+.wp-caption {
+	border: none;
+	text-align: left;
+	background: none;
+	padding: 0;
+	margin: 20px 0;
+
+	max-width: 780px;
+}
+
+.wp-caption-dd {
+	font-size: 13px;
+	line-height: 24px;
+	color: rgba(58, 58, 58, 0.5);
+	margin-top: 12px;
+	margin-bottom: 12px;
+	display: block;
+	padding: 0;
+}
