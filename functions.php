@@ -38,6 +38,7 @@ class Semicolon {
 
 		add_action( 'widgets_init', array( __CLASS__, 'widgets_init' ) );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
+		add_action( 'wp_head', array( __CLASS__, 'css_overrides' ) );
 		add_action( 'wp', array( __CLASS__, 'setup_author' ) );
 
 		add_filter( 'wp_page_menu_args', array( __CLASS__, 'page_menu_args' ) );
@@ -160,6 +161,7 @@ class Semicolon {
 	 */
 	public static function enqueue_scripts() {
 		wp_enqueue_style( 'semicolon', get_stylesheet_uri(), array( 'semicolon-genericons', 'semicolon-open-sans', 'semicolon-pt-serif' ), '20140520' );
+		wp_enqueue_style( 'semicolon-colors', get_template_directory_uri() . '/css/colors.css', array( 'semicolon' ), '20140520' );
 		wp_enqueue_style( 'semicolon-genericons', get_template_directory_uri() . '/css/genericons.css', array(), '20131222' );
 
 		// @todo: allow subsets via i18n.
@@ -500,6 +502,17 @@ class Semicolon {
 			return 0;
 
 		return $term->term_id;
+	}
+
+	/**
+	 * This will help override some colors in the future.
+	 */
+	public static function css_overrides() {
+		// We need Jetpack's SASS powers.
+		if ( ! function_exists( 'jetpack_sass_css_preprocess' ) )
+			return;
+
+		// printf( '<style>%s</style>', esc_html( jetpack_sass_css_preprocess( $content ) ) );
 	}
 }
 

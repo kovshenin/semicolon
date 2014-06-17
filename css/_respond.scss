@@ -88,14 +88,13 @@
 		.current-post-parent {
 			a {
 				border-top-color: transparent;
-				background: rgba( $color-secondary, 0.03 );
 			}
 		}
 
 		div.semicolon-navigation ul,
 		ul.semicolon-navigation {
 			display: block;
-			border-bottom: solid 1px rgba( $color-secondary, 0.1 );
+			border-bottom: solid 1px;
 
 			li {
 				display: block;
@@ -110,8 +109,7 @@
 		}
 
 		.menu-toggle {
-			border-top-color: $color-secondary;
-			border-bottom: solid 1px rgba( $color-secondary, 0.1 );
+			border-bottom: solid 1px;
 		}
 	}
 

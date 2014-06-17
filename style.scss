@@ -21,8 +21,8 @@ and Blueprint http://www.blueprintcss.org/
 
 $font-headings: 'PT Serif', Georgia, 'Times New Roman', serif;
 $font-regular: 'Open Sans', Arial, sans-serif;
-$color-primary: #117bb8;
-$color-secondary: #3a3a3a;
+$color-primary: yellow;
+$color-secondary: blue;
 
 $debug: false;
 $vrhythm-debug: false;
@@ -42,7 +42,6 @@ body {
 }
 
 ::selection {
-	background: $color-primary;
 	color: white;
 }
 
@@ -74,12 +73,7 @@ h3 {
 }
 
 a, a:visited, a:link {
-	color: $color-primary;
 	text-decoration: underline;
-
-	&:hover {
-		color: lighten( $color-primary, 10% );
-	}
 }
 
 #page {
@@ -100,7 +94,6 @@ a, a:visited, a:link {
 }
 
 .site-title a {
-	color: $color-secondary;
 	text-decoration: none;
 }
 
@@ -108,7 +101,6 @@ a, a:visited, a:link {
 	font-family: $font-regular;
 	font-size: 14px;
 	line-height: 24px;
-	color: rgba( $color-secondary, 0.5 );
 	margin: 0;
 	padding: 0;
 	font-weight: 400;
@@ -117,13 +109,12 @@ a, a:visited, a:link {
 .main-navigation {
 	margin-top: 48px;
 	margin-bottom: 48px;
-	border-top: solid 1px rgba( $color-secondary, 0.1 );
+	border-top: solid 1px;
 	position: relative;
 
 	@if $debug { background: rgba(1,0,0,0.04); }
 
 	a {
-		color: $color-secondary;
 		text-decoration: none;
 		margin-top: -1px;
 		padding: 0px 20px;
@@ -131,17 +122,6 @@ a, a:visited, a:link {
 		height: 48px;
 		font-size: 16px;
 		line-height: 40px;
-	}
-
-	.current_page_item,
-	.current-menu-item,
-	.current-post-ancestor,
-	.current-menu-ancestor,
-	.current-menu-parent,
-	.current-post-parent {
-		a {
-			border-top-color: $color-secondary;
-		}
 	}
 
 	/* Temporarily disable submenus */
@@ -166,8 +146,7 @@ ul.semicolon-social {
 	li:hover { background: none; }
 	a span { position: absolute; top: -9999px; left: -9999px; }
 
-	li a::before       { color: rgba( $color-secondary, 0.5 ); font: normal 20px/40px 'Genericons'; content: '\f408'; }
-	li a:hover::before { color: $color-secondary; }
+	li a::before       { font: normal 20px/40px 'Genericons'; content: '\f408'; }
 
 	li a[href*="codepen.io"]::before      { content: '\f216'; }
 	li a[href*="digg.com"]::before        { content: '\f221'; }
@@ -199,7 +178,6 @@ ul.semicolon-social {
 .page-description {
 	margin: 0 0 48px 0;
 	padding: 12px 24px;
-	background: rgba( $color-secondary, 0.03 );
 	p { margin-bottom: 0; margin-top: 24px; }
 }
 
@@ -211,10 +189,6 @@ ul.semicolon-social {
 	overflow: hidden;
 
 	@if $debug { background: purple; }
-}
-
-pre {
-	background: rgba( $color-secondary, 0.03 );
 }
 
 hr {
@@ -251,7 +225,6 @@ hr {
 		margin-bottom: 6px;
 		width: 150px;
 		height: 150px;
-		background: rgba( $color-secondary, 0.03 );
 		text-align: center;
 		overflow: hidden;
 
@@ -280,7 +253,6 @@ hr {
 		font-size: 16px;
 		line-height: 24px;
 		a {
-			color: $color-secondary;
 			text-decoration: none;
 			margin-bottom: 12px;
 			display: block;
@@ -289,12 +261,6 @@ hr {
 
 	.entry-header {
 		position: relative;
-	}
-
-	&:hover {
-		.entry-title a {
-			@extend a:hover;
-		}
 	}
 
 	&.semicolon-last {
@@ -393,16 +359,12 @@ table {
 		padding: 8px 8px;
 	}
 
-	th {
-		border-bottom: solid 3px lighten($color-secondary, 40%);
+	thead th {
+		border-bottom: solid 3px;
 	}
 
-	td {
-		border-bottom: solid 1px lighten($color-secondary, 70%);
-	}
-
-	tr:hover td {
-		background: rgba($color-secondary, 0.03);
+	tbody th, td {
+		border-bottom: solid 1px;
 	}
 }
 
@@ -471,7 +433,6 @@ blockquote:before {
 	position: absolute;
 	margin-left: -40px;
 	margin-top: 26px;
-	color: $color-primary;
 	font-family: $font-headings;
 	font-size: 64px;
 	line-height: 16px;
@@ -496,10 +457,7 @@ blockquote:before {
 	font-size: 13px;
 	line-height: 24px;
 
-	color: rgba( $color-secondary, 0.5 );
-
 	a {
-		color: rgba( $color-secondary, 0.5 );
 		text-decoration: none;
 	}
 }
@@ -518,12 +476,7 @@ blockquote:before {
 		margin-bottom: 0;
 
 		a {
-			color: $color-secondary;
 			text-decoration: none;
-
-			&:hover {
-				color: $color-primary;
-			}
 		}
 	}
 
@@ -543,7 +496,6 @@ blockquote:before {
 
 	time {
 		font-size: 13px;
-		color: rgba( $color-secondary, 0.5 );
 		font-family: $font-regular;
 		font-weight: normal;
 
@@ -575,28 +527,13 @@ body.page .author {
 
 	a {
 		float: left;
-		background: lighten( $color-secondary, 60% );
 		padding: 0 10px;
 		font-size: 13px;
 		line-height: 32px;
 		height: 32px;
-		color: $color-secondary;
 		text-decoration: none;
 		margin-right: 4px;
 		margin-bottom: 4px;
-
-		&:hover {
-			background: lighten( $color-secondary, 50% );
-			color: $color-secondary;
-		}
-	}
-}
-
-.post-tags a {
-	background: lighten( $color-secondary, 70% );
-
-	&:hover {
-		background: lighten( $color-secondary, 60% );
 	}
 }
 
@@ -638,14 +575,6 @@ time.updated {
 				margin-bottom: 0;
 			}
 		}
-
-		.widget {
-			background: $color-primary;
-		}
-	}
-
-	.sidebar-secondary .widget {
-		background: rgba( $color-secondary, 0.03 );
 	}
 
 	.widget-title {
@@ -672,7 +601,7 @@ time.updated {
 	display: block;
 	float: left;
 	clear: both;
-	border-top: solid 1px rgba( $color-secondary, 0.1 );
+	border-top: solid 1px;
 	text-align: center;
 
 	.pagination {
@@ -687,13 +616,7 @@ time.updated {
 		height: 48px;
 		font-weight: 400;
 		border-top: solid 4px transparent;
-
 		text-decoration: none;
-		color: $color-secondary;
-
-		&.current {
-			border-top-color: $color-secondary;
-		}
 	}
 }
 
@@ -742,7 +665,6 @@ time.updated {
 
 		a {
 			text-decoration: none;
-			color: $color-secondary;
 		}
 	}
 
@@ -795,7 +717,6 @@ input[type="reset"],
 input[type="submit"],
 .button-primary,
 a.button-primary {
-	background: $color-primary;
 	color: white;
 	border: none;
 	font-family: $font-regular;
@@ -807,7 +728,6 @@ a.button-primary {
 
 	&:hover,
 	&:focus {
-		background: lighten( $color-primary, 5% );
 		color: white;
 	}
 }
@@ -817,11 +737,6 @@ a.button-primary {
 a.button,
 a.button-secondary {
 	@extend .button-primary;
-	background: $color-secondary;
-
-	&:hover {
-		background: lighten( $color-secondary, 5% );
-	}
 }
 
 input[type="text"],
@@ -830,7 +745,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	border: solid 1px rgba( $color-secondary, 0.3 );
+	border: solid 1px;
 	line-height: 24px;
 	font-size: 16px;
 	display: block;
@@ -927,10 +842,6 @@ body.admin-bar .semicolon-anchor {
 		height: auto;
 		color: white;
 		text-decoration: none;
-
-		&:hover {
-			color: $color-primary;
-		}
 	}
 }
 

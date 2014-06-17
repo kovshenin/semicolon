@@ -1,0 +1,219 @@
+$color-primary: #117bb8;
+$color-secondary: #3a3a3a;
+
+::selection {
+	background: $color-primary;
+}
+
+a, a:visited, a:link {
+	color: $color-primary;
+	&:hover {
+		color: lighten( $color-primary, 10% );
+	}
+}
+
+.site-title a {
+	color: $color-secondary;
+}
+
+.site-description {
+	color: rgba( $color-secondary, 0.5 );
+}
+
+.main-navigation {
+	border-top-color: rgba( $color-secondary, 0.1 );
+	a {
+		color: $color-secondary;
+	}
+
+	.current_page_item,
+	.current-menu-item,
+	.current-post-ancestor,
+	.current-menu-ancestor,
+	.current-menu-parent,
+	.current-post-parent {
+		a {
+			border-top-color: $color-secondary;
+		}
+	}
+}
+
+ul.semicolon-social {
+	li a::before       { color: rgba( $color-secondary, 0.5 ); }
+	li a:hover::before { color: $color-secondary; }
+}
+
+.page-description {
+	background: rgba( $color-secondary, 0.03 );
+}
+
+pre {
+	background: rgba( $color-secondary, 0.03 );
+}
+
+.post-thumbnail {
+	background: rgba( $color-secondary, 0.03 );
+}
+
+.grid article,
+.related-content article {
+	.entry-title a {
+		color: $color-secondary;
+	}
+
+	&:hover .entry-title a {
+		color: $color-primary;
+	}
+}
+
+table {
+	thead th {
+		border-bottom-color: lighten($color-secondary, 40%);
+	}
+
+	tbody th, td {
+		border-bottom-color: lighten($color-secondary, 70%);
+	}
+
+	tbody tr:hover th,
+	tr:hover td {
+		background: rgba($color-secondary, 0.03);
+	}
+}
+
+blockquote:before {
+	color: $color-primary;
+}
+
+.entry-meta,
+.comment-metadata,
+.site-footer {
+	color: rgba( $color-secondary, 0.5 );
+
+	a {
+		color: rgba( $color-secondary, 0.5 );
+	}
+}
+
+.single .author {
+	h3 a {
+		color: $color-secondary;
+		&:hover {
+			color: $color-primary;
+		}
+	}
+	time {
+		color: rgba( $color-secondary, 0.5 );
+	}
+}
+
+.post-categories,
+.post-tags {
+	a {
+		background: lighten( $color-secondary, 60% );
+		color: $color-secondary;
+
+		&:hover {
+			background: lighten( $color-secondary, 50% );
+			color: $color-secondary;
+		}
+	}
+}
+
+.post-tags a {
+	background: lighten( $color-secondary, 70% );
+	&:hover {
+		background: lighten( $color-secondary, 60% );
+	}
+}
+
+.widget-area {
+	.sidebar-primary .widget {
+		background: $color-primary;
+		a:hover {
+			color: white;
+		}
+	}
+
+	.sidebar-secondary .widget {
+		background: rgba( $color-secondary, 0.03 );
+	}
+}
+
+.paging-navigation {
+	border-top-color: rgba( $color-secondary, 0.1 );
+	.page-numbers {
+		color: $color-secondary;
+		&.current {
+			border-top-color: $color-secondary;
+		}
+	}
+}
+
+.comment-author a {
+	color: $color-secondary;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button-primary,
+a.button-primary {
+	background: $color-primary;
+	&:hover,
+	&:focus {
+		background: lighten( $color-primary, 5% );
+	}
+}
+
+.button,
+.button-secondary,
+a.button,
+a.button-secondary {
+	background: $color-secondary;
+	&:hover {
+		background: lighten( $color-secondary, 5% );
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	border-color: rgba( $color-secondary, 0.3 );
+}
+
+.grid article:hover .semicolon-inline-controls {
+	a {
+		&:hover {
+			color: $color-primary;
+		}
+	}
+}
+
+.main-navigation.toggled {
+	.current_page_item,
+	.current-menu-item,
+	.current-post-ancestor,
+	.current-menu-ancestor,
+	.current-menu-parent,
+	.current-post-parent {
+		a {
+			background: rgba( $color-secondary, 0.03 );
+		}
+	}
+
+	div.semicolon-navigation ul,
+	ul.semicolon-navigation {
+		display: block;
+		border-bottom-color: rgba( $color-secondary, 0.1 );
+	}
+
+	.menu-toggle {
+		border-top-color: $color-secondary;
+		border-bottom-color: rgba( $color-secondary, 0.1 );
+	}
+}

@@ -1,0 +1,161 @@
+::selection {
+  background: #117bb8; }
+
+a, a:visited, a:link {
+  color: #117bb8; }
+  a:hover, a:visited:hover, a:link:hover {
+    color: #159ae7; }
+
+.site-title a {
+  color: #3a3a3a; }
+
+.site-description {
+  color: rgba(58, 58, 58, 0.5); }
+
+.main-navigation {
+  border-top-color: rgba(58, 58, 58, 0.1); }
+  .main-navigation a {
+    color: #3a3a3a; }
+  .main-navigation .current_page_item a,
+  .main-navigation .current-menu-item a,
+  .main-navigation .current-post-ancestor a,
+  .main-navigation .current-menu-ancestor a,
+  .main-navigation .current-menu-parent a,
+  .main-navigation .current-post-parent a {
+    border-top-color: #3a3a3a; }
+
+ul.semicolon-social li a::before {
+  color: rgba(58, 58, 58, 0.5); }
+ul.semicolon-social li a:hover::before {
+  color: #3a3a3a; }
+
+.page-description {
+  background: rgba(58, 58, 58, 0.03); }
+
+pre {
+  background: rgba(58, 58, 58, 0.03); }
+
+.post-thumbnail {
+  background: rgba(58, 58, 58, 0.03); }
+
+.grid article .entry-title a,
+.related-content article .entry-title a {
+  color: #3a3a3a; }
+.grid article:hover .entry-title a,
+.related-content article:hover .entry-title a {
+  color: #117bb8; }
+
+table thead th {
+  border-bottom-color: #a0a0a0; }
+table tbody th, table td {
+  border-bottom-color: #ededed; }
+table tbody tr:hover th,
+table tr:hover td {
+  background: rgba(58, 58, 58, 0.03); }
+
+blockquote:before {
+  color: #117bb8; }
+
+.entry-meta,
+.comment-metadata,
+.site-footer {
+  color: rgba(58, 58, 58, 0.5); }
+  .entry-meta a,
+  .comment-metadata a,
+  .site-footer a {
+    color: rgba(58, 58, 58, 0.5); }
+
+.single .author h3 a {
+  color: #3a3a3a; }
+  .single .author h3 a:hover {
+    color: #117bb8; }
+.single .author time {
+  color: rgba(58, 58, 58, 0.5); }
+
+.post-categories a,
+.post-tags a {
+  background: lightgrey;
+  color: #3a3a3a; }
+  .post-categories a:hover,
+  .post-tags a:hover {
+    background: #bababa;
+    color: #3a3a3a; }
+
+.post-tags a {
+  background: #ededed; }
+  .post-tags a:hover {
+    background: lightgrey; }
+
+.widget-area .sidebar-primary .widget {
+  background: #117bb8; }
+  .widget-area .sidebar-primary .widget a:hover {
+    color: white; }
+.widget-area .sidebar-secondary .widget {
+  background: rgba(58, 58, 58, 0.03); }
+
+.paging-navigation {
+  border-top-color: rgba(58, 58, 58, 0.1); }
+  .paging-navigation .page-numbers {
+    color: #3a3a3a; }
+    .paging-navigation .page-numbers.current {
+      border-top-color: #3a3a3a; }
+
+.comment-author a {
+  color: #3a3a3a; }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button-primary,
+a.button-primary {
+  background: #117bb8; }
+  button:hover, button:focus,
+  input[type="button"]:hover,
+  input[type="button"]:focus,
+  input[type="reset"]:hover,
+  input[type="reset"]:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:focus,
+  .button-primary:hover,
+  .button-primary:focus,
+  a.button-primary:hover,
+  a.button-primary:focus {
+    background: #138bcf; }
+
+.button,
+.button-secondary,
+a.button,
+a.button-secondary {
+  background: #3a3a3a; }
+  .button:hover,
+  .button-secondary:hover,
+  a.button:hover,
+  a.button-secondary:hover {
+    background: #474747; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  border-color: rgba(58, 58, 58, 0.3); }
+
+.grid article:hover .semicolon-inline-controls a:hover {
+  color: #117bb8; }
+
+.main-navigation.toggled .current_page_item a,
+.main-navigation.toggled .current-menu-item a,
+.main-navigation.toggled .current-post-ancestor a,
+.main-navigation.toggled .current-menu-ancestor a,
+.main-navigation.toggled .current-menu-parent a,
+.main-navigation.toggled .current-post-parent a {
+  background: rgba(58, 58, 58, 0.03); }
+.main-navigation.toggled div.semicolon-navigation ul,
+.main-navigation.toggled ul.semicolon-navigation {
+  display: block;
+  border-bottom-color: rgba(58, 58, 58, 0.1); }
+.main-navigation.toggled .menu-toggle {
+  border-top-color: #3a3a3a;
+  border-bottom-color: rgba(58, 58, 58, 0.1); }
