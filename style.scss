@@ -287,6 +287,10 @@ hr {
 		}
 	}
 
+	.entry-header {
+		position: relative;
+	}
+
 	&:hover {
 		.entry-title a {
 			@extend a:hover;
@@ -880,5 +884,56 @@ input[type="search"] {
 }
 
 .sticky, .bypostauthor { /* Nothing */ }
+
+/* Inline Controls */
+.semicolon-inline-controls { 
+	display: none;
+}
+
+.semicolon-anchor {
+	position: absolute;
+	visibility: hidden;
+	top: 0;
+}
+
+body.admin-bar .semicolon-anchor {
+	top: -80px; /* Adjust for fixed header */
+}
+
+.grid article:hover .semicolon-inline-controls {
+	display: block;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	background: red;
+	float: left;
+	background: #333;
+
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+
+	a {
+		display: block;
+		float: left;
+		clear: both;
+		padding: 6px;
+		width: auto;
+		height: auto;
+		color: white;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+}
+
+.grid article.semicolon-featured a.semicolon-featured-toggle {
+	color: #dfd319;
+	&:hover {
+		color: darken( #dfd319, 10% );
+	}
+}
 
 @import 'css/respond';

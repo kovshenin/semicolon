@@ -2,6 +2,7 @@
 /**
  * The Semicolon Theme
  */
+
 class Semicolon {
 	private function __construct() {}
 
@@ -23,6 +24,8 @@ class Semicolon {
 		if ( ! isset( $content_width ) ) {
 			$content_width = 780;
 		}
+
+		add_action( 'init', array( __CLASS__, 'inline_controls_handler' ) );
 
 		add_action( 'pre_get_posts', array( __CLASS__, 'pre_get_posts' ) );
 		add_filter( 'posts_results', array( __CLASS__, 'posts_results' ), 10, 2 );
@@ -238,13 +241,14 @@ class Semicolon {
 		$post = get_post( $post_id );
 		$featured = false;
 
-		if ( class_exists( 'Featured_Content' ) && method_exists( 'Featured_Content', 'get_setting' ) ) {
-			$tag_id = Featured_Content::get_setting( 'tag-id' );
-			$post_tags = wp_get_object_terms( $post->ID, 'post_tag' );
+		$term_id = self::get_jetpack_featured_content_term_id();
+		if ( ! $term_id )
+			return $featured;
 
-			if ( in_array( absint( $tag_id ), wp_list_pluck( $post_tags, 'term_id' ) ) )
-				$featured = true;
-		}
+		$post_tags = wp_get_object_terms( $post->ID, 'post_tag' );
+
+		if ( in_array( $term_id, wp_list_pluck( $post_tags, 'term_id' ) ) )
+			$featured = true;
 
 		return $featured;
 	}
@@ -412,6 +416,86 @@ class Semicolon {
 		wp_enqueue_script( 'semicolon_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 	}
 
+	/**
+	 * Renders an inline controls div for the current post.
+	 */
+	public static function inline_controls() {
+		$post = get_post();
+
+		if ( ! current_user_can( 'edit_post', $post->ID ) )
+			return;
+
+		$toggle_featured_link = add_query_arg( array(
+			'semicolon_action' => 'toggle_featured',
+			'semicolon_post_id' => $post->ID,
+		) );
+
+		echo '<div class="semicolon-inline-controls">';
+
+		// Only if Featured Content is active and configured.
+		if ( self::get_jetpack_featured_content_term_id() )
+			printf( '<a href="%s" class="semicolon-featured-toggle dashicons dashicons-star-filled"></a>', esc_url( $toggle_featured_link ) );
+
+		printf( '<a href="%s" class="dashicons dashicons-edit"></a>', esc_url( get_edit_post_link( $post ) ) );
+		echo '</div>';
+
+		printf( '<a class="semicolon-anchor" id="semicolon-post-%d"></a>', $post->ID );
+	}
+
+	/**
+	 * Fires during init, looks for a semicolon_action.
+	 */
+	public static function inline_controls_handler() {
+		if ( empty( $_GET['semicolon_action'] ) || ! is_user_logged_in() )
+			return;
+
+		$action = strtolower( $_GET['semicolon_action'] );
+		if ( ! in_array( $action, array( 'toggle_featured' ) ) )
+			return;
+
+		// Powered by Jetpack's Featured Content.
+		if ( 'toggle_featured' == $action ) {
+			if ( empty( $_GET['semicolon_post_id'] ) )
+				return;
+
+			$post_id = absint( $_GET['semicolon_post_id'] );
+			$post = get_post( $post_id );
+
+			if ( ! current_user_can( 'edit_post', $post->ID ) )
+				return;
+
+			// Only if the featured content tag has been set.
+			$term_id = self::get_jetpack_featured_content_term_id();
+			if ( ! $term_id )
+				return;
+
+			// Toggle the featured content tag.
+			if ( self::is_featured( $post->ID ) ) {
+				wp_remove_object_terms( $post->ID, $term_id, 'post_tag' );
+			} else {
+				wp_set_object_terms( $post->ID, $term_id, 'post_tag', true );
+			}
+
+			if ( method_exists( 'Featured_Content', 'delete_transient' ) )
+				Featured_Content::delete_transient();
+
+			$redirect_url = remove_query_arg( array( 'semicolon_action', 'semicolon_post_id' ) );
+			$redirect_url .= sprintf( '#semicolon-post-%d', $post->ID );
+
+			wp_safe_redirect( esc_url_raw( $redirect_url ) );
+		}
+	}
+
+	public static function get_jetpack_featured_content_term_id() {
+		if ( ! method_exists( 'Featured_Content', 'get_setting' ) )
+			return 0;
+
+		$term = get_term_by( 'name', Featured_Content::get_setting( 'tag-name' ), 'post_tag' );
+		if ( ! $term )
+			return 0;
+
+		return $term->term_id;
+	}
 }
 
 Semicolon::setup();
