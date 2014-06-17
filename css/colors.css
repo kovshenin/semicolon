@@ -111,6 +111,7 @@ input[type="reset"],
 input[type="submit"],
 .button-primary,
 a.button-primary {
+  color: white;
   background: #117bb8; }
   button:hover, button:focus,
   input[type="button"]:hover,
@@ -129,6 +130,7 @@ a.button-primary {
 .button-secondary,
 a.button,
 a.button-secondary {
+  color: white;
   background: #3a3a3a; }
   .button:hover,
   .button-secondary:hover,

@@ -161,6 +161,7 @@ input[type="reset"],
 input[type="submit"],
 .button-primary,
 a.button-primary {
+	color: white;
 	background: $color-primary;
 	&:hover,
 	&:focus {
@@ -172,6 +173,7 @@ a.button-primary {
 .button-secondary,
 a.button,
 a.button-secondary {
+	color: white;
 	background: $color-secondary;
 	&:hover {
 		background: lighten( $color-secondary, 5% );
