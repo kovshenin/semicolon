@@ -87,7 +87,8 @@ blockquote:before {
 
 .entry-meta,
 .comment-metadata,
-.site-footer {
+.site-footer,
+.wp-caption-text {
 	color: rgba( $color-secondary, 0.5 );
 
 	a {

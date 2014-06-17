@@ -58,11 +58,13 @@ blockquote:before {
 
 .entry-meta,
 .comment-metadata,
-.site-footer {
+.site-footer,
+.wp-caption-text {
   color: rgba(58, 58, 58, 0.5); }
   .entry-meta a,
   .comment-metadata a,
-  .site-footer a {
+  .site-footer a,
+  .wp-caption-text a {
     color: rgba(58, 58, 58, 0.5); }
 
 .single .author h3 a {
