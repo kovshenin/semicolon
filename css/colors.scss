@@ -165,6 +165,7 @@ a.button-primary {
 	background: $color-primary;
 	&:hover,
 	&:focus {
+		color: white;
 		background: lighten( $color-primary, 5% );
 	}
 }
@@ -176,6 +177,7 @@ a.button-secondary {
 	color: white;
 	background: $color-secondary;
 	&:hover {
+		color: white;
 		background: lighten( $color-secondary, 5% );
 	}
 }

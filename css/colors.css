@@ -124,6 +124,7 @@ a.button-primary {
   .button-primary:focus,
   a.button-primary:hover,
   a.button-primary:focus {
+    color: white;
     background: #138bcf; }
 
 .button,
@@ -136,6 +137,7 @@ a.button-secondary {
   .button-secondary:hover,
   a.button:hover,
   a.button-secondary:hover {
+    color: white;
     background: #474747; }
 
 input[type="text"],
