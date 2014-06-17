@@ -192,6 +192,11 @@ class Semicolon {
 	 * Theme-specific body classes.
 	 */
 	public static function body_class( $classes ) {
+		global $wp_customize;
+
+		if ( $wp_customize && $wp_customize->is_preview() )
+			$classes[] = 'semicolon-customizing';
+
 		if ( ! is_singular() )
 			$classes[] = 'grid';
 

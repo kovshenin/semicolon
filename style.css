@@ -1354,6 +1354,10 @@ input[type="search"] {
 .semicolon-inline-controls {
   display: none; }
 
+/* No inline controls when Customizer is active. */
+body.semicolon-customizing .semicolon-inline-controls {
+  display: none !important; }
+
 .semicolon-anchor {
   position: absolute;
   visibility: hidden;
