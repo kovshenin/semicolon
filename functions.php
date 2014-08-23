@@ -29,6 +29,11 @@ class Semicolon {
 				'secondary' => '#3a3a3a',
 				'tertiary' => '#ff0000',
 			),
+			'color_labels' => array(
+				'primary' => __( 'Primary Color', 'semicolon' ),
+				'secondary' => __( 'Secondary Color', 'semicolon' ),
+				'tertiary' => __( 'Tertiary Color', 'semicolon' ),
+			),
 		);
 
 		if ( ! isset( $content_width ) ) {
@@ -225,29 +230,62 @@ class Semicolon {
 		// Cache with a hash and then smash.
 		if ( $hash !== md5( serialize( $colors ) ) ) {
 
+			// Set these early, just in case everything else fails or fatals.
+			set_theme_mod( 'semicolon-colors-hash', md5( serialize( $colors ) ) );
+			set_theme_mod( 'semicolon-colors-css', '' );
+
 			// There's a special semicolon-override marker in the .sass file.
 			$override = '';
 			foreach ( $colors as $key => $value ) {
 				$override .= sprintf( '$color-%s: %s;' . PHP_EOL, $key, $value );
 			}
 
-			// @todo: Maybe use WP_Filesystem to read the file.
-			$sass = file_get_contents( get_template_directory() . '/css/colors.scss' );
+			// Retrieve the Sass file and then run some replacements.
+			$sass = self::custom_colors_get_sass();
+			if ( empty( $sass ) )
+				return;
+
 			$sass = preg_replace( '/^.*?semicolon-override.*$/im', $override, $sass );
 			$css = jetpack_sass_css_preprocess( $sass );
 
 			// Minify the CSS if possible.
 			if ( method_exists( 'Jetpack_Custom_CSS', 'minify' ) ) {
-				$css_updated = Jetpack_Custom_CSS::minify( $css_updated );
+				$css = Jetpack_Custom_CSS::minify( $css );
 			}
 
-			set_theme_mod( 'semicolon-colors-hash', md5( serialize( $colors ) ) );
 			set_theme_mod( 'semicolon-colors-css', $css );
 		}
 
 		// Dequeue the default colors css.
 		wp_dequeue_style( 'semicolon-colors' );
 		return $css;
+	}
+
+	/**
+	 * Retrieve the contents of the colors .scss file.
+	 *
+	 * This is a bit tricky. It tries to use the direct fs method to read
+	 * the contents of the bundled .scss file. If it fails, this method will
+	 * attempt a remote request.
+	 */
+	public static function custom_colors_get_sass() {
+		include_once( ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php' );
+		include_once( ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php' );
+
+		if ( ! class_exists( 'WP_Filesystem_Direct' ) )
+			return false;
+
+		$wp_filesystem = new WP_Filesystem_Direct( null );
+		$sass = $wp_filesystem->get_contents( get_template_directory() . '/css/colors.scss' );
+		unset( $wp_filesystem );
+
+		// This is slower, but okay since the results will be cached indefinitely.
+		if ( empty( $sass ) ) {
+			$request = wp_remote_get( get_template_directory_uri() . '/css/colors.scss' );
+			$sass = wp_remote_retrieve_body( $request );
+		}
+
+		return $sass;
 	}
 
 	/**
@@ -494,8 +532,10 @@ class Semicolon {
 		foreach ( self::$defaults['colors'] as $key => $default ) {
 			$wp_customize->add_setting( "semicolon-colors[$key]", array( 'default' => $default ) );
 
+			$label = ! empty( self::$defaults['color_labels'][ $key ] ) ? self::$defaults['color_labels'][ $key ] : __( 'Color', 'semicolon' );
+
 			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'semicolon-color-' . $key, array(
-				'label' => __( 'Primary Color', 'semicolon' ),
+				'label' => $label,
 				'section' => 'colors',
 				'settings' => "semicolon-colors[$key]",
 			) ) );
