@@ -28,12 +28,10 @@ class Semicolon {
 			'colors' => array(
 				'primary' => '#117bb8',
 				'secondary' => '#3a3a3a',
-				'tertiary' => '#ff0000',
 			),
 			'color_labels' => array(
 				'primary' => __( 'Primary Color', 'semicolon' ),
 				'secondary' => __( 'Secondary Color', 'semicolon' ),
-				'tertiary' => __( 'Tertiary Color', 'semicolon' ),
 			),
 		);
 
