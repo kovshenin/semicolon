@@ -348,19 +348,21 @@ class Semicolon {
 	public static function get_related_posts() {
 		$post = get_post();
 
+		$posts_per_page = apply_filters( 'semicolon_related_posts_per_page', 4 );
+
 		// Support for the Yet Another Related Posts Plugin
 		if ( function_exists( 'yarpp_get_related' ) ) {
-			$related = yarpp_get_related( array( 'limit' => 4 ), $post->ID );
+			$related = yarpp_get_related( array( 'limit' => $posts_per_page ), $post->ID );
 			return new WP_Query( array(
 				'post__in' => wp_list_pluck( $related, 'ID' ),
-				'posts_per_page' => 3,
+				'posts_per_page' => $posts_per_page,
 				'ignore_sticky_posts' => true,
 				'post__not_in' => array( $post->ID ),
 			) );
 		}
 
 		$args = array(
-			'posts_per_page' => 4,
+			'posts_per_page' => $posts_per_page,
 			'ignore_sticky_posts' => true,
 			'post__not_in' => array( $post->ID ),
 		);
