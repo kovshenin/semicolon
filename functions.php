@@ -5,6 +5,7 @@
 
 class Semicolon {
 	public static $defaults = array();
+	public static $colors_css_version = 20140823;
 
 	private function __construct() {}
 
@@ -175,7 +176,7 @@ class Semicolon {
 	 */
 	public static function enqueue_scripts() {
 		wp_enqueue_style( 'semicolon', get_stylesheet_uri(), array( 'semicolon-genericons', 'semicolon-open-sans', 'semicolon-pt-serif' ), '20140520' );
-		wp_enqueue_style( 'semicolon-colors', get_template_directory_uri() . '/css/colors.css', array( 'semicolon' ), '20140520' );
+		wp_enqueue_style( 'semicolon-colors', get_template_directory_uri() . '/css/colors.css', array( 'semicolon' ), self::$colors_css_version );
 		wp_enqueue_style( 'semicolon-genericons', get_template_directory_uri() . '/css/genericons.css', array(), '20131222' );
 
 		// @todo: allow subsets via i18n.
@@ -226,12 +227,13 @@ class Semicolon {
 
 		$css = get_theme_mod( 'semicolon-colors-css', false );
 		$hash = get_theme_mod( 'semicolon-colors-hash', false );
+		$new_hash = md5( serialize( array_merge( $colors, array( 'version' => self::$colors_css_version ) ) ) );
 
 		// Cache with a hash and then smash.
-		if ( $hash !== md5( serialize( $colors ) ) ) {
+		if ( $hash !== $new_hash ) {
 
 			// Set these early, just in case everything else fails or fatals.
-			set_theme_mod( 'semicolon-colors-hash', md5( serialize( $colors ) ) );
+			set_theme_mod( 'semicolon-colors-hash', $new_hash );
 			set_theme_mod( 'semicolon-colors-css', '' );
 
 			// There's a special semicolon-override marker in the .sass file.
