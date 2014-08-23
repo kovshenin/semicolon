@@ -1,6 +1,9 @@
 $color-primary: #117bb8;
 $color-secondary: #3a3a3a;
 
+/* Do not remove the following line. It is us ed to override color declarations. */
+/* semicolon-override */
+
 ::selection {
 	background: $color-primary;
 }

@@ -4,6 +4,8 @@
  */
 
 class Semicolon {
+	public static $defaults = array();
+
 	private function __construct() {}
 
 	/**
@@ -20,6 +22,14 @@ class Semicolon {
 	 */
 	public static function after_setup_theme() {
 		global $content_width;
+
+		self::$defaults = array(
+			'colors' => array(
+				'primary' => '#117bb8',
+				'secondary' => '#3a3a3a',
+				'tertiary' => '#ff0000',
+			),
+		);
 
 		if ( ! isset( $content_width ) ) {
 			$content_width = 780;
@@ -38,7 +48,6 @@ class Semicolon {
 
 		add_action( 'widgets_init', array( __CLASS__, 'widgets_init' ) );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
-		add_action( 'wp_head', array( __CLASS__, 'css_overrides' ) );
 		add_action( 'wp', array( __CLASS__, 'setup_author' ) );
 
 		add_filter( 'wp_page_menu_args', array( __CLASS__, 'page_menu_args' ) );
@@ -174,6 +183,71 @@ class Semicolon {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+
+		if ( self::supports_custom_colors() ) {
+			wp_add_inline_style( 'semicolon', self::custom_colors() );
+		}
+	}
+
+	/**
+	 * Returns true if custom colors support is available.
+	 */
+	public static function supports_custom_colors() {
+		// We need Jetpack's SASS super powers.
+		return function_exists( 'jetpack_sass_css_preprocess' );
+	}
+
+	/**
+	 * Custom Colors
+	 *
+	 * This feature is experimental. It relies on Jetpack's Custom CSS module
+	 * and the availability of a SASS preprocessor function.
+	 */
+	public static function custom_colors() {
+		$colors = get_theme_mod( 'semicolon-colors', self::$defaults['colors'] );
+		$defaults = self::$defaults['colors'];
+
+		$custom = false;
+		foreach ( $defaults as $key => $default ) {
+			if ( strtolower( $colors[ $key ] ) != $default ) {
+				$custom = true;
+				break;
+			}
+		}
+
+		// At least one custom color should be set for an override.
+		if ( ! $custom )
+			return;
+
+		$css = get_theme_mod( 'semicolon-colors-css', false );
+		$hash = get_theme_mod( 'semicolon-colors-hash', false );
+
+		// Cache with a hash and then smash.
+		if ( $hash !== md5( serialize( $colors ) ) ) {
+
+			// There's a special semicolon-override marker in the .sass file.
+			$override = '';
+			foreach ( $colors as $key => $value ) {
+				$override .= sprintf( '$color-%s: %s;' . PHP_EOL, $key, $value );
+			}
+
+			// @todo: Maybe use WP_Filesystem to read the file.
+			$sass = file_get_contents( get_template_directory() . '/css/colors.scss' );
+			$sass = preg_replace( '/^.*?semicolon-override.*$/im', $override, $sass );
+			$css = jetpack_sass_css_preprocess( $sass );
+
+			// Minify the CSS if possible.
+			if ( method_exists( 'Jetpack_Custom_CSS', 'minify' ) ) {
+				$css_updated = Jetpack_Custom_CSS::minify( $css_updated );
+			}
+
+			set_theme_mod( 'semicolon-colors-hash', md5( serialize( $colors ) ) );
+			set_theme_mod( 'semicolon-colors-css', $css );
+		}
+
+		// Dequeue the default colors css.
+		wp_dequeue_style( 'semicolon-colors' );
+		return $css;
 	}
 
 	/**
@@ -413,9 +487,19 @@ class Semicolon {
 	}
 
 	public static function customize_register( $wp_customize ) {
-		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+		$wp_customize->get_setting('blogname')->transport = 'postMessage';
+		$wp_customize->get_setting('blogdescription')->transport = 'postMessage';
+		$wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
+
+		foreach ( self::$defaults['colors'] as $key => $default ) {
+			$wp_customize->add_setting( "semicolon-colors[$key]", array( 'default' => $default ) );
+
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'semicolon-color-' . $key, array(
+				'label' => __( 'Primary Color', 'semicolon' ),
+				'section' => 'colors',
+				'settings' => "semicolon-colors[$key]",
+			) ) );
+		}
 	}
 
 	/**
@@ -504,17 +588,6 @@ class Semicolon {
 			return 0;
 
 		return $term->term_id;
-	}
-
-	/**
-	 * This will help override some colors in the future.
-	 */
-	public static function css_overrides() {
-		// We need Jetpack's SASS powers.
-		if ( ! function_exists( 'jetpack_sass_css_preprocess' ) )
-			return;
-
-		// printf( '<style>%s</style>', esc_html( jetpack_sass_css_preprocess( $content ) ) );
 	}
 }
 
