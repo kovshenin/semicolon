@@ -1172,7 +1172,6 @@ a.button-secondary,
 a.button-primary,
 a.button,
 a.button-secondary {
-  color: white;
   border: none;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
@@ -1180,26 +1179,6 @@ a.button-secondary {
   cursor: pointer;
   text-decoration: none;
   display: inline-block; }
-  button:hover, button:focus,
-  input[type="button"]:hover,
-  input[type="button"]:focus,
-  input[type="reset"]:hover,
-  input[type="reset"]:focus,
-  input[type="submit"]:hover,
-  input[type="submit"]:focus,
-  .button-primary:hover,
-  .button:hover,
-  .button-secondary:hover,
-  .button-primary:focus,
-  .button:focus,
-  .button-secondary:focus,
-  a.button-primary:hover,
-  a.button:hover,
-  a.button-secondary:hover,
-  a.button-primary:focus,
-  a.button:focus,
-  a.button-secondary:focus {
-    color: white; }
 
 input[type="text"],
 input[type="email"],

@@ -705,7 +705,6 @@ input[type="reset"],
 input[type="submit"],
 .button-primary,
 a.button-primary {
-	color: white;
 	border: none;
 	font-family: $font-regular;
 	font-size: 16px;
@@ -713,11 +712,6 @@ a.button-primary {
 	cursor: pointer;
 	text-decoration: none;
 	display: inline-block;
-
-	&:hover,
-	&:focus {
-		color: white;
-	}
 }
 
 .button,

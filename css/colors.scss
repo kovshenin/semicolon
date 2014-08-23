@@ -184,11 +184,11 @@ input[type="reset"],
 input[type="submit"],
 .button-primary,
 a.button-primary {
-	color: white;
+	color: contrast-color( $color-primary );
 	background: $color-primary;
 	&:hover,
 	&:focus {
-		color: white;
+		color: contrast-color( $color-primary );
 		background: lighten( $color-primary, 5% );
 	}
 }
@@ -197,10 +197,10 @@ a.button-primary {
 .button-secondary,
 a.button,
 a.button-secondary {
-	color: white;
+	color: contrast-color( $color-secondary );
 	background: $color-secondary;
 	&:hover {
-		color: white;
+		color: contrast-color( $color-secondary );
 		background: lighten( $color-secondary, 5% );
 	}
 }
