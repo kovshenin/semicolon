@@ -2,7 +2,8 @@
 /* Do not remove the following line. It is us ed to override color declarations. */
 /* semicolon-override */
 ::selection {
-  background: #117bb8; }
+  background: #117bb8;
+  color: white; }
 
 a, a:visited, a:link {
   color: #117bb8; }
@@ -91,10 +92,14 @@ blockquote:before {
   .post-tags a:hover {
     background: lightgrey; }
 
-.widget-area .sidebar-primary .widget {
-  background: #117bb8; }
-  .widget-area .sidebar-primary .widget a:hover {
+.widget-area .sidebar-primary {
+  color: white; }
+  .widget-area .sidebar-primary a {
     color: white; }
+  .widget-area .sidebar-primary .widget {
+    background: #117bb8; }
+    .widget-area .sidebar-primary .widget a:hover {
+      color: white; }
 .widget-area .sidebar-secondary .widget {
   background: rgba(58, 58, 58, 0.03); }
 

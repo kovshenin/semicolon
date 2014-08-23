@@ -584,9 +584,6 @@ body {
   font-weight: 400;
   color: #444; }
 
-::selection {
-  color: white; }
-
 h1, h2, h3, .site-title, .grid .page-title, .grid article .entry-title, .js.grid article.semicolon-featured .entry-title, .related-content .related-content-title, .related-content article .entry-title, .single .author h3, .widget-area .widget-title, .comments-title, .comment-meta .comment-author, #respond #reply-title {
   font-size: 52px;
   line-height: 72px;
@@ -1072,12 +1069,8 @@ time.updated {
   .widget-area .sidebar-secondary,
   .widget-area .sidebar-tertiary {
     /*padding: 24px 24px;*/ }
-  .widget-area .sidebar-primary {
-    color: white; }
-    .widget-area .sidebar-primary a {
-      color: white; }
-    .widget-area .sidebar-primary aside:last-child p:last-child {
-      margin-bottom: 0; }
+  .widget-area .sidebar-primary aside:last-child p:last-child {
+    margin-bottom: 0; }
   .widget-area .widget-title {
     font-size: 18px;
     line-height: 24px;

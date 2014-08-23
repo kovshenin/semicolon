@@ -6,8 +6,18 @@ $color-secondary: #3a3a3a;
 /* Do not remove the following line. It is us ed to override color declarations. */
 /* semicolon-override */
 
+@function contrast-color( $color, $dark: #3a3a3a, $light: #ffffff ) {
+	@if ( lightness( $color ) > 50 ) {
+		@return $dark;
+	}
+	@else {
+		@return $light;
+	}
+}
+
 ::selection {
 	background: $color-primary;
+	color: contrast-color( $color-primary );
 }
 
 a, a:visited, a:link {
@@ -134,10 +144,18 @@ blockquote:before {
 }
 
 .widget-area {
-	.sidebar-primary .widget {
-		background: $color-primary;
-		a:hover {
-			color: white;
+	.sidebar-primary {
+		color: contrast-color( $color-primary );
+
+		a {
+			color: contrast-color( $color-primary );
+		}
+
+		.widget {
+			background: $color-primary;
+			a:hover {
+				color: white;
+			}
 		}
 	}
 

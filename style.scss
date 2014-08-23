@@ -39,10 +39,6 @@ body {
 	color: #444;
 }
 
-::selection {
-	color: white;
-}
-
 h1 {
 	font-size: 52px;
 	line-height: 72px;
@@ -562,12 +558,6 @@ time.updated {
 	}
 
 	.sidebar-primary {
-		color: white;
-
-		a {
-			color: white;
-		}
-
 		aside:last-child {
 			p:last-child {
 				margin-bottom: 0;
