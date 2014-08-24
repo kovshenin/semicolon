@@ -1,7 +1,7 @@
 /* Don't forget to bump $colors_css_version for custom colors to work correctly. */
 
-$color-primary: #117bb8;
-$color-secondary: #3a3a3a;
+$color-accent: #117bb8;
+$color-text: #3a3a3a;
 
 $color-background: white;
 $auto-contrast: false;
@@ -101,57 +101,57 @@ $test-parse-sass: 'this string should never appear in the compiled stylesheet.';
 	@return $color;
 }
 
-$color-primary-contrasted: auto-contrast( $color-primary, $color-background );
-$color-primary-contrasted-alt: $color-primary-contrasted;
-$color-secondary-contrasted: auto-contrast( $color-secondary, $color-background );
-$color-secondary-contrasted-alt: $color-secondary;
-$color-secondary-contrasted-semi-transparent: $color-secondary;
+$color-accent-contrasted: auto-contrast( $color-accent, $color-background );
+$color-accent-contrasted-alt: $color-accent-contrasted;
+$color-text-contrasted: auto-contrast( $color-text, $color-background );
+$color-text-contrasted-alt: $color-text;
+$color-text-contrasted-semi-transparent: $color-text;
 
-$color-foreground-on-primary: auto-contrast( white, $color-primary-contrasted, 20%, 7.0 );
-$color-foreground-on-secondary: auto-contrast( white, $color-secondary-contrasted, 20%, 7.0 );
+$color-foreground-on-accent: auto-contrast( white, $color-accent-contrasted, 20%, 7.0 );
+$color-foreground-on-text: auto-contrast( white, $color-text-contrasted, 20%, 7.0 );
 
 @if ( lightness( $color-background ) > 50 or not $auto-contrast ) {
-	$color-primary-contrasted-alt: lighten( $color-primary-contrasted, 5% );
-	$color-primary-contrasted: darken( $color-primary-contrasted, 5% );
-	$color-secondary-contrasted-alt: auto-contrast( lighten( $color-secondary-contrasted, 40% ), $color-background, $darken-only: true );
-	$color-secondary-contrasted: darken( $color-secondary-contrasted, 5% );
-	$color-secondary-contrasted-semi-transparent: transparentize( $color-secondary-contrasted, 0.9 );
+	$color-accent-contrasted-alt: lighten( $color-accent-contrasted, 5% );
+	$color-accent-contrasted: darken( $color-accent-contrasted, 5% );
+	$color-text-contrasted-alt: auto-contrast( lighten( $color-text-contrasted, 40% ), $color-background, $darken-only: true );
+	$color-text-contrasted: darken( $color-text-contrasted, 5% );
+	$color-text-contrasted-semi-transparent: transparentize( $color-text-contrasted, 0.9 );
 } @else {
-	$color-primary-contrasted-alt: darken( $color-primary-contrasted, 5% );
-	$color-primary-contrasted: lighten( $color-primary-contrasted, 5% );
-	$color-secondary-contrasted-alt: auto-contrast( darken( $color-secondary-contrasted, 40% ), $color-background, $lighten-only: true );
-	$color-secondary-contrasted: lighten( $color-secondary-contrasted, 5% );
-	$color-secondary-contrasted-semi-transparent: transparentize( $color-secondary-contrasted, 0.7 );
+	$color-accent-contrasted-alt: darken( $color-accent-contrasted, 5% );
+	$color-accent-contrasted: lighten( $color-accent-contrasted, 5% );
+	$color-text-contrasted-alt: auto-contrast( darken( $color-text-contrasted, 40% ), $color-background, $lighten-only: true );
+	$color-text-contrasted: lighten( $color-text-contrasted, 5% );
+	$color-text-contrasted-semi-transparent: transparentize( $color-text-contrasted, 0.7 );
 }
 
 body {
-	color: $color-secondary-contrasted;
+	color: $color-text-contrasted;
 }
 
 ::selection {
-	background: $color-primary;
-	color: $color-foreground-on-primary;
+	background: $color-accent;
+	color: $color-foreground-on-accent;
 }
 
 a, a:visited, a:link {
-	color: $color-primary-contrasted;
+	color: $color-accent-contrasted;
 	&:hover {
-		color: $color-primary-contrasted-alt;
+		color: $color-accent-contrasted-alt;
 	}
 }
 
 .site-title a {
-	color: $color-secondary-contrasted;
+	color: $color-text-contrasted;
 }
 
 .site-description {
-	color: $color-secondary-contrasted-alt;
+	color: $color-text-contrasted-alt;
 }
 
 .main-navigation {
-	border-top-color: $color-secondary-contrasted-semi-transparent;
+	border-top-color: $color-text-contrasted-semi-transparent;
 	a {
-		color: $color-secondary-contrasted;
+		color: $color-text-contrasted;
 	}
 
 	.current_page_item,
@@ -161,111 +161,111 @@ a, a:visited, a:link {
 	.current-menu-parent,
 	.current-post-parent {
 		a {
-			border-top-color: $color-secondary-contrasted;
+			border-top-color: $color-text-contrasted;
 		}
 	}
 }
 
 ul.semicolon-social {
-	li a::before       { color: rgba( $color-secondary-contrasted, 0.5 ); }
-	li a:hover::before { color: $color-secondary-contrasted; }
+	li a::before       { color: rgba( $color-text-contrasted, 0.5 ); }
+	li a:hover::before { color: $color-text-contrasted; }
 }
 
 .page-description {
-	background: rgba( $color-secondary-contrasted, 0.03 );
+	background: rgba( $color-text-contrasted, 0.03 );
 }
 
 pre {
-	background: rgba( $color-secondary-contrasted, 0.03 );
+	background: rgba( $color-text-contrasted, 0.03 );
 }
 
 .post-thumbnail {
-	background: rgba( $color-secondary-contrasted, 0.03 );
+	background: rgba( $color-text-contrasted, 0.03 );
 }
 
 .grid article,
 .related-content article {
 	.entry-title a {
-		color: $color-secondary-contrasted;
+		color: $color-text-contrasted;
 	}
 
 	&:hover .entry-title a {
-		color: $color-primary-contrasted-alt;
+		color: $color-accent-contrasted-alt;
 	}
 }
 
 table {
 	thead th {
-		border-bottom-color: rgba( $color-secondary-contrasted, 0.3 );
+		border-bottom-color: rgba( $color-text-contrasted, 0.3 );
 	}
 
 	tbody th, td {
-		border-bottom-color: rgba( $color-secondary-contrasted, 0.2 );
+		border-bottom-color: rgba( $color-text-contrasted, 0.2 );
 	}
 
 	tbody tr:hover th,
 	tr:hover td {
-		background: rgba( $color-secondary-contrasted, 0.03 );
+		background: rgba( $color-text-contrasted, 0.03 );
 	}
 }
 
 blockquote:before {
-	color: $color-primary-contrasted;
+	color: $color-accent-contrasted;
 }
 
 .entry-meta,
 .comment-metadata,
 .site-footer,
 .wp-caption-text {
-	color: $color-secondary-contrasted-alt;
+	color: $color-text-contrasted-alt;
 
 	a {
-		color: $color-secondary-contrasted-alt;
+		color: $color-text-contrasted-alt;
 	}
 }
 
 .single .author {
 	h3 a {
-		color: $color-secondary-contrasted;
+		color: $color-text-contrasted;
 		&:hover {
-			color: $color-primary-contrasted-alt;
+			color: $color-accent-contrasted-alt;
 		}
 	}
 	time {
-		color: $color-secondary-contrasted-alt;
+		color: $color-text-contrasted-alt;
 	}
 }
 
 .post-categories,
 .post-tags {
 	a {
-		background: rgba( $color-secondary-contrasted, 0.2 );
-		color: $color-secondary;
+		background: rgba( $color-text-contrasted, 0.2 );
+		color: $color-text;
 
 		&:hover {
-			background: rgba( $color-secondary-contrasted, 0.3 );
-			color: $color-secondary;
+			background: rgba( $color-text-contrasted, 0.3 );
+			color: $color-text;
 		}
 	}
 }
 
 .post-tags a {
-	background: rgba( $color-secondary-contrasted, 0.1 );
+	background: rgba( $color-text-contrasted, 0.1 );
 	&:hover {
-		background: rgba( $color-secondary-contrasted, 0.2 );
+		background: rgba( $color-text-contrasted, 0.2 );
 	}
 }
 
 .widget-area {
 	.sidebar-primary {
-		color: $color-foreground-on-primary;
+		color: $color-foreground-on-accent;
 
 		a {
-			color: $color-foreground-on-primary;
+			color: $color-foreground-on-accent;
 		}
 
 		.widget {
-			background: $color-primary-contrasted;
+			background: $color-accent-contrasted;
 			a:hover {
 				color: white;
 			}
@@ -273,22 +273,22 @@ blockquote:before {
 	}
 
 	.sidebar-secondary .widget {
-		background: rgba( $color-secondary-contrasted, 0.03 );
+		background: rgba( $color-text-contrasted, 0.03 );
 	}
 }
 
 .paging-navigation {
-	border-top-color: $color-secondary-contrasted-semi-transparent;
+	border-top-color: $color-text-contrasted-semi-transparent;
 	.page-numbers {
-		color: $color-secondary-contrasted;
+		color: $color-text-contrasted;
 		&.current {
-			border-top-color: $color-secondary-contrasted;
+			border-top-color: $color-text-contrasted;
 		}
 	}
 }
 
 .comment-author a {
-	color: $color-secondary-contrasted;
+	color: $color-text-contrasted;
 }
 
 button,
@@ -297,12 +297,12 @@ input[type="reset"],
 input[type="submit"],
 .button-primary,
 a.button-primary {
-	color: $color-foreground-on-primary;
-	background: $color-primary-contrasted;
+	color: $color-foreground-on-accent;
+	background: $color-accent-contrasted;
 	&:hover,
 	&:focus {
-		color: $color-foreground-on-primary;
-		background: $color-primary-contrasted-alt;
+		color: $color-foreground-on-accent;
+		background: $color-accent-contrasted-alt;
 	}
 }
 
@@ -310,11 +310,11 @@ a.button-primary {
 .button-secondary,
 a.button,
 a.button-secondary {
-	color: $color-foreground-on-secondary;
-	background: $color-secondary-contrasted;
+	color: $color-foreground-on-text;
+	background: $color-text-contrasted;
 	&:hover {
-		color: $color-foreground-on-secondary;
-		background: $color-secondary-contrasted-alt;
+		color: $color-foreground-on-text;
+		background: $color-text-contrasted-alt;
 	}
 }
 
@@ -324,13 +324,13 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	border-color: $color-secondary-contrasted-semi-transparent;
+	border-color: $color-text-contrasted-semi-transparent;
 }
 
 .grid article:hover .semicolon-inline-controls {
 	a {
 		&:hover {
-			color: $color-primary-contrasted-alt;
+			color: $color-accent-contrasted-alt;
 		}
 	}
 }
@@ -343,18 +343,18 @@ textarea {
 	.current-menu-parent,
 	.current-post-parent {
 		a {
-			background: $color-secondary-contrasted-semi-transparent;
+			background: $color-text-contrasted-semi-transparent;
 		}
 	}
 
 	div.semicolon-navigation ul,
 	ul.semicolon-navigation {
 		display: block;
-		border-bottom-color: $color-secondary-contrasted-semi-transparent;
+		border-bottom-color: $color-text-contrasted-semi-transparent;
 	}
 
 	.menu-toggle {
-		border-top-color: $color-secondary-contrasted;
-		border-bottom-color: $color-secondary-contrasted-semi-transparent;
+		border-top-color: $color-text-contrasted;
+		border-bottom-color: $color-text-contrasted-semi-transparent;
 	}
 }

@@ -26,12 +26,12 @@ class Semicolon {
 
 		self::$defaults = array(
 			'colors' => array(
-				'primary' => '#117bb8',
-				'secondary' => '#3a3a3a',
+				'accent' => '#117bb8',
+				'text' => '#3a3a3a',
 			),
 			'color_labels' => array(
-				'primary' => __( 'Primary Color', 'semicolon' ),
-				'secondary' => __( 'Secondary Color', 'semicolon' ),
+				'accent' => __( 'Accent Color', 'semicolon' ),
+				'text' => __( 'Text Color', 'semicolon' ),
 			),
 		);
 
@@ -209,10 +209,10 @@ class Semicolon {
 	 */
 	public static function custom_colors() {
 		$colors = get_theme_mod( 'semicolon-colors', self::$defaults['colors'] );
-		$defaults = self::$defaults['colors'];
+		$colors = wp_parse_args( $colors, self::$defaults['colors'] );
 
 		$custom = false;
-		foreach ( $defaults as $key => $default ) {
+		foreach ( self::$defaults['colors'] as $key => $default ) {
 			if ( strtolower( $colors[ $key ] ) != $default ) {
 				$custom = true;
 				break;
@@ -230,7 +230,8 @@ class Semicolon {
 		$hash = get_theme_mod( 'semicolon-colors-hash', false );
 		$new_hash = md5( serialize( array_merge( $colors, array(
 			'version' => self::$colors_css_version,
-			'background_color' => get_background_color(),
+			'background-color' => get_background_color(),
+			'auto-contrast' => get_theme_mod( 'semicolon-colors-auto-contrast', true ),
 		) ) ) );
 
 		// Cache with a hash and then smash.
