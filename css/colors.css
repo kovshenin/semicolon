@@ -158,7 +158,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  border-color: rgba(45, 45, 45, 0.3); }
+  border-color: rgba(45, 45, 45, 0.1); }
 
 .grid article:hover .semicolon-inline-controls a:hover {
   color: #138bcf; }
@@ -169,7 +169,7 @@ textarea {
 .main-navigation.toggled .current-menu-ancestor a,
 .main-navigation.toggled .current-menu-parent a,
 .main-navigation.toggled .current-post-parent a {
-  background: rgba(45, 45, 45, 0.03); }
+  background: rgba(45, 45, 45, 0.1); }
 .main-navigation.toggled div.semicolon-navigation ul,
 .main-navigation.toggled ul.semicolon-navigation {
   display: block;

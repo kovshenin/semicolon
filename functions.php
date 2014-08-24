@@ -263,6 +263,10 @@ class Semicolon {
 			$time = microtime( true ) - $start;
 			// echo $time;
 
+			// Something went wrong, so don't display raw sass.
+			if ( empty( $css ) || strpos( $css, 'this string should never appear in the compiled stylesheet' ) !== false )
+				return;
+
 			// Minify the CSS if possible.
 			if ( method_exists( 'Jetpack_Custom_CSS', 'minify' ) ) {
 				$css = Jetpack_Custom_CSS::minify( $css );

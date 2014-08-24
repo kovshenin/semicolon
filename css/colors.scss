@@ -5,6 +5,7 @@ $color-secondary: #3a3a3a;
 
 $color-background: white;
 $auto-contrast: false;
+$test-parse-sass: 'this string should never appear in the compiled stylesheet.';
 
 /* Do not remove the following line. It is us ed to override color declarations. */
 /* semicolon-override */
@@ -61,7 +62,7 @@ $auto-contrast: false;
 	@return $ratio;
 }
 
-@function auto-contrast( $color, $bgcolor: $color, $step: 10%, $threshold: 3 ) {
+@function auto-contrast( $color, $bgcolor: $color, $step: 10%, $threshold: 3, $lighten-only: false, $darken-only: false ) {
 	/* threshold: 4.5 = WCAG AA,7= WCAG AAA */
 
 	@if ( not $auto-contrast ) {
@@ -80,15 +81,19 @@ $auto-contrast: false;
 		$darker-ratio: contrast-ratio( $bgcolor, $darker );
 		$lighter-ratio: contrast-ratio( $bgcolor, $lighter );
 
-		@if ( $lighter-ratio > $darker-ratio ) {
-			@if ( $lighter-ratio > $threshold ) {
-				@return $lighter;
+		@if ( not $darken-only ) {
+			@if ( $lighter-ratio > $darker-ratio or $lighten-only ) {
+				@if ( $lighter-ratio > $threshold ) {
+					@return $lighter;
+				}
 			}
 		}
 
-		@if( $darker-ratio > $lighter-ratio ) {
-			@if ( $darker-ratio > $threshold ) {
-				@return $darker;
+		@if ( not $lighten-only ) {
+			@if( $darker-ratio > $lighter-ratio or $darken-only ) {
+				@if ( $darker-ratio > $threshold ) {
+					@return $darker;
+				}
 			}
 		}
 	}
@@ -100,6 +105,7 @@ $color-primary-contrasted: auto-contrast( $color-primary, $color-background );
 $color-primary-contrasted-alt: $color-primary-contrasted;
 $color-secondary-contrasted: auto-contrast( $color-secondary, $color-background );
 $color-secondary-contrasted-alt: $color-secondary;
+$color-secondary-contrasted-semi-transparent: $color-secondary;
 
 $color-foreground-on-primary: auto-contrast( white, $color-primary-contrasted, 20%, 7.0 );
 $color-foreground-on-secondary: auto-contrast( white, $color-secondary-contrasted, 20%, 7.0 );
@@ -107,13 +113,15 @@ $color-foreground-on-secondary: auto-contrast( white, $color-secondary-contraste
 @if ( lightness( $color-background ) > 50 or not $auto-contrast ) {
 	$color-primary-contrasted-alt: lighten( $color-primary-contrasted, 5% );
 	$color-primary-contrasted: darken( $color-primary-contrasted, 5% );
-	$color-secondary-contrasted-alt: auto-contrast( lighten( $color-secondary-contrasted, 40% ), $color-background );
+	$color-secondary-contrasted-alt: auto-contrast( lighten( $color-secondary-contrasted, 40% ), $color-background, $darken-only: true );
 	$color-secondary-contrasted: darken( $color-secondary-contrasted, 5% );
+	$color-secondary-contrasted-semi-transparent: transparentize( $color-secondary-contrasted, 0.9 );
 } @else {
 	$color-primary-contrasted-alt: darken( $color-primary-contrasted, 5% );
 	$color-primary-contrasted: lighten( $color-primary-contrasted, 5% );
-	$color-secondary-contrasted-alt: auto-contrast( darken( $color-secondary-contrasted, 40% ), $color-background );
+	$color-secondary-contrasted-alt: auto-contrast( darken( $color-secondary-contrasted, 40% ), $color-background, $lighten-only: true );
 	$color-secondary-contrasted: lighten( $color-secondary-contrasted, 5% );
+	$color-secondary-contrasted-semi-transparent: transparentize( $color-secondary-contrasted, 0.7 );
 }
 
 body {
@@ -141,7 +149,7 @@ a, a:visited, a:link {
 }
 
 .main-navigation {
-	border-top-color: rgba( $color-secondary-contrasted, 0.1 );
+	border-top-color: $color-secondary-contrasted-semi-transparent;
 	a {
 		color: $color-secondary-contrasted;
 	}
@@ -270,7 +278,7 @@ blockquote:before {
 }
 
 .paging-navigation {
-	border-top-color: rgba( $color-secondary-contrasted, 0.1 );
+	border-top-color: $color-secondary-contrasted-semi-transparent;
 	.page-numbers {
 		color: $color-secondary-contrasted;
 		&.current {
@@ -316,7 +324,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	border-color: rgba( $color-secondary-contrasted, 0.3 );
+	border-color: $color-secondary-contrasted-semi-transparent;
 }
 
 .grid article:hover .semicolon-inline-controls {
@@ -335,18 +343,18 @@ textarea {
 	.current-menu-parent,
 	.current-post-parent {
 		a {
-			background: rgba( $color-secondary-contrasted, 0.03 );
+			background: $color-secondary-contrasted-semi-transparent;
 		}
 	}
 
 	div.semicolon-navigation ul,
 	ul.semicolon-navigation {
 		display: block;
-		border-bottom-color: rgba( $color-secondary-contrasted, 0.1 );
+		border-bottom-color: $color-secondary-contrasted-semi-transparent;
 	}
 
 	.menu-toggle {
 		border-top-color: $color-secondary-contrasted;
-		border-bottom-color: rgba( $color-secondary-contrasted, 0.1 );
+		border-bottom-color: $color-secondary-contrasted-semi-transparent;
 	}
 }
