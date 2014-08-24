@@ -219,25 +219,36 @@ class Semicolon {
 			}
 		}
 
+		if ( get_theme_mod( 'semicolon-colors-auto-contrast', true ) && get_background_color() != get_theme_support( 'custom-background', 'default-color' ) )
+			$custom = true;
+
 		// At least one custom color should be set for an override.
 		if ( ! $custom )
 			return;
 
 		$css = get_theme_mod( 'semicolon-colors-css', false );
 		$hash = get_theme_mod( 'semicolon-colors-hash', false );
-		$new_hash = md5( serialize( array_merge( $colors, array( 'version' => self::$colors_css_version ) ) ) );
+		$new_hash = md5( serialize( array_merge( $colors, array(
+			'version' => self::$colors_css_version,
+			'background_color' => get_background_color(),
+		) ) ) );
 
 		// Cache with a hash and then smash.
-		if ( $hash !== $new_hash ) {
+		if ( $hash !== $new_hash /* || true /* use for debug */ ) {
 
 			// Set these early, just in case everything else fails or fatals.
 			set_theme_mod( 'semicolon-colors-hash', $new_hash );
 			set_theme_mod( 'semicolon-colors-css', '' );
 
 			// There's a special semicolon-override marker in the .sass file.
-			$override = '';
+			$override = sprintf( '$color-background: #%s;' . PHP_EOL, get_background_color() );
+
 			foreach ( $colors as $key => $value ) {
 				$override .= sprintf( '$color-%s: %s;' . PHP_EOL, $key, $value );
+			}
+
+			if ( get_theme_mod( 'semicolon-colors-auto-contrast', true ) ) {
+				$override .= '$auto-contrast: true;' . PHP_EOL;
 			}
 
 			// Retrieve the Sass file and then run some replacements.
@@ -246,7 +257,11 @@ class Semicolon {
 				return;
 
 			$sass = preg_replace( '/^.*?semicolon-override.*$/im', $override, $sass );
+
+			$start = microtime( true );
 			$css = jetpack_sass_css_preprocess( $sass );
+			$time = microtime( true ) - $start;
+			// echo $time;
 
 			// Minify the CSS if possible.
 			if ( method_exists( 'Jetpack_Custom_CSS', 'minify' ) ) {
@@ -528,6 +543,7 @@ class Semicolon {
 		$wp_customize->get_setting('blogname')->transport = 'postMessage';
 		$wp_customize->get_setting('blogdescription')->transport = 'postMessage';
 		$wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
+		$wp_customize->get_setting('background_color')->transport = 'refresh';
 
 		foreach ( self::$defaults['colors'] as $key => $default ) {
 			$wp_customize->add_setting( "semicolon-colors[$key]", array( 'default' => $default ) );
@@ -540,6 +556,14 @@ class Semicolon {
 				'settings' => "semicolon-colors[$key]",
 			) ) );
 		}
+
+		$wp_customize->add_setting( 'semicolon-colors-auto-contrast', array( 'default' => true ) );
+		$wp_customize->add_control( 'semicolon-colors-auto-contrast', array(
+			'type' => 'checkbox',
+			'label' => __( 'Auto Contrast', 'semicolon' ),
+			'section' => 'colors',
+			'settings' => 'semicolon-colors-auto-contrast',
+		) );
 	}
 
 	/**

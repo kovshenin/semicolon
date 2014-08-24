@@ -3,42 +3,190 @@
 $color-primary: #117bb8;
 $color-secondary: #3a3a3a;
 
+$color-background: white;
+$auto-contrast: false;
+
 /* Do not remove the following line. It is us ed to override color declarations. */
 /* semicolon-override */
 
-@function contrast-color( $color, $dark: #3a3a3a, $light: #ffffff ) {
-	@if ( lightness( $color ) > 50 ) {
-		@return $dark;
+@function gcd( $a, $b ) {
+	/* Recursing like a pro, yo. */
+	@while ( $b > 0 ) {
+		$c: $a;
+		$a: $b;
+		$b: $c % $b;
 	}
-	@else {
-		@return $light;
+	@return abs( $a );
+}
+
+@function pow( $base, $exponent ) {
+	$value: $base;
+
+	@if ( floor( $exponent ) != $exponent ) {
+		$whole: floor( $exponent );
+		$decimal: $exponent - $whole;
+
+		$numerator: $decimal * 100 + $whole * 100;
+		$denominator: 100;
+		$divisor: gcd( $numerator, $denominator );
+
+		$m: $numerator / $divisor;
+		$n: $denominator / $divisor;
+
+		@if ( $m > 1 ) {
+			@for $i from 2 through $m {
+				$value: $value * $base;
+			}
+		} @else {
+			@for $i from 0 through - $m {
+				$value: $value / $base;
+			}
+		}
+
+		@return nthroot( $n, $value );
 	}
+
+	@if ( $exponent > 1 ) {
+		@for $i from 2 through $exponent {
+			$value: $value * $base;
+		}
+	} @else {
+		@for $i from 0 through - $exponent {
+			$value: $value / $base;
+		}
+	}
+
+	@return $value;
+}
+
+@function nthroot( $n, $base ) {
+	$x_0: $base / $n;
+	$x_1: 1;
+
+	@while true {
+		$x_0: $x_1;
+		$pow: $x_0;
+		@for $i from 2 through $n - 1 {
+			$pow: $pow * $x_0;
+		}
+
+		$x_1: ( 1 / $n ) * ( ( $n - 1 ) * $x_0 + ( $base / $pow ) );
+		@if ( abs( $x_0 - $x_1 ) < 0.0001 ) {
+			@return $x_1;
+		}
+	}
+
+	@return 0;
+}
+
+@function luma( $color ) {
+	// Adapted from: https://gist.github.com/voxpelli/6304812
+	$rgba: red( $color ), green( $color ), blue( $color );
+	$rgba2: ();
+	
+	@for $i from 1 through 3 {
+		$rgb: nth( $rgba, $i );
+		$rgb: $rgb / 255;
+		$rgb: if( $rgb < .03928, $rgb / 12.92, pow( ( $rgb + .055 ) / 1.055, 2.4 ) );
+		$rgba2: append( $rgba2, $rgb );
+	}
+	@return ( .2126 * nth( $rgba2, 1 ) + .7152 * nth( $rgba2, 2 ) + 0.0722 * nth( $rgba2, 3 ) ) * 100;
+}
+
+@function contrast-ratio( $color1, $color2 ) {
+	$luma1: luma( $color1 ) + 5;
+	$luma2: luma( $color2 ) + 5;
+	$ratio: $luma1 / $luma2;
+
+	@if $luma1 < $luma2 {
+		$ratio: 1 / $ratio;
+	}
+	@return $ratio;
+}
+
+@function auto-contrast( $color, $bgcolor: $color, $step: 10%, $threshold: 2.5 ) {
+	/* threshold: 4.5 = WCAG AA,7= WCAG AAA */
+
+	@if ( not $auto-contrast ) {
+		@return $color;
+	}
+
+	@if ( contrast_ratio( $color, $bgcolor ) > $threshold ) {
+		@return $color;
+	}
+
+	$percent: 0;
+	@while ( $percent < 90% ) {
+		$percent: $percent + $step;
+		$lighter: lighten( $color, $percent );
+		$darker: darken( $color, $percent );
+		$darker-ratio: contrast-ratio( $bgcolor, $darker );
+		$lighter-ratio: contrast-ratio( $bgcolor, $lighter );
+
+		@if ( $lighter-ratio > $darker-ratio ) {
+			@if ( $lighter-ratio > $threshold ) {
+				@return $lighter;
+			}
+		}
+
+		@if( $darker-ratio > $lighter-ratio ) {
+			@if ( $darker-ratio > $threshold ) {
+				@return $darker;
+			}
+		}
+	}
+
+	@return $color;
+}
+
+$color-primary-contrasted: auto-contrast( $color-primary, $color-background );
+$color-primary-contrasted-alt: $color-primary-contrasted;
+$color-secondary-contrasted: auto-contrast( $color-secondary, $color-background );
+$color-secondary-contrasted-alt: $color-secondary;
+
+$color-foreground-on-primary: auto-contrast( white, $color-primary-contrasted, 20%, 7.0 );
+$color-foreground-on-secondary: auto-contrast( white, $color-secondary-contrasted, 20%, 7.0 );
+
+@if ( lightness( $color-background ) > 50 or not $auto-contrast ) {
+	$color-primary-contrasted-alt: lighten( $color-primary-contrasted, 5% );
+	$color-primary-contrasted: darken( $color-primary-contrasted, 5% );
+	$color-secondary-contrasted-alt: auto-contrast( lighten( $color-secondary-contrasted, 40% ), $color-background );
+	$color-secondary-contrasted: darken( $color-secondary-contrasted, 5% );
+} @else {
+	$color-primary-contrasted-alt: darken( $color-primary-contrasted, 5% );
+	$color-primary-contrasted: lighten( $color-primary-contrasted, 5% );
+	$color-secondary-contrasted-alt: auto-contrast( darken( $color-secondary-contrasted, 40% ), $color-background );
+	$color-secondary-contrasted: lighten( $color-secondary-contrasted, 5% );
+}
+
+body {
+	color: $color-secondary-contrasted;
 }
 
 ::selection {
 	background: $color-primary;
-	color: contrast-color( $color-primary );
+	color: $color-foreground-on-primary;
 }
 
 a, a:visited, a:link {
-	color: $color-primary;
+	color: $color-primary-contrasted;
 	&:hover {
-		color: lighten( $color-primary, 10% );
+		color: $color-primary-contrasted-alt;
 	}
 }
 
 .site-title a {
-	color: $color-secondary;
+	color: $color-secondary-contrasted;
 }
 
 .site-description {
-	color: rgba( $color-secondary, 0.5 );
+	color: $color-secondary-contrasted-alt;
 }
 
 .main-navigation {
-	border-top-color: rgba( $color-secondary, 0.1 );
+	border-top-color: rgba( $color-secondary-contrasted, 0.1 );
 	a {
-		color: $color-secondary;
+		color: $color-secondary-contrasted;
 	}
 
 	.current_page_item,
@@ -48,111 +196,111 @@ a, a:visited, a:link {
 	.current-menu-parent,
 	.current-post-parent {
 		a {
-			border-top-color: $color-secondary;
+			border-top-color: $color-secondary-contrasted;
 		}
 	}
 }
 
 ul.semicolon-social {
-	li a::before       { color: rgba( $color-secondary, 0.5 ); }
-	li a:hover::before { color: $color-secondary; }
+	li a::before       { color: rgba( $color-secondary-contrasted, 0.5 ); }
+	li a:hover::before { color: $color-secondary-contrasted; }
 }
 
 .page-description {
-	background: rgba( $color-secondary, 0.03 );
+	background: rgba( $color-secondary-contrasted, 0.03 );
 }
 
 pre {
-	background: rgba( $color-secondary, 0.03 );
+	background: rgba( $color-secondary-contrasted, 0.03 );
 }
 
 .post-thumbnail {
-	background: rgba( $color-secondary, 0.03 );
+	background: rgba( $color-secondary-contrasted, 0.03 );
 }
 
 .grid article,
 .related-content article {
 	.entry-title a {
-		color: $color-secondary;
+		color: $color-secondary-contrasted;
 	}
 
 	&:hover .entry-title a {
-		color: $color-primary;
+		color: $color-primary-contrasted-alt;
 	}
 }
 
 table {
 	thead th {
-		border-bottom-color: lighten($color-secondary, 40%);
+		border-bottom-color: rgba( $color-secondary-contrasted, 0.3 );
 	}
 
 	tbody th, td {
-		border-bottom-color: lighten($color-secondary, 70%);
+		border-bottom-color: rgba( $color-secondary-contrasted, 0.2 );
 	}
 
 	tbody tr:hover th,
 	tr:hover td {
-		background: rgba($color-secondary, 0.03);
+		background: rgba( $color-secondary-contrasted, 0.03 );
 	}
 }
 
 blockquote:before {
-	color: $color-primary;
+	color: $color-primary-contrasted;
 }
 
 .entry-meta,
 .comment-metadata,
 .site-footer,
 .wp-caption-text {
-	color: rgba( $color-secondary, 0.5 );
+	color: $color-secondary-contrasted-alt;
 
 	a {
-		color: rgba( $color-secondary, 0.5 );
+		color: $color-secondary-contrasted-alt;
 	}
 }
 
 .single .author {
 	h3 a {
-		color: $color-secondary;
+		color: $color-secondary-contrasted;
 		&:hover {
-			color: $color-primary;
+			color: $color-primary-contrasted-alt;
 		}
 	}
 	time {
-		color: rgba( $color-secondary, 0.5 );
+		color: $color-secondary-contrasted-alt;
 	}
 }
 
 .post-categories,
 .post-tags {
 	a {
-		background: lighten( $color-secondary, 60% );
+		background: rgba( $color-secondary-contrasted, 0.2 );
 		color: $color-secondary;
 
 		&:hover {
-			background: lighten( $color-secondary, 50% );
+			background: rgba( $color-secondary-contrasted, 0.3 );
 			color: $color-secondary;
 		}
 	}
 }
 
 .post-tags a {
-	background: lighten( $color-secondary, 70% );
+	background: rgba( $color-secondary-contrasted, 0.1 );
 	&:hover {
-		background: lighten( $color-secondary, 60% );
+		background: rgba( $color-secondary-contrasted, 0.2 );
 	}
 }
 
 .widget-area {
 	.sidebar-primary {
-		color: contrast-color( $color-primary );
+		color: $color-foreground-on-primary;
 
 		a {
-			color: contrast-color( $color-primary );
+			color: $color-foreground-on-primary;
 		}
 
 		.widget {
-			background: $color-primary;
+			background: $color-primary-contrasted;
 			a:hover {
 				color: white;
 			}
@@ -160,22 +308,22 @@ blockquote:before {
 	}
 
 	.sidebar-secondary .widget {
-		background: rgba( $color-secondary, 0.03 );
+		background: rgba( $color-secondary-contrasted, 0.03 );
 	}
 }
 
 .paging-navigation {
-	border-top-color: rgba( $color-secondary, 0.1 );
+	border-top-color: rgba( $color-secondary-contrasted, 0.1 );
 	.page-numbers {
-		color: $color-secondary;
+		color: $color-secondary-contrasted;
 		&.current {
-			border-top-color: $color-secondary;
+			border-top-color: $color-secondary-contrasted;
 		}
 	}
 }
 
 .comment-author a {
-	color: $color-secondary;
+	color: $color-secondary-contrasted;
 }
 
 button,
@@ -184,12 +332,12 @@ input[type="reset"],
 input[type="submit"],
 .button-primary,
 a.button-primary {
-	color: contrast-color( $color-primary );
-	background: $color-primary;
+	color: $color-foreground-on-primary;
+	background: $color-primary-contrasted;
 	&:hover,
 	&:focus {
-		color: contrast-color( $color-primary );
-		background: lighten( $color-primary, 5% );
+		color: $color-foreground-on-primary;
+		background: $color-primary-contrasted-alt;
 	}
 }
 
@@ -197,11 +345,11 @@ a.button-primary {
 .button-secondary,
 a.button,
 a.button-secondary {
-	color: contrast-color( $color-secondary );
-	background: $color-secondary;
+	color: $color-foreground-on-secondary;
+	background: $color-secondary-contrasted;
 	&:hover {
-		color: contrast-color( $color-secondary );
-		background: lighten( $color-secondary, 5% );
+		color: $color-foreground-on-secondary;
+		background: $color-secondary-contrasted-alt;
 	}
 }
 
@@ -211,13 +359,13 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	border-color: rgba( $color-secondary, 0.3 );
+	border-color: rgba( $color-secondary-contrasted, 0.3 );
 }
 
 .grid article:hover .semicolon-inline-controls {
 	a {
 		&:hover {
-			color: $color-primary;
+			color: $color-primary-contrasted-alt;
 		}
 	}
 }
@@ -230,18 +378,18 @@ textarea {
 	.current-menu-parent,
 	.current-post-parent {
 		a {
-			background: rgba( $color-secondary, 0.03 );
+			background: rgba( $color-secondary-contrasted, 0.03 );
 		}
 	}
 
 	div.semicolon-navigation ul,
 	ul.semicolon-navigation {
 		display: block;
-		border-bottom-color: rgba( $color-secondary, 0.1 );
+		border-bottom-color: rgba( $color-secondary-contrasted, 0.1 );
 	}
 
 	.menu-toggle {
-		border-top-color: $color-secondary;
-		border-bottom-color: rgba( $color-secondary, 0.1 );
+		border-top-color: $color-secondary-contrasted;
+		border-bottom-color: rgba( $color-secondary-contrasted, 0.1 );
 	}
 }
