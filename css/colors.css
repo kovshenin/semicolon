@@ -18,7 +18,7 @@ a, a:visited, a:link {
   color: #2d2d2d; }
 
 .site-description {
-  color: #878787; }
+  color: #a0a0a0; }
 
 .main-navigation {
   border-top-color: rgba(45, 45, 45, 0.1); }
@@ -68,19 +68,19 @@ blockquote:before {
 .comment-metadata,
 .site-footer,
 .wp-caption-text {
-  color: #878787; }
+  color: #a0a0a0; }
   .entry-meta a,
   .comment-metadata a,
   .site-footer a,
   .wp-caption-text a {
-    color: #878787; }
+    color: #a0a0a0; }
 
 .single .author h3 a {
   color: #2d2d2d; }
   .single .author h3 a:hover {
     color: #138bcf; }
 .single .author time {
-  color: #878787; }
+  color: #a0a0a0; }
 
 .post-categories a,
 .post-tags a {
@@ -150,7 +150,7 @@ a.button-secondary {
   a.button:hover,
   a.button-secondary:hover {
     color: white;
-    background: #878787; }
+    background: #a0a0a0; }
 
 input[type="text"],
 input[type="email"],
