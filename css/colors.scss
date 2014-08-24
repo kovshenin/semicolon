@@ -9,73 +9,29 @@ $auto-contrast: false;
 /* Do not remove the following line. It is us ed to override color declarations. */
 /* semicolon-override */
 
-@function gcd( $a, $b ) {
-	/* Recursing like a pro, yo. */
-	@while ( $b > 0 ) {
-		$c: $a;
-		$a: $b;
-		$b: $c % $b;
-	}
-	@return abs( $a );
-}
-
-@function pow( $base, $exponent ) {
-	$value: $base;
-
-	@if ( floor( $exponent ) != $exponent ) {
-		$whole: floor( $exponent );
-		$decimal: $exponent - $whole;
-
-		$numerator: $decimal * 100 + $whole * 100;
-		$denominator: 100;
-		$divisor: gcd( $numerator, $denominator );
-
-		$m: $numerator / $divisor;
-		$n: $denominator / $divisor;
-
-		@if ( $m > 1 ) {
-			@for $i from 2 through $m {
-				$value: $value * $base;
-			}
-		} @else {
-			@for $i from 0 through - $m {
-				$value: $value / $base;
-			}
-		}
-
-		@return nthroot( $n, $value );
-	}
-
-	@if ( $exponent > 1 ) {
-		@for $i from 2 through $exponent {
-			$value: $value * $base;
-		}
-	} @else {
-		@for $i from 0 through - $exponent {
-			$value: $value / $base;
-		}
-	}
-
-	@return $value;
-}
-
-@function nthroot( $n, $base ) {
-	$x_0: $base / $n;
-	$x_1: 1;
-
-	@while true {
-		$x_0: $x_1;
-		$pow: $x_0;
-		@for $i from 2 through $n - 1 {
-			$pow: $pow * $x_0;
-		}
-
-		$x_1: ( 1 / $n ) * ( ( $n - 1 ) * $x_0 + ( $base / $pow ) );
-		@if ( abs( $x_0 - $x_1 ) < 0.0001 ) {
-			@return $x_1;
-		}
-	}
-
+/* Calculate ^2.4 like a boss. */
+@function pow24 ( $base ) {
+	@if ( $base < 0 ) { @return 0.0; }
+	@if ( $base < 0.05 ) { @return 0.0008; }
+	@if ( $base < 0.1 ) { @return 0.004; }
+	@if ( $base < 0.15 ) { @return 0.0105; }
+	@if ( $base < 0.2 ) { @return 0.021; }
+	@if ( $base < 0.25 ) { @return 0.0359; }
+	@if ( $base < 0.3 ) { @return 0.0556; }
+	@if ( $base < 0.35 ) { @return 0.0805; }
+	@if ( $base < 0.4 ) { @return 0.1109; }
+	@if ( $base < 0.45 ) { @return 0.1471; }
+	@if ( $base < 0.5 ) { @return 0.1895; }
+	@if ( $base < 0.55 ) { @return 0.2382; }
+	@if ( $base < 0.6 ) { @return 0.2935; }
+	@if ( $base < 0.65 ) { @return 0.3556; }
+	@if ( $base < 0.7 ) { @return 0.4248; }
+	@if ( $base < 0.75 ) { @return 0.5014; }
+	@if ( $base < 0.8 ) { @return 0.5854; }
+	@if ( $base < 0.85 ) { @return 0.677; }
+	@if ( $base < 0.9 ) { @return 0.7766; }
+	@if ( $base < 0.95 ) { @return 0.8842; }
+	@if ( $base <= 1 ) { @return 1; }
 	@return 0;
 }
 
@@ -87,9 +43,10 @@ $auto-contrast: false;
 	@for $i from 1 through 3 {
 		$rgb: nth( $rgba, $i );
 		$rgb: $rgb / 255;
-		$rgb: if( $rgb < .03928, $rgb / 12.92, pow( ( $rgb + .055 ) / 1.055, 2.4 ) );
+		$rgb: if( $rgb < .03928, $rgb / 12.92, pow24( ( $rgb + .055 ) / 1.055 ) );
 		$rgba2: append( $rgba2, $rgb );
 	}
+
 	@return ( .2126 * nth( $rgba2, 1 ) + .7152 * nth( $rgba2, 2 ) + 0.0722 * nth( $rgba2, 3 ) ) * 100;
 }
 
@@ -104,7 +61,7 @@ $auto-contrast: false;
 	@return $ratio;
 }
 
-@function auto-contrast( $color, $bgcolor: $color, $step: 10%, $threshold: 2.5 ) {
+@function auto-contrast( $color, $bgcolor: $color, $step: 10%, $threshold: 3 ) {
 	/* threshold: 4.5 = WCAG AA,7= WCAG AAA */
 
 	@if ( not $auto-contrast ) {

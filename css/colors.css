@@ -1,6 +1,7 @@
 /* Don't forget to bump $colors_css_version for custom colors to work correctly. */
 /* Do not remove the following line. It is us ed to override color declarations. */
 /* semicolon-override */
+/* Calculate ^2.4 like a boss. */
 body {
   color: #2d2d2d; }
 
@@ -17,7 +18,7 @@ a, a:visited, a:link {
   color: #2d2d2d; }
 
 .site-description {
-  color: #a0a0a0; }
+  color: #878787; }
 
 .main-navigation {
   border-top-color: rgba(45, 45, 45, 0.1); }
@@ -67,19 +68,19 @@ blockquote:before {
 .comment-metadata,
 .site-footer,
 .wp-caption-text {
-  color: #a0a0a0; }
+  color: #878787; }
   .entry-meta a,
   .comment-metadata a,
   .site-footer a,
   .wp-caption-text a {
-    color: #a0a0a0; }
+    color: #878787; }
 
 .single .author h3 a {
   color: #2d2d2d; }
   .single .author h3 a:hover {
     color: #138bcf; }
 .single .author time {
-  color: #a0a0a0; }
+  color: #878787; }
 
 .post-categories a,
 .post-tags a {
@@ -149,7 +150,7 @@ a.button-secondary {
   a.button:hover,
   a.button-secondary:hover {
     color: white;
-    background: #a0a0a0; }
+    background: #878787; }
 
 input[type="text"],
 input[type="email"],
