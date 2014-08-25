@@ -202,6 +202,14 @@ class Semicolon {
 	}
 
 	/**
+	 * Pre-4.0 compatibility.
+	 */
+	public static function is_customize_preview() {
+		global $wp_customize;
+		return is_a( $wp_customize, 'WP_Customize_Manager' ) && $wp_customize->is_preview();
+	}
+
+	/**
 	 * Custom Colors
 	 *
 	 * This feature is experimental. It relies on Jetpack's Custom CSS module
@@ -237,9 +245,13 @@ class Semicolon {
 		// Cache with a hash and then smash.
 		if ( $hash !== $new_hash /* || true /* use for debug */ ) {
 
-			// Set these early, just in case everything else fails or fatals.
-			set_theme_mod( 'semicolon-colors-hash', $new_hash );
-			set_theme_mod( 'semicolon-colors-css', '' );
+			// Somebody can preview Semicolon without activating it, let's not
+			// pollute the database with our theme mods.
+			if ( ! self::is_customize_preview() ) {
+				// Set these early, just in case everything else fails or fatals.
+				set_theme_mod( 'semicolon-colors-hash', $new_hash );
+				set_theme_mod( 'semicolon-colors-css', '' );
+			}
 
 			// There's a special semicolon-override marker in the .sass file.
 			$override = sprintf( '$color-background: #%s;' . PHP_EOL, get_background_color() );
@@ -273,7 +285,10 @@ class Semicolon {
 				$css = Jetpack_Custom_CSS::minify( $css );
 			}
 
-			set_theme_mod( 'semicolon-colors-css', $css );
+			// Don't write to the db in preview mode.
+			if ( ! self::is_customize_preview() ) {
+				set_theme_mod( 'semicolon-colors-css', $css );
+			}
 		}
 
 		// Dequeue the default colors css.
