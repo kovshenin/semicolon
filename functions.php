@@ -270,11 +270,7 @@ class Semicolon {
 				return;
 
 			$sass = preg_replace( '/^.*?semicolon-override.*$/im', $override, $sass );
-
-			$start = microtime( true );
 			$css = jetpack_sass_css_preprocess( $sass );
-			$time = microtime( true ) - $start;
-			// echo $time;
 
 			// Something went wrong, so don't display raw sass.
 			if ( empty( $css ) || strpos( $css, 'this string should never appear in the compiled stylesheet' ) !== false )
