@@ -112,15 +112,11 @@ $color-foreground-on-text: auto-contrast( white, $color-text-contrasted, 20%, 7.
 
 @if ( lightness( $color-background ) > 50 or not $auto-contrast ) {
 	$color-accent-contrasted-alt: lighten( $color-accent-contrasted, 5% );
-	$color-accent-contrasted: darken( $color-accent-contrasted, 5% );
 	$color-text-contrasted-alt: auto-contrast( lighten( $color-text-contrasted, 40% ), $color-background, $darken-only: true );
-	$color-text-contrasted: darken( $color-text-contrasted, 5% );
 	$color-text-contrasted-semi-transparent: transparentize( $color-text-contrasted, 0.9 );
 } @else {
 	$color-accent-contrasted-alt: darken( $color-accent-contrasted, 5% );
-	$color-accent-contrasted: lighten( $color-accent-contrasted, 5% );
 	$color-text-contrasted-alt: auto-contrast( darken( $color-text-contrasted, 40% ), $color-background, $lighten-only: true );
-	$color-text-contrasted: lighten( $color-text-contrasted, 5% );
 	$color-text-contrasted-semi-transparent: transparentize( $color-text-contrasted, 0.7 );
 }
 
