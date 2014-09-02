@@ -185,6 +185,14 @@ ul.semicolon-social {
 	@if $debug { background: purple; }
 }
 
+.semicolon-breadcrumbs {
+	@extend .entry-meta;
+}
+
+.archive .semicolon-breadcrumbs {
+	margin-bottom: 12px;
+}
+
 hr {
 	border-top: solid 1px #ccc;
 	border: 0;

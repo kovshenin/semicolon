@@ -730,6 +730,9 @@ ul.semicolon-social {
   margin-bottom: 24px;
   overflow: hidden; }
 
+.archive .semicolon-breadcrumbs {
+  margin-bottom: 12px; }
+
 hr {
   border-top: solid 1px #ccc;
   border: 0;
@@ -986,10 +989,10 @@ blockquote:before {
     .related-content article.semicolon-last {
       margin-right: 0; }
 
-.entry-meta, .entry-content .wp-caption-text, .comment-meta .comment-metadata, .site-footer {
+.entry-meta, .semicolon-breadcrumbs, .entry-content .wp-caption-text, .comment-meta .comment-metadata, .site-footer {
   font-size: 13px;
   line-height: 24px; }
-  .entry-meta a, .entry-content .wp-caption-text a, .comment-meta .comment-metadata a, .site-footer a {
+  .entry-meta a, .semicolon-breadcrumbs a, .entry-content .wp-caption-text a, .comment-meta .comment-metadata a, .site-footer a {
     text-decoration: none; }
 
 .single .author {
@@ -1053,7 +1056,7 @@ body.page .author {
 time.updated {
   display: none; }
 
-.grid .entry-meta .author, .grid .entry-content .wp-caption-text .author, .entry-content .grid .wp-caption-text .author, .grid .comment-meta .comment-metadata .author, .comment-meta .grid .comment-metadata .author, .grid .site-footer .author,
+.grid .entry-meta .author, .grid .semicolon-breadcrumbs .author, .grid .entry-content .wp-caption-text .author, .entry-content .grid .wp-caption-text .author, .grid .comment-meta .comment-metadata .author, .comment-meta .grid .comment-metadata .author, .grid .site-footer .author,
 .related-content .author {
   display: none; }
 

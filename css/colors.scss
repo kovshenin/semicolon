@@ -212,7 +212,8 @@ blockquote:before {
 .entry-meta,
 .comment-metadata,
 .site-footer,
-.wp-caption-text {
+.wp-caption-text,
+.semicolon-breadcrumbs {
 	color: $color-text-contrasted-alt;
 
 	a {

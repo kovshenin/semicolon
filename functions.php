@@ -5,7 +5,7 @@
 
 class Semicolon {
 	public static $defaults = array();
-	public static $colors_css_version = 20140823;
+	public static $colors_css_version = 20140902;
 
 	private function __construct() {}
 
@@ -668,6 +668,15 @@ class Semicolon {
 			return 0;
 
 		return $term->term_id;
+	}
+
+	public static function breadcrumbs() {
+		if ( has_action( 'semicolon_breadcrumbs' ) )
+			return do_action( 'semicolon_breadcrumbs' );
+
+		if ( function_exists( 'yoast_breadcrumb' ) ) {
+			yoast_breadcrumb( '<div class="semicolon-breadcrumbs">', '</div>' );
+		}
 	}
 }
 

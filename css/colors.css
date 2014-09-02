@@ -67,12 +67,14 @@ blockquote:before {
 .entry-meta,
 .comment-metadata,
 .site-footer,
-.wp-caption-text {
+.wp-caption-text,
+.semicolon-breadcrumbs {
   color: #a0a0a0; }
   .entry-meta a,
   .comment-metadata a,
   .site-footer a,
-  .wp-caption-text a {
+  .wp-caption-text a,
+  .semicolon-breadcrumbs a {
     color: #a0a0a0; }
 
 .single .author h3 a {

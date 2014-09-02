@@ -4,6 +4,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clear' ); ?>>
+
+	<?php Semicolon::breadcrumbs(); ?>
 	<h1 class="entry-title"><?php the_title(); ?></h1>
 
 	<div class="entry-content">

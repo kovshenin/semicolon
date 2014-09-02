@@ -12,6 +12,7 @@
 get_header(); ?>
 
 	<?php if ( ! is_front_page() ) : ?>
+	<?php Semicolon::breadcrumbs(); ?>
 	<header class="page-header page-description">
 		<h1 class="page-title">
 			<?php
