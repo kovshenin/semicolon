@@ -38,10 +38,9 @@ if ( ! function_exists( 'semicolon_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function semicolon_posted_on() {
-	$human_time = semicolon_human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) );
+	$human_time = sprintf( __( '%s ago', 'semicolon' ), human_time_diff( get_post_time( 'U', true ) ) );
 	$regular_time = get_the_time( get_option( 'date_format' ) );
-
-	$output_time = sprintf( '%s <span style="display:none;">%s</span>', $human_time, $regular_time );
+	$output_time = $human_time;
 
 	if ( current_time( 'timestamp' ) > get_the_time( 'U' ) + 60 * 60 * 24 * 14 )
 		$output_time = $regular_time;
@@ -64,45 +63,8 @@ if ( ! function_exists( 'semicolon_human_time_diff' ) ) :
  * @return string Human readable time difference.
  */
 function semicolon_human_time_diff( $from, $to = '' ) {
-	if ( empty( $to ) )
-		$to = time();
-
-	$diff = (int) abs( $to - $from );
-
-	if ( $diff < HOUR_IN_SECONDS ) {
-		$mins = round( $diff / MINUTE_IN_SECONDS );
-		if ( $mins <= 1 )
-			$mins = 1;
-		/* translators: min=minute */
-		$since = sprintf( _n( '%s min ago', '%s mins ago', $mins, 'semicolon' ), $mins );
-	} elseif ( $diff < DAY_IN_SECONDS && $diff >= HOUR_IN_SECONDS ) {
-		$hours = round( $diff / HOUR_IN_SECONDS );
-		if ( $hours <= 1 )
-			$hours = 1;
-		$since = sprintf( _n( '%s hour ago', '%s hours ago', $hours, 'semicolon' ), $hours );
-	} elseif ( $diff < WEEK_IN_SECONDS && $diff >= DAY_IN_SECONDS ) {
-		$days = round( $diff / DAY_IN_SECONDS );
-		if ( $days <= 1 )
-			$days = 1;
-		$since = sprintf( _n( '%s day ago', '%s days ago', $days, 'semicolon' ), $days );
-	} elseif ( $diff < 30 * DAY_IN_SECONDS && $diff >= WEEK_IN_SECONDS ) {
-		$weeks = round( $diff / WEEK_IN_SECONDS );
-		if ( $weeks <= 1 )
-			$weeks = 1;
-		$since = sprintf( _n( '%s week ago', '%s weeks ago', $weeks, 'semicolon' ), $weeks );
-	} elseif ( $diff < YEAR_IN_SECONDS && $diff >= 30 * DAY_IN_SECONDS ) {
-		$months = round( $diff / ( 30 * DAY_IN_SECONDS ) );
-		if ( $months <= 1 )
-			$months = 1;
-		$since = sprintf( _n( '%s month ago', '%s months ago', $months, 'semicolon' ), $months );
-	} elseif ( $diff >= YEAR_IN_SECONDS ) {
-		$years = round( $diff / YEAR_IN_SECONDS );
-		if ( $years <= 1 )
-			$years = 1;
-		$since = sprintf( _n( '%s year ago', '%s years ago', $years, 'semicolon' ), $years );
-	}
-
-	return $since;
+	_deprecated_function( __FUNCTION__, '0.9.1', 'human_time_diff' );
+	return sprintf( __( '%s ago', 'semicolon' ), human_time_diff( $from, $to ) );
 }
 endif; // function_exists
 
