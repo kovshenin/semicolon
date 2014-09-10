@@ -523,6 +523,7 @@ class Semicolon {
 			);
 		}
 
+		$args = apply_filters( 'semicolon_related_posts_query_args', $args );
 		return new WP_Query( $args );
 	}
 
