@@ -496,12 +496,15 @@ class Semicolon {
 		// Support for the Yet Another Related Posts Plugin
 		if ( function_exists( 'yarpp_get_related' ) ) {
 			$related = yarpp_get_related( array( 'limit' => $posts_per_page ), $post->ID );
-			return new WP_Query( array(
+			$args = array(
 				'post__in' => wp_list_pluck( $related, 'ID' ),
 				'posts_per_page' => $posts_per_page,
 				'ignore_sticky_posts' => true,
 				'post__not_in' => array( $post->ID ),
-			) );
+			);
+
+			$args = apply_filters( 'semicolon_related_posts_query_args', $args );
+			return new WP_Query( $args );
 		}
 
 		$args = array(
