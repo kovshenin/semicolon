@@ -562,7 +562,11 @@ class Semicolon {
 	public static function customize_register( $wp_customize ) {
 		$wp_customize->get_setting('blogname')->transport = 'postMessage';
 		$wp_customize->get_setting('blogdescription')->transport = 'postMessage';
-		$wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
+
+		// Colors are powered by Jetpack and Sass, make sure they're available.
+		if ( ! self::supports_custom_colors() )
+			return;
+
 		$wp_customize->get_setting('background_color')->transport = 'refresh';
 
 		foreach ( self::$defaults['colors'] as $key => $default ) {
@@ -590,7 +594,7 @@ class Semicolon {
 	 * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 	 */
 	public static function customize_preview_js() {
-		wp_enqueue_script( 'semicolon_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+		wp_enqueue_script( 'semicolon_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20141002', true );
 	}
 
 	/**
