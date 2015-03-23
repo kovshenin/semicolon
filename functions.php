@@ -493,6 +493,33 @@ class Semicolon {
 
 		$posts_per_page = apply_filters( 'semicolon_related_posts_per_page', 4 );
 
+		// Support for the Zone Manager (Zoninator) plugin
+		if ( function_exists( 'z_get_zoninator' ) ) {
+
+			// Allow plugins and child themes to define their own zones or use defaults.
+			$zones = apply_filters( 'semicolon_related_posts_zones', false, $post->ID );
+			if ( ! is_array( $zones ) ) {
+				$zones = array( 'related-posts' );
+
+				$categories = wp_get_object_terms( $post->ID, array( 'category' ), array( 'fields' => 'slugs' ) );
+				foreach ( $categories as $slug )
+					$zones[] = 'related-posts-' . $slug;
+
+				$zones = array_reverse( $zones );
+			}
+
+			foreach ( $zones as $zone ) {
+				$query = z_get_zoninator()->get_zone_query( $zone, apply_filters( 'semicolon_related_posts_query_args', array(
+					'posts_per_page' => $posts_per_page,
+					'post__not_in' => array( $post->ID ),
+					'ignore_sticky_posts' => true,
+				) ) );
+
+				if ( $query->have_posts() )
+					return $query;
+			}
+		}
+
 		// Support for the Yet Another Related Posts Plugin
 		if ( function_exists( 'yarpp_get_related' ) ) {
 			$related = yarpp_get_related( array( 'limit' => $posts_per_page ), $post->ID );
