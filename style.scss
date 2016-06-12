@@ -268,6 +268,14 @@ hr {
 	&.semicolon-last {
 		margin-right: 0;
 	}
+
+	.entry-meta {
+		float: left;
+
+		.entry-date {
+			float: left;
+		}
+	}
 }
 
 .grid article {
@@ -485,7 +493,7 @@ blockquote:before {
 	.author-bio {
 		display: block;
 		margin-left: 80px;
-		
+
 		h3, p { clear: none; }
 	}
 
@@ -791,13 +799,38 @@ input[type="search"] {
 .sticky, .bypostauthor { /* Nothing */ }
 
 /* Inline Controls */
-.semicolon-inline-controls { 
+.semicolon-inline-controls {
 	display: none;
 }
 
 /* No inline controls when Customizer is active. */
 body.semicolon-customizing .semicolon-inline-controls {
 	display: none !important;
+}
+
+/* Pageviews */
+.semicolon-pageviews-wrapper {
+	float: left;
+
+	svg {
+		display: inline-block;
+		margin-top: 6px;
+		margin-right: 2px;
+		margin-left: 4px;
+		float: left;
+		width: 12px;
+		height: 12px;
+	}
+
+	span {
+		float: left;
+		position: relative;
+	}
+}
+
+.taxonomy .semicolon-pageviews-wrapper {
+	margin-top: 4px;
+	font-size: 13px;
 }
 
 .semicolon-anchor {
@@ -815,7 +848,6 @@ body.admin-bar .semicolon-anchor {
 	position: absolute;
 	top: 12px;
 	right: 12px;
-	background: red;
 	float: left;
 	background: #333;
 

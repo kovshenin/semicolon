@@ -12,6 +12,7 @@
 
 		<div class="entry-meta">
 			<?php semicolon_posted_on(); ?>
+			<?php Semicolon::pageviews(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 

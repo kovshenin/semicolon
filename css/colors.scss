@@ -40,7 +40,7 @@ $test-parse-sass: 'this string should never appear in the compiled stylesheet.';
 	// Adapted from: https://gist.github.com/voxpelli/6304812
 	$rgba: red( $color ), green( $color ), blue( $color );
 	$rgba2: ();
-	
+
 	@for $i from 1 through 3 {
 		$rgb: nth( $rgba, $i );
 		$rgb: $rgb / 255;
@@ -354,4 +354,12 @@ textarea {
 		border-top-color: $color-text-contrasted;
 		border-bottom-color: $color-text-contrasted-semi-transparent;
 	}
+}
+
+.semicolon-pageviews-wrapper svg {
+	fill: $color-text-contrasted-alt;
+}
+
+.taxonomy .semicolon-pageviews-wrapper span {
+	color: $color-text-contrasted-alt;
 }

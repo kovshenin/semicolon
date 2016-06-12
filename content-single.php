@@ -23,6 +23,7 @@
 			<?php do_action( 'semicolon_before_category' ); ?>
 			<?php if ( semicolon_categorized_blog() ) { the_category(); } ?>
 			<?php the_tags( '<div class="post-tags">', ' ', '</div>' ); ?>
+			<?php Semicolon::pageviews(); ?>
 		</div>
 
 		<div class="author vcard">

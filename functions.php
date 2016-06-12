@@ -5,7 +5,7 @@
 
 class Semicolon {
 	public static $defaults = array();
-	public static $colors_css_version = 20140902;
+	public static $colors_css_version = 20160612;
 
 	private function __construct() {}
 
@@ -105,6 +105,9 @@ class Semicolon {
 			'max_posts' => 2,
 		) );
 
+		// Add support for the Pageviews plugin
+		add_theme_support( 'pageviews' );
+
 		do_action( 'semicolon_after_setup_theme' );
 	}
 
@@ -173,7 +176,7 @@ class Semicolon {
 	 * Enqueue all the things.
 	 */
 	public static function enqueue_scripts() {
-		wp_enqueue_style( 'semicolon', get_stylesheet_uri(), array( 'semicolon-genericons', 'semicolon-open-sans', 'semicolon-pt-serif' ), '20140521' );
+		wp_enqueue_style( 'semicolon', get_stylesheet_uri(), array( 'semicolon-genericons', 'semicolon-open-sans', 'semicolon-pt-serif' ), '20160612' );
 		wp_enqueue_style( 'semicolon-colors', get_template_directory_uri() . '/css/colors.css', array( 'semicolon' ), self::$colors_css_version );
 		wp_enqueue_style( 'semicolon-genericons', get_template_directory_uri() . '/css/genericons.css', array(), '20131222' );
 
@@ -692,6 +695,16 @@ class Semicolon {
 
 			wp_safe_redirect( esc_url_raw( $redirect_url ) );
 		}
+	}
+
+	public static function pageviews() {
+		if ( ! has_action( 'pageviews' ) )
+			return;
+
+		$post = get_post();
+		?>
+		<div class="semicolon-pageviews-wrapper"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1792 1792"><path d="M588.277,896v692.375H280.555V896H588.277z M1049.86,630.363v958.012h-307.72V630.363H1049.86z M1511.446,203.625v1384.75h-307.725V203.625H1511.446z"/></svg><?php do_action( 'pageviews' ); ?></div>
+		<?php
 	}
 
 	public static function get_jetpack_featured_content_term_id() {

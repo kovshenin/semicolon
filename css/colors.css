@@ -179,3 +179,11 @@ textarea {
 .main-navigation.toggled .menu-toggle {
   border-top-color: #3a3a3a;
   border-bottom-color: rgba(58, 58, 58, 0.1); }
+
+.semicolon-pageviews-wrapper svg {
+  fill: #a0a0a0; }
+
+.taxonomy .semicolon-pageviews-wrapper span {
+  color: #a0a0a0; }
+
+/*# sourceMappingURL=colors.css.map */
