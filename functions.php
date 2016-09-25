@@ -670,7 +670,7 @@ class Semicolon {
 		$wp_customize->get_setting('background_color')->transport = 'refresh';
 
 		foreach ( self::$defaults['colors'] as $key => $default ) {
-			$wp_customize->add_setting( "semicolon-colors[$key]", array( 'default' => $default ) );
+			$wp_customize->add_setting( "semicolon-colors[$key]", array( 'default' => $default, 'sanitize_callback' => 'sanitize_hex_color' ) );
 
 			$label = ! empty( self::$defaults['color_labels'][ $key ] ) ? self::$defaults['color_labels'][ $key ] : __( 'Color', 'semicolon' );
 
@@ -681,7 +681,7 @@ class Semicolon {
 			) ) );
 		}
 
-		$wp_customize->add_setting( 'semicolon-colors-auto-contrast', array( 'default' => true ) );
+		$wp_customize->add_setting( 'semicolon-colors-auto-contrast', array( 'default' => true, 'sanitize_callback' => function( $input ) { return (bool) $input; } ) );
 		$wp_customize->add_control( 'semicolon-colors-auto-contrast', array(
 			'type' => 'checkbox',
 			'label' => __( 'Auto Contrast', 'semicolon' ),
