@@ -109,6 +109,9 @@ class Semicolon {
 		// Add support for the Pageviews plugin
 		add_theme_support( 'pageviews' );
 
+		// Title tag
+		add_theme_support( 'title-tag' );
+
 		do_action( 'semicolon_after_setup_theme' );
 	}
 
