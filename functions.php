@@ -169,13 +169,13 @@ class Semicolon {
 				'label' => 'Zone Manager',
 				'description' => __( 'Semicolon defines the Related Posts section as a zone for this plugin, allowing you to easily customize that area.', 'semicolon' ),
 				'filename' => 'zoninator/zoninator.php',
-				'url' => 'https://wordpress.org/plugins/wordpress-seo/',
+				'url' => 'https://wordpress.org/plugins/zoninator/',
 			),
 			array(
 				'label' => 'YARPP',
 				'description' => __( 'Yet Another Related Posts Plugin (YARPP) integrates well with the Related Posts section in the Semicolon theme.', 'semicolon' ),
 				'filename' => 'yet-another-related-posts-plugin/yarpp.php',
-				'url' => 'https://wordpress.org/plugins/wordpress-seo/',
+				'url' => 'https://wordpress.org/plugins/yet-another-related-posts-plugin/',
 			),
 		);
 		?>
