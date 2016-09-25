@@ -5,7 +5,7 @@ responsive layout, clean and easy to read typography, a unique grid layout
 with featured posts support, a few widget areas, a special menu for your
 social profiles and much more.
 
-FAQ: http://kovshenin.com/themes/semicolon/
+FAQ: https://konstantin.blog/themes/semicolon/
 
 
 # Featured Posts
@@ -46,7 +46,7 @@ Hit “create a new menu” and add some items for your social profiles using Cu
 When you’re done, assign the newly created menu to the “Social Menu” theme location. Visit
 your home page and you’ll see that your links are now icons. If you’re looking for the RSS
 feed icon, simply use your feed address as the URL for a custom link,
-such as http://kovshenin.com/feed.
+such as https://konstantin.blog/feed.
 
 
 # Related Posts
@@ -78,7 +78,7 @@ widgets work best in the footer area.
 # Support
 
 Please use the WordPress.org forums for support and feedback:
-http://wordpress.org/support/theme/semicolon
+https://wordpress.org/support/theme/semicolon
 
 
 # Changelog
