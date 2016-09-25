@@ -91,11 +91,15 @@ https://wordpress.org/support/theme/semicolon
 
 = 0.9.1 =
 * Feature: New social icons for Vkontakte, Telegram, Whatsapp, Stack Overflow and Stack Exchange
+* Feature: Breadcrumbs support via Yoast SEO
+* Feature: Add support for Zone Manager (Zoninator)
 * Feature: Added support for the Pageviews plugin
 * Enhancement: Add a new Recommended Plugin section
+* Enhancement: Simplify use of human_time_diff
 * Enhancement: Update screenshot
 * Enhancement: Remove deprecated theme tags
 * Enhancement: Add CSS .map files
+* Enhancement: Filter related posts query_args
 * Bug: Add sanitize callback functions for Customizer settings
 * Bug: Add missing text domain in footer text
 
