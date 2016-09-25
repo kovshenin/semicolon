@@ -1,6 +1,6 @@
 # Semicolon theme for WordPress
 
-Semicolon is a simple and clean magazine theme for WordPress. It has a 
+Semicolon is a simple and clean magazine theme for WordPress. It has a
 responsive layout, clean and easy to read typography, a unique grid layout
 with featured posts support, a few widget areas, a special menu for your
 social profiles and much more.
@@ -80,8 +80,24 @@ widgets work best in the footer area.
 Please use the WordPress.org forums for support and feedback:
 https://wordpress.org/support/theme/semicolon
 
+# License & Attributions
+
+* All theme files (except third-party assets listed below) are distributed under the GNU GPL v3 or later: https://www.gnu.org/licenses/gpl-3.0.en.html
+* The bundled Genericons icon font is also distributed under the GPL: https://genericons.com/
+* Some FontAwesome social icons are bundled as SVGs inside the theme stylesheet. FontAwesome icons are distributed under the GPL-friendly SIL OFL 1.1: http://fontawesome.io/license/ the SVGs are distributed under the MIT License: https://github.com/encharm/Font-Awesome-SVG-PNG
+* Google Fonts are used by this theme but not bundled: https://fonts.google.com/
 
 # Changelog
+
+= 0.9.1 =
+* Feature: New social icons for Vkontakte, Telegram, Whatsapp, Stack Overflow and Stack Exchange
+* Feature: Added support for the Pageviews plugin
+* Enhancement: Add a new Recommended Plugin section
+* Enhancement: Update screenshot
+* Enhancement: Remove deprecated theme tags
+* Enhancement: Add CSS .map files
+* Bug: Add sanitize callback functions for Customizer settings
+* Bug: Add missing text domain in footer text
 
 = 0.9 =
 
