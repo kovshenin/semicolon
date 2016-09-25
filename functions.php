@@ -40,6 +40,7 @@ class Semicolon {
 		}
 
 		add_action( 'init', array( __CLASS__, 'inline_controls_handler' ) );
+		add_action( 'admin_menu', array( __CLASS__, 'admin_menu' ) );
 
 		add_action( 'pre_get_posts', array( __CLASS__, 'pre_get_posts' ) );
 		add_filter( 'posts_results', array( __CLASS__, 'posts_results' ), 10, 2 );
@@ -129,6 +130,72 @@ class Semicolon {
 		if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
 			$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
 		}
+	}
+
+	/**
+	 * Administration menu
+	 */
+	public static function admin_menu() {
+		add_theme_page( __( 'Recommended Plugins', 'semicolon' ), __( 'Recommended Plugins', 'semicolon' ), 'activate_plugins', 'semicolon-recommended', array( __CLASS__, 'admin_menu_recommended' ) );
+	}
+
+	/**
+	 * Recommended Plugins section in Appearance
+	 */
+	public static function admin_menu_recommended() {
+		$plugins = array(
+			array(
+				'label' => 'Jetpack',
+				'description' => __( 'Jetpack contains many useful features that integrate well with the Semicolon theme, including custom colors, featured posts and more.', 'semicolon' ),
+				'filename' => 'jetpack/jetpack.php',
+				'url' => 'https://wordpress.org/plugins/jetpack/',
+			),
+			array(
+				'label' => 'Pageviews',
+				'description' => __( 'Pageviews is a simple and lightweight views counter for your WordPress posts and pages.', 'semicolon' ),
+				'filename' => 'pageviews/pageviews.php',
+				'url' => 'https://wordpress.org/plugins/pageviews/',
+			),
+			array(
+				'label' => 'Yoast SEO',
+				'description' => __( 'One of the most popular SEO plugins for WordPress, includes a breadcrumbs functionality which integrates well with Semicolon.', 'semicolon' ),
+				'filename' => 'wordpress-seo/wp-seo.php',
+				'url' => 'https://wordpress.org/plugins/wordpress-seo/',
+			),
+			array(
+				'label' => 'Zone Manager',
+				'description' => __( 'Semicolon defines the Related Posts section as a zone for this plugin, allowing you to easily customize that area.', 'semicolon' ),
+				'filename' => 'zoninator/zoninator.php',
+				'url' => 'https://wordpress.org/plugins/wordpress-seo/',
+			),
+			array(
+				'label' => 'YARPP',
+				'description' => __( 'Yet Another Related Posts Plugin (YARPP) integrates well with the Related Posts section in the Semicolon theme.', 'semicolon' ),
+				'filename' => 'yet-another-related-posts-plugin/yarpp.php',
+				'url' => 'https://wordpress.org/plugins/wordpress-seo/',
+			),
+		);
+		?>
+		<div class="wrap">
+			<h1><?php _e( 'Recommended Plugins', 'semicolon' ); ?></h1>
+			<p><?php _e( 'Below is a list of recommended plugins for the Semicolon theme. They are all optional.', 'semicolon' ); ?></p>
+
+			<table class="widefat">
+				<?php foreach ( $plugins as $plugin ) : ?>
+				<tr>
+					<td><a href="<?php echo esc_url( $plugin['url'] ); ?>" target="_blank"><strong><?php echo str_replace( ' ', '&nbsp;', esc_html( $plugin['label'] ) ); ?></strong></a></td>
+					<td><?php echo esc_html( $plugin['description'] ); ?></td>
+
+					<?php if ( is_plugin_active( $plugin['filename'] ) ) : ?>
+						<td>Active</td>
+					<?php else : ?>
+						<td><a href="<?php echo esc_url( $plugin['url'] ); ?>" target="_blank"><?php _e( 'Download', 'semicolon' ); ?></a></td>
+					<?php endif; ?>
+				</tr>
+				<?php endforeach; ?>
+			</table>
+		</div>
+		<?php
 	}
 
 	/**
