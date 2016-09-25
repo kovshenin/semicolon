@@ -702,8 +702,22 @@ class Semicolon {
 			return;
 
 		$post = get_post();
+		$pageviews_show_link = apply_filters( 'semicolon_pageviews_show_link', true );
 		?>
-		<div class="semicolon-pageviews-wrapper"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1792 1792"><path d="M588.277,896v692.375H280.555V896H588.277z M1049.86,630.363v958.012h-307.72V630.363H1049.86z M1511.446,203.625v1384.75h-307.725V203.625H1511.446z"/></svg><?php do_action( 'pageviews' ); ?></div>
+		<div class="semicolon-pageviews-wrapper">
+
+			<?php if ( $pageviews_show_link ) : ?>
+			<a href="https://wordpress.org/plugins/pageviews/" target="_blank">
+			<?php endif; ?>
+
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1792 1792">
+				<path d="M588.277,896v692.375H280.555V896H588.277z M1049.86,630.363v958.012h-307.72V630.363H1049.86z M1511.446,203.625v1384.75h-307.725V203.625H1511.446z"/>
+			</svg><?php do_action( 'pageviews' ); ?>
+
+			<?php if ( $pageviews_show_link ) : ?>
+			</a>
+			<?php endif; ?>
+		</div>
 		<?php
 	}
 
