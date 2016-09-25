@@ -165,6 +165,22 @@ a, a:visited, a:link {
 ul.semicolon-social {
 	li a::before       { color: rgba( $color-text-contrasted, 0.5 ); }
 	li a:hover::before { color: $color-text-contrasted; }
+
+	/* SVGs */
+	li a[href*="telegram.me"],
+	li a[href*="vk.com"],
+	li a[href*="stackoverflow.com"],
+	li a[href*="stackexchange.com"],
+	li a[href*="whatsapp.com"],
+	li a[href*="whatsapp:"] {
+		&::before {
+			background-color: rgba( $color-text-contrasted, 0.5 );
+		}
+
+		&:hover::before {
+			background-color: $color-text-contrasted;
+		}
+	}
 }
 
 .page-description {

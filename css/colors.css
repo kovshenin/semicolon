@@ -32,10 +32,26 @@ a, a:visited, a:link {
   .main-navigation .current-post-parent a {
     border-top-color: #3a3a3a; }
 
-ul.semicolon-social li a::before {
-  color: rgba(58, 58, 58, 0.5); }
-ul.semicolon-social li a:hover::before {
-  color: #3a3a3a; }
+ul.semicolon-social {
+  /* SVGs */ }
+  ul.semicolon-social li a::before {
+    color: rgba(58, 58, 58, 0.5); }
+  ul.semicolon-social li a:hover::before {
+    color: #3a3a3a; }
+  ul.semicolon-social li a[href*="telegram.me"]::before,
+  ul.semicolon-social li a[href*="vk.com"]::before,
+  ul.semicolon-social li a[href*="stackoverflow.com"]::before,
+  ul.semicolon-social li a[href*="stackexchange.com"]::before,
+  ul.semicolon-social li a[href*="whatsapp.com"]::before,
+  ul.semicolon-social li a[href*="whatsapp:"]::before {
+    background-color: rgba(58, 58, 58, 0.5); }
+  ul.semicolon-social li a[href*="telegram.me"]:hover::before,
+  ul.semicolon-social li a[href*="vk.com"]:hover::before,
+  ul.semicolon-social li a[href*="stackoverflow.com"]:hover::before,
+  ul.semicolon-social li a[href*="stackexchange.com"]:hover::before,
+  ul.semicolon-social li a[href*="whatsapp.com"]:hover::before,
+  ul.semicolon-social li a[href*="whatsapp:"]:hover::before {
+    background-color: #3a3a3a; }
 
 .page-description {
   background: rgba(58, 58, 58, 0.03); }
