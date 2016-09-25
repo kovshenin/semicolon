@@ -89,8 +89,13 @@ https://wordpress.org/support/theme/semicolon
 
 # Changelog
 
+= 0.9.2 =
+
+* Bug: Fix some recommended plugins URLs
+
 = 0.9.1 =
-* Feature: New social icons for Vkontakte, Telegram, Whatsapp, Stack Overflow and Stack Exchange
+
+* Feature: New social icons for Vkontakte, Telegram, WhatsApp, Stack Overflow and Stack Exchange
 * Feature: Breadcrumbs support via Yoast SEO
 * Feature: Add support for Zone Manager (Zoninator)
 * Feature: Added support for the Pageviews plugin
