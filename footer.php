@@ -22,7 +22,7 @@
 			<?php if ( has_action( 'semicolon_credits' ) ) : ?>
 				<?php do_action( 'semicolon_credits' ); ?>
 			<?php else : ?>
-				<?php _e( 'Powered by <a href="http://wordpress.org">WordPress</a>. Semicolon Theme by <a href="http://kovshenin.com">Konstantin Kovshenin</a>.' ); ?>
+				<?php _e( 'Powered by <a href="http://wordpress.org">WordPress</a>. Semicolon Theme by <a href="http://kovshenin.com">Konstantin Kovshenin</a>.', 'semicolon' ); ?>
 			<?php endif; ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
