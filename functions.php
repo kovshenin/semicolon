@@ -5,7 +5,7 @@
 
 class Semicolon {
 	public static $defaults = array();
-	public static $colors_css_version = 20160612;
+	public static $colors_css_version = 20160925;
 
 	private function __construct() {}
 
@@ -243,7 +243,7 @@ class Semicolon {
 	 * Enqueue all the things.
 	 */
 	public static function enqueue_scripts() {
-		wp_enqueue_style( 'semicolon', get_stylesheet_uri(), array( 'semicolon-genericons', 'semicolon-open-sans', 'semicolon-pt-serif' ), '20160612' );
+		wp_enqueue_style( 'semicolon', get_stylesheet_uri(), array( 'semicolon-genericons', 'semicolon-open-sans', 'semicolon-pt-serif' ), '20160925' );
 		wp_enqueue_style( 'semicolon-colors', get_template_directory_uri() . '/css/colors.css', array( 'semicolon' ), self::$colors_css_version );
 		wp_enqueue_style( 'semicolon-genericons', get_template_directory_uri() . '/css/genericons.css', array(), '20131222' );
 
